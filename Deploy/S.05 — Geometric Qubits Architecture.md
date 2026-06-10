@@ -1,6 +1,6 @@
 Quantum Mechanics — Structural Sector
 
-S.05 — Geometric Qubits
+S.05 — Geometric Qubits Architecture
 
 Technical White Paper
 
