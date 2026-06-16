@@ -1,0 +1,733 @@
+# Unified Finite-Density Quantum Field Theory
+
+## U.11 — Critical Endpoints as Geometric Singularities
+
+### A Theory of Density-Space Bifurcations, Universality Classes, and Critical Geometry
+
+---
+
+# Abstract
+
+Critical phenomena represent one of the deepest mysteries in quantum field theory and statistical physics. Near critical points, microscopic details become irrelevant, correlation lengths diverge, fluctuations become scale invariant, and systems belonging to entirely different physical domains exhibit identical behavior.
+
+Within conventional approaches, critical points are characterized by nonanalyticities of thermodynamic potentials and classified by universality classes derived from renormalization group fixed points.
+
+Unified Finite-Density Quantum Field Theory (UFD-QFT) proposes a deeper interpretation. Critical endpoints are geometric singularities of density space. They occur when the thermodynamic manifold undergoes a bifurcation in topology, renormalization flow, statistical gauge structure, and thimble organization simultaneously.
+
+This document develops a geometric theory of critical phenomena in which universality emerges from singular geometric structures rather than microscopic dynamics. Critical endpoints become density-space singularities where multiple geometric sectors merge, separate, or reorganize.
+
+---
+
+# Part I
+
+# The Nature of Criticality
+
+## 1. Conventional Critical Points
+
+A critical point is traditionally defined by:
+
+[
+\xi
+\rightarrow
+\infty,
+]
+
+where
+
+[
+\xi
+]
+
+is the correlation length.
+
+---
+
+## 2. Thermodynamic Signature
+
+Near criticality:
+
+[
+\frac{\partial^n F}
+{\partial x^n}
+\rightarrow
+\infty.
+]
+
+Thermodynamic derivatives diverge.
+
+---
+
+## 3. Universality Puzzle
+
+Fluids, magnets, superconductors, and QCD exhibit identical critical exponents despite vastly different microscopic structures.
+
+---
+
+## 4. Geometric Principle
+
+The common feature is not microscopic physics.
+
+The common feature is singular geometry.
+
+---
+
+# Part II
+
+# Density-Space Singularities
+
+## 5. Thermodynamic Manifold
+
+From U.3:
+
+[
+\mathcal D.
+]
+
+Coordinates:
+
+[
+y^A
+===
+
+(T,\mu_1,\mu_2,\ldots).
+]
+
+---
+
+## 6. Metric Geometry
+
+The manifold possesses metric
+
+[
+g_{AB}.
+]
+
+---
+
+## 7. Curvature Scalar
+
+[
+R
+=
+
+g^{AB}R_{AB}.
+]
+
+---
+
+## 8. Critical Singularity Condition
+
+A geometric critical point satisfies
+
+[
+R
+\rightarrow
+\infty.
+]
+
+---
+
+## 9. Interpretation
+
+Infinite curvature implies breakdown of local geometric smoothness.
+
+A new phase organization becomes necessary.
+
+---
+
+# Part III
+
+# Density-Space Bifurcations
+
+## 10. Bifurcation Concept
+
+A bifurcation occurs when a smooth trajectory splits into multiple branches.
+
+---
+
+## 11. Density Flow Field
+
+From U.9:
+
+[
+\mathcal B.
+]
+
+defines density RG evolution.
+
+---
+
+## 12. Critical Bifurcation
+
+At criticality:
+
+[
+\det
+\left(
+\frac{\partial\mathcal B^M}
+{\partial X^N}
+\right)
+=======
+
+0.
+
+]
+
+---
+
+## 13. Physical Meaning
+
+The flow becomes locally noninvertible.
+
+Multiple future phase trajectories emerge.
+
+---
+
+## 14. Endpoint Interpretation
+
+A critical endpoint is a density-space branching singularity.
+
+---
+
+# Part IV
+
+# Catastrophe Geometry
+
+## 15. Free-Energy Surface
+
+Define
+
+[
+F(y).
+]
+
+---
+
+## 16. Multiple Minima
+
+Near first-order transitions:
+
+[
+F
+]
+
+possesses competing minima.
+
+---
+
+## 17. Endpoint Merger
+
+At criticality:
+
+multiple minima merge.
+
+---
+
+## 18. Catastrophe Structure
+
+The merger creates a cusp singularity.
+
+---
+
+## 19. Critical Geometry Principle
+
+Critical endpoints correspond to catastrophe singularities of the free-energy landscape.
+
+---
+
+# Part V
+
+# Morse-Theoretic Criticality
+
+## 20. Morse Function
+
+Define
+
+[
+\Phi
+====
+
+F(T,\mu).
+]
+
+---
+
+## 21. Critical Points
+
+[
+\partial_A\Phi
+==============
+
+0.
+
+]
+
+---
+
+## 22. Hessian Degeneracy
+
+Criticality occurs when
+
+[
+\det(H_{AB})
+============
+
+0.
+
+]
+
+---
+
+## 23. Geometric Meaning
+
+The free-energy landscape loses local rigidity.
+
+---
+
+## 24. Topological Consequence
+
+Topology becomes capable of changing.
+
+---
+
+# Part VI
+
+# Renormalization Fixed Points
+
+## 25. RG Geometry
+
+From U.10:
+
+[
+\mathcal M.
+]
+
+---
+
+## 26. Fixed Point Condition
+
+[
+\mathcal B^M=0.
+]
+
+---
+
+## 27. Critical Fixed Points
+
+A critical endpoint corresponds to a degenerate fixed point.
+
+---
+
+## 28. Marginal Directions
+
+Certain eigenvalues satisfy
+
+[
+\lambda_i=0.
+]
+
+---
+
+## 29. Interpretation
+
+The theory becomes scale invariant.
+
+---
+
+# Part VII
+
+# Universality Classes
+
+## 30. Conventional Definition
+
+Universality classes are determined by:
+
+* dimensionality,
+* symmetry,
+* conserved quantities.
+
+---
+
+## 31. Geometric Reinterpretation
+
+Universality classes correspond to singularity classes of density-space geometry.
+
+---
+
+## 32. Critical Equivalence
+
+Two systems belong to the same universality class if their singular geometries are topologically equivalent.
+
+---
+
+## 33. Geometric Universality Principle
+
+Microscopic details disappear because geometry dominates.
+
+---
+
+# Part VIII
+
+# Critical Curvature Scaling
+
+## 34. Correlation Geometry
+
+Correlation length:
+
+[
+\xi.
+]
+
+---
+
+## 35. Curvature Scaling Law
+
+Postulate
+
+[
+R
+\sim
+\xi^d.
+]
+
+---
+
+## 36. Critical Divergence
+
+As
+
+[
+\xi
+\rightarrow
+\infty,
+]
+
+[
+R
+\rightarrow
+\infty.
+]
+
+---
+
+## 37. Geometric Interpretation
+
+Infinite correlation is equivalent to infinite geometric coupling.
+
+---
+
+# Part IX
+
+# Statistical Gauge Singularities
+
+## 38. Statistical Gauge Field
+
+From U.4:
+
+[
+\mathcal A_A.
+]
+
+---
+
+## 39. Statistical Curvature
+
+[
+\mathcal F_{AB}.
+]
+
+---
+
+## 40. Critical Enhancement
+
+Near criticality:
+
+[
+|\mathcal F|
+\rightarrow
+\infty.
+]
+
+---
+
+## 41. Sign-Curvature Interpretation
+
+Critical points maximize statistical interference.
+
+---
+
+## 42. Sign-Problem Enhancement
+
+The finite-density sign problem becomes strongest near geometric singularities.
+
+---
+
+# Part X
+
+# Thimble Criticality
+
+## 43. Thimble Networks
+
+From U.6:
+
+[
+\mathcal G_T.
+]
+
+---
+
+## 44. Saddle Degeneracy
+
+Criticality occurs when multiple saddles become nearly degenerate.
+
+---
+
+## 45. Network Reconnection
+
+The topology of
+
+[
+\mathcal G_T
+]
+
+changes.
+
+---
+
+## 46. Interference Explosion
+
+Large numbers of thimbles contribute simultaneously.
+
+---
+
+## 47. Geometric Interpretation
+
+Critical phenomena emerge from thimble-network singularity formation.
+
+---
+
+# Part XI
+
+# Topological Critical Points
+
+## 48. Topology Change
+
+From U.8:
+
+[
+\mathcal T
+\rightarrow
+\mathcal T'.
+]
+
+---
+
+## 49. Singular Transition
+
+Topology cannot change smoothly.
+
+---
+
+## 50. Critical Necessity
+
+A singular configuration must be traversed.
+
+---
+
+## 51. Critical Endpoint Principle
+
+Every topology-changing transition possesses a critical geometric intermediary.
+
+---
+
+# Part XII
+
+# Dense QCD Critical Endpoint
+
+## 52. Conventional Picture
+
+The QCD critical endpoint terminates a first-order phase boundary.
+
+---
+
+## 53. Geometric Picture
+
+The endpoint is a density-space singularity.
+
+---
+
+## 54. Basin Merger
+
+Hadronic and quark-matter basins become geometrically connected.
+
+---
+
+## 55. RG Interpretation
+
+Multiple flow branches merge.
+
+---
+
+## 56. Thimble Interpretation
+
+Distinct saddle sectors become degenerate.
+
+---
+
+## 57. Statistical Gauge Interpretation
+
+Interference curvature becomes maximal.
+
+---
+
+# Part XIII
+
+# Multicritical Geometry
+
+## 58. Higher-Order Singularities
+
+Several phase boundaries may intersect.
+
+---
+
+## 59. Tricritical Points
+
+Three geometric sectors meet.
+
+---
+
+## 60. Multicritical Surfaces
+
+Higher-dimensional intersections become possible.
+
+---
+
+## 61. Topological Classification
+
+Multicritical phenomena correspond to higher-order geometric singularities.
+
+---
+
+# Part XIV
+
+# Critical Entanglement Geometry
+
+## 62. Entanglement Growth
+
+Near criticality:
+
+[
+S_E
+]
+
+becomes long-ranged.
+
+---
+
+## 63. Information Geometry
+
+Correlation networks become scale invariant.
+
+---
+
+## 64. Entanglement Singularities
+
+Information geometry develops critical structure.
+
+---
+
+## 65. Interpretation
+
+Critical points are simultaneously thermodynamic, geometric, and informational singularities.
+
+---
+
+# Part XV
+
+# Density-Space Bifurcation Theory
+
+## 66. Bifurcation Surface
+
+Define
+
+[
+\Sigma_B.
+]
+
+---
+
+## 67. Branch Structure
+
+Flow trajectories satisfy
+
+[
+\mathcal B
+\rightarrow
+{\mathcal B_1,\mathcal B_2,\ldots}.
+]
+
+---
+
+## 68. Phase Emergence
+
+Each branch corresponds to a distinct phase basin.
+
+---
+
+## 69. Endpoint Structure
+
+Critical endpoints are branch-generation singularities.
+
+---
+
+## 70. Global Interpretation
+
+The phase diagram is a bifurcation network embedded in density geometry.
+
+---
+
+# Part XVI
+
+# Critical Singularity Principle
+
+Traditional theories identify critical points through diverging susceptibilities and correlation lengths.
+
+UFD-QFT proposes a deeper description.
+
+Criticality arises because the geometric structure of density space becomes singular.
+
+Universality emerges because singular geometries possess limited topological classes independent of microscopic details.
+
+---
+
+# Critical Endpoint Principle
+
+A critical endpoint is a geometric singularity of the density manifold where:
+
+1. Curvature diverges,
+2. Renormalization flows become degenerate,
+3. Statistical gauge curvature becomes maximal,
+4. Thimble networks undergo reconnection,
+5. Topology change becomes possible.
+
+Critical phenomena are manifestations of this singular geometric structure.
+
+---
+
+# UFD-QFT Critical Geometry Conjecture
+
+For every finite-density quantum field theory:
+
+1. Critical points are geometric singularities rather than merely thermodynamic anomalies.
+
+2. Universality classes are equivalence classes of geometric singularities.
+
+3. Divergent correlation lengths correspond to divergent density-space curvature.
+
+4. The sign problem is amplified by critical statistical curvature.
+
+5. The QCD critical endpoint is a density-space bifurcation singularity linking hadronic and quark-matter geometric basins.
+
+6. All phase transitions requiring topology change must pass through critical singular geometries.
+
+Critical Endpoints as Geometric Singularities therefore unify renormalization theory, topology change, interference structure, and universality within a single geometric framework, providing the mathematical foundation for the information-theoretic and entanglement structures developed in the subsequent documents of the UFD-QFT corpus.
