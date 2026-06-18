@@ -1,0 +1,7254 @@
+# Quantum Darwinism Beyond Redundancy Counting
+
+## Toward a Quantitative Scaling Law for Environment-Induced Information Replication
+
+### Part I — Foundations, Formal Setting, and the Redundancy Scaling Problem
+
+---
+
+# Abstract
+
+Quantum Darwinism proposes that classical objectivity emerges because environments do not merely decohere quantum systems—they selectively proliferate information about preferred observables into many environmental fragments. Independent observers then infer an effectively objective reality by intercepting redundant environmental records rather than directly measuring the system.
+
+Although Quantum Darwinism explains why pointer states become objectively accessible, no general quantitative law presently determines how redundancy scales with environmental size, coupling structure, observer precision, and environmental complexity. Existing formulations define redundancy operationally through mutual-information thresholds but stop short of deriving a universal scaling relation.
+
+This work introduces a quantitative program for redundancy growth and proposes a formal scaling theory. We construct an information-geometric description of environment-mediated replication and derive a candidate General Redundancy Scaling Law (GRSL), relating observable redundancy to environmental dimensionality, complexity, correlation structure, and decoherence flow.
+
+Part I establishes the mathematical framework and derives the governing variables.
+
+---
+
+# 1. Introduction
+
+The measurement problem concerns how a quantum description exhibiting coherent superpositions produces effectively classical outcomes.
+
+Traditional decoherence theory explains suppression of interference:
+
+[
+\rho_S
+\rightarrow
+\sum_i
+p_i |i\rangle\langle i|
+]
+
+but decoherence alone does not explain why multiple observers agree on the same outcome.
+
+Quantum Darwinism addresses this deficiency.
+
+Instead of direct observation:
+
+[
+S\rightarrow O
+]
+
+objectivity emerges through:
+
+[
+S\rightarrow E_1,E_2,\dots,E_N\rightarrow O_i
+]
+
+where environmental fragments store partially independent records.
+
+Observers reconstruct system properties through environmental interception.
+
+The environment functions simultaneously as:
+
+1. Monitor
+2. Communication channel
+3. Information amplifier
+4. Selection mechanism
+
+Yet an unresolved question remains:
+
+**How does redundancy quantitatively scale?**
+
+If environment size doubles:
+
+[
+N\rightarrow 2N
+]
+
+does redundancy double?
+
+Exponential growth?
+
+Sublinear saturation?
+
+No general law currently predicts this.
+
+This manuscript constructs such a law.
+
+---
+
+# 2. Existing Quantum Darwinism Formalism
+
+## 2.1 Composite Hilbert Structure
+
+Consider:
+
+[
+\mathcal H
+==========
+
+\mathcal H_S
+\otimes
+\mathcal H_E
+]
+
+with
+
+[
+\mathcal H_E
+============
+
+\bigotimes_{k=1}^{N}
+\mathcal H_k
+]
+
+where:
+
+* (S): observed system
+* (E_k): environmental fragment
+
+Global evolution:
+
+[
+U(t)
+====
+
+e^{-iHt}
+]
+
+with
+
+[
+H
+=
+
+H_S
++
+H_E
++
+H_{SE}
+]
+
+and
+
+[
+H_{SE}
+======
+
+\sum_k
+A_S\otimes B_k
+]
+
+---
+
+## 2.2 Environment Encoding
+
+Initially:
+
+[
+|\Psi(0)\rangle
+===============
+
+\left(
+\sum_i c_i|s_i\rangle
+\right)
+\otimes
+|E_0\rangle
+]
+
+Evolution yields:
+
+[
+|\Psi(t)\rangle
+===============
+
+\sum_i
+c_i
+|s_i\rangle
+\otimes
+|E_i(t)\rangle
+]
+
+Environment states become correlated.
+
+If:
+
+[
+\langle E_i|E_j\rangle
+\rightarrow0
+]
+
+decoherence occurs.
+
+Observers measure only fragments:
+
+[
+F\subset E
+]
+
+and infer system information.
+
+---
+
+## 2.3 Redundancy Definition
+
+Standard redundancy:
+
+[
+R_\delta
+========
+
+\frac{N}{m_\delta}
+]
+
+where:
+
+[
+I(S:F_{m_\delta})
+=================
+
+(1-\delta)H(S)
+]
+
+Interpretation:
+
+(m_\delta) fragments recover fraction (1-\delta) of information.
+
+Objectivity:
+
+[
+R_\delta\gg1
+]
+
+Problem:
+
+This definition measures redundancy.
+
+It does not predict redundancy.
+
+---
+
+# 3. Quantitative Deficiency of Existing Theory
+
+Present approaches treat redundancy as an empirical output.
+
+Formally:
+
+[
+R
+=
+
+R(H,\rho_0,t)
+]
+
+but no governing differential relation exists.
+
+Three unresolved issues appear.
+
+---
+
+## Problem A — Environment Size
+
+Current theory lacks:
+
+[
+\frac{\partial R}{\partial N}
+]
+
+How rapidly does information replication increase?
+
+---
+
+## Problem B — Environmental Complexity
+
+Two environments with equal dimension may exhibit radically different redundancy.
+
+Example:
+
+[
+\dim(E_A)=\dim(E_B)
+]
+
+yet
+
+[
+R_A\neq R_B
+]
+
+because of differing topology.
+
+Dimension alone cannot govern scaling.
+
+---
+
+## Problem C — Correlation Saturation
+
+Fragments become correlated.
+
+Independent records decrease.
+
+Therefore:
+
+[
+R\not\propto N
+]
+
+indefinitely.
+
+A suppression mechanism must exist.
+
+---
+
+# 4. Axioms for Redundancy Scaling
+
+We introduce four postulates.
+
+---
+
+## Postulate I — Information Replication
+
+Observable redundancy equals independent environmental encoding:
+
+[
+R\propto N_{\text{eff}}
+]
+
+where:
+
+[
+N_{\text{eff}}
+\le N
+]
+
+---
+
+## Postulate II — Complexity Suppression
+
+Environmental complexity reduces replication efficiency.
+
+Define complexity functional:
+
+[
+\mathcal C(E)
+]
+
+Then:
+
+[
+\frac{\partial R}{\partial\mathcal C}
+<
+0
+]
+
+---
+
+## Postulate III — Coupling Amplification
+
+Replication increases with coupling throughput.
+
+Define:
+
+[
+\Gamma
+======
+
+|H_{SE}|
+]
+
+Then:
+
+[
+\frac{\partial R}{\partial\Gamma}
+
+>
+
+0
+]
+
+---
+
+## Postulate IV — Correlation Renormalization
+
+Inter-fragment entanglement suppresses independent copying.
+
+Define:
+
+[
+\Xi
+===
+
+\frac1{N^2}
+\sum_{ij}
+I(E_i:E_j)
+]
+
+Then:
+
+[
+\frac{\partial R}{\partial\Xi}
+<
+0
+]
+
+---
+
+# 5. Information-Geometric State Space
+
+Define redundancy field:
+
+[
+R=R(x^\mu)
+]
+
+coordinates:
+
+[
+x^\mu
+=====
+
+(
+N,
+\Gamma,
+\mathcal C,
+\Xi,
+t
+)
+]
+
+Metric:
+
+[
+ds^2
+====
+
+g_{\mu\nu}
+dx^\mu dx^\nu
+]
+
+with:
+
+[
+g_{\mu\nu}
+==========
+
+-\partial_\mu\partial_\nu S
+]
+
+where (S) is informational entropy.
+
+Redundancy becomes a flow over information geometry.
+
+Define current:
+
+[
+J^\mu
+=====
+
+R,v^\mu
+]
+
+Conservation:
+
+[
+\nabla_\mu J^\mu
+================
+
+\Pi_R
+]
+
+where:
+
+[
+\Pi_R
+]
+
+is redundancy production.
+
+---
+
+# 6. Derivation of the General Redundancy Equation
+
+Assume production scales as:
+
+1. Environment capacity
+2. Coupling throughput
+3. Complexity suppression
+4. Correlation screening
+
+Factorization:
+
+[
+\Pi_R
+=====
+
+\alpha
+N^\beta
+\Gamma^\eta
+e^{-\lambda\mathcal C}
+e^{-\sigma\Xi}
+]
+
+Redundancy obeys:
+
+[
+\boxed{
+\frac{dR}{dt}
+=============
+
+\alpha
+N^\beta
+\Gamma^\eta
+e^{-\lambda\mathcal C}
+e^{-\sigma\Xi}
+--------------
+
+\mu R
+}
+]
+
+where:
+
+* (\alpha): replication coefficient
+* (\beta): environmental scaling exponent
+* (\eta): coupling exponent
+* (\lambda): complexity attenuation
+* (\sigma): correlation suppression
+* (\mu): redundancy decay
+
+This is the first dynamical law.
+
+But it is not yet closed.
+
+We require explicit definitions of:
+
+[
+\mathcal C
+]
+
+and
+
+[
+\Xi
+]
+
+and determination of (\beta).
+
+That constitutes Part II.
+
+---
+
+# 7. Dimensionless Control Parameters
+
+Define:
+
+Environment load:
+
+[
+\chi
+====
+
+\frac{\mathcal C}{\log N}
+]
+
+Replication number:
+
+[
+\mathcal R
+==========
+
+\frac{\alpha N^\beta\Gamma^\eta}{\mu}
+]
+
+Correlation number:
+
+[
+\mathcal X
+==========
+
+\sigma\Xi
+]
+
+Then:
+
+[
+\frac{dR}{d\tau}
+================
+
+\mathcal R
+e^{-(\lambda\chi+\mathcal X)}
+-R
+]
+
+Steady state:
+
+[
+R^*
+===
+
+\mathcal R
+e^{-(\lambda\chi+\mathcal X)}
+]
+
+Objectivity criterion:
+
+[
+R^*\gg1
+]
+
+---
+
+# Part I Result
+
+Quantum Darwinism may be reformulated as a dynamical redundancy field.
+
+The central governing relation introduced here is:
+
+[
+\boxed{
+\frac{dR}{dt}
+=============
+
+\alpha
+N^\beta
+\Gamma^\eta
+e^{-\lambda\mathcal C}
+e^{-\sigma\Xi}
+--------------
+
+\mu R
+}
+]
+
+which predicts that redundancy is governed not solely by environment size but by a competition between amplification, complexity, and environmental self-correlation.
+
+---
+
+### Part II — Complexity Functional, Renormalized Environment Size, and Closed-Form Redundancy Scaling Law
+
+---
+
+# Abstract of Part II
+
+Part I introduced redundancy as a dynamical field and proposed:
+
+[
+\frac{dR}{dt}
+=============
+
+\alpha
+N^\beta
+\Gamma^\eta
+e^{-\lambda\mathcal C}
+e^{-\sigma\Xi}
+--------------
+
+\mu R
+]
+
+but left three quantities undefined:
+
+[
+\mathcal C,\qquad
+\Xi,\qquad
+\beta
+]
+
+In this part we derive explicit expressions for environmental complexity, redundancy suppression due to inter-fragment correlations, and the environmental scaling exponent.
+
+The result is a closed quantitative relation:
+
+[
+\boxed{
+R
+=
+
+\mathcal A
+N_{\mathrm{eff}}^{\beta_*}
+\Gamma^\eta
+}
+]
+
+with
+
+[
+N_{\mathrm{eff}}
+================
+
+N
+e^{-(\lambda\chi+\sigma\Xi)}
+]
+
+and a universal prediction:
+
+[
+\boxed{
+\beta_*
+=======
+
+\frac{1}{1+\chi+\Xi}
+}
+]
+
+which implies redundancy transitions continuously between linear, sublinear, logarithmic, and saturated regimes.
+
+---
+
+# 8. Environmental Complexity as Information Geometry
+
+The environment contains both storage capacity and internal structure.
+
+Let:
+
+[
+E
+=
+
+{E_1,\dots,E_N}
+]
+
+Each fragment possesses reduced state:
+
+[
+\rho_i
+]
+
+Define environmental graph:
+
+[
+G(E)
+====
+
+(V,\mathcal E)
+]
+
+where vertices correspond to fragments.
+
+Edges encode mutual information:
+
+[
+w_{ij}
+======
+
+I(E_i:E_j)
+]
+
+Complex environments exhibit:
+
+* heterogeneous connectivity,
+* correlated encoding,
+* finite accessibility.
+
+Complexity must capture all three.
+
+---
+
+## Definition 1 — Environmental Complexity Functional
+
+Define:
+
+[
+\boxed{
+\mathcal C(E)
+=============
+
+\frac{
+S_{\mathrm{spec}}
++
+\gamma
+S_{\mathrm{corr}}
++
+\kappa
+S_{\mathrm{top}}
+}{
+\log N
+}
+}
+]
+
+Components:
+
+Spectral entropy:
+
+[
+S_{\mathrm{spec}}
+=================
+
+*
+
+\sum_i
+\lambda_i\log\lambda_i
+]
+
+where:
+
+[
+\lambda_i
+]
+
+are normalized eigenvalues of environmental covariance.
+
+Correlation entropy:
+
+[
+S_{\mathrm{corr}}
+=================
+
+*
+
+\sum_{ij}
+p_{ij}\log p_{ij}
+]
+
+Topology entropy:
+
+[
+S_{\mathrm{top}}
+================
+
+-\sum_k
+q_k\log q_k
+]
+
+Properties:
+
+[
+0\le\mathcal C<\infty
+]
+
+Low complexity:
+
+[
+\mathcal C\rightarrow0
+]
+
+Highly structured environment:
+
+[
+\mathcal C\gg1
+]
+
+---
+
+# 9. Effective Environment Size
+
+Raw environment count:
+
+[
+N
+]
+
+overestimates available redundancy.
+
+Only informationally independent fragments matter.
+
+Define:
+
+[
+N_{\mathrm{eff}}
+]
+
+through accessible entropy.
+
+---
+
+## Definition 2 — Effective Environmental Capacity
+
+[
+\boxed{
+N_{\mathrm{eff}}
+================
+
+N
+e^{-\lambda\chi}
+}
+]
+
+where:
+
+[
+\chi
+====
+
+\frac{\mathcal C}{\log N}
+]
+
+Interpretation:
+
+[
+\chi=0
+]
+
+all fragments independent.
+
+[
+\chi>0
+]
+
+usable environment shrinks.
+
+Extreme limit:
+
+[
+\chi\rightarrow\infty
+]
+
+gives:
+
+[
+N_{\mathrm{eff}}\rightarrow1
+]
+
+Only one effective observer channel remains.
+
+---
+
+# 10. Correlation Renormalization
+
+Complexity alone is insufficient.
+
+Fragments may redundantly encode one another.
+
+We define a second suppression field.
+
+---
+
+## Definition 3 — Correlation Density
+
+[
+\boxed{
+\Xi
+===
+
+\frac{
+1
+}{
+N(N-1)
+}
+\sum_{i\ne j}
+\frac{
+I(E_i:E_j)
+}{
+H(E_i)+H(E_j)
+}
+}
+]
+
+Properties:
+
+[
+0\le\Xi\le1
+]
+
+Interpretation:
+
+[
+\Xi=0
+]
+
+independent environment.
+
+[
+\Xi\rightarrow1
+]
+
+complete redundancy collapse.
+
+Effective environment becomes:
+
+[
+\boxed{
+N_{\mathrm{eff}}
+================
+
+N
+e^{-(\lambda\chi+\sigma\Xi)}
+}
+]
+
+---
+
+# 11. Deriving the Scaling Exponent
+
+We now determine:
+
+[
+\beta
+]
+
+instead of assuming it.
+
+---
+
+## Principle of Redundancy Stationarity
+
+Suppose redundancy production is stable under environment subdivision.
+
+Partition:
+
+[
+N\rightarrow kN
+]
+
+Require:
+
+[
+R(kN)
+=====
+
+f(k)
+R(N)
+]
+
+Assume self-similarity:
+
+[
+R
+\propto
+N^\beta
+]
+
+Take logarithm:
+
+[
+\log R
+======
+
+\beta\log N
+]
+
+Differentiate.
+
+[
+\frac{d\log R}{d\log N}
+=======================
+
+\beta
+]
+
+But complexity and correlations modify accessible growth:
+
+[
+d\log R
+=======
+
+## d\log N
+
+## \chi d\log N
+
+\Xi d\log N
+]
+
+Hence:
+
+[
+\beta
+=====
+
+\frac{
+d\log R
+}{
+d\log N
+}
+=
+
+\frac1{1+\chi+\Xi}
+]
+
+Therefore:
+
+[
+\boxed{
+\beta_*
+=======
+
+\frac1{1+\chi+\Xi}
+}
+]
+
+---
+
+# Theorem I — Universal Redundancy Exponent
+
+For self-similar environment encoding with finite complexity and finite mutual correlations,
+
+[
+\boxed{
+0<\beta_*\le1
+}
+]
+
+with:
+
+Linear replication:
+
+[
+\beta_*=1
+]
+
+Sublinear:
+
+[
+\tfrac12<\beta_*<1
+]
+
+Logarithmic regime:
+
+[
+\beta_*\rightarrow0
+]
+
+Saturation:
+
+[
+R\rightarrow\mathrm{constant}
+]
+
+Proof.
+
+Because:
+
+[
+\chi,\Xi\ge0
+]
+
+then:
+
+[
+1+\chi+\Xi\ge1
+]
+
+therefore:
+
+[
+0<\beta_*\le1
+]
+
+QED.
+
+---
+
+# 12. Closed-Form General Redundancy Scaling Law
+
+Insert:
+
+[
+N_{\mathrm{eff}}
+================
+
+N
+e^{-(\lambda\chi+\sigma\Xi)}
+]
+
+into Part I dynamics.
+
+Steady state:
+
+[
+\frac{dR}{dt}=0
+]
+
+gives:
+
+[
+\mu R
+=====
+
+\alpha
+N_{\mathrm{eff}}^{\beta_*}
+\Gamma^\eta
+]
+
+Thus:
+
+[
+\boxed{
+R
+=
+
+\frac{\alpha}{\mu}
+\left(
+N
+e^{-(\lambda\chi+\sigma\Xi)}
+\right)^{
+\frac1{1+\chi+\Xi}
+}
+\Gamma^\eta
+}
+]
+
+Equivalent form:
+
+[
+\boxed{
+R
+=
+
+\mathcal A
+N^{
+\frac1{1+\chi+\Xi}
+}
+\Gamma^\eta
+e^{
+-\frac{
+\lambda\chi+\sigma\Xi
+}{
+1+\chi+\Xi
+}
+}
+}
+]
+
+where:
+
+[
+\mathcal A=\frac{\alpha}{\mu}
+]
+
+This is the proposed General Redundancy Scaling Law (GRSL).
+
+---
+
+# 13. Limiting Regimes
+
+---
+
+## Regime A — Ideal Environment
+
+[
+\chi=\Xi=0
+]
+
+Result:
+
+[
+R\sim N
+]
+
+Linear objectivity.
+
+---
+
+## Regime B — Structured Environment
+
+[
+\chi\gg1
+]
+
+Result:
+
+[
+R\sim N^{1/\chi}
+]
+
+Sublinear emergence.
+
+---
+
+## Regime C — Correlation Collapse
+
+[
+\Xi\rightarrow1
+]
+
+Result:
+
+[
+R\sim\sqrt N
+]
+
+Objectivity becomes expensive.
+
+---
+
+## Regime D — High Complexity
+
+[
+\chi+\Xi\gg1
+]
+
+Result:
+
+[
+R\approx\mathrm{constant}
+]
+
+No classical world emerges.
+
+---
+
+# 14. Information-Theoretic Interpretation
+
+Objectivity emerges when:
+
+[
+R\gg1
+]
+
+Insert GRSL.
+
+Threshold:
+
+[
+\boxed{
+N
+\gg
+\exp
+\left(
+\lambda\chi+\sigma\Xi
+\right)
+}
+]
+
+Interpretation:
+
+classical reality appears only when environmental size exceeds an exponential complexity barrier.
+
+---
+
+# Part II Result
+
+Part II converts redundancy from an observational quantity into a predictive scaling theory.
+
+The derived law:
+
+[
+\boxed{
+R
+=
+
+\frac{\alpha}{\mu}
+\left(
+N
+e^{-(\lambda\chi+\sigma\Xi)}
+\right)^{
+\frac1{1+\chi+\Xi}
+}
+\Gamma^\eta
+}
+]
+
+predicts that objectivity is governed by a renormalized environment size and a universal exponent determined jointly by environmental complexity and inter-fragment correlations.
+
+---
+
+### Part III — Temporal Evolution, Redundancy Continuity Equation, and Objectivity Phase Transitions
+
+---
+
+# Abstract of Part III
+
+Parts I–II introduced a proposed General Redundancy Scaling Law (GRSL):
+
+[
+R
+=
+
+\frac{\alpha}{\mu}
+\left(
+N
+e^{-(\lambda\chi+\sigma\Xi)}
+\right)^{
+\frac1{1+\chi+\Xi}
+}
+\Gamma^\eta
+]
+
+interpreting redundancy as a dynamical information field.
+
+The previous treatment established stationary behavior but left unanswered:
+
+1. How redundancy evolves in time;
+2. Whether objectivity emerges continuously or via phase transition;
+3. Whether information replication admits conservation principles.
+
+Part III develops a time-dependent theory.
+
+We derive:
+
+* a redundancy continuity equation,
+* a redundancy transport tensor,
+* an objectivity order parameter,
+* a phase diagram for quantum-to-classical emergence,
+* characteristic timescales for redundancy formation.
+
+---
+
+# 15. Dynamic Redundancy Manifold
+
+Introduce the redundancy field:
+
+[
+R(x^\mu)
+]
+
+defined over informational coordinates:
+
+[
+x^\mu
+=====
+
+(
+t,
+N,
+\Gamma,
+\chi,
+\Xi
+)
+]
+
+with metric:
+
+[
+g_{\mu\nu}
+]
+
+Redundancy becomes a transported quantity.
+
+Define flux:
+
+[
+J^\mu
+=====
+
+R,u^\mu
+]
+
+where:
+
+[
+u^\mu
+=====
+
+\frac{dx^\mu}{d\tau}
+]
+
+is redundancy velocity.
+
+Components:
+
+[
+u^\mu
+=====
+
+(
+u_t,
+u_N,
+u_\Gamma,
+u_\chi,
+u_\Xi
+)
+]
+
+Interpretation:
+
+* (u_t): temporal propagation
+* (u_N): environment growth
+* (u_\Gamma): coupling amplification
+* (u_\chi): complexity drift
+* (u_\Xi): correlation accumulation
+
+---
+
+# 16. Redundancy Conservation Principle
+
+Quantum information is not created arbitrarily.
+
+Replication competes against:
+
+1. decoherence,
+2. environmental mixing,
+3. correlation saturation.
+
+Assume local balance.
+
+---
+
+## Postulate V — Redundancy Transport
+
+Redundancy obeys:
+
+[
+\boxed{
+\partial_\mu J^\mu
+==================
+
+\Pi_R-\Lambda_R
+}
+]
+
+where:
+
+Production:
+
+[
+\Pi_R
+]
+
+Loss:
+
+[
+\Lambda_R
+]
+
+Expand:
+
+[
+\frac{\partial R}{\partial t}
++
+\nabla\cdot(R\mathbf u)
+=======================
+
+\Pi_R-\Lambda_R
+]
+
+---
+
+## Production Term
+
+Using GRSL:
+
+[
+\Pi_R
+=====
+
+\alpha
+N^{\beta_*}
+\Gamma^\eta
+e^{-(\lambda\chi+\sigma\Xi)}
+]
+
+---
+
+## Dissipation Term
+
+Assume irreversible destruction:
+
+[
+\Lambda_R
+=========
+
+\mu R
++
+\nu R^2
+]
+
+Linear term:
+
+fragment degradation.
+
+Quadratic term:
+
+fragment overlap.
+
+Thus:
+
+[
+\boxed{
+\frac{\partial R}{\partial t}
++
+\nabla\cdot(R\mathbf u)
+=======================
+
+\alpha
+N^{\beta_*}
+\Gamma^\eta
+e^{-(\lambda\chi+\sigma\Xi)}
+----------------------------
+
+## \mu R
+
+\nu R^2
+}
+]
+
+This becomes the governing evolution equation.
+
+---
+
+# 17. Logistic Emergence of Objectivity
+
+Neglect transport.
+
+Then:
+
+[
+\frac{dR}{dt}
+=============
+
+A-\mu R-\nu R^2
+]
+
+where:
+
+[
+A
+=
+
+\alpha
+N^{\beta_*}
+\Gamma^\eta
+e^{-(\lambda\chi+\sigma\Xi)}
+]
+
+Solve.
+
+Define:
+
+[
+\Delta
+======
+
+\sqrt{\mu^2+4A\nu}
+]
+
+Solution:
+
+[
+\boxed{
+R(t)
+====
+
+\frac{
+\Delta
+\tanh\left[
+\frac{\Delta}{2}
+(t+t_0)
+\right]
+-\mu
+}{
+2\nu
+}
+}
+]
+
+Properties:
+
+Early:
+
+[
+R\sim At
+]
+
+Intermediate:
+
+[
+R\sim e^{\Delta t}
+]
+
+Late:
+
+[
+R\rightarrow R_*
+]
+
+where:
+
+[
+R_*
+===
+
+\frac{\Delta-\mu}{2\nu}
+]
+
+Interpretation:
+
+objectivity forms sigmoidally.
+
+---
+
+# 18. Objectivity Order Parameter
+
+Classicality requires independent observation.
+
+Define:
+
+[
+\boxed{
+\Phi
+====
+
+\frac{R}{R+R_c}
+}
+]
+
+where:
+
+[
+R_c
+]
+
+is minimum redundancy.
+
+Properties:
+
+[
+0\le\Phi\le1
+]
+
+Quantum regime:
+
+[
+\Phi\approx0
+]
+
+Transitional:
+
+[
+\Phi\sim\tfrac12
+]
+
+Objective:
+
+[
+\Phi\rightarrow1
+]
+
+Equivalent inversion:
+
+[
+R
+=
+
+R_c
+\frac{\Phi}{1-\Phi}
+]
+
+---
+
+# 19. Critical Redundancy Threshold
+
+Insert GRSL.
+
+Critical condition:
+
+[
+R=R_c
+]
+
+Then:
+
+[
+R_c
+===
+
+\frac{\alpha}{\mu}
+\left(
+N
+e^{-(\lambda\chi+\sigma\Xi)}
+\right)^{
+\frac1{1+\chi+\Xi}
+}
+\Gamma^\eta
+]
+
+Solve.
+
+[
+\boxed{
+N_c
+===
+
+\left(
+\frac{\mu R_c}{\alpha\Gamma^\eta}
+\right)^{
+1+\chi+\Xi
+}
+e^{\lambda\chi+\sigma\Xi}
+}
+]
+
+Interpretation:
+
+minimum environment required for objectivity.
+
+Scaling:
+
+[
+N_c
+\propto
+e^{\lambda\chi}
+]
+
+Complex environments require exponentially larger environments.
+
+---
+
+# 20. Phase Diagram of Objectivity
+
+Define dimensionless control:
+
+[
+\Omega
+======
+
+\frac{
+\alpha
+N^{\beta_*}
+\Gamma^\eta
+}{
+\mu
+}
+e^{-(\lambda\chi+\sigma\Xi)}
+]
+
+Three regions emerge.
+
+---
+
+## Region I — Quantum Dominated
+
+[
+\Omega<1
+]
+
+Properties:
+
+[
+R<R_c
+]
+
+No stable records.
+
+---
+
+## Region II — Transitional
+
+[
+\Omega\approx1
+]
+
+Properties:
+
+intermittent objectivity.
+
+Large fluctuations.
+
+---
+
+## Region III — Darwinian Objective
+
+[
+\Omega>1
+]
+
+Properties:
+
+[
+R\gg R_c
+]
+
+Stable environmental records.
+
+---
+
+Critical boundary:
+
+[
+\boxed{
+\Omega=1
+}
+]
+
+---
+
+# 21. Redundancy Correlation Length
+
+Introduce informational distance:
+
+[
+d(E_i,E_j)
+]
+
+Define correlation function:
+
+[
+C(r)
+====
+
+\langle
+R(x)R(x+r)
+\rangle
+]
+
+Near transition:
+
+[
+C(r)
+\sim
+e^{-r/\xi}
+]
+
+Define redundancy correlation length:
+
+[
+\boxed{
+\xi
+\sim
+|\Omega-1|^{-\nu_R}
+}
+]
+
+where:
+
+[
+\nu_R
+]
+
+is redundancy critical exponent.
+
+At:
+
+[
+\Omega\rightarrow1
+]
+
+[
+\xi\rightarrow\infty
+]
+
+Objectivity becomes system-wide.
+
+---
+
+# 22. Emergence Time
+
+Define emergence time:
+
+[
+\tau_D
+======
+
+\int_0^{R_c}
+\frac{dR}
+{
+A-\mu R-\nu R^2
+}
+]
+
+Closed form:
+
+[
+\boxed{
+\tau_D
+======
+
+\frac1\Delta
+\log
+\left(
+\frac{
+\Delta+\mu+2\nu R_c
+}{
+\Delta-\mu-2\nu R_c
+}
+\right)
+}
+]
+
+Scaling:
+
+[
+\tau_D
+\sim
+N^{-\beta_*}
+]
+
+Large environments accelerate classicalization.
+
+Complexity slows it.
+
+---
+
+# 23. Interpretation
+
+The proposed framework predicts:
+
+1. Objectivity emerges dynamically;
+2. Redundancy obeys transport laws;
+3. Environmental complexity acts as informational friction;
+4. Correlation density acts as redundancy pressure;
+5. Classicality appears beyond a critical redundancy threshold.
+
+The environment is therefore interpreted as a nonequilibrium information reactor rather than a passive sink.
+
+---
+
+# Part III Result
+
+The proposed redundancy field obeys:
+
+[
+\boxed{
+\frac{\partial R}{\partial t}
++
+\nabla\cdot(R\mathbf u)
+=======================
+
+\alpha
+N^{\beta_*}
+\Gamma^\eta
+e^{-(\lambda\chi+\sigma\Xi)}
+----------------------------
+
+## \mu R
+
+\nu R^2
+}
+]
+
+with objectivity controlled by:
+
+[
+\boxed{
+\Omega
+======
+
+\frac{
+\alpha
+N^{\beta_*}
+\Gamma^\eta
+}{
+\mu
+}
+e^{-(\lambda\chi+\sigma\Xi)}
+}
+]
+
+and transition at:
+
+[
+\boxed{
+\Omega=1
+}
+]
+
+---
+
+### Part IV — Microscopic Derivation from Open Quantum Dynamics and Environmental Channel Theory
+
+---
+
+# Abstract of Part IV
+
+Parts I–III introduced a proposed macroscopic redundancy theory and a General Redundancy Scaling Law (GRSL):
+
+[
+R
+=
+
+\frac{\alpha}{\mu}
+\left(
+N
+e^{-(\lambda\chi+\sigma\Xi)}
+\right)^{
+\frac1{1+\chi+\Xi}
+}
+\Gamma^\eta
+]
+
+The coefficients:
+
+[
+\alpha,\mu,\lambda,\sigma,\eta
+]
+
+have so far remained phenomenological.
+
+Part IV derives these quantities from microscopic dynamics.
+
+We formulate environmental redundancy as a channel-capacity problem in open quantum systems and connect redundancy growth to:
+
+* decoherence generators,
+* environment spectral density,
+* quantum Fisher geometry,
+* environmental information throughput,
+* non-Markovian backflow.
+
+This establishes a microscopic interpretation of the scaling law.
+
+---
+
+# 24. Microscopic Setup
+
+Consider:
+
+[
+\mathcal H
+==========
+
+\mathcal H_S
+\otimes
+\bigotimes_{k=1}^{N}
+\mathcal H_k
+]
+
+Hamiltonian:
+
+[
+H
+=
+
+H_S
++
+H_E
++
+H_{SE}
+]
+
+with interaction:
+
+[
+H_{SE}
+======
+
+\sum_k
+g_k
+A_S\otimes B_k
+]
+
+where:
+
+[
+g_k
+]
+
+are fragment couplings.
+
+Initial state:
+
+[
+\rho(0)
+=======
+
+\rho_S
+\otimes
+\rho_E
+]
+
+Unitary evolution:
+
+[
+U(t)
+====
+
+e^{-iHt}
+]
+
+Reduced system dynamics:
+
+[
+\rho_S(t)
+=========
+
+\mathrm{Tr}_E
+\left[
+U\rho U^\dagger
+\right]
+]
+
+Environmental fragments inherit records.
+
+---
+
+# 25. Redundancy as Distributed Channel Capacity
+
+Treat each fragment as an information channel.
+
+Fragment map:
+
+[
+\mathcal E_k:
+S\rightarrow E_k
+]
+
+with output:
+
+[
+\rho_k
+======
+
+\mathcal E_k(\rho_S)
+]
+
+Accessible information bounded by Holevo quantity:
+
+[
+\chi_k
+======
+
+## S(\bar\rho)
+
+\sum_i
+p_i
+S(\rho_i)
+]
+
+Total environmental acquisition:
+
+[
+\mathcal I_E
+============
+
+\sum_k
+\chi_k
+]
+
+Not all acquired information is independent.
+
+Define independent throughput:
+
+[
+\boxed{
+\mathcal T
+==========
+
+\sum_k
+\chi_k
+------
+
+\sum_{i<j}
+\omega_{ij}
+I(E_i:E_j)
+}
+]
+
+where:
+
+[
+\omega_{ij}
+]
+
+weights overlap.
+
+Interpretation:
+
+[
+\mathcal T
+]
+
+measures effective record creation.
+
+---
+
+# 26. Microscopic Redundancy Production Rate
+
+Postulate local proportionality:
+
+[
+\frac{dR}{dt}
+\propto
+\mathcal T
+]
+
+Normalize by system entropy.
+
+[
+\boxed{
+\alpha
+======
+
+\frac{
+\mathcal T
+}{
+H(S)
+}
+}
+]
+
+Expanded:
+
+[
+\boxed{
+\alpha
+======
+
+\frac{
+\sum_k\chi_k
+------------
+
+\sum_{i<j}
+\omega_{ij}
+I(E_i:E_j)
+}{
+H(S)
+}
+}
+]
+
+Interpretation:
+
+[
+\alpha
+]
+
+is the redundancy replication efficiency.
+
+Limits:
+
+Perfect independent recording:
+
+[
+\alpha\rightarrow N
+]
+
+Highly correlated environment:
+
+[
+\alpha\rightarrow0
+]
+
+---
+
+# 27. Microscopic Origin of Redundancy Loss
+
+Part III introduced:
+
+[
+-\mu R
+------
+
+\nu R^2
+]
+
+We derive:
+
+[
+\mu
+]
+
+from environmental instability.
+
+Assume fragment fidelity:
+
+[
+F(t)
+====
+
+\mathrm{Tr}
+\sqrt{
+\sqrt{\rho_0}
+\rho(t)
+\sqrt{\rho_0}
+}
+]
+
+Decay rate:
+
+[
+\boxed{
+\mu
+===
+
+*
+
+\frac{d}{dt}
+\log F
+}
+]
+
+Interpretation:
+
+large:
+
+[
+\mu
+]
+
+means records quickly disappear.
+
+Quadratic overlap coefficient:
+
+[
+\boxed{
+\nu
+===
+
+\frac{
+1
+}{
+N^2
+}
+\sum_{ij}
+\frac{
+I(E_i:E_j)
+}{
+H(E_i)
+}
+}
+]
+
+Thus overlap becomes measurable.
+
+---
+
+# 28. Spectral Origin of Complexity Suppression
+
+Part II introduced complexity penalty:
+
+[
+e^{-\lambda\chi}
+]
+
+We derive:
+
+[
+\lambda
+]
+
+from environmental spectrum.
+
+Environmental spectral density:
+
+[
+J(\omega)
+]
+
+Define effective bandwidth:
+
+[
+W
+=
+
+\frac{
+\int
+\omega
+J(\omega)
+d\omega
+}{
+\int
+J(\omega)
+d\omega
+}
+]
+
+Define spectral disorder:
+
+[
+D
+=
+
+\frac{
+\int
+(\omega-W)^2
+J(\omega)
+d\omega
+}{
+W^2
+}
+]
+
+Then:
+
+[
+\boxed{
+\lambda
+=======
+
+\lambda_0
+(1+D)
+}
+]
+
+Interpretation:
+
+broad chaotic spectra suppress replication.
+
+Narrow spectra preserve records.
+
+---
+
+# 29. Correlation Screening from Environmental Entanglement
+
+Correlation suppression:
+
+[
+e^{-\sigma\Xi}
+]
+
+now derived.
+
+Define environment entanglement tensor:
+
+[
+\mathcal E_{ij}
+===============
+
+S(E_i)
++
+S(E_j)
+------
+
+S(E_iE_j)
+]
+
+Average screening:
+
+[
+\boxed{
+\sigma
+======
+
+\sigma_0
+\frac{
+\sum_{ij}
+\mathcal E_{ij}
+}{
+N^2
+}
+}
+]
+
+Interpretation:
+
+entangled environments reduce independent observers.
+
+---
+
+# 30. Coupling Exponent from Information Flux
+
+Part II introduced:
+
+[
+\Gamma^\eta
+]
+
+Assume throughput:
+
+[
+\mathcal T
+\propto
+\Gamma^\eta
+]
+
+Define information susceptibility:
+
+[
+\eta
+====
+
+\frac{
+d\log\mathcal T
+}{
+d\log\Gamma
+}
+]
+
+Thus:
+
+[
+\boxed{
+\eta
+====
+
+\frac{
+\Gamma
+}{
+\mathcal T
+}
+\frac{
+d\mathcal T
+}{
+d\Gamma
+}
+}
+]
+
+Regimes:
+
+[
+\eta=1
+]
+
+linear amplification.
+
+[
+\eta<1
+]
+
+saturation.
+
+[
+\eta>1
+]
+
+superamplification.
+
+---
+
+# 31. Connection to Lindblad Dynamics
+
+Markovian evolution:
+
+[
+\dot\rho
+========
+
+-i[H,\rho]
++
+\sum_a
+\mathcal D[L_a]
+\rho
+]
+
+with:
+
+[
+\mathcal D[L]
+=============
+
+## L\rho L^\dagger
+
+\frac12
+{
+L^\dagger L,
+\rho
+}
+]
+
+Define decoherence generator:
+
+[
+\Lambda_D
+=========
+
+\sum_a
+L_a^\dagger L_a
+]
+
+Environmental information production:
+
+[
+\boxed{
+\alpha
+\propto
+\mathrm{Tr}
+(
+\rho\Lambda_D
+)
+}
+]
+
+Therefore:
+
+[
+R
+]
+
+becomes connected directly to master-equation dynamics.
+
+---
+
+# 32. Non-Markovian Corrections
+
+Quantum Darwinism is typically simplified under memoryless environments.
+
+Allow memory kernel:
+
+[
+\dot\rho(t)
+===========
+
+\int_0^t
+K(t-s)
+\rho(s),ds
+]
+
+Define information backflow:
+
+[
+B(t)
+====
+
+\int
+\max
+\left(
+0,
+-\dot D
+\right)
+dt
+]
+
+where:
+
+[
+D
+]
+
+is distinguishability.
+
+Correct redundancy:
+
+[
+\boxed{
+R_{\mathrm{NM}}
+===============
+
+R
+e^{-\zeta B}
+}
+]
+
+where:
+
+[
+\zeta
+]
+
+measures memory sensitivity.
+
+Prediction:
+
+memory suppresses stable objectivity.
+
+---
+
+# 33. Quantum Fisher Formulation
+
+Objectivity corresponds to parameter recoverability.
+
+Quantum Fisher metric:
+
+[
+F_Q
+===
+
+\mathrm{Tr}
+(
+\rho L^2
+)
+]
+
+with SLD:
+
+[
+L
+]
+
+Define redundancy estimator:
+
+[
+\boxed{
+R
+\propto
+F_Q^{\kappa}
+}
+]
+
+Interpretation:
+
+high redundancy implies large environmental distinguishability.
+
+---
+
+# 34. Microscopic General Redundancy Scaling Law
+
+Substitute microscopic coefficients.
+
+[
+\boxed{
+R
+=
+
+\frac{
+\mathcal T
+}{
+H(S)\mu
+}
+\left(
+N
+e^{
+-\lambda_0(1+D)\chi
+-------------------
+
+\sigma\Xi
+}
+\right)^{
+\frac1{1+\chi+\Xi}
+}
+\Gamma^{
+\Gamma
+\mathcal T^{-1}
+d\mathcal T/d\Gamma
+}
+}
+]
+
+Equivalent logarithmic form:
+
+[
+\boxed{
+\log R
+======
+
+## \log\mathcal T
+
+## \log H(S)
+
+\log\mu
++
+\beta_*
+\log N
+------
+
+\beta_*
+[
+\lambda_0(1+D)\chi
++
+\sigma\Xi
+]
++
+\eta\log\Gamma
+}
+]
+
+This becomes the microscopic closure.
+
+---
+
+# 35. Physical Interpretation
+
+The proposed framework predicts:
+
+* Redundancy equals usable channel throughput.
+* Complexity originates in spectral disorder.
+* Correlations screen observer independence.
+* Memory suppresses stable objectivity.
+* Classicality emerges when environmental information flow exceeds degradation.
+
+Objectivity is interpreted as a nonequilibrium information phase sustained by continuous environmental replication.
+
+---
+
+# Part IV Result
+
+Microscopic coefficients become:
+
+[
+\boxed{
+\alpha
+======
+
+\frac{
+\sum_k\chi_k
+------------
+
+\sum_{i<j}
+\omega_{ij}I(E_i:E_j)
+}{
+H(S)
+}
+}
+]
+
+[
+\boxed{
+\lambda
+=======
+
+\lambda_0(1+D)
+}
+]
+
+[
+\boxed{
+\mu
+===
+
+*
+
+\frac{d}{dt}
+\log F
+}
+]
+
+and produce a closed microscopic redundancy theory.
+
+---
+
+### Part V — Exact Solutions, Benchmark Environments, and Scaling Universality
+
+---
+
+# Abstract of Part V
+
+Parts I–IV introduced a proposed General Redundancy Scaling Law (GRSL) and derived its microscopic coefficients.
+
+The remaining question is whether the framework reproduces recognizable qualitative behavior across canonical open quantum environments.
+
+This part develops solvable benchmark systems and derives explicit redundancy trajectories.
+
+We analyze:
+
+1. Independent spin environments
+2. Photon-scattering environments
+3. Bosonic thermal reservoirs
+4. Chaotic environments
+5. Hierarchical environments
+6. Infinite-dimensional limits
+
+The objective is not to reproduce existing Quantum Darwinism calculations exactly, but to determine whether the proposed redundancy theory produces internally consistent scaling behavior.
+
+---
+
+# 36. General Benchmark Structure
+
+Consider:
+
+[
+S\otimes E
+]
+
+with:
+
+[
+E=\bigotimes_{k=1}^{N}E_k
+]
+
+Redundancy prediction:
+
+[
+\boxed{
+R
+=
+
+\frac{
+\mathcal T
+}{
+H(S)\mu
+}
+\left(
+N
+e^{-\lambda\chi-\sigma\Xi}
+\right)^{
+\frac1{1+\chi+\Xi}
+}
+\Gamma^\eta
+}
+]
+
+Define normalized redundancy:
+
+[
+r
+=
+
+\frac{R}{N}
+]
+
+Interpretation:
+
+[
+r=1
+]
+
+perfect replication.
+
+[
+r\ll1
+]
+
+high redundancy loss.
+
+---
+
+# 37. Model I — Independent Spin Bath
+
+Environment:
+
+[
+\mathcal H_E
+============
+
+\bigotimes_{k=1}^{N}
+\mathbb C^2
+]
+
+Interaction:
+
+[
+H_{SE}
+======
+
+\sum_k
+g
+\sigma_z\otimes\sigma_z^{(k)}
+]
+
+Initial state:
+
+[
+|\Psi_0\rangle
+==============
+
+(a|0\rangle+b|1\rangle)
+\otimes
+|+\rangle^{\otimes N}
+]
+
+Evolution:
+
+[
+|\Psi(t)\rangle
+===============
+
+a|0\rangle|E_0\rangle
++
+b|1\rangle|E_1\rangle
+]
+
+Overlap:
+
+[
+\langle E_0|E_1\rangle
+======================
+
+(\cos 2gt)^N
+]
+
+For:
+
+[
+gt\ll1
+]
+
+[
+\langle E_0|E_1\rangle
+\approx
+e^{-2Ng^2t^2}
+]
+
+Thus:
+
+[
+\Gamma
+\sim
+g\sqrt N
+]
+
+Independent bath:
+
+[
+\chi\approx0,\qquad
+\Xi\approx0
+]
+
+Then:
+
+[
+\boxed{
+R_{\text{spin}}
+\propto
+N
+}
+]
+
+Linear replication.
+
+Objectivity emerges rapidly.
+
+---
+
+# 38. Model II — Photon Scattering Environment
+
+Consider a macroscopic object.
+
+Environment:
+
+[
+E=
+{
+\gamma_1,\dots,\gamma_N
+}
+]
+
+Each scattered photon stores partial information.
+
+Coupling:
+
+[
+H_{SE}
+======
+
+\sum_k
+\hat x\otimes a_k^\dagger a_k
+]
+
+Photon flux:
+
+[
+\Phi_\gamma
+]
+
+Information throughput:
+
+[
+\mathcal T
+\propto
+\Phi_\gamma
+]
+
+Environmental correlations remain weak.
+
+Assume:
+
+[
+\chi
+\sim
+\frac1{\log N}
+]
+
+Then:
+
+[
+\beta_*
+=======
+
+\frac1{1+\chi}
+]
+
+Expand:
+
+[
+\beta_*
+\approx
+1-\chi
+]
+
+Result:
+
+[
+\boxed{
+R_{\gamma}
+\sim
+N^{1-\chi}
+}
+]
+
+Near-linear growth.
+
+Prediction:
+
+macroscopic optical environments produce extremely large redundancy.
+
+---
+
+# 39. Model III — Bosonic Thermal Reservoir
+
+Environment:
+
+[
+H_E
+===
+
+\sum_k
+\omega_k
+a_k^\dagger a_k
+]
+
+Spectral density:
+
+[
+J(\omega)
+=========
+
+\eta\omega^s
+e^{-\omega/\omega_c}
+]
+
+Complexity derived from spectral disorder:
+
+[
+\chi
+\propto
+\mathrm{Var}(\omega)
+]
+
+Temperature introduces correlations.
+
+Estimate:
+
+[
+\Xi
+\sim
+T/T_c
+]
+
+Then:
+
+[
+\boxed{
+R_T
+\propto
+N^{
+\frac1{
+1+
+\mathrm{Var}(\omega)
++
+T/T_c
+}
+}
+}
+]
+
+Prediction:
+
+temperature suppresses redundancy.
+
+High-temperature environments become poor objectivity generators.
+
+---
+
+# 40. Model IV — Chaotic Environment
+
+Environmental Hamiltonian:
+
+[
+H_E
+===
+
+H_{\mathrm{GOE}}
+]
+
+with random matrix statistics.
+
+Spectral entropy:
+
+[
+S_{\mathrm{spec}}
+\sim
+\log N
+]
+
+Therefore:
+
+[
+\chi\sim1
+]
+
+Strong internal entanglement:
+
+[
+\Xi\sim1
+]
+
+Thus:
+
+[
+\beta_*
+=======
+
+\frac13
+]
+
+Result:
+
+[
+\boxed{
+R_{\mathrm{chaotic}}
+\sim
+N^{1/3}
+}
+]
+
+Interpretation:
+
+tripling environment size only doubles redundancy approximately.
+
+Objectivity becomes expensive.
+
+---
+
+# 41. Model V — Hierarchical Environment
+
+Suppose environment contains nested structure.
+
+Fragments grouped into blocks:
+
+[
+E=
+\bigcup_a E^{(a)}
+]
+
+Tree depth:
+
+[
+L
+]
+
+Complexity:
+
+[
+\chi
+\sim
+\log L
+]
+
+Effective size:
+
+[
+N_{\mathrm{eff}}
+\sim
+\frac{N}{L}
+]
+
+Then:
+
+[
+\boxed{
+R_{\mathrm{hier}}
+\sim
+\left(
+\frac{N}{L}
+\right)^{
+1/(1+\log L)
+}
+}
+]
+
+Prediction:
+
+deep hierarchy strongly suppresses replication.
+
+---
+
+# 42. Infinite Environment Limit
+
+Take:
+
+[
+N\rightarrow\infty
+]
+
+Classical intuition predicts:
+
+[
+R\rightarrow\infty
+]
+
+GRSL predicts otherwise.
+
+Since:
+
+[
+R
+\sim
+N^{
+1/(1+\chi+\Xi)
+}
+]
+
+If:
+
+[
+\chi+\Xi\rightarrow\infty
+]
+
+then:
+
+[
+\boxed{
+R
+\rightarrow
+\mathrm{constant}
+}
+]
+
+Therefore:
+
+infinite environments need not generate infinite objectivity.
+
+Complexity may dominate.
+
+---
+
+# 43. Universal Scaling Classes
+
+Define:
+
+[
+R\sim N^\beta
+]
+
+Classify.
+
+---
+
+## Class U — Ultra-Darwinian
+
+[
+\beta\approx1
+]
+
+Examples:
+
+independent photons,
+spin baths.
+
+---
+
+## Class S — Sublinear
+
+[
+1/2<\beta<1
+]
+
+Examples:
+
+structured environments.
+
+---
+
+## Class C — Critical
+
+[
+0<\beta<1/2
+]
+
+Examples:
+
+chaotic reservoirs.
+
+---
+
+## Class L — Localized
+
+[
+\beta\rightarrow0
+]
+
+Objectivity suppressed.
+
+---
+
+# 44. Exact Time Evolution in Solvable Regimes
+
+From Part III:
+
+[
+\frac{dR}{dt}
+=============
+
+A-\mu R-\nu R^2
+]
+
+Define:
+
+[
+A=
+AN^\beta
+]
+
+Solution:
+
+[
+\boxed{
+R(t)
+====
+
+R_*
+\frac{
+1-e^{-t/\tau}
+}{
+1+\kappa e^{-t/\tau}
+}
+}
+]
+
+where:
+
+[
+\tau
+====
+
+\frac1{
+\sqrt{\mu^2+4A\nu}
+}
+]
+
+Growth regimes:
+
+Early:
+
+[
+R\sim t
+]
+
+Middle:
+
+[
+R\sim e^t
+]
+
+Late:
+
+[
+R\rightarrow R_*
+]
+
+Universal collapse:
+
+[
+\frac{R}{R_*}
+=============
+
+F(t/\tau)
+]
+
+---
+
+# 45. Environment Efficiency Bound
+
+Define efficiency:
+
+[
+\epsilon
+========
+
+\frac{R}{N}
+]
+
+Insert GRSL.
+
+[
+\boxed{
+\epsilon
+========
+
+N^{
+-\frac{
+\chi+\Xi
+}{
+1+\chi+\Xi
+}
+}
+}
+]
+
+Implication:
+
+larger environments become progressively less efficient.
+
+More environment does not imply proportionally more objectivity.
+
+---
+
+# 46. Benchmark Summary
+
+| Environment  | Complexity | Correlation |          Predicted Scaling |
+| ------------ | ---------: | ----------: | -------------------------: |
+| Spin bath    |        low |         low |                  (R\sim N) |
+| Photon field |        low |         low |         (R\sim N^{1-\chi}) |
+| Thermal bath |   moderate |    moderate | (R\sim N^{1/(1+\chi+\Xi)}) |
+| Chaotic      |       high |        high |            (R\sim N^{1/3}) |
+| Hierarchical |      large |    moderate |         strong suppression |
+
+---
+
+# Part V Result
+
+The proposed framework yields a family of redundancy universality classes.
+
+The central prediction becomes:
+
+[
+\boxed{
+R
+\sim
+N^{
+1/(1+\chi+\Xi)
+}
+}
+]
+
+rather than universal linear growth.
+
+Redundancy generation is therefore interpreted as a renormalization problem controlled by complexity and environmental self-correlation.
+
+---
+
+### Part VI — Experimental Predictions, Numerical Validation, and Falsifiability Criteria
+
+---
+
+# Abstract of Part VI
+
+Parts I–V developed a proposed General Redundancy Scaling Law (GRSL):
+
+[
+R
+=
+
+\frac{
+\mathcal T
+}{
+H(S)\mu
+}
+\left(
+N
+e^{-\lambda\chi-\sigma\Xi}
+\right)^{
+\frac1{1+\chi+\Xi}
+}
+\Gamma^\eta
+]
+
+This construction remains meaningful only if it generates observable distinctions.
+
+Part VI develops:
+
+1. measurable redundancy observables,
+2. numerical extraction procedures,
+3. scaling diagnostics,
+4. finite-size estimators,
+5. falsifiability criteria.
+
+The objective is to determine whether redundancy obeys universal scaling or remains environment-specific.
+
+---
+
+# 47. Operational Definition of Measured Redundancy
+
+Experimental redundancy cannot access entire environments.
+
+Observers sample fragments.
+
+Let:
+
+[
+F_m
+===
+
+{E_1,\dots,E_m}
+]
+
+Define accessible mutual information:
+
+[
+I_m
+===
+
+I(S:F_m)
+]
+
+Standard redundancy estimator:
+
+[
+R_\delta
+========
+
+\frac{N}{m_\delta}
+]
+
+where:
+
+[
+I_m
+===
+
+(1-\delta)H(S)
+]
+
+GRSL introduces a corrected estimator.
+
+---
+
+## Definition — Renormalized Redundancy Estimator
+
+[
+\boxed{
+R_{\mathrm{obs}}
+================
+
+\frac{
+N
+}{
+m_\delta
+}
+\exp(-\lambda\chi-\sigma\Xi)
+}
+]
+
+Equivalent logarithmic form:
+
+[
+\log R_{\mathrm{obs}}
+=====================
+
+## \log N
+
+## \log m_\delta
+
+## \lambda\chi
+
+\sigma\Xi
+]
+
+Prediction:
+
+raw redundancy overestimates effective objectivity.
+
+---
+
+# 48. Scaling Collapse Procedure
+
+Assume measurements:
+
+[
+R(N)
+]
+
+across environments.
+
+GRSL predicts:
+
+[
+R
+=
+
+A
+N^\beta
+]
+
+with:
+
+[
+\beta
+=====
+
+\frac1{1+\chi+\Xi}
+]
+
+Rescale:
+
+[
+Y
+=
+
+R
+N^{-\beta}
+]
+
+Then:
+
+[
+Y\rightarrow\mathrm{constant}
+]
+
+Procedure:
+
+1. Measure redundancy
+2. Estimate complexity
+3. Estimate correlations
+4. Collapse curves
+
+Successful collapse supports GRSL.
+
+---
+
+# 49. Numerical Extraction of Complexity
+
+Complexity functional:
+
+[
+\chi
+====
+
+\frac{
+S_{\mathrm{spec}}
++
+\gamma S_{\mathrm{corr}}
++
+\kappa S_{\mathrm{top}}
+}{
+(\log N)^2
+}
+]
+
+Algorithm.
+
+Input:
+
+[
+\rho_E
+]
+
+Compute:
+
+Step 1:
+
+Diagonalize covariance.
+
+[
+\Sigma
+]
+
+Step 2:
+
+Compute:
+
+[
+S_{\mathrm{spec}}
+]
+
+Step 3:
+
+Compute graph entropy.
+
+Step 4:
+
+Compute:
+
+[
+\chi
+]
+
+Output:
+
+[
+\beta
+=====
+
+\frac1{1+\chi+\Xi}
+]
+
+Complexity becomes measurable.
+
+---
+
+# 50. Numerical Extraction of Correlation Density
+
+Given environmental tomography.
+
+Compute:
+
+[
+\rho_{ij}
+]
+
+Evaluate:
+
+[
+I(E_i:E_j)
+]
+
+Estimate:
+
+[
+\boxed{
+\Xi
+===
+
+\frac{
+1
+}{
+N(N-1)
+}
+\sum_{ij}
+\frac{
+I(E_i:E_j)
+}{
+H(E_i)+H(E_j)
+}
+}
+]
+
+Finite sampling correction:
+
+[
+\Xi_N
+=====
+
+\Xi_\infty
++
+aN^{-1}
++
+bN^{-2}
+]
+
+Extrapolate.
+
+---
+
+# 51. Prediction I — Sublinear Redundancy Growth
+
+Standard expectation:
+
+[
+R\propto N
+]
+
+GRSL predicts:
+
+[
+R\propto N^\beta
+]
+
+with:
+
+[
+\beta<1
+]
+
+Observable signature:
+
+log–log slope less than unity.
+
+Estimate:
+
+[
+\boxed{
+\beta
+=====
+
+\frac{
+d\log R
+}{
+d\log N
+}
+}
+]
+
+Deviation from:
+
+[
+\beta=1
+]
+
+becomes primary test.
+
+---
+
+# 52. Prediction II — Complexity Barrier
+
+Part II predicted:
+
+[
+N_c
+\sim
+e^{\lambda\chi}
+]
+
+Test.
+
+Hold:
+
+[
+\Gamma
+]
+
+fixed.
+
+Increase complexity.
+
+Measure required environment size.
+
+Expected:
+
+[
+\log N_c
+]
+
+linear in:
+
+[
+\chi
+]
+
+Experimental slope:
+
+[
+\lambda
+]
+
+---
+
+# 53. Prediction III — Correlation Suppression
+
+Control:
+
+[
+\Xi
+]
+
+via fragment interaction.
+
+Prediction:
+
+[
+\boxed{
+\frac{
+\partial R
+}{
+\partial\Xi
+}
+<0
+}
+]
+
+Observable:
+
+increasing environment–environment coupling reduces objectivity.
+
+---
+
+# 54. Prediction IV — Memory-Induced Collapse
+
+From Part IV:
+
+[
+R_{\mathrm{NM}}
+===============
+
+R
+e^{-\zeta B}
+]
+
+Prediction:
+
+strong information backflow delays emergence.
+
+Define delay:
+
+[
+\Delta\tau
+==========
+
+## \tau_{\mathrm{NM}}
+
+\tau_M
+]
+
+Expected:
+
+[
+\Delta\tau
+\propto B
+]
+
+---
+
+# 55. Candidate Experimental Platforms
+
+The proposed framework suggests classes of tests.
+
+---
+
+## Platform A — Controlled Spin Arrays
+
+Construct:
+
+[
+S\otimes E
+]
+
+with tunable:
+
+[
+N
+]
+
+Measure redundancy plateau.
+
+Expected:
+
+[
+R\sim N^\beta
+]
+
+---
+
+## Platform B — Cavity Photonic Environments
+
+Control:
+
+* scattering rate,
+* mode count,
+* spectral structure.
+
+Extract:
+
+[
+\chi
+]
+
+Prediction:
+
+spectral broadening lowers redundancy.
+
+---
+
+## Platform C — Programmable Reservoirs
+
+Engineer:
+
+[
+\Xi
+]
+
+through controlled inter-fragment coupling.
+
+Prediction:
+
+transition boundary.
+
+[
+\Omega=1
+]
+
+---
+
+## Platform D — Tensor-Network Simulation
+
+Represent:
+
+[
+|\Psi\rangle
+]
+
+using:
+
+[
+\mathrm{MPS}
+]
+
+or
+
+[
+\mathrm{PEPS}
+]
+
+Measure:
+
+[
+R(N)
+]
+
+to large sizes.
+
+---
+
+# 56. Finite-Size Scaling Theory
+
+Real experiments satisfy:
+
+[
+N<\infty
+]
+
+Assume:
+
+[
+R(N)
+====
+
+N^\beta
+f(N/\xi)
+]
+
+Expand:
+
+[
+R
+=
+
+N^\beta
+\left(
+1+cN^{-\omega}
++\dots
+\right)
+]
+
+Estimate:
+
+[
+\beta
+]
+
+by crossing.
+
+Finite-size corrections become measurable.
+
+---
+
+# 57. Statistical Model Selection
+
+Suppose measured:
+
+[
+R_i
+]
+
+Compare:
+
+Model M1:
+
+[
+R\propto N
+]
+
+Model M2:
+
+GRSL.
+
+Likelihood:
+
+[
+\mathcal L
+==========
+
+P(R_i|\theta)
+]
+
+Compute:
+
+[
+\Delta\mathrm{AIC}
+]
+
+Decision:
+
+[
+\Delta\mathrm{AIC}>10
+]
+
+strong preference.
+
+Alternative:
+
+Bayesian evidence.
+
+---
+
+# 58. Falsifiability Criteria
+
+The proposed theory fails if any hold.
+
+---
+
+## Criterion F1
+
+Measured:
+
+[
+R\propto N
+]
+
+for all complexity classes.
+
+---
+
+## Criterion F2
+
+[
+\beta
+]
+
+independent of:
+
+[
+\chi,\Xi
+]
+
+---
+
+## Criterion F3
+
+Correlation increase leaves redundancy unchanged.
+
+---
+
+## Criterion F4
+
+No finite critical environment size exists.
+
+---
+
+## Criterion F5
+
+Non-Markovian backflow has no effect.
+
+Any verified failure invalidates GRSL.
+
+---
+
+# 59. Derived Experimental Phase Map
+
+Define observable control:
+
+[
+\Omega_{\mathrm{exp}}
+=====================
+
+\frac{
+R_{\mathrm{obs}}
+}{
+R_c
+}
+]
+
+Regions.
+
+Quantum:
+
+[
+\Omega_{\mathrm{exp}}<1
+]
+
+Mixed:
+
+[
+\Omega_{\mathrm{exp}}\approx1
+]
+
+Objective:
+
+[
+\Omega_{\mathrm{exp}}>1
+]
+
+Prediction:
+
+all environments collapse onto universal coordinates.
+
+---
+
+# 60. Interpretation
+
+The proposed framework replaces the question:
+
+“How many environmental copies exist?”
+
+with:
+
+“How efficiently does the environment transform microscopic information into independent observer access?”
+
+Objectivity becomes a measurable throughput problem.
+
+The classical world appears not because environments are large, but because they remain sufficiently low-complexity and weakly self-correlated to sustain scalable information replication.
+
+---
+
+# Part VI Result
+
+The proposed theory becomes empirically meaningful only through the scaling relation:
+
+[
+\boxed{
+R
+\sim
+N^{
+1/(1+\chi+\Xi)
+}
+}
+]
+
+and its associated predictions:
+
+[
+\boxed{
+\beta<1,
+\qquad
+N_c\sim e^{\lambda\chi},
+\qquad
+R_{\mathrm{NM}}=Re^{-\zeta B}
+}
+]
+
+---
+
+### Part VII — Consistency Proofs, Bounds, and No-Go Theorems
+
+---
+
+# Abstract of Part VII
+
+Parts I–VI introduced a proposed General Redundancy Scaling Law (GRSL), a dynamical redundancy field, and operational predictions.
+
+A viable quantitative theory must satisfy consistency requirements:
+
+1. Preserve quantum-information bounds;
+2. Avoid unlimited information creation;
+3. Respect finite environmental capacity;
+4. Recover ordinary decoherence behavior in appropriate limits.
+
+This part derives mathematical constraints and establishes admissible parameter regions.
+
+We develop:
+
+* redundancy bounds,
+* existence conditions,
+* saturation theorems,
+* monotonicity relations,
+* no-go results.
+
+---
+
+# 61. Consistency Requirements
+
+The proposed redundancy field:
+
+[
+R
+=
+
+\frac{
+\mathcal T
+}{
+H(S)\mu
+}
+\left(
+N
+e^{-\lambda\chi-\sigma\Xi}
+\right)^{
+\beta_*}
+\Gamma^\eta
+]
+
+with:
+
+[
+\beta_*
+=======
+
+\frac1{1+\chi+\Xi}
+]
+
+must satisfy:
+
+---
+
+## Requirement A — Finite Information
+
+[
+R<\infty
+]
+
+---
+
+## Requirement B — Positive Replication
+
+[
+R\ge0
+]
+
+---
+
+## Requirement C — Capacity Preservation
+
+Accessible information cannot exceed environment capacity.
+
+---
+
+## Requirement D — Recovery of Standard Limit
+
+When:
+
+[
+\chi,\Xi\rightarrow0
+]
+
+redundancy must approach conventional behavior.
+
+---
+
+# 62. The Redundancy Capacity Bound
+
+Let:
+
+[
+H(S)
+]
+
+be system entropy.
+
+Environmental fragment entropy:
+
+[
+H(E_i)
+]
+
+Total accessible environment entropy:
+
+[
+H_E
+===
+
+\sum_i H(E_i)
+]
+
+Objectivity requires:
+
+[
+R,H(S)
+]
+
+stored bits.
+
+Thus:
+
+[
+R,H(S)\le H_E
+]
+
+Therefore:
+
+[
+\boxed{
+R
+\le
+\frac{H_E}{H(S)}
+}
+]
+
+This becomes the capacity bound.
+
+Insert GRSL.
+
+[
+\boxed{
+\frac{
+\mathcal T
+}{
+\mu
+}
+\left(
+N
+e^{-\lambda\chi-\sigma\Xi}
+\right)^{\beta_*}
+\Gamma^\eta
+\le
+H_E
+}
+]
+
+Only parameter regions satisfying this inequality remain admissible.
+
+---
+
+# Theorem II — Finite Redundancy
+
+If:
+
+[
+H_E<\infty
+]
+
+then:
+
+[
+R<\infty
+]
+
+Proof.
+
+Capacity inequality gives:
+
+[
+R\le H_E/H(S)
+]
+
+Since:
+
+[
+H(S)>0
+]
+
+result follows.
+
+QED.
+
+---
+
+# 63. No Unlimited Objectivity Theorem
+
+Question:
+
+Can infinite objectivity emerge?
+
+Suppose:
+
+[
+N\rightarrow\infty
+]
+
+GRSL gives:
+
+[
+R
+\sim
+N^{\beta_*}
+]
+
+But:
+
+[
+\beta_*
+=======
+
+\frac1{1+\chi+\Xi}
+]
+
+If complexity grows:
+
+[
+\chi(N)
+\sim
+\log N
+]
+
+then:
+
+[
+\beta_*\rightarrow0
+]
+
+Thus:
+
+[
+R\rightarrow\mathrm{constant}
+]
+
+---
+
+## Theorem III
+
+Infinite environment size does not guarantee infinite redundancy.
+
+Proof.
+
+Take:
+
+[
+\chi=\log N
+]
+
+Then:
+
+[
+R
+\sim
+N^{1/(1+\log N)}
+]
+
+Take logarithm.
+
+[
+\log R
+======
+
+\frac{\log N}{1+\log N}
+]
+
+Limit:
+
+[
+R\rightarrow e
+]
+
+QED.
+
+Interpretation:
+
+environmental growth alone cannot force classicality.
+
+---
+
+# 64. Monotonicity Constraints
+
+Redundancy must behave sensibly.
+
+Differentiate GRSL.
+
+---
+
+## Environment Growth
+
+[
+\frac{\partial R}{\partial N}
+=============================
+
+\frac{\beta_*R}{N}
+]
+
+Since:
+
+[
+\beta_*>0
+]
+
+then:
+
+[
+\boxed{
+\frac{\partial R}{\partial N}>0
+}
+]
+
+More environment never reduces redundancy.
+
+---
+
+## Complexity
+
+[
+\boxed{
+\frac{\partial R}{\partial\chi}<0
+}
+]
+
+---
+
+## Correlations
+
+[
+\boxed{
+\frac{\partial R}{\partial\Xi}<0
+}
+]
+
+---
+
+## Coupling
+
+[
+\boxed{
+\frac{\partial R}{\partial\Gamma}>0
+}
+]
+
+These establish directional consistency.
+
+---
+
+# 65. Redundancy Stability Condition
+
+From Part III:
+
+[
+\frac{dR}{dt}
+=============
+
+A-\mu R-\nu R^2
+]
+
+Steady state:
+
+[
+R_*
+===
+
+\frac{
+\sqrt{\mu^2+4A\nu}
+------------------
+
+\mu
+}{
+2\nu
+}
+]
+
+Perturb:
+
+[
+R=R_*+\delta R
+]
+
+Linearize.
+
+[
+\frac{d(\delta R)}{dt}
+======================
+
+-(\mu+2\nu R_*)
+\delta R
+]
+
+Thus:
+
+[
+\boxed{
+\mu+2\nu R_*>0
+}
+]
+
+ensures stability.
+
+---
+
+# Theorem IV — Stable Objectivity
+
+Objective states remain observable only if redundancy damping exceeds overlap amplification.
+
+---
+
+# 66. Information Conservation Constraint
+
+Environmental copying cannot violate quantum information limits.
+
+Define informational action:
+
+[
+\mathcal A_I
+============
+
+\int
+R(t),dt
+]
+
+Require:
+
+[
+\boxed{
+\mathcal A_I
+\le
+\int
+\frac{
+H_E
+}{
+H(S)
+}
+dt
+}
+]
+
+Interpretation:
+
+total objectivity has finite informational cost.
+
+---
+
+# 67. Redundancy Entropy Production
+
+Define redundancy entropy:
+
+[
+S_R
+===
+
+\log(1+R)
+]
+
+Derivative:
+
+[
+\dot S_R
+========
+
+\frac{
+\dot R
+}{
+1+R
+}
+]
+
+Substitute dynamics.
+
+[
+\dot S_R
+========
+
+\frac{
+A-\mu R-\nu R^2
+}{
+1+R
+}
+]
+
+At equilibrium:
+
+[
+\dot S_R=0
+]
+
+---
+
+## Proposition
+
+Redundancy entropy cannot increase indefinitely.
+
+Bound:
+
+[
+S_R
+\le
+\log
+\left(
+1+
+\frac{H_E}{H(S)}
+\right)
+]
+
+---
+
+# 68. No-Go Theorem for Complexity-Free Objectivity
+
+Assume:
+
+[
+\lambda=0
+]
+
+Then:
+
+[
+R
+\sim
+N^{1/(1+\Xi)}
+]
+
+Suppose:
+
+[
+\Xi\rightarrow0
+]
+
+Then:
+
+[
+R\sim N
+]
+
+Infinite objectivity emerges.
+
+But capacity bound requires:
+
+[
+R
+\le
+H_E/H(S)
+]
+
+Contradiction for sufficiently large:
+
+[
+N
+]
+
+---
+
+## Theorem V
+
+Any viable redundancy theory requires suppression beyond raw environment size.
+
+Complexity or equivalent renormalization cannot be identically zero.
+
+---
+
+# 69. No-Go Theorem for Perfect Correlation
+
+Assume:
+
+[
+\Xi=1
+]
+
+All fragments become mutually dependent.
+
+Effective environment:
+
+[
+N_{\mathrm{eff}}
+================
+
+Ne^{-\sigma}
+]
+
+As:
+
+[
+\sigma\rightarrow\infty
+]
+
+[
+N_{\mathrm{eff}}\rightarrow0
+]
+
+Thus:
+
+[
+R\rightarrow0
+]
+
+---
+
+## Theorem VI
+
+Perfectly correlated environments cannot support objective observation.
+
+Interpretation:
+
+many observers require informational independence.
+
+---
+
+# 70. Classical Recovery Limit
+
+Take:
+
+[
+\chi\rightarrow0
+]
+
+[
+\Xi\rightarrow0
+]
+
+Then:
+
+[
+\beta_*\rightarrow1
+]
+
+GRSL reduces.
+
+[
+R
+\rightarrow
+\frac{
+\mathcal T
+}{
+H(S)\mu
+}
+N
+\Gamma^\eta
+]
+
+Linear redundancy recovered.
+
+---
+
+## Correspondence Principle
+
+The proposed theory reproduces ordinary redundancy growth in low-complexity limits.
+
+---
+
+# 71. Universality Bound
+
+Combine all constraints.
+
+Admissible region:
+
+[
+\boxed{
+0
+<
+\beta_*
+\le1
+}
+]
+
+[
+\boxed{
+R
+\le
+H_E/H(S)
+}
+]
+
+[
+\boxed{
+\mu+2\nu R_*>0
+}
+]
+
+These define physically admissible redundancy.
+
+---
+
+# 72. Interpretation
+
+This analysis suggests:
+
+* redundancy cannot diverge arbitrarily,
+* objectivity requires finite informational resources,
+* complexity regulates replication,
+* correlations constrain observer independence.
+
+The environment therefore acts less like an unlimited copier and more like a finite-capacity information network.
+
+---
+
+# Part VII Result
+
+The proposed framework survives a first consistency analysis under:
+
+[
+\boxed{
+R
+\le
+\frac{H_E}{H(S)}
+}
+]
+
+[
+\boxed{
+0<\beta_*\le1
+}
+]
+
+and stability condition:
+
+[
+\boxed{
+\mu+2\nu R_*>0
+}
+]
+
+---
+
+### Part VIII — Renormalization Group Theory of Redundancy and Objectivity Fixed Points
+
+---
+
+# Abstract of Part VIII
+
+Parts I–VII developed a proposed quantitative theory for redundancy generation and established consistency conditions.
+
+A remaining question is whether objectivity itself possesses scale structure.
+
+Environmental records are not observed at microscopic resolution. Observers access coarse-grained fragments.
+
+This motivates a renormalization description.
+
+Part VIII constructs:
+
+* redundancy coarse-graining,
+* scale flow equations,
+* objectivity beta-functions,
+* redundancy fixed points,
+* universality classes.
+
+The central result is a scale equation governing how objectivity changes under environmental resolution.
+
+---
+
+# 73. Motivation: Objectivity Across Scale
+
+Classical observation is inherently coarse.
+
+Observers do not access:
+
+[
+E_1,E_2,\dots,E_N
+]
+
+individually.
+
+Instead:
+
+[
+E
+\rightarrow
+\tilde E
+]
+
+where fragments are grouped.
+
+Define coarse-graining map:
+
+[
+\mathcal G_b:
+E\rightarrow E'
+]
+
+with scale factor:
+
+[
+b>1
+]
+
+Effective environment:
+
+[
+N\rightarrow N'=N/b
+]
+
+Question:
+
+How does:
+
+[
+R
+]
+
+transform?
+
+---
+
+# 74. Redundancy Renormalization Transformation
+
+GRSL:
+
+[
+R
+=
+
+A
+N^{\beta_*}
+e^{-\beta_*(\lambda\chi+\sigma\Xi)}
+]
+
+Define transformed redundancy:
+
+[
+R'
+==
+
+\mathcal R_b(R)
+]
+
+Assume scale covariance.
+
+Require:
+
+[
+R'
+==
+
+b^{-y_R}
+R
+]
+
+where:
+
+[
+y_R
+]
+
+is redundancy scaling dimension.
+
+Substitute.
+
+[
+R'
+==
+
+A
+(N/b)^{\beta_*}
+e^{-\beta_*(\lambda\chi'+\sigma\Xi')}
+]
+
+Thus:
+
+[
+\boxed{
+R'
+==
+
+R
+b^{-\beta_*}
+\exp
+\left[
+-\beta_*
+(
+\lambda\Delta\chi
++
+\sigma\Delta\Xi
+)
+\right]
+}
+]
+
+with:
+
+[
+\Delta\chi=\chi'-\chi
+]
+
+[
+\Delta\Xi=\Xi'-\Xi
+]
+
+---
+
+# 75. Redundancy Beta Function
+
+Introduce scale parameter:
+
+[
+\ell=\log b
+]
+
+Define:
+
+[
+\boxed{
+\beta_R
+=======
+
+\frac{d\log R}{d\ell}
+}
+]
+
+Using transformation:
+
+[
+\boxed{
+\beta_R
+=======
+
+## -\beta_*
+
+\beta_*
+\lambda
+\frac{d\chi}{d\ell}
+-------------------
+
+\beta_*
+\sigma
+\frac{d\Xi}{d\ell}
+}
+]
+
+Equivalent:
+
+[
+\boxed{
+\beta_R
+=======
+
+*
+
+\frac{
+1
++
+\lambda\chi'
++
+\sigma\Xi'
+}{
+1+\chi+\Xi
+}
+}
+]
+
+Interpretation:
+
+* positive flow → redundancy amplification,
+* negative flow → redundancy loss,
+* zero → scale invariance.
+
+---
+
+# 76. Flow Equations for Complexity and Correlations
+
+Complexity and correlation themselves evolve.
+
+Assume:
+
+[
+\frac{d\chi}{d\ell}
+===================
+
+a\chi-b\chi^2
+]
+
+This logistic flow gives:
+
+[
+\boxed{
+\chi(\ell)
+==========
+
+\frac{
+a
+}{
+b+
+Ce^{-a\ell}
+}
+}
+]
+
+Complexity saturates.
+
+Similarly:
+
+[
+\boxed{
+\frac{d\Xi}{d\ell}
+==================
+
+u\Xi-v\Xi^2
+}
+]
+
+Solution:
+
+[
+\Xi(\ell)
+=========
+
+\frac{
+u
+}{
+v+
+De^{-u\ell}
+}
+]
+
+Correlations exhibit finite asymptotes.
+
+---
+
+# 77. Objectivity Coupling
+
+Define effective objectivity:
+
+[
+g_O
+===
+
+\frac{R}{R_c}
+]
+
+Using Part III:
+
+[
+\Omega
+======
+
+g_O
+]
+
+Objectivity flow:
+
+[
+\boxed{
+\frac{dg_O}{d\ell}
+==================
+
+\beta_O(g_O)
+}
+]
+
+Assume polynomial expansion.
+
+[
+\boxed{
+\beta_O
+=======
+
+## \epsilon g_O
+
+\kappa g_O^2
+}
+]
+
+Solution:
+
+[
+g_O(\ell)
+=========
+
+\frac{
+\epsilon
+}{
+\kappa+
+Ce^{-\epsilon\ell}
+}
+]
+
+---
+
+# 78. Fixed Points of Objectivity
+
+Fixed points satisfy:
+
+[
+\beta_O=0
+]
+
+Solutions:
+
+---
+
+## Quantum Fixed Point
+
+[
+g_O^*=0
+]
+
+Properties:
+
+[
+R=0
+]
+
+No stable environmental records.
+
+---
+
+## Critical Fixed Point
+
+[
+g_O^*=1
+]
+
+Transition.
+
+Large fluctuations.
+
+---
+
+## Objective Fixed Point
+
+[
+\boxed{
+g_O^*
+=====
+
+\frac{\epsilon}{\kappa}
+}
+]
+
+Stable objectivity.
+
+Condition:
+
+[
+\epsilon>\kappa
+]
+
+---
+
+# Theorem VII — Emergent Objectivity Fixed Point
+
+If environmental amplification exceeds redundancy screening, objectivity becomes scale-stable.
+
+Proof.
+
+Linearize.
+
+[
+\frac{d\delta g}{d\ell}
+=======================
+
+(
+\epsilon-2\kappa g^*
+)
+\delta g
+]
+
+For:
+
+[
+g^*=\epsilon/\kappa
+]
+
+eigenvalue:
+
+[
+-\epsilon<0
+]
+
+stable.
+
+QED.
+
+---
+
+# 79. Critical Exponents
+
+Near criticality.
+
+Define:
+
+[
+\xi_R
+\sim
+|g-g_c|^{-\nu}
+]
+
+Objectivity susceptibility:
+
+[
+\chi_O
+======
+
+\frac{dR}{dg}
+]
+
+Scaling:
+
+[
+\chi_O
+\sim
+|g-g_c|^{-\gamma}
+]
+
+Order parameter:
+
+[
+\Phi
+\sim
+(g-g_c)^\beta
+]
+
+Thus:
+
+[
+\boxed{
+\nu,\gamma,\beta
+}
+]
+
+characterize emergence.
+
+---
+
+# 80. Universality Classes of Objectivity
+
+Define classes.
+
+---
+
+## O-I — Linear Objectivity
+
+[
+\beta_*\approx1
+]
+
+Low complexity.
+
+Stable.
+
+---
+
+## O-II — Renormalized Objectivity
+
+[
+1/2<\beta_*<1
+]
+
+Moderate suppression.
+
+---
+
+## O-III — Critical Objectivity
+
+[
+0<\beta_*<1/2
+]
+
+Sensitive emergence.
+
+---
+
+## O-IV — Frozen Objectivity
+
+[
+\beta_*\rightarrow0
+]
+
+No macroscopic consensus.
+
+---
+
+# 81. Coarse-Grained Redundancy Entropy
+
+Define:
+
+[
+S_R=\log(1+R)
+]
+
+Flow:
+
+[
+\frac{dS_R}{d\ell}
+==================
+
+\frac1{1+R}
+\frac{dR}{d\ell}
+]
+
+Substitute.
+
+[
+\boxed{
+\frac{dS_R}{d\ell}
+==================
+
+\frac{
+R
+}{
+1+R
+}
+\beta_R
+}
+]
+
+Entropy fixed point:
+
+[
+\beta_R=0
+]
+
+Interpretation:
+
+objective worlds correspond to stationary redundancy entropy.
+
+---
+
+# 82. Renormalized General Redundancy Scaling Law
+
+Integrate flow.
+
+Obtain scale-dependent redundancy:
+
+[
+\boxed{
+R(\ell)
+=======
+
+R_0
+\exp
+\left[
+------
+
+\int
+\beta_R(\ell)
+d\ell
+\right]
+}
+]
+
+Substitute flows.
+
+[
+\boxed{
+R(\ell)
+=======
+
+R_0
+\left(
+\frac{
+\chi_0
+}{
+\chi(\ell)
+}
+\right)^\lambda
+\left(
+\frac{
+\Xi_0
+}{
+\Xi(\ell)
+}
+\right)^\sigma
+e^{-\beta_*\ell}
+}
+]
+
+This becomes the renormalized GRSL.
+
+---
+
+# 83. Scale Hierarchy
+
+Three scales emerge.
+
+Microscopic:
+
+[
+R\ll1
+]
+
+Mesoscopic:
+
+[
+R\sim1
+]
+
+Macroscopic:
+
+[
+R\gg1
+]
+
+Objectivity appears only beyond crossover:
+
+[
+\ell_c
+]
+
+defined by:
+
+[
+R(\ell_c)=R_c
+]
+
+Thus:
+
+[
+\boxed{
+\ell_c
+======
+
+\frac{
+1
+}{
+\beta_*
+}
+\log
+\frac{
+R_0
+}{
+R_c
+}
+}
+]
+
+---
+
+# 84. Interpretation
+
+The proposed renormalization picture suggests:
+
+* objectivity is scale-dependent,
+* environments coarse-grain information,
+* redundancy possesses fixed points,
+* classicality behaves like an emergent phase.
+
+Observers do not discover objectivity directly; they encounter the stable infrared sector of environmental information flow.
+
+---
+
+# Part VIII Result
+
+Redundancy acquires a scale equation:
+
+[
+\boxed{
+\beta_R
+=======
+
+*
+
+## \beta_*
+
+\beta_*
+\lambda
+\frac{d\chi}{d\ell}
+-------------------
+
+\beta_*
+\sigma
+\frac{d\Xi}{d\ell}
+}
+]
+
+with objectivity controlled by fixed points:
+
+[
+\boxed{
+g_O^*
+=====
+
+0,;
+1,;
+\epsilon/\kappa
+}
+]
+
+The proposed framework therefore reinterprets Quantum Darwinism as a renormalization theory of environmental information.
+
+---
+
+### Part IX — Tensor Networks, Information Geometry, and Continuum Redundancy Fields
+
+---
+
+# Abstract of Part IX
+
+Parts I–VIII treated redundancy as a dynamical and renormalizable quantity.
+
+This raises a structural question:
+
+What mathematical object does redundancy become in the large-environment limit?
+
+This part introduces:
+
+* redundancy tensors,
+* environmental information manifolds,
+* continuum redundancy fields,
+* tensor-network representations,
+* geometric equations for objectivity.
+
+The central proposal is that environmental objectivity can be represented as curvature generated by information replication.
+
+---
+
+# 85. From Discrete Fragments to Continuous Environments
+
+Previous sections assumed:
+
+[
+E
+=
+
+\bigotimes_{i=1}^{N}
+E_i
+]
+
+For large environments:
+
+[
+N\rightarrow\infty
+]
+
+replace discrete indexing.
+
+Define environmental coordinates:
+
+[
+x\in\mathcal M_E
+]
+
+Environmental state:
+
+[
+\rho_E(x)
+]
+
+Redundancy becomes:
+
+[
+R_i
+\rightarrow
+R(x)
+]
+
+Total redundancy:
+
+[
+\boxed{
+R_{\mathrm{tot}}
+================
+
+\int_{\mathcal M_E}
+R(x),dV
+}
+]
+
+Objectivity becomes a field.
+
+---
+
+# 86. Redundancy Density and Conservation
+
+Define local redundancy density:
+
+[
+r(x)
+]
+
+such that:
+
+[
+R
+=
+
+\int r(x)dV
+]
+
+Introduce redundancy current:
+
+[
+J^a
+===
+
+ru^a
+]
+
+where:
+
+[
+u^a
+]
+
+is information velocity.
+
+Conservation:
+
+[
+\boxed{
+\nabla_aJ^a
+===========
+
+\Pi-\Lambda
+}
+]
+
+Expanded:
+
+[
+\boxed{
+\partial_t r
++
+\nabla_i(r u^i)
+===============
+
+\Pi-\Lambda
+}
+]
+
+Production:
+
+[
+\Pi
+===
+
+\alpha
+r^\gamma
+]
+
+Loss:
+
+[
+\Lambda
+=======
+
+\mu r+\nu r^2
+]
+
+Field equation:
+
+[
+\boxed{
+\partial_t r
++
+\nabla_i(r u^i)
+===============
+
+## \alpha r^\gamma
+
+## \mu r
+
+\nu r^2
+}
+]
+
+---
+
+# 87. Tensor Representation of Environmental Records
+
+Associate each fragment with local encoding tensor:
+
+[
+Q^{(i)}_{ab}
+]
+
+where indices represent accessible observables.
+
+Global environmental record:
+
+[
+\boxed{
+\mathcal R_{ab}
+===============
+
+\sum_i
+Q^{(i)}_{ab}
+}
+]
+
+Properties.
+
+Trace:
+
+[
+\mathrm{Tr}
+(\mathcal R)
+============
+
+R
+]
+
+Determinant:
+
+[
+\det(\mathcal R)
+]
+
+measures observer independence.
+
+Rank:
+
+[
+\mathrm{rank}
+(\mathcal R)
+]
+
+counts accessible observational directions.
+
+---
+
+# 88. Environmental Metric
+
+Introduce metric from distinguishability.
+
+Define:
+
+[
+\boxed{
+g_{ab}
+======
+
+\partial_a\partial_b
+S
+}
+]
+
+where:
+
+[
+S
+=
+
+*
+
+\mathrm{Tr}
+(
+\rho\log\rho
+)
+]
+
+Interpretation:
+
+large curvature corresponds to rapidly changing information.
+
+Distance:
+
+[
+ds^2
+====
+
+g_{ab}
+dx^adx^b
+]
+
+Redundancy becomes geometric.
+
+---
+
+# 89. Information Curvature
+
+Construct connection:
+
+[
+\Gamma^a_{bc}
+]
+
+Curvature:
+
+[
+R^a_{\ bcd}
+]
+
+Contract.
+
+Define redundancy curvature:
+
+[
+\boxed{
+\mathcal K
+==========
+
+g^{ab}
+R_{ab}
+}
+]
+
+Interpretation:
+
+[
+\mathcal K>0
+]
+
+localized objectivity.
+
+[
+\mathcal K<0
+]
+
+information spreading.
+
+[
+\mathcal K\approx0
+]
+
+uniform accessibility.
+
+---
+
+# 90. Geometric Redundancy Equation
+
+Assume replication generates curvature.
+
+Postulate:
+
+[
+\boxed{
+\mathcal K
+==========
+
+\Lambda_R
+R
+}
+]
+
+where:
+
+[
+\Lambda_R
+]
+
+is redundancy curvature coupling.
+
+Insert GRSL.
+
+[
+\boxed{
+\mathcal K
+==========
+
+\Lambda_R
+\frac{
+\mathcal T
+}{
+H(S)\mu
+}
+N^{\beta_*}
+e^{-\beta_*(\lambda\chi+\sigma\Xi)}
+\Gamma^\eta
+}
+]
+
+Interpretation:
+
+objective worlds correspond to curved information geometries.
+
+---
+
+# 91. Tensor-Network Representation
+
+Represent global state:
+
+[
+|\Psi\rangle
+]
+
+as tensor network.
+
+Vertices:
+
+environment fragments.
+
+Edges:
+
+entanglement.
+
+Tensor:
+
+[
+A^{s}_{\alpha\beta\gamma}
+]
+
+Network amplitude:
+
+[
+\boxed{
+|\Psi\rangle
+============
+
+\mathrm{tTr}
+\prod_i
+A_i
+}
+]
+
+Redundancy encoded by bond multiplicity.
+
+Define redundancy observable:
+
+[
+\boxed{
+R
+\propto
+\sum_i
+\log D_i
+}
+]
+
+where:
+
+[
+D_i
+]
+
+is bond dimension.
+
+---
+
+# 92. Continuum Limit
+
+Take:
+
+[
+N\rightarrow\infty
+]
+
+and lattice spacing:
+
+[
+a\rightarrow0
+]
+
+Define:
+
+[
+r(x)
+====
+
+\lim_{a\to0}
+\frac{R_i}{a^d}
+]
+
+Effective action:
+
+[
+\boxed{
+S_R
+===
+
+\int
+d^dx
+\left[
+\frac12
+(\nabla r)^2
++
+V(r)
+\right]
+}
+]
+
+Potential:
+
+[
+V(r)
+====
+
+-\frac\alpha2r^2
++
+\frac\mu3r^3
++
+\frac\nu4r^4
+]
+
+Euler–Lagrange equation:
+
+[
+\boxed{
+\nabla^2r
+=========
+
+\frac{dV}{dr}
+}
+]
+
+---
+
+# 93. Soliton Solutions
+
+Stationary condition:
+
+[
+\frac{dr}{dt}=0
+]
+
+Then:
+
+[
+\frac{d^2r}{dx^2}
+=================
+
+-\alpha r+\mu r^2+\nu r^3
+]
+
+Localized solution:
+
+[
+\boxed{
+r(x)
+====
+
+r_0
+\operatorname{sech}
+\left(
+\frac{x}{\ell_R}
+\right)
+}
+]
+
+Interpretation:
+
+localized islands of objectivity.
+
+Length scale:
+
+[
+\ell_R
+======
+
+\sqrt{
+\frac2\alpha
+}
+]
+
+---
+
+# 94. Topological Redundancy Charge
+
+Define:
+
+[
+\boxed{
+Q_R
+===
+
+\int
+r(x)d^dx
+}
+]
+
+Conserved under smooth deformation.
+
+Interpretation:
+
+global observer accessibility.
+
+Different:
+
+[
+Q_R
+]
+
+correspond to distinct objectivity sectors.
+
+---
+
+# 95. Information-Geometric Geodesics
+
+Observers access records along shortest informational paths.
+
+Geodesic:
+
+[
+\boxed{
+\frac{d^2x^a}{d\tau^2}
++
+\Gamma^a_{bc}
+\frac{dx^b}{d\tau}
+\frac{dx^c}{d\tau}
+==================
+
+0
+}
+]
+
+Observed outcomes follow minimal information-cost trajectories.
+
+---
+
+# 96. Emergent Objective Domains
+
+Define domain:
+
+[
+\Omega_O
+========
+
+{
+x:r(x)>r_c
+}
+]
+
+Boundary:
+
+[
+r=r_c
+]
+
+Volume:
+
+[
+V_O
+===
+
+\int_{\Omega_O}
+dV
+]
+
+Prediction:
+
+classical reality occupies finite regions of information space.
+
+---
+
+# 97. Unified Continuum Redundancy Equation
+
+Collecting terms.
+
+[
+\boxed{
+\partial_t r
++
+\nabla_i(ru^i)
+==============
+
+D_R\nabla^2r
++
+\alpha r^\gamma
+---------------
+
+## \mu r
+
+\nu r^2
+}
+]
+
+Interpretation:
+
+Redundancy behaves as reaction–diffusion information dynamics.
+
+---
+
+# 98. Interpretation
+
+The proposed continuum picture reinterprets:
+
+* redundancy as a field,
+* objectivity as geometry,
+* environmental records as tensors,
+* observation as geodesic extraction.
+
+Quantum Darwinism becomes a field theory of environmental information.
+
+---
+
+# Part IX Result
+
+The proposed continuum limit yields:
+
+[
+\boxed{
+\partial_t r
++
+\nabla_i(ru^i)
+==============
+
+D_R\nabla^2r
++
+\alpha r^\gamma
+---------------
+
+## \mu r
+
+\nu r^2
+}
+]
+
+with environmental geometry determined by:
+
+[
+\boxed{
+\mathcal K
+==========
+
+\Lambda_RR
+}
+]
+
+Objectivity is interpreted as stable curvature in information space.
+
+---
+
+### Part X — Cosmological Limits, Quantum Gravity Connections, and Universal Objectivity
+
+---
+
+# Abstract of Part X
+
+Parts I–IX developed a proposed redundancy theory in which objectivity emerges through environment-mediated information replication governed by a General Redundancy Scaling Law (GRSL).
+
+The final question concerns asymptotic limits:
+
+Can redundancy remain meaningful for environments approaching cosmological scale?
+
+This part develops:
+
+* cosmological redundancy dynamics,
+* horizon-limited objectivity,
+* gravitational corrections,
+* asymptotic objectivity bounds,
+* universal information emergence.
+
+The central proposal is that objectivity itself possesses a finite cosmological capacity.
+
+---
+
+# 99. Objectivity Beyond Laboratory Systems
+
+Previous sections treated environments as finite collections.
+
+Cosmological environments require:
+
+[
+E\rightarrow E_{\mathrm{cos}}
+]
+
+with:
+
+[
+N\rightarrow\infty
+]
+
+Potential environments include:
+
+* radiation fields,
+* gravitational degrees of freedom,
+* matter distributions,
+* quantum vacuum fluctuations.
+
+Question:
+
+Can objectivity scale indefinitely?
+
+GRSL predicts:
+
+No.
+
+Because complexity and correlations renormalize growth.
+
+---
+
+# 100. Cosmological Redundancy Density
+
+Introduce proper redundancy density:
+
+[
+r(x,t)
+]
+
+over spacetime.
+
+Metric:
+
+[
+ds^2
+====
+
+-g_{\mu\nu}dx^\mu dx^\nu
+]
+
+Total redundancy:
+
+[
+\boxed{
+R_U
+===
+
+\int
+r(x,t)
+\sqrt{-g}
+,d^4x
+}
+]
+
+Assume expansion.
+
+Scale factor:
+
+[
+a(t)
+]
+
+Then:
+
+[
+\boxed{
+r(t)
+====
+
+\frac{
+r_0
+}{
+a(t)^d
+}
+}
+]
+
+Interpretation:
+
+cosmic expansion dilutes accessible records.
+
+---
+
+# 101. Horizon-Limited Objectivity
+
+Observation is finite.
+
+Define horizon size:
+
+[
+L_H
+]
+
+Only environmental records within:
+
+[
+V_H
+]
+
+contribute.
+
+Effective environment:
+
+[
+\boxed{
+N_H
+===
+
+nV_H
+}
+]
+
+where:
+
+[
+n
+]
+
+is fragment density.
+
+Replace GRSL:
+
+[
+\boxed{
+R_H
+===
+
+A
+N_H^{\beta_*}
+e^{-\beta_*(\lambda\chi+\sigma\Xi)}
+}
+]
+
+Objectivity becomes horizon dependent.
+
+---
+
+# 102. Gravitational Information Compression
+
+Assume information storage constrained by area.
+
+Introduce effective capacity:
+
+[
+C_G
+\propto
+A_H
+]
+
+with horizon area.
+
+Define compression factor:
+
+[
+\boxed{
+\kappa_G
+========
+
+\frac{
+C_G
+}{
+V_H
+}
+}
+]
+
+Correct redundancy.
+
+[
+\boxed{
+R_G
+===
+
+\kappa_G
+R_H
+}
+]
+
+Interpretation:
+
+gravity limits replication efficiency.
+
+---
+
+# 103. Gravitational Redundancy Equation
+
+Extend Part IX.
+
+Introduce covariant conservation.
+
+[
+\boxed{
+\nabla_\mu J^\mu
+================
+
+\Pi_R-\Lambda_R
+}
+]
+
+Expand.
+
+[
+\boxed{
+\frac1{\sqrt{-g}}
+\partial_\mu
+(
+\sqrt{-g}
+J^\mu
+)
+=
+
+\Pi_R-\Lambda_R
+}
+]
+
+For homogeneous conditions:
+
+[
+\boxed{
+\dot r
++
+drH
+===
+
+\Pi_R-\Lambda_R
+}
+]
+
+where:
+
+[
+H
+=
+
+\frac{\dot a}{a}
+]
+
+Expansion acts as dilution.
+
+---
+
+# 104. Objectivity Epochs
+
+Define objectivity parameter:
+
+[
+\Omega
+======
+
+\frac{R}{R_c}
+]
+
+Evolution:
+
+[
+\Omega(t)
+=========
+
+\Omega_0
+a^{-d}
+]
+
+Three regimes.
+
+---
+
+## Epoch I — Quantum Dominated
+
+[
+\Omega<1
+]
+
+No stable records.
+
+---
+
+## Epoch II — Emergent
+
+[
+\Omega\sim1
+]
+
+Objectivity begins.
+
+---
+
+## Epoch III — Classical Dominated
+
+[
+\Omega\gg1
+]
+
+Environmental consensus stabilizes.
+
+---
+
+# 105. Maximum Objectivity Principle
+
+Introduce total accessible redundancy:
+
+[
+R_U
+]
+
+Assume finite environmental capacity.
+
+Postulate:
+
+[
+\boxed{
+R_U
+\le
+R_{\max}
+}
+]
+
+Define:
+
+[
+R_{\max}
+========
+
+\Lambda_U
+S_U
+]
+
+where:
+
+[
+S_U
+]
+
+is total accessible entropy.
+
+Interpretation:
+
+objectivity possesses a finite ceiling.
+
+---
+
+# Theorem VIII — Finite Universal Objectivity
+
+If total informational capacity remains finite then universal redundancy remains finite.
+
+Proof.
+
+From:
+
+[
+R_U
+\le
+\Lambda_US_U
+]
+
+If:
+
+[
+S_U<\infty
+]
+
+then:
+
+[
+R_U<\infty
+]
+
+QED.
+
+---
+
+# 106. Quantum Gravity Correction to GRSL
+
+Introduce curvature scalar:
+
+[
+\mathcal R
+]
+
+Modify exponent.
+
+[
+\boxed{
+\beta_G
+=======
+
+\frac{
+1
+}{
+1+\chi+\Xi+\tau\mathcal R
+}
+}
+]
+
+Then:
+
+[
+\boxed{
+R
+=
+
+A
+N^{\beta_G}
+e^{-\beta_G(\lambda\chi+\sigma\Xi)}
+}
+]
+
+Prediction:
+
+curvature suppresses objectivity.
+
+Flat limit:
+
+[
+\mathcal R\rightarrow0
+]
+
+recovers GRSL.
+
+---
+
+# 107. Objective Horizon Radius
+
+Define:
+
+[
+R(R_H)=R_c
+]
+
+Solve.
+
+[
+\boxed{
+L_O
+\propto
+\left(
+\frac{
+R_c
+}{
+A
+}
+\right)^{
+1/(d\beta_G)
+}
+}
+]
+
+Interpretation:
+
+minimum observable environment.
+
+---
+
+# 108. Universal Information Action
+
+Define:
+
+[
+\boxed{
+\mathcal S_O
+============
+
+\int
+R(x)
+\sqrt{-g}
+,d^4x
+}
+]
+
+Variation:
+
+[
+\delta\mathcal S_O=0
+]
+
+produces:
+
+[
+\boxed{
+\nabla^2R
+---------
+
+\frac{
+\partial V
+}{
+\partial R
+}
+=
+
+0
+}
+]
+
+Objectivity follows stationary informational paths.
+
+---
+
+# 109. Asymptotic Objectivity State
+
+Consider:
+
+[
+t\rightarrow\infty
+]
+
+If:
+
+[
+\Pi_R\rightarrow\Lambda_R
+]
+
+then:
+
+[
+\dot R\rightarrow0
+]
+
+Define asymptotic state:
+
+[
+\boxed{
+R_\infty
+========
+
+\frac{
+\Pi_R
+}{
+\Lambda_R
+}
+}
+]
+
+Interpretation:
+
+stable informational equilibrium.
+
+---
+
+# 110. Universal Redundancy Principle
+
+Combine Parts I–X.
+
+Redundancy emerges from:
+
+[
+R
+\sim
+N
+\times
+\text{throughput}
+\times
+\text{independence}
+\times
+\text{capacity}
+]
+
+General expression:
+
+[
+\boxed{
+R
+=
+
+A
+N^{
+1/(1+\chi+\Xi+\tau\mathcal R)
+}
+e^{
+-\frac{
+\lambda\chi+\sigma\Xi
+}{
+1+\chi+\Xi+\tau\mathcal R
+}
+}
+}
+]
+
+This becomes the final proposed cosmological extension.
+
+---
+
+# 111. Interpretation
+
+Across this manuscript, the environment has been reinterpreted from passive decohering background into an active information-distribution medium.
+
+Within the proposed framework:
+
+* decoherence suppresses alternatives,
+* redundancy creates accessibility,
+* complexity limits replication,
+* correlations reduce independence,
+* scale organizes objectivity,
+* geometry constrains observation.
+
+Objectivity becomes an emergent informational phase rather than a primitive property.
+
+---
+
+# Conclusion
+
+This white paper introduced a proposed quantitative extension of Quantum Darwinism centered on the question:
+
+How does environmental redundancy scale?
+
+The proposed answer was formulated through the General Redundancy Scaling Law.
+
+Core proposal:
+
+[
+\boxed{
+R
+\sim
+N^{
+1/(1+\chi+\Xi)
+}
+}
+]
+
+with extensions incorporating:
+
+* complexity,
+* environmental correlations,
+* dynamical transport,
+* renormalization,
+* continuum limits,
+* cosmological constraints.
+
+The theory predicts:
+
+1. Redundancy growth is generally sublinear;
+2. Complexity produces effective environment shrinkage;
+3. Objectivity emerges through threshold behavior;
+4. Infinite environments need not yield infinite objectivity;
+5. Classical reality represents stable environmental information flow.
+
+Future work would require deriving measurable definitions of complexity and correlation directly from concrete open-system models and testing whether any nontrivial scaling universality appears in numerical Quantum Darwinism studies.
+
+---
+
+**End of White Paper**
