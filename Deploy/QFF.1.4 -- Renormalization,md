@@ -1,0 +1,742 @@
+# Quantum Field Theory in Finite Volume as a Systematic Physical Framework
+
+## Volume I — Foundations of Finite-Volume Quantum Field Theory
+
+# Part IV — Renormalization
+
+---
+
+# 24. UV Structure in Compact Space
+
+## 24.1 Introduction
+
+Renormalization is conventionally regarded as a consequence of ultraviolet divergences arising from short-distance fluctuations. Since ultraviolet behavior is local, one might expect compactification to play no role in renormalization.
+
+This expectation is only partially correct.
+
+While leading ultraviolet singularities remain local and independent of global geometry, finite volume modifies the spectral organization of ultraviolet modes and introduces new geometric structures into renormalized observables.
+
+The purpose of this chapter is to establish the ultraviolet foundations of finite-volume quantum field theory.
+
+---
+
+## 24.2 Locality of UV Physics
+
+Consider a scalar theory
+
+[
+\mathcal L
+==========
+
+\frac12(\partial\phi)^2
+-\frac12m^2\phi^2
+-\frac{\lambda}{4!}\phi^4.
+]
+
+At short distances
+
+[
+|x-y|
+\ll L,
+]
+
+propagation cannot resolve the global topology.
+
+Consequently
+
+[
+G_L(x,y)
+========
+
+G_\infty(x,y)
++
+\mathcal O(e^{-mL}).
+]
+
+The singularity structure remains identical:
+
+[
+G_L(x,y)
+\sim
+\frac{1}{4\pi^2|x-y|^2}.
+]
+
+---
+
+## 24.3 UV Universality Theorem
+
+**Theorem.**
+
+For every local relativistic quantum field theory on a compact manifold,
+
+[
+\lim_{|x-y|\to0}
+G_L(x,y)
+========
+
+\lim_{|x-y|\to0}
+G_\infty(x,y).
+]
+
+Hence ultraviolet divergences are independent of volume.
+
+---
+
+### Proof
+
+The image representation gives
+
+[
+G_L(x)
+======
+
+G_\infty(x)
++
+\sum_{n\neq0}
+G_\infty(x+nL).
+]
+
+The second term is finite as
+
+[
+x\to0.
+]
+
+All singular behavior therefore originates from
+
+[
+G_\infty(x).
+]
+
+∎
+
+---
+
+## 24.4 Heat-Kernel Expansion
+
+Let
+
+[
+K(s)
+====
+
+\operatorname{Tr}
+e^{-s\Delta}.
+]
+
+For compact manifolds,
+
+[
+K(s)
+\sim
+(4\pi s)^{-3/2}
+\sum_{k=0}^{\infty}
+a_k s^k.
+]
+
+The coefficients
+
+[
+a_k
+]
+
+encode local geometry.
+
+Examples:
+
+[
+a_0=\operatorname{Vol}(\Sigma),
+]
+
+[
+a_1=\frac16
+\int_\Sigma
+R,dV.
+]
+
+Ultraviolet divergences are therefore governed by geometric invariants.
+
+---
+
+## 24.5 Spectral Regularization
+
+Because the spectrum is discrete,
+
+[
+\lambda_n
+\rightarrow\infty,
+]
+
+one may define
+
+[
+\zeta(s)
+========
+
+\sum_n
+\lambda_n^{-s}.
+]
+
+The determinant becomes
+
+[
+\ln\det\Delta
+=============
+
+-\zeta'(0).
+]
+
+Finite-volume theories thus possess a natural spectral regularization scheme.
+
+---
+
+## 24.6 Renormalized Effective Action
+
+The one-loop effective action is
+
+[
+\Gamma
+======
+
+S
++
+\frac12
+\ln\det K.
+]
+
+Using heat-kernel subtraction,
+
+[
+\Gamma_{\rm ren}
+================
+
+## \Gamma
+
+\Gamma_{\rm div}.
+]
+
+The finite remainder depends explicitly on geometry.
+
+---
+
+## 24.7 Geometric Renormalization Principle
+
+Ultraviolet counterterms remain local, but finite renormalized quantities acquire geometric dependence through compactification.
+
+This principle governs all subsequent developments.
+
+---
+
+# 25. Infrared Regularization by Volume
+
+## 25.1 Infrared Divergences
+
+Infinite-volume theories often suffer infrared singularities.
+
+Typical examples include
+
+[
+\int\frac{d^3p}{p^2},
+]
+
+which diverges as
+
+[
+p\to0.
+]
+
+---
+
+## 25.2 Momentum Gap
+
+Compactification imposes
+
+[
+p_{\min}
+========
+
+\frac{2\pi}{L}.
+]
+
+Consequently
+
+[
+p=0
+]
+
+is isolated.
+
+Infrared divergences are automatically regulated.
+
+---
+
+## 25.3 Infrared Finite Theorem
+
+**Theorem.**
+
+Every finite-volume theory possesses a nonzero infrared scale
+
+[
+\Lambda_V
+=========
+
+\frac{2\pi}{L}.
+]
+
+All momentum integrals become infrared finite.
+
+---
+
+## 25.4 Massless Fields
+
+For a massless scalar,
+
+[
+E_n
+===
+
+\frac{2\pi}{L}|n|.
+]
+
+The spectrum remains discrete.
+
+Infrared pathologies are softened by compactification.
+
+---
+
+## 25.5 Zero-Mode Problem
+
+The exception occurs for
+
+[
+n=0.
+]
+
+The zero mode satisfies
+
+[
+E_0=0.
+]
+
+This mode must be separated explicitly.
+
+Many finite-volume phenomena are controlled by zero-mode dynamics.
+
+---
+
+## 25.6 Finite-Volume Infrared Phase Space
+
+The infrared sector consists of a finite number of modes
+
+[
+|p|
+<
+\Lambda.
+]
+
+Consequently finite-volume theories possess a finite-dimensional infrared Hilbert space.
+
+---
+
+## 25.7 Infrared Geometry Principle
+
+Volume itself acts as a physical infrared regulator.
+
+Infrared behavior becomes a geometric property rather than a pathological divergence.
+
+---
+
+# 26. Finite-Volume Renormalization Group
+
+## 26.1 Need for a New RG
+
+Traditional renormalization studies variation with momentum scale
+
+[
+\mu.
+]
+
+Finite-volume systems possess a second scale
+
+[
+L.
+]
+
+The theory therefore depends on
+
+[
+(\mu,L).
+]
+
+---
+
+## 26.2 Two-Scale Renormalization
+
+Physical observables satisfy
+
+[
+\mathcal O
+==========
+
+\mathcal O(\mu,L).
+]
+
+Both scales influence dynamics.
+
+---
+
+## 26.3 Volume Flow
+
+Define
+
+[
+\beta_L
+=======
+
+L
+\frac{\partial g}{\partial L}.
+]
+
+This quantity measures evolution under changes of spatial volume.
+
+---
+
+## 26.4 Generalized RG Equation
+
+The effective action satisfies
+
+[
+\left(
+\mu\frac{\partial}{\partial\mu}
++
+\beta(g)\frac{\partial}{\partial g}
++
+L\frac{\partial}{\partial L}
+\right)
+\Gamma
+======
+
+0.
+
+]
+
+This is the fundamental finite-volume RG equation.
+
+---
+
+## 26.5 Spectral RG
+
+Since compactification discretizes momenta, coarse-graining can be defined directly in spectral space.
+
+Introduce
+
+[
+\lambda<\Lambda.
+]
+
+Integrating out eigenmodes above
+
+[
+\Lambda
+]
+
+defines an effective spectral theory.
+
+---
+
+## 26.6 Finite-Volume Fixed Points
+
+A fixed point satisfies
+
+[
+\beta(g)=0,
+]
+
+[
+\beta_L(g)=0.
+]
+
+The second condition is absent in ordinary field theory.
+
+---
+
+## 26.7 Volume RG Principle
+
+Volume is elevated from an external parameter to a renormalization coordinate.
+
+The renormalization group becomes a flow on
+
+[
+(\mu,L)
+]
+
+space.
+
+---
+
+# 27. Running Couplings
+
+## 27.1 Conventional Running
+
+In infinite volume,
+
+[
+g=g(\mu).
+]
+
+Renormalization generates scale dependence through
+
+[
+\mu\frac{dg}{d\mu}
+==================
+
+\beta(g).
+]
+
+---
+
+## 27.2 Finite-Volume Running
+
+Compactification introduces
+
+[
+g=g(\mu,L).
+]
+
+The coupling now depends on geometry.
+
+---
+
+## 27.3 One-Loop Example
+
+For
+
+[
+\phi^4
+]
+
+the one-loop correction becomes
+
+[
+\lambda_{\rm eff}
+=================
+
+\lambda
++
+\lambda^2
+\sum_k
+\frac{1}{(k^2+m^2)^2}.
+]
+
+The momentum sum depends on
+
+[
+L.
+]
+
+---
+
+## 27.4 Geometric Running
+
+Define
+
+[
+\gamma_L
+========
+
+L\frac{\partial g}{\partial L}.
+]
+
+This measures geometric evolution.
+
+---
+
+## 27.5 Coupling Surface
+
+The coupling becomes a surface
+
+[
+g(\mu,L)
+]
+
+rather than a single curve.
+
+Renormalization trajectories occupy a two-dimensional parameter space.
+
+---
+
+## 27.6 Universal Decompactification Limit
+
+As
+
+[
+L\to\infty,
+]
+
+[
+\gamma_L\to0,
+]
+
+and ordinary running is recovered.
+
+---
+
+## 27.7 Geometric Coupling Principle
+
+Finite-volume QFT predicts that coupling constants are simultaneously functions of energy scale and compact geometry.
+
+---
+
+# 28. Universal Finite-Size Corrections
+
+## 28.1 General Framework
+
+Every observable admits decomposition
+
+[
+\mathcal O(L)
+=============
+
+\mathcal O_\infty
++
+\Delta\mathcal O(L).
+]
+
+The correction encodes finite-volume physics.
+
+---
+
+## 28.2 Massive Theories
+
+For mass gap
+
+[
+m,
+]
+
+one finds
+
+[
+\Delta\mathcal O
+\sim
+e^{-mL}.
+]
+
+These corrections arise from wrapped propagation.
+
+---
+
+## 28.3 Massless Theories
+
+Power-law behavior appears:
+
+[
+\Delta\mathcal O
+\sim
+L^{-n}.
+]
+
+The exponent depends on universality class.
+
+---
+
+## 28.4 Casimir Energy
+
+Vacuum fluctuations produce
+
+[
+E_C
+===
+
+\frac12
+\sum_n\omega_n.
+]
+
+After renormalization,
+
+[
+E_C(L)
+]
+
+provides a universal finite-volume observable.
+
+---
+
+## 28.5 Spectral Origin
+
+Finite-size effects arise from the difference
+
+[
+\sum_n
+------
+
+\int dn.
+]
+
+Poisson summation yields
+
+[
+\Delta\mathcal O
+================
+
+\sum_{m\neq0}
+\hat f(mL).
+]
+
+This relation underlies all universal volume corrections.
+
+---
+
+## 28.6 Universal Finite-Size Theorem
+
+**Theorem.**
+
+For every local relativistic field theory on a compact manifold,
+
+[
+\Delta\mathcal O(L)
+]
+
+is completely determined by the spectral geometry of the compactification.
+
+---
+
+### Proof Sketch
+
+Observables depend only upon eigenvalues
+
+[
+\lambda_n.
+]
+
+The difference between finite and infinite volume is entirely encoded in the spectral shift function
+
+[
+\xi(\lambda).
+]
+
+Therefore finite-size corrections are geometric invariants of the compact space.
+
+∎
+
+---
+
+## 28.7 Finite-Volume Universality Principle
+
+Finite-volume effects are not artifacts.
+
+They constitute genuine physical observables determined by geometry, topology, and spectral structure.
+
+---
+
+# Conclusions of Part IV
+
+Renormalization in compact space preserves the local ultraviolet structure of ordinary quantum field theory while fundamentally reorganizing its infrared behavior. Compactification introduces a physical infrared scale, converts divergent integrals into discrete spectral sums, and promotes geometry to a renormalization variable alongside energy scale. The resulting framework naturally leads to generalized renormalization-group flows on the two-scale space
+
+[
+(\mu,L),
+]
+
+with coupling constants becoming geometric functions rather than merely energy-dependent parameters.
+
+The central outcome of Part IV is that finite-volume renormalization is not simply ordinary renormalization performed in a box. It is a broader geometric theory in which ultraviolet locality, infrared compactification, spectral regularization, and volume-dependent running are unified within a single framework. These results prepare the way for Part V, where finite-volume scattering theory, LSZ reduction, spectral reconstruction, and the emergence of S-matrix physics from compact spectra will be developed.
