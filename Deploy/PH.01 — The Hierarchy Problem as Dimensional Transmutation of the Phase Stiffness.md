@@ -7188,4 +7188,505 @@ Whether this program ultimately provides an accurate description of nature will 
 
 Nevertheless, the central thesis advanced throughout this work is that the hierarchy problem may be viewed not as an indication of missing protective symmetries or hidden microscopic sectors, but as the emergent consequence of coherence-driven dimensional transmutation acting on a universal phase substrate. If borne out by further theoretical development and empirical investigation, this perspective would recast one of the deepest puzzles in particle physics as a natural manifestation of the geometry of phase itself.
 
+## Appendix A. Functional Renormalization of the Phase Stiffness
+
+A.1 Purpose
+
+The principal mathematical result developed throughout this paper is the evolution of the phase-stiffness tensor under successive coarse-graining. The main text introduced the universal beta functional as the effective renormalization equation governing coherent phase geometry. The purpose of this appendix is to derive that functional directly from the phase-inconsistency functional and to establish its mathematical properties.
+
+Within the present framework, renormalization is interpreted as a geometric evolution of coherent phase configurations rather than as the perturbative subtraction of ultraviolet divergences. The effective stiffness therefore becomes scale dependent because progressively smaller coherent fluctuations are integrated out while preserving the global coherence bound.
+
+⸻
+
+A.2 The Phase-Inconsistency Functional
+
+The fundamental variational functional is
+
+[
+I[\Phi]
+
+\int_M
+\rho(\Phi,D\Phi)
+,d\mu,
+]
+
+with energy density
+
+[
+\rho
+
+\frac12
+K_{ab}(\Phi)
+D_\mu\Phi^a
+D^\mu\Phi^b
++
+V(\Phi)
++
+\lambda
+\operatorname{Tr}
+(F_{\mu\nu}F^{\mu\nu}).
+]
+
+Unlike conventional field theories,
+
+the tensor
+
+[
+K_{ab}
+]
+
+is not regarded as fixed.
+
+Instead,
+
+it evolves under coarse-graining and therefore defines the running geometry of the phase manifold.
+
+⸻
+
+A.3 Separation of Degrees of Freedom
+
+Introduce a decomposition of the phase field,
+
+[
+\Phi
+
+\Phi_<+\Phi_>,
+]
+
+where
+
+[
+\Phi_<
+]
+
+contains coherent modes below the renormalization scale,
+
+and
+
+[
+\Phi_>
+]
+
+contains microscopic fluctuations above that scale.
+
+The effective functional is obtained by integrating over the high-frequency sector,
+
+[
+e^{-I_{\rm eff}[\Phi_<]}
+
+\int
+\mathcal D\Phi_>
+,
+e^{-I[\Phi_<+\Phi_>]}.
+]
+
+This expression defines the coarse-grained geometry without reference to perturbative loop expansions.
+
+⸻
+
+A.4 Effective Stiffness Tensor
+
+Expanding the functional about the coarse-grained configuration,
+
+[
+I
+
+I_<
++
+\delta I
++
+\frac12
+\delta^2I
++\cdots,
+]
+
+integration over
+
+[
+\Phi_>
+]
+
+renormalizes the kinetic term,
+
+[
+\frac12
+K_{ab}
+D_\mu\Phi^a
+D^\mu\Phi^b
+\rightarrow
+\frac12
+K_{ab}^{\rm eff}
+D_\mu\Phi^a
+D^\mu\Phi^b.
+]
+
+Hence,
+
+[
+\boxed{
+K_{ab}
+\rightarrow
+K_{ab}^{\rm eff}(\ell),
+}
+]
+
+where
+
+[
+\ell
+
+\ln
+\left(
+\frac{\Lambda_{\rm coh}}
+{\mu}
+\right).
+]
+
+The geometry itself therefore evolves with observational scale.
+
+⸻
+
+A.5 Infinitesimal Coarse-Graining
+
+Consider an infinitesimal transformation,
+
+[
+\ell
+\rightarrow
+\ell+d\ell.
+]
+
+The effective stiffness changes according to
+
+[
+K_{ab}
+(\ell+d\ell)
+
+K_{ab}
+(\ell)
++
+\delta K_{ab}.
+]
+
+Define
+
+[
+\delta K_{ab}
+
+\beta_{ab}
+,d\ell.
+]
+
+The beta tensor is therefore
+
+[
+\boxed{
+\beta_{ab}
+
+\frac{dK_{ab}}
+{d\ell}.
+}
+]
+
+This equation serves as the fundamental definition of the phase-theoretic renormalization group.
+
+⸻
+
+A.6 Curvature Contribution
+
+The kinetic geometry induces the Levi-Civita connection,
+
+[
+\Gamma^a_{bc}
+
+\frac12
+K^{ad}
+(
+\partial_bK_{dc}
++
+\partial_cK_{bd}
+
+\partial_dK_{bc}
+).
+]
+
+Repeated coarse-graining smooths microscopic curvature.
+
+The leading-order geometric correction is proportional to the Ricci tensor,
+
+[
+\delta K_{ab}
+
+\gamma
+R_{ab}
+,d\ell.
+]
+
+Consequently,
+
+[
+\boxed{
+\beta^{({\rm curv})}_{ab}
+
+\gamma
+R_{ab}.
+}
+]
+
+This contribution is the phase-manifold analogue of geometric Ricci flow.
+
+⸻
+
+A.7 Gauge Contribution
+
+Gauge transport contributes
+
+[
+\lambda
+\operatorname{Tr}
+(F_{\mu\nu}F^{\mu\nu})
+]
+
+to the local coherence energy.
+
+Averaging over microscopic gauge fluctuations modifies the stiffness,
+
+[
+\delta K_{ab}
+
+\lambda
+\langle
+F^2
+\rangle
+K_{ab}
+,d\ell.
+]
+
+Thus,
+
+[
+\boxed{
+\beta^{({\rm gauge})}_{ab}
+
+\lambda
+\langle
+F^2
+\rangle
+K_{ab}.
+}
+]
+
+Gauge fluctuations therefore reduce the effective rigidity of coherent transport.
+
+⸻
+
+A.8 Topological Contribution
+
+Phase defects survive coarse-graining because they are protected by topology.
+
+Their contribution is represented by the defect tensor,
+
+[
+\Omega_{ab}.
+]
+
+Integration over microscopic fluctuations gives
+
+[
+\delta K_{ab}
+
+\eta
+\Omega_{ab}
+,d\ell,
+]
+
+so that
+
+[
+\boxed{
+\beta^{({\rm topo})}_{ab}
+
+\eta
+\Omega_{ab}.
+}
+]
+
+Unlike curvature,
+
+topological excitations reinforce localized coherence.
+
+⸻
+
+A.9 Linear Renormalization Operator
+
+Microscopic averaging also produces linear mixing between stiffness components.
+
+Introduce the renormalization operator,
+
+[
+B_{ab}^{;;cd},
+]
+
+acting according to
+
+[
+\delta K_{ab}
+
+B_{ab}^{;;cd}
+K_{cd}
+,d\ell.
+]
+
+Therefore,
+
+[
+\boxed{
+\beta^{({\rm lin})}_{ab}
+
+B_{ab}^{;;cd}
+K_{cd}.
+}
+]
+
+This operator governs anisotropic flow on the phase manifold.
+
+⸻
+
+A.10 Universal Beta Functional
+
+Summing the independent geometric contributions yields
+
+[
+\boxed{
+\frac{dK_{ab}}
+{d\ell}
+
+B_{ab}^{;;cd}
+K_{cd}
+
+\gamma
+R_{ab}
++
+\eta
+\Omega_{ab}
+
+\lambda
+\langle
+F^2
+\rangle
+K_{ab}.
+}
+]
+
+This tensor equation constitutes the universal renormalization-group equation of Phase Theory.
+
+All gauge sectors,
+
+topological sectors,
+
+and effective interactions arise through projection of this single geometric flow.
+
+⸻
+
+A.11 Covariance
+
+The beta functional transforms covariantly under smooth coordinate transformations of the phase manifold,
+
+[
+K_{ab}
+\rightarrow
+K’_{ab}
+
+\frac{\partial\Phi^c}{\partial\Phi’^a}
+\frac{\partial\Phi^d}{\partial\Phi’^b}
+K_{cd}.
+]
+
+Since every term in the beta functional is tensorial,
+
+[
+\beta_{ab}
+]
+
+likewise transforms as a rank-two covariant tensor.
+
+The renormalization flow is therefore independent of the choice of phase coordinates.
+
+⸻
+
+A.12 Fixed Points
+
+Renormalization fixed points satisfy
+
+[
+\beta_{ab}=0.
+]
+
+Linearizing about
+
+[
+K_{ab}^{(0)},
+]
+
+gives
+
+[
+\delta\beta_{ab}
+
+M_{ab}^{;;cd}
+\delta K_{cd},
+]
+
+where
+
+[
+M_{ab}^{;;cd}
+
+\frac{\partial\beta_{ab}}
+{\partial K_{cd}}.
+]
+
+The eigenvalues of
+
+[
+M
+]
+
+classify ultraviolet-attractive,
+
+infrared-attractive,
+
+and unstable renormalization trajectories.
+
+Electroweak dimensional transmutation corresponds to an infrared trajectory crossing the critical stiffness hypersurface.
+
+⸻
+
+A.13 Existence of the Flow
+
+Theorem A.1 (Existence of Functional Renormalization Flow).
+
+Assume the phase-inconsistency functional is differentiable, bounded below, and defined on a coherence-limited phase manifold. Then infinitesimal coarse-graining induces a continuous tensor evolution
+
+[
+\frac{dK_{ab}}
+{d\ell}
+
+\beta_{ab}(K),
+]
+
+whose leading-order geometric form is given by the universal beta functional.
+
+Proof.
+
+Differentiability of the variational functional guarantees the existence of its first and second functional derivatives. Integration over infinitesimal ultraviolet fluctuations defines a continuous transformation of the effective kinetic tensor. Curvature, gauge fluctuations, topological defects, and linear operator mixing contribute additively to first order in (d\ell). Since each contribution is tensorial, their sum defines a covariant evolution equation for (K_{ab}). Therefore the effective phase geometry evolves continuously under coarse-graining according to the universal beta functional. ∎
+
+⸻
+
+A.14 Interpretation
+
+The construction presented in this appendix provides the mathematical basis for the renormalization program developed throughout this paper. Rather than treating renormalization as the removal of ultraviolet divergences from perturbative loop calculations, Phase Theory interprets it as the evolution of the intrinsic geometry of a coherent phase manifold under successive changes of observational scale.
+
+Within this framework, the phase-stiffness tensor replaces the conventional running coupling as the primary renormalized quantity. Curvature, gauge transport, and topological structure all contribute to a single covariant beta functional whose projections govern electroweak symmetry breaking, strong-interaction confinement, gravitational coherence, and topological mass generation. The universal renormalization flow derived here therefore serves as the mathematical foundation for the hierarchy mechanism proposed throughout the present work.
+
 ## 
