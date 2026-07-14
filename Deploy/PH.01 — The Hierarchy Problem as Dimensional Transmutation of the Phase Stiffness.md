@@ -1,7 +1,7 @@
 # The Hierarchy Problem as Dimensional Transmutation of the Phase Stiffness
 ## A Phase Theory Resolution of the Weak–Planck Mass Separation
 ### Supplementary Note to Phase Theory: A Unified Theory of Matter, Light, and Geometry
-### Marlon Hanks, Independent Researcher, Dust LLc
+### Marlon Hanks, Independent Researcher, Dust LLC
 ### July 11, 2026
 
 ## Abstract
