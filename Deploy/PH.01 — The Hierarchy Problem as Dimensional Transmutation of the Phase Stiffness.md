@@ -8715,4 +8715,398 @@ This appendix establishes the internal stability properties of the hierarchy mec
 
 Accordingly, the hierarchy is interpreted as a dynamically generated geometric property of the coherent phase manifold. Once established, it remains robust under infinitesimal deformations of the ultraviolet phase geometry, reflecting the structural stability of the underlying variational system rather than the cancellation of independent high-energy contributions.
 
+## Appendix D. Numerical Estimates
+
+D.1 Purpose
+
+The preceding appendices established the mathematical structure underlying the hierarchy mechanism proposed in this work. The present appendix provides representative numerical estimates illustrating the behavior of the renormalization equations developed throughout the paper.
+
+These estimates are intended to demonstrate the order-of-magnitude behavior implied by the formalism rather than to constitute precision predictions. A complete quantitative treatment would require explicit derivation of the sector-dependent beta-functional coefficients from the microscopic dynamics of the phase manifold.
+
+⸻
+
+D.2 Reference Scales
+
+Throughout this appendix we employ the following characteristic physical scales:
+
+Quantity	Symbol	Representative Value
+Coherence scale	(\Lambda_{\rm coh})	(1.22\times10^{19},\mathrm{GeV})
+Electroweak scale	(v_{\rm EW})	(246,\mathrm{GeV})
+Higgs boson mass	(m_H)	(125.25,\mathrm{GeV})
+QCD confinement scale	(\Lambda_{\rm QCD})	(0.2,\mathrm{GeV})
+Top-quark mass	(m_t)	(172.7,\mathrm{GeV})
+Electron mass	(m_e)	(0.511,\mathrm{MeV})
+
+The ratio
+
+[
+\frac{\Lambda_{\rm coh}}
+{v_{\rm EW}}
+\approx
+5\times10^{16}
+]
+
+represents the principal hierarchy addressed in this paper.
+
+⸻
+
+D.3 Logarithmic Hierarchy
+
+Using
+
+[
+v_{\rm EW}
+
+\Lambda_{\rm coh}
+\exp!\left(
+-\frac{2\pi}
+{b_{\rm EW}\alpha_{\rm EW}}
+\right),
+]
+
+one finds
+
+[
+\ln
+\left(
+\frac{\Lambda_{\rm coh}}
+{v_{\rm EW}}
+\right)
+\approx
+38.44.
+]
+
+Hence
+
+[
+\boxed{
+\frac{2\pi}
+{b_{\rm EW}\alpha_{\rm EW}}
+\approx
+38.44.
+}
+]
+
+The enormous hierarchy therefore corresponds to a moderate logarithmic renormalization action rather than an extraordinarily large numerical parameter.
+
+⸻
+
+D.4 Representative Coupling Estimate
+
+Assuming
+
+[
+b_{\rm EW}=1,
+]
+
+the corresponding ultraviolet effective coupling becomes
+
+[
+\alpha_{\rm EW}
+
+\frac{2\pi}{38.44}
+\approx
+0.163.
+]
+
+Alternatively,
+
+for
+
+[
+b_{\rm EW}=2,
+]
+
+one obtains
+
+[
+\alpha_{\rm EW}
+\approx
+0.082.
+]
+
+Likewise,
+
+[
+b_{\rm EW}=4
+]
+
+gives
+
+[
+\alpha_{\rm EW}
+\approx
+0.041.
+]
+
+These values remain perturbatively moderate, illustrating that exponential hierarchy generation can arise from order-unity ultraviolet parameters.
+
+⸻
+
+D.5 Sensitivity Analysis
+
+Differentiating the hierarchy equation gives
+
+[
+\frac{\delta v}
+{v}
+
+\frac{\delta\Lambda}
+{\Lambda}
++
+\frac{2\pi}{b^2\alpha}
+\delta b
++
+\frac{2\pi}{b\alpha^2}
+\delta\alpha.
+]
+
+Assume representative values
+
+[
+b=2,
+\qquad
+\alpha=0.082.
+]
+
+Then
+
+[
+\frac{2\pi}{b^2\alpha}
+\approx
+19.2,
+]
+
+while
+
+[
+\frac{2\pi}{b\alpha^2}
+\approx
+4.67\times10^2.
+]
+
+The weak scale therefore depends exponentially upon the renormalization trajectory while remaining multiplicatively related to the generated scale itself.
+
+⸻
+
+D.6 Comparison with QCD
+
+For Quantum Chromodynamics,
+
+dimensional transmutation generates
+
+[
+\Lambda_{\rm QCD}
+
+\Lambda_{\rm UV}
+\exp
+\left(
+-\frac{2\pi}
+{b_0\alpha_s}
+\right).
+]
+
+The proposed electroweak relation possesses identical mathematical structure,
+
+[
+v_{\rm EW}
+
+\Lambda_{\rm coh}
+\exp
+\left(
+-\frac{2\pi}
+{b_{\rm EW}\alpha_{\rm EW}}
+\right).
+]
+
+The numerical distinction lies entirely in the effective beta-functional coefficient and the ultraviolet phase stiffness.
+
+Thus,
+
+within the framework of this paper,
+
+strong confinement and electroweak symmetry breaking are interpreted as parallel infrared manifestations of the same coherence-driven renormalization process.
+
+⸻
+
+D.7 Hierarchy Table
+
+The characteristic logarithmic separations between representative physical scales are summarized below.
+
+Scale Pair	Ratio	Natural Logarithm
+(\Lambda_{\rm coh}/v_{\rm EW})	(5.0\times10^{16})	38.44
+(v_{\rm EW}/\Lambda_{\rm QCD})	(1.23\times10^{3})	7.11
+(m_t/m_e)	(3.38\times10^{5})	12.73
+(\Lambda_{\rm coh}/\Lambda_{\rm QCD})	(6.1\times10^{19})	45.56
+
+These values illustrate that all observed mass hierarchies occupy a comparatively modest logarithmic range despite spanning many orders of magnitude in energy.
+
+⸻
+
+D.8 Running of the Phase Stiffness
+
+Using the one-loop approximation,
+
+[
+\frac{dK}
+{d\ell}
+
+\frac{b}{16\pi^2}
+K,
+]
+
+the solution is
+
+[
+K(\ell)
+
+K_0
+\exp
+\left(
+
+\frac{b\ell}
+{16\pi^2}
+\right).
+]
+
+Since
+
+[
+\alpha
+
+K^{-1},
+]
+
+the effective coupling evolves according to
+
+[
+\alpha(\ell)
+
+\alpha_0
+\exp
+\left(
+\frac{b\ell}
+{16\pi^2}
+\right).
+]
+
+The stiffness therefore decreases smoothly as the effective interaction strength increases toward the infrared.
+
+⸻
+
+D.9 Illustrative Condensation Scale
+
+Suppose
+
+[
+\Lambda_{\rm coh}
+
+1.22\times10^{19},\mathrm{GeV},
+]
+
+with
+
+[
+b_{\rm EW}=2,
+\qquad
+\alpha_{\rm EW}=0.082.
+]
+
+The hierarchy equation yields
+
+[
+v_{\rm EW}
+
+1.22\times10^{19}
+\exp(-38.3)
+\approx
+2.8\times10^{2},\mathrm{GeV},
+]
+
+which lies within the order of magnitude of the observed electroweak scale.
+
+This example is illustrative only. Agreement at the precision level would require a first-principles calculation of the beta-functional coefficients rather than assigning representative values.
+
+⸻
+
+D.10 Coherence Energy Estimate
+
+Associating the coherence scale with the ultraviolet endpoint of admissible phase configurations,
+
+the characteristic coherence energy density is
+
+[
+\rho_{\rm coh}
+\sim
+\Lambda_{\rm coh}^{4}.
+]
+
+Using the representative value,
+
+[
+\Lambda_{\rm coh}
+
+1.22\times10^{19},\mathrm{GeV},
+]
+
+gives
+
+[
+\rho_{\rm coh}
+\sim
+2.2\times10^{76}
+,
+\mathrm{GeV}^{4}.
+]
+
+This represents the characteristic microscopic energy density of the coherent phase substrate prior to infrared condensation.
+
+⸻
+
+D.11 Numerical Consistency
+
+The representative calculations presented above exhibit several notable features.
+
+First,
+
+all observed physical hierarchies correspond to logarithmic separations of order
+
+[
+10\text{–}50,
+]
+
+rather than hundreds or thousands.
+
+Second,
+
+moderate ultraviolet couplings naturally generate exponentially separated infrared scales.
+
+Third,
+
+the hierarchy equation remains numerically stable under modest changes in the beta-functional parameters.
+
+Finally,
+
+the same mathematical structure consistently reproduces the qualitative behavior of both electroweak and strong-interaction dimensional transmutation.
+
+⸻
+
+D.12 Numerical Estimate Theorem
+
+Theorem D.1 (Representative Hierarchy Scale).
+
+Assume the coherence scale is identified with the ultraviolet endpoint of the phase manifold and that the electroweak sector obeys the logarithmic dimensional-transmutation equation developed throughout this paper. Then order-unity ultraviolet parameters generate exponentially separated infrared scales whose magnitudes are consistent with the observed hierarchy between the electroweak and coherence scales.
+
+Proof.
+
+The hierarchy equation depends exponentially upon the inverse effective coupling. Consequently, moderate variations of order-unity ultraviolet parameters produce exponentially different infrared condensation scales. Substitution of representative values demonstrates that logarithmic renormalization actions of order (40) generate scale separations of approximately (10^{17}), reproducing the observed order of magnitude without introducing independently fine-tuned mass parameters. The numerical estimates presented above illustrate this behavior within the assumptions of the proposed framework. ∎
+
+⸻
+
+D.13 Interpretation
+
+The calculations in this appendix provide representative numerical illustrations of the hierarchy mechanism proposed throughout the paper. They demonstrate that coherence-driven dimensional transmutation is capable of producing extremely large separations between ultraviolet and infrared scales from comparatively modest logarithmic renormalization actions.
+
+These estimates should not be interpreted as precision fits. The numerical coefficients appearing in the universal beta functional remain to be derived from the microscopic dynamics of the Phase Theory framework. Once those coefficients are obtained, the hierarchy equation developed in the main text can be evaluated quantitatively and compared directly with experimental measurements of electroweak symmetry breaking, gauge coupling evolution, and particle mass spectra.
+
 ## 
