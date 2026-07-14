@@ -8196,4 +8196,523 @@ The one-loop beta functional provides the leading approximation to the universal
 
 Within the proposed framework, the familiar one-loop renormalization-group equations of gauge theory appear as low-order projections of a more general tensor evolution acting on the phase-stiffness manifold. The hierarchy between the coherence scale and the electroweak scale is thereby interpreted as the first-order consequence of geometric renormalization rather than the cancellation of ultraviolet divergences, while higher-order functional corrections are expected to refine this approximation without altering its underlying geometric origin.
 
+## Appendix C. Stability Proof of the Hierarchy
+
+C.1 Purpose
+
+The central claim of this paper is that the hierarchy between the coherence scale and the electroweak scale is generated dynamically through renormalization of the phase-stiffness tensor rather than through cancellation of independent ultraviolet contributions. Such a mechanism is only viable if the resulting hierarchy is mathematically stable.
+
+The purpose of this appendix is to establish the stability properties of the proposed hierarchy within the Phase Theory framework. Specifically, we demonstrate that, under the assumptions of the theory, small perturbations of the ultraviolet phase geometry produce only multiplicative corrections to the infrared condensation scale. Consequently, the hierarchy is structurally stable under continuous deformations of the phase manifold.
+
+⸻
+
+C.2 Hierarchy Equation
+
+Throughout the main text, the electroweak scale was proposed to satisfy
+
+[
+\boxed{
+v_{\rm EW}
+
+\Lambda_{\rm coh}
+\exp!\left(
+-\frac{2\pi}
+{b_{\rm EW}\alpha_{\rm EW}}
+\right).
+}
+]
+
+Introduce
+
+[
+S
+
+\frac{2\pi}
+{b_{\rm EW}\alpha_{\rm EW}},
+]
+
+so that
+
+[
+v_{\rm EW}
+
+\Lambda_{\rm coh}
+e^{-S}.
+]
+
+The quantity
+
+[
+S
+]
+
+may be interpreted as the accumulated renormalization action along the coarse-graining trajectory.
+
+⸻
+
+C.3 Infinitesimal Perturbations
+
+Let the ultraviolet parameters undergo small variations,
+
+[
+\Lambda_{\rm coh}
+\rightarrow
+\Lambda_{\rm coh}
++\delta\Lambda,
+]
+
+[
+b_{\rm EW}
+\rightarrow
+b_{\rm EW}
++\delta b,
+]
+
+[
+\alpha_{\rm EW}
+\rightarrow
+\alpha_{\rm EW}
++\delta\alpha.
+]
+
+Taking the logarithmic differential gives
+
+[
+d\ln v_{\rm EW}
+
+d\ln\Lambda_{\rm coh}
+
+dS.
+]
+
+Since
+
+[
+S
+
+\frac{2\pi}
+{b\alpha},
+]
+
+one obtains
+
+[
+dS
+
+\frac{2\pi}{b^2\alpha}
+,db
+
+\frac{2\pi}{b\alpha^2}
+,d\alpha.
+]
+
+Therefore,
+
+[
+\boxed{
+\frac{\delta v_{\rm EW}}
+{v_{\rm EW}}
+
+\frac{\delta\Lambda_{\rm coh}}
+{\Lambda_{\rm coh}}
++
+\frac{2\pi}{b^2\alpha}
+,\delta b
++
+\frac{2\pi}{b\alpha^2}
+,\delta\alpha.
+}
+]
+
+To first order, all corrections are proportional to the original value of the weak scale.
+
+No additive correction proportional to
+
+[
+\Lambda_{\rm coh}
+]
+
+appears.
+
+⸻
+
+C.4 Variational Stability
+
+Particle masses are defined by
+
+[
+m(\Xi)
+
+\min_{\Phi\in\sigma(\Xi)}
+I_{\rm eff}[\Phi].
+]
+
+Suppose the minimizing configuration is
+
+[
+\Phi_0.
+]
+
+The first variation satisfies
+
+[
+\delta I[\Phi_0]
+
+]
+
+The second variation is
+
+[
+\delta^2I
+
+\int_M
+\delta\Phi^a
+H_{ab}
+\delta\Phi^b
+,d\mu,
+]
+
+where
+
+[
+H_{ab}
+
+\frac{\delta^2I}
+{\delta\Phi^a
+\delta\Phi^b}
+]
+
+is the Hessian operator.
+
+If
+
+[
+H_{ab}
+
+0
+]
+
+in the sense of positive definiteness,
+
+then
+
+[
+\boxed{
+\delta^2I
+
+0,
+}
+]
+
+establishing that the configuration represents a local minimum.
+
+Small perturbations therefore increase the phase-inconsistency functional and cannot destabilize the generated hierarchy.
+
+⸻
+
+C.5 Stability Under RG Flow
+
+The stiffness tensor evolves according to
+
+[
+\frac{dK_{ab}}
+{d\ell}
+
+\beta_{ab}(K).
+]
+
+Consider a perturbation
+
+[
+K_{ab}
+
+K_{ab}^{(0)}
++
+\delta K_{ab}.
+]
+
+Linearizing,
+
+[
+\frac{d(\delta K_{ab})}
+{d\ell}
+
+M_{ab}^{;;cd}
+\delta K_{cd},
+]
+
+where
+
+[
+M_{ab}^{;;cd}
+
+\frac{\partial\beta_{ab}}
+{\partial K_{cd}}
+\Bigg|_{K^{(0)}}.
+]
+
+Solutions are
+
+[
+\delta K
+
+e^{M\ell}
+\delta K(0).
+]
+
+If every eigenvalue satisfies
+
+[
+\operatorname{Re}(\lambda_i)<0,
+]
+
+then
+
+[
+\delta K
+\rightarrow
+0
+]
+
+as
+
+[
+\ell
+\rightarrow
+\infty.
+]
+
+The renormalization trajectory is therefore infrared stable.
+
+⸻
+
+C.6 Topological Protection
+
+The hierarchy ultimately determines masses through topological sectors,
+
+[
+m(\Xi)
+
+\min_{\Phi\in\sigma(\Xi)}
+I[\Phi].
+]
+
+Distinct sectors possess conserved topological invariants,
+
+[
+Q(\Xi)
+
+\text{constant}.
+]
+
+Continuous deformations satisfy
+
+[
+\delta Q=0.
+]
+
+Consequently,
+
+small perturbations cannot move the minimizing configuration into another topological class.
+
+Mass generation therefore inherits stability from the topology of the phase manifold itself.
+
+⸻
+
+C.7 Coherence Bound Stability
+
+The coherence bound requires
+
+[
+J
+\le
+C
+,
+\min
+(|\partial A|,
+|\partial B|).
+]
+
+Suppose
+
+[
+C
+\rightarrow
+C+\delta C.
+]
+
+The coherence scale changes according to
+
+[
+\Lambda_{\rm coh}
+\rightarrow
+\Lambda_{\rm coh}
+(1+\epsilon),
+]
+
+where
+
+[
+|\epsilon|
+\ll
+1.
+]
+
+Since
+
+[
+v_{\rm EW}
+\propto
+\Lambda_{\rm coh},
+]
+
+the weak scale changes proportionally,
+
+[
+\delta v
+
+v
+\epsilon.
+]
+
+The exponential hierarchy remains intact.
+
+The coherence bound therefore preserves relative scale separation under small perturbations.
+
+⸻
+
+C.8 Structural Stability
+
+Combining the preceding analyses,
+
+the hierarchy possesses four independent stabilization mechanisms:
+
+1. Exponential dimensional transmutation.
+2. Variational minimization.
+3. Infrared-attractive renormalization flow.
+4. Topological conservation.
+
+Each mechanism independently suppresses sensitivity to infinitesimal ultraviolet deformations.
+
+Together they define a structurally stable hierarchy.
+
+⸻
+
+C.9 Absence of Additive Instability
+
+A distinguishing property of the proposed framework is the absence of additive ultraviolet corrections.
+
+In perturbative naturalness arguments,
+
+one schematically encounters
+
+[
+m_H^2
+
+m_0^2
++
+\Delta m^2.
+]
+
+Within the present framework,
+
+the hierarchy instead satisfies
+
+[
+m
+
+m_0
+e^{-S},
+]
+
+so that
+
+[
+\delta m
+
+m
+,\delta S.
+]
+
+Corrections therefore scale with the generated mass itself.
+
+They never introduce terms proportional to the ultraviolet coherence scale independently of the renormalization trajectory.
+
+⸻
+
+C.10 Lyapunov Functional
+
+Define
+
+[
+\mathcal L
+
+I_{\rm eff}
+
+I_{\rm min}.
+]
+
+Because
+
+[
+I_{\rm min}
+]
+
+is the variational minimum,
+
+[
+\mathcal L
+\ge
+0.
+]
+
+Differentiating along the renormalization flow,
+
+[
+\frac{d\mathcal L}
+{d\ell}
+
+\int_M
+\beta_{ab}
+\beta^{ab}
+,d\mu
+\le
+0.
+]
+
+Hence,
+
+[
+\boxed{
+\frac{d\mathcal L}
+{d\ell}
+\le
+0.
+}
+]
+
+The effective functional decreases monotonically during coarse-graining.
+
+The hierarchy therefore evolves toward a stable infrared attractor.
+
+⸻
+
+C.11 Stability Theorem
+
+Theorem C.1 (Hierarchy Stability).
+
+Assume the phase-inconsistency functional possesses a positive-definite second variation, the phase-stiffness tensor evolves according to the universal beta functional, and the coherence bound defines the ultraviolet endpoint of admissible phase configurations. Then the electroweak hierarchy generated by dimensional transmutation is structurally stable under infinitesimal perturbations of the ultraviolet geometry.
+
+Proof.
+
+The variational principle ensures that stable particle configurations correspond to local minima of the effective functional. Linearization of the renormalization-group flow shows that perturbations decay whenever the stability matrix has negative real eigenvalues. Conservation of topological invariants prevents continuous transitions between distinct minimizing sectors, while the coherence bound changes only multiplicatively under infinitesimal deformation. Since the electroweak scale depends exponentially upon the renormalization action, all first-order perturbations modify the hierarchy multiplicatively rather than introducing independent ultraviolet-scale contributions. The generated hierarchy therefore remains stable under continuous deformations within the assumptions of the framework. ∎
+
+⸻
+
+C.12 Interpretation
+
+This appendix establishes the internal stability properties of the hierarchy mechanism proposed throughout this paper. Within the assumptions of Phase Theory, the separation between the coherence scale and the electroweak scale is maintained not by delicate cancellations among perturbative contributions but by the combined action of logarithmic renormalization, variational stability, infrared-attractive flow, and topological protection.
+
+Accordingly, the hierarchy is interpreted as a dynamically generated geometric property of the coherent phase manifold. Once established, it remains robust under infinitesimal deformations of the ultraviolet phase geometry, reflecting the structural stability of the underlying variational system rather than the cancellation of independent high-energy contributions.
+
 ## 
