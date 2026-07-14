@@ -33,7 +33,7 @@ The present work further demonstrates that the hierarchy separating the electrow
 
 Finally, the paper identifies the principal mathematical developments required to elevate this proposal from a structural hypothesis to a first-principles derivation. These include construction of the functional renormalization group equation for the complete stiffness tensor, derivation of the electroweak beta functional directly from the phase-inconsistency functional, establishment of the quantitative relationship between the coherence bound and the emergent gravitational scale, and determination of the ultraviolet behavior of the unified phase-stiffness manifold. Successful completion of these developments would provide a non-perturbative explanation for the origin of the electroweak hierarchy in which all observed fundamental mass scales arise as emergent consequences of the same coherence-limited variational dynamics governing the phase substrate.
 
-I. Introduction
+## I. Introduction
 
 The remarkable success of the Standard Model of particle physics has established it as one of the most accurate scientific theories ever constructed. Precision measurements performed over the past five decades have confirmed its predictions across energy scales extending from atomic physics to multi-TeV collider experiments. Nevertheless, beneath this extraordinary empirical success lies a profound conceptual difficulty concerning the origin of physical mass scales. While the Standard Model accurately predicts interactions among elementary particles, it does not explain why those interactions occur at the vastly different characteristic energies observed in nature.
 
@@ -453,3 +453,1437 @@ If this mechanism holds, the weak–Planck hierarchy is not stabilized by symmet
 Instead, it is generated dynamically through the same coherence-limited renormalization process already responsible for confinement, thereby reducing two apparently unrelated naturalness problems to different manifestations of a single variational principle governing the phase substrate.
 
 The next section develops this reformulation explicitly by expressing the hierarchy problem entirely in terms of the phase-stiffness tensor, coherence-limited variational dynamics, and topological defect energies, eliminating reference to elementary scalar mass parameters altogether.
+
+## III. Phase-Theoretic Reformulation
+
+3.1 Introduction
+
+The conventional hierarchy problem is formulated entirely within perturbative quantum field theory. Its fundamental variables are elementary scalar fields, bare mass parameters, and ultraviolet loop corrections computed around a fixed vacuum state. Within that framework, the question is whether the Higgs mass remains stable under increasingly energetic virtual fluctuations.
+
+Phase Theory begins from an entirely different ontology. The primitive object is neither a particle nor a quantum field in the conventional sense, but a continuous phase substrate whose coherent configurations define all observable physical structures. Matter, gauge interactions, geometry, and inertia emerge as distinct manifestations of constrained phase organization. Consequently, the hierarchy problem must be reformulated in terms of the variables that actually exist within the theory.
+
+The purpose of this section is therefore not to solve the hierarchy problem, but to redefine it mathematically. Once expressed in Phase Theory variables, the apparent fine-tuning of the Standard Model becomes a question concerning the evolution of the phase-stiffness tensor under coherence-limited coarse-graining.
+
+⸻
+
+3.2 The Phase Substrate
+
+The fundamental dynamical variable of Phase Theory is the substrate field
+
+[
+\Phi :
+M
+\rightarrow
+\mathcal{P},
+]
+
+where
+
+* (M) denotes spacetime,
+* (\mathcal{P}) denotes the phase manifold.
+
+Every observable quantity is constructed from local or global properties of this mapping.
+
+The energetic content of any configuration is determined by the phase-inconsistency functional
+
+[
+I[\Phi]
+
+\int_M
+\rho(\Phi,D\Phi)
+,d\mu,
+]
+
+with density
+
+[
+\rho
+
+\frac12
+K_{ab}(\Phi)
+D_\mu\Phi^a
+D^\mu\Phi^b
++
+V(\Phi)
++
+\lambda
+\operatorname{Tr}
+(F_{\mu\nu}F^{\mu\nu}).
+]
+
+Unlike the Standard Model Lagrangian, this functional contains no elementary particle masses.
+
+Instead,
+
+* the stiffness tensor (K_{ab}) determines the energetic cost of local phase deformation,
+* the potential (V(\Phi)) determines admissible coherent vacua,
+* the gauge curvature term governs collective phase transport.
+
+All particle properties emerge only after global minimization.
+
+⸻
+
+3.3 Mass as a Variational Quantity
+
+Within Phase Theory every particle corresponds to a topological sector
+
+[
+\Xi
+\in
+\pi_n(\mathcal P),
+]
+
+whose observable mass is defined by
+
+[
+m(\Xi)
+
+\min_{\Phi\in\sigma(\Xi)}
+I[\Phi].
+]
+
+This definition differs fundamentally from the perturbative construction of elementary particles.
+
+No independent mass parameter exists.
+
+No bare scalar mass is introduced.
+
+No counterterm appears.
+
+Instead, mass is a property of the minimizing configuration itself.
+
+The hierarchy problem therefore cannot concern ultraviolet corrections to an elementary mass parameter because no such parameter exists within the formalism.
+
+Instead, one must determine why different topological sectors possess minima differing by many orders of magnitude.
+
+⸻
+
+3.4 The Role of Phase Stiffness
+
+The principal dynamical object governing these minima is the stiffness tensor
+
+[
+K_{ab}(\Phi).
+]
+
+Physically,
+
+large stiffness corresponds to strong resistance against local phase deformation,
+
+while small stiffness corresponds to comparatively flexible phase configurations.
+
+The effective gauge coupling satisfies the inverse relationship
+
+[
+\alpha
+\propto
+K^{-1},
+]
+
+so that
+
+[
+K
+\uparrow
+\quad\Longrightarrow\quad
+\alpha
+\downarrow,
+]
+
+and conversely,
+
+[
+K
+\downarrow
+\quad\Longrightarrow\quad
+\alpha
+\uparrow.
+]
+
+The stiffness tensor therefore replaces the elementary gauge couplings as the primary dynamical variables of the theory.
+
+Gauge interactions become emergent manifestations of the geometry of the phase substrate rather than independent microscopic constants.
+
+⸻
+
+3.5 Coherence-Limited Variational Dynamics
+
+A distinguishing feature of Phase Theory is the existence of a finite coherence bound.
+
+The admissible configuration space is not arbitrary.
+
+Instead,
+
+Axiom 4 constrains the transferable phase information according to
+
+[
+J
+\le
+C
+,
+\min
+(
+|\partial A|,
+|\partial B|
+),
+]
+
+where
+
+(C)
+
+is a universal coherence constant governing the maximum information transmissible across phase boundaries.
+
+This bound has profound consequences.
+
+Unlike perturbative quantum field theory,
+
+there exists no independent ultraviolet cutoff inserted by hand.
+
+Configurations violating coherence cannot exist.
+
+The coherence limit therefore functions as an intrinsic geometric ultraviolet completion.
+
+Rather than regulating divergent loop integrals,
+
+it restricts the admissible variational domain itself.
+
+Consequently,
+
+the minimization problem remains finite before perturbative expansion is ever considered.
+
+⸻
+
+3.6 Reformulating the Hierarchy
+
+Within this framework,
+
+the Standard Model question
+
+Why is the Higgs mass protected from quadratic divergences?
+
+is replaced by
+
+Why does the global minimum associated with electroweak symmetry breaking occur exponentially below the coherence scale?
+
+The distinction is essential.
+
+The first question concerns perturbative corrections,
+
+whereas the second concerns the geometry of the minimizing manifold.
+
+Suppose
+
+[
+\Phi_{\rm EW}
+]
+
+denotes the minimizing configuration corresponding to the electroweak vacuum.
+
+Its energy satisfies
+
+[
+I[\Phi_{\rm EW}]
+<
+I[\Phi]
+]
+
+for all admissible neighboring configurations within the same topological sector.
+
+The magnitude of this minimum is determined not by cancellation between unrelated quantities,
+
+but by the complete structure of
+
+[
+K_{ab},
+\quad
+V(\Phi),
+\quad
+F_{\mu\nu},
+]
+
+and the coherence constraint simultaneously.
+
+The hierarchy therefore becomes a property of the global geometry of the functional rather than perturbative bookkeeping.
+
+⸻
+
+3.7 A Running Phase Stiffness
+
+Section XIII of the foundational Phase Theory manuscript established that the effective phase stiffness evolves under coarse-graining, producing the logarithmic running responsible for Quantum Chromodynamic confinement.
+
+Motivated by that result, we introduce the central hypothesis of the present work.
+
+Hypothesis III.1 (Universal Phase-Stiffness Flow).
+
+Every gauge sector corresponds to a block of the universal stiffness tensor,
+
+[
+K_{ab}
+
+\begin{pmatrix}
+K_{\rm SU(3)} & 0 & 0\
+0 & K_{\rm SU(2)} & 0\
+0 & 0 & K_{\rm U(1)}
+\end{pmatrix},
+]
+
+whose evolution under coarse-graining is governed by a common functional renormalization equation,
+
+[
+\mu
+\frac{dK_{ab}}
+{d\mu}
+
+\beta_{ab}(K).
+]
+
+Consequently,
+
+all observed gauge couplings originate from the renormalization of a single geometric object rather than from independent microscopic constants.
+
+The electroweak hierarchy therefore becomes a statement concerning one block of the universal beta functional.
+
+⸻
+
+3.8 Dimensional Transmutation of the Stiffness
+
+Assume that the electroweak block evolves according to
+
+[
+\mu
+\frac{d\alpha_{\rm EW}}
+{d\mu}
+
+\frac{b_{\rm EW}}
+{2\pi}
+\alpha_{\rm EW}^{,2},
+]
+
+with
+
+[
+\alpha_{\rm EW}
+\propto
+K_{\rm EW}^{-1}.
+]
+
+Integration yields
+
+[
+\alpha_{\rm EW}(\mu)
+
+\frac{2\pi}
+{b_{\rm EW}
+\ln(\mu/\Lambda_{\rm EW})},
+]
+
+where the dynamically generated infrared scale satisfies
+
+[
+\Lambda_{\rm EW}
+
+\Lambda_{\rm coh}
+\exp
+!\left[
+
+\frac{2\pi}
+{b_{\rm EW}
+\alpha_{\rm EW}
+(\Lambda_{\rm coh})}
+\right].
+]
+
+This expression is formally identical to the dimensional transmutation responsible for QCD confinement.
+
+The essential difference is interpretational.
+
+The running quantity is no longer an elementary gauge coupling.
+
+It is the inverse of the evolving phase stiffness of the substrate itself.
+
+⸻
+
+3.9 Reformulated Hierarchy Principle
+
+The hierarchy problem may now be stated entirely within the language of Phase Theory.
+
+Hierarchy Principle.
+
+The separation between the electroweak scale and the coherence scale is determined by the non-perturbative renormalization of the electroweak phase stiffness under coherence-limited coarse-graining.
+
+No ultraviolet cancellation is required.
+
+No elementary scalar mass must be stabilized.
+
+No independently divergent counterterms appear.
+
+Instead, the weak scale is the infrared manifestation of the global geometry of the phase substrate.
+
+The remaining sections of this paper are devoted to deriving this principle quantitatively. We first construct the functional renormalization equation governing the evolution of the phase-stiffness tensor, from which the electroweak beta functional, dimensional transmutation, and stability of the generated hierarchy emerge as consequences of the variational dynamics.
+
+## IV. Phase Stiffness Renormalization
+
+4.1 Introduction
+
+The preceding sections established that the hierarchy problem assumes an entirely different mathematical form within Phase Theory. Since elementary mass parameters do not exist, the central dynamical object governing the emergence of physical scales is the phase-stiffness tensor,
+
+[
+K_{ab}(\Phi).
+]
+
+The fundamental hypothesis of this work is that the large separation between the electroweak and coherence scales originates not from perturbative cancellations, but from the renormalization of this tensor under coherence-limited coarse-graining.
+
+This section develops the mathematical framework required to describe that evolution. Rather than treating gauge couplings as independent running parameters, Phase Theory regards them as emergent inverse measures of substrate stiffness. Consequently, renormalization becomes a geometric flow on the manifold of stiffness tensors induced by successive elimination of short-wavelength phase fluctuations.
+
+⸻
+
+4.2 The Stiffness Tensor as a Geometric Metric
+
+The phase-inconsistency functional contains the kinetic contribution
+
+[
+I_{\rm kin}
+
+\frac12
+\int_M
+K_{ab}(\Phi)
+D_\mu\Phi^a
+D^\mu\Phi^b
+,d\mu.
+]
+
+The tensor
+
+[
+K_{ab}
+]
+
+is symmetric,
+
+[
+K_{ab}
+
+K_{ba},
+]
+
+and positive definite,
+
+[
+\xi^a
+K_{ab}
+\xi^b
+
+0,
+\qquad
+\forall
+,
+\xi
+\neq0.
+]
+
+Consequently,
+
+(K_{ab})
+
+defines a Riemannian metric on the internal phase manifold.
+
+Distances measured by
+
+[
+ds^2
+
+K_{ab}
+,d\Phi^a
+d\Phi^b
+]
+
+represent energetic distances between neighboring coherent configurations.
+
+Large stiffness corresponds to steep energetic gradients,
+
+while reduced stiffness permits larger phase excursions at lower energetic cost.
+
+Thus the geometry of the phase manifold directly determines the effective interaction strengths observed at macroscopic scales.
+
+⸻
+
+4.3 Coarse-Graining of the Phase Substrate
+
+Consider decomposing the substrate field into long- and short-wavelength components,
+
+[
+\Phi
+
+\Phi_<+\Phi_>,
+]
+
+where
+
+[
+|\mathbf{k}|
+<
+\Lambda/b
+]
+
+belongs to the infrared sector,
+
+while
+
+[
+\Lambda/b
+<
+|\mathbf{k}|
+<
+\Lambda
+]
+
+contains ultraviolet fluctuations.
+
+The effective functional is defined by integrating over the eliminated modes,
+
+[
+e^{-I_{\rm eff}[\Phi_<]}
+
+\int
+\mathcal D\Phi_>
+,
+e^{-I[\Phi_<+\Phi_>]}.
+]
+
+Unlike conventional Wilsonian renormalization,
+
+the integration domain is restricted by the coherence condition,
+
+[
+J
+\le
+C
+,
+\min
+(
+|\partial A|,
+|\partial B|
+),
+]
+
+ensuring that eliminated configurations remain physically admissible throughout the coarse-graining process.
+
+The resulting flow therefore occurs within a finite geometric configuration space rather than an unrestricted functional space.
+
+⸻
+
+4.4 The Renormalization Operator
+
+Let
+
+[
+\mathcal R_\ell
+]
+
+denote the coarse-graining operator acting over logarithmic scale
+
+[
+\ell
+
+\ln
+\left(
+\frac{\Lambda_{\rm coh}}
+{\mu}
+\right).
+]
+
+The stiffness tensor evolves according to
+
+[
+K_{ab}
+(\ell+d\ell)
+
+\mathcal R_{d\ell}
+!
+\left[
+K_{ab}(\ell)
+\right].
+]
+
+Expanding to first order,
+
+[
+K_{ab}
+(\ell+d\ell)
+
+K_{ab}
++
+d\ell
+,\beta_{ab}
+(K)
++
+\mathcal O
+(d\ell^2),
+]
+
+giving the functional beta equation
+
+[
+\boxed{
+\frac{dK_{ab}}
+{d\ell}
+
+\beta_{ab}(K).
+}
+]
+
+This equation is the Phase Theory analogue of the renormalization-group equation for gauge couplings, except that the evolving quantity is the intrinsic geometry of the phase manifold itself.
+
+⸻
+
+4.5 Functional Form of the Beta Tensor
+
+The beta tensor must satisfy several geometric constraints.
+
+First,
+
+general covariance on the phase manifold requires
+
+[
+\beta_{ab}
+]
+
+to transform as a rank-two tensor.
+
+Second,
+
+positivity of the stiffness metric requires
+
+[
+K_{ab}
++
+d\ell
+,\beta_{ab}
+]
+
+to remain positive definite.
+
+Third,
+
+the evolution must preserve coherence admissibility.
+
+These requirements motivate the general expansion
+
+[
+\beta_{ab}
+
+B_{ab}^{;;cd}
+K_{cd}
++
+\Gamma_{ab}
+(K)
++
+\mathcal O
+(K^{-1}),
+]
+
+where
+
+[
+B_{ab}^{;;cd}
+]
+
+encodes universal logarithmic screening,
+
+while
+
+[
+\Gamma_{ab}
+]
+
+contains nonlinear self-interactions arising from curvature of the phase manifold.
+
+To lowest order,
+
+the linear term dominates,
+
+producing logarithmic running analogous to asymptotic freedom.
+
+⸻
+
+4.6 Emergent Gauge Couplings
+
+Phase Theory identifies effective gauge couplings with inverse stiffness,
+
+[
+\alpha_i
+
+\frac{\kappa_i}
+{K_i},
+]
+
+where
+
+[
+K_i
+]
+
+denotes the appropriate invariant eigenvalue of the corresponding gauge-sector block,
+
+and
+
+[
+\kappa_i
+]
+
+is a normalization constant.
+
+Differentiation immediately yields
+
+[
+\frac{d\alpha_i}
+{d\ell}
+
+\frac{\kappa_i}
+{K_i^2}
+\frac{dK_i}
+{d\ell}.
+]
+
+Substituting the beta tensor,
+
+[
+\frac{d\alpha_i}
+{d\ell}
+
+\frac{\kappa_i}
+{K_i^2}
+\beta_i(K).
+]
+
+If
+
+[
+\beta_i(K)
+
+B_i,
+]
+
+to leading order,
+
+then
+
+[
+\boxed{
+\frac{d\alpha_i}
+{d\ell}
+
+B_i
+\alpha_i^2,
+}
+]
+
+recovering the familiar logarithmic form of gauge coupling evolution as an emergent consequence of geometric stiffness renormalization.
+
+Thus the running of gauge couplings is no longer fundamental.
+
+It is induced by the evolution of the substrate geometry.
+
+⸻
+
+4.7 Universality of the Stiffness Flow
+
+The Standard Model treats
+
+SU(3),
+
+SU(2),
+
+and
+
+U(1)
+
+as distinct gauge theories possessing independent beta functions.
+
+Within Phase Theory,
+
+all three sectors originate as block components of the same geometric tensor,
+
+[
+K_{ab}
+
+K^{(3)}
+\oplus
+K^{(2)}
+\oplus
+K^{(1)}.
+]
+
+Consequently,
+
+their renormalization equations become
+
+[
+\frac{dK^{(i)}}
+{d\ell}
+
+\beta^{(i)}
+(K),
+\qquad
+i
+
+1,2,3.
+]
+
+Each block evolves independently at low energies,
+
+yet all arise from a common microscopic substrate.
+
+This unifies gauge coupling evolution as different projections of a single geometric flow.
+
+⸻
+
+4.8 Electroweak Renormalization
+
+The electroweak block,
+
+[
+K_{\rm EW}
+
+K^{(2)}
+\oplus
+K^{(1)},
+]
+
+governs the radial phase stiffness associated with spontaneous symmetry breaking.
+
+Assuming logarithmic evolution,
+
+[
+\frac{dK_{\rm EW}}
+{d\ell}
+
+B_{\rm EW},
+]
+
+integration yields
+
+[
+K_{\rm EW}
+(\mu)
+
+K_{\rm EW}
+(\Lambda_{\rm coh})
++
+B_{\rm EW}
+\ln
+\left(
+\frac{\Lambda_{\rm coh}}
+{\mu}
+\right).
+]
+
+Using
+
+[
+\alpha_{\rm EW}
+\propto
+K_{\rm EW}^{-1},
+]
+
+one obtains
+
+[
+\alpha_{\rm EW}
+(\mu)
+
+\frac{1}
+{
+K_{\rm EW}
+(\Lambda_{\rm coh})
++
+B_{\rm EW}
+\ln
+(
+\Lambda_{\rm coh}/\mu
+)
+},
+]
+
+demonstrating that logarithmic running emerges directly from geometric evolution of the substrate rather than perturbative loop corrections.
+
+⸻
+
+4.9 Fixed Points and Dimensional Transmutation
+
+Infrared condensation occurs when the effective stiffness reaches the critical value
+
+[
+K_{\rm crit},
+]
+
+at which the radial phase mode becomes energetically unstable,
+
+[
+\frac{\partial^2V}
+{\partial\Phi^2}
+=0.
+]
+
+Solving
+
+[
+K_{\rm EW}
+(v_{\rm EW})
+
+K_{\rm crit},
+]
+
+gives
+
+[
+v_{\rm EW}
+
+\Lambda_{\rm coh}
+\exp
+\left[
+
+\frac{
+K_{\rm crit}
+
+K_{\rm EW}
+(\Lambda_{\rm coh})
+}
+{B_{\rm EW}}
+\right].
+]
+
+Writing
+
+[
+\alpha_{\rm EW}
+
+K_{\rm EW}^{-1},
+]
+
+this becomes
+
+[
+\boxed{
+v_{\rm EW}
+
+\Lambda_{\rm coh}
+\exp
+!\left[
+
+\frac{2\pi}
+{b_{\rm EW}
+\alpha_{\rm EW}
+(\Lambda_{\rm coh})}
+\right],
+}
+]
+
+recovering the universal dimensional-transmutation form proposed in Section III.
+
+The weak scale therefore emerges as the infrared endpoint of geometric stiffness evolution rather than from cancellation among ultraviolet-sensitive mass parameters.
+
+⸻
+
+4.10 Interpretation
+
+The renormalization of the phase-stiffness tensor constitutes the central mathematical mechanism of this paper.
+
+Rather than interpreting renormalization as the running of elementary coupling constants, Phase Theory elevates the evolving object to the geometry of the underlying phase substrate itself. Gauge interactions, spontaneous symmetry breaking, and dimensional transmutation consequently become different manifestations of a single coherence-limited geometric flow.
+
+Within this framework, the electroweak hierarchy is not an independent naturalness problem requiring additional protecting symmetries. It is the inevitable consequence of logarithmic evolution of the substrate stiffness toward a critical point at which a new coherent vacuum becomes energetically favored. The hierarchy is therefore generated dynamically by the geometry of the phase manifold, providing the mathematical foundation upon which the remaining sections derive the emergence and stability of the weak scale.
+
+## V. Coarse-Graining of the Phase-Inconsistency Functional
+
+5.1 Introduction
+
+The preceding section introduced the phase-stiffness tensor as the fundamental quantity whose renormalization governs the emergence of physical mass scales. The beta tensor describing its evolution, however, was introduced phenomenologically. A complete theory requires that this flow arise directly from the underlying variational principle rather than being postulated independently.
+
+The objective of this section is therefore to derive the coarse-graining dynamics of the phase-inconsistency functional itself. Unlike conventional quantum field theory, where renormalization is performed on a perturbative effective action, Phase Theory begins with a globally defined functional over a coherence-constrained configuration space. Renormalization consequently becomes a transformation acting on the functional landscape of admissible phase configurations rather than on perturbative Green’s functions.
+
+This distinction is central to the present work. Since particle masses are defined by global minima of the functional, any renormalization of the functional necessarily induces renormalization of the entire particle spectrum.
+
+⸻
+
+5.2 Functional Decomposition
+
+Let the microscopic phase configuration be written as
+
+[
+\Phi(x)
+
+\Phi_L(x)
++
+\Phi_S(x),
+]
+
+where
+
+[
+\Phi_L
+]
+
+contains wavelengths larger than the coarse-graining scale,
+
+[
+|\mathbf{k}|<\mu,
+]
+
+while
+
+[
+\Phi_S
+]
+
+contains short-wavelength fluctuations,
+
+[
+\mu<|\mathbf{k}|<\Lambda_{\rm coh}.
+]
+
+The complete phase-inconsistency functional becomes
+
+[
+I[\Phi]
+
+I[\Phi_L+\Phi_S].
+]
+
+Rather than minimizing over all configurations simultaneously, coarse-graining proceeds by integrating out the short-wavelength sector while preserving global coherence.
+
+⸻
+
+5.3 Effective Phase Functional
+
+The effective long-distance functional is defined by
+
+[
+\exp
+!\left(
+
+I_{\rm eff}[\Phi_L]
+\right)
+
+\int_{\mathcal C}
+\mathcal D\Phi_S
+,
+\exp
+!\left(
+
+I[\Phi_L+\Phi_S]
+\right),
+]
+
+where
+
+[
+\mathcal C
+]
+
+denotes the space of configurations satisfying the coherence constraint
+
+[
+J
+\le
+C
+,
+\min
+(
+|\partial A|,
+|\partial B|
+).
+]
+
+Unlike Wilsonian renormalization, the functional integral is not taken over arbitrary ultraviolet fluctuations. Only configurations compatible with substrate coherence contribute to the effective dynamics. The coherence bound therefore acts as an intrinsic regulator arising from the geometry of the phase substrate rather than as an externally imposed cutoff.
+
+⸻
+
+5.4 Functional Expansion
+
+Expanding about the long-wavelength configuration,
+
+[
+\Phi
+
+\Phi_L+\eta,
+]
+
+with
+
+[
+\eta
+\equiv
+\Phi_S,
+]
+
+the functional admits the Taylor expansion
+
+[
+I[\Phi]
+
+I[\Phi_L]
++
+\delta I
++
+\frac12
+\delta^2I
++
+\mathcal O(\eta^3).
+]
+
+The first variation satisfies
+
+[
+\delta I
+
+\int_M
+\frac{\delta I}
+{\delta\Phi^a}
+\eta^a
+,d\mu.
+]
+
+At a stationary configuration,
+
+[
+\frac{\delta I}
+{\delta\Phi^a}
+
+0,
+]
+
+so the leading contribution becomes
+
+[
+I[\Phi]
+
+I[\Phi_L]
++
+\frac12
+\int_M
+\eta^a
+,
+\mathcal H_{ab}
+,
+\eta^b
+,d\mu
++
+\mathcal O(\eta^3),
+]
+
+where
+
+[
+\mathcal H_{ab}
+
+\frac{\delta^2I}
+{\delta\Phi^a
+\delta\Phi^b}
+]
+
+is the Hessian operator of the phase-inconsistency functional.
+
+The spectrum of
+
+[
+\mathcal H
+]
+
+determines the energetic stability of nearby coherent configurations.
+
+⸻
+
+5.5 Integrating Out Short-Wavelength Modes
+
+Performing the Gaussian integration over admissible fluctuations gives
+
+[
+I_{\rm eff}
+
+I
++
+\frac12
+\operatorname{Tr}
+\ln
+\mathcal H
++
+\mathcal O(\hbar^2).
+]
+
+Within Phase Theory this trace has a distinct interpretation.
+
+It is not the contribution of virtual particles propagating in an otherwise fixed vacuum.
+
+Instead, it represents the collective response of the coherent phase substrate to the elimination of microscopic inconsistencies.
+
+Renormalization therefore measures how the energetic landscape itself changes as increasingly fine phase structures are absorbed into the effective macroscopic description.
+
+⸻
+
+5.6 Renormalization of the Functional Density
+
+Since
+
+[
+I
+
+\int
+\rho
+,d\mu,
+]
+
+coarse-graining induces
+
+[
+\rho
+\rightarrow
+\rho_{\rm eff}.
+]
+
+To lowest order,
+
+[
+\rho_{\rm eff}
+
+\frac12
+K^{\rm eff}{ab}
+D\mu\Phi^a
+D^\mu\Phi^b
++
+V_{\rm eff}
+(\Phi)
++
+\lambda_{\rm eff}
+\operatorname{Tr}
+(F_{\mu\nu}F^{\mu\nu})
++\cdots.
+]
+
+Every coefficient in the functional therefore becomes scale dependent,
+
+[
+K_{ab}
+\rightarrow
+K_{ab}(\mu),
+]
+
+[
+V
+\rightarrow
+V(\mu),
+]
+
+[
+\lambda
+\rightarrow
+\lambda(\mu).
+]
+
+Renormalization is thus understood as evolution of the complete geometry of the phase substrate.
+
+⸻
+
+5.7 Functional Flow Equation
+
+Introduce the logarithmic scale parameter
+
+[
+t
+
+\ln
+\mu.
+]
+
+Differentiating the effective functional gives the exact functional flow equation
+
+[
+\boxed{
+\frac{\partial I_{\rm eff}}
+{\partial t}
+
+\mathcal F
+!\left[
+I_{\rm eff}
+\right],
+}
+]
+
+where
+
+[
+\mathcal F
+]
+
+is the coarse-graining operator generated by coherent elimination of microscopic phase fluctuations.
+
+Expanding in local invariants,
+
+[
+\mathcal F
+
+\beta_K
+\frac{\delta}
+{\delta K}
++
+\beta_V
+\frac{\delta}
+{\delta V}
++
+\beta_\lambda
+\frac{\partial}
+{\partial\lambda}
++\cdots.
+]
+
+Consequently,
+
+all effective parameters evolve simultaneously because they originate from a single variational functional.
+
+⸻
+
+5.8 Flow of the Stiffness Tensor
+
+Applying the functional derivative to the kinetic term yields
+
+[
+\frac{\partial K_{ab}}
+{\partial t}
+
+\beta_{ab}(K,V,\lambda).
+]
+
+The beta tensor therefore depends not solely upon the stiffness itself, but upon the complete energetic landscape of the substrate.
+
+To lowest order,
+
+[
+\beta_{ab}
+
+B_{ab}^{;;cd}
+K_{cd}
++
+\mathcal O(K^{-1}),
+]
+
+recovering the logarithmic running introduced in the previous section.
+
+Higher-order contributions incorporate nonlinear interactions between phase stiffness, curvature, and topological defect density.
+
+⸻
+
+5.9 Evolution of Variational Minima
+
+Because particle masses satisfy
+
+[
+m(\Xi)
+
+\min_{\Phi\in\sigma(\Xi)}
+I[\Phi],
+]
+
+coarse-graining modifies both
+
+the functional,
+
+and
+
+its minimizing configuration.
+
+Denote the evolving minimizer by
+
+[
+\Phi_\ast(t).
+]
+
+Then
+
+[
+\frac{d}
+{dt}
+m(\Xi)
+
+\frac{d}
+{dt}
+I_{\rm eff}
+[\Phi_\ast(t)].
+]
+
+Using the chain rule,
+
+[
+\frac{dm}
+{dt}
+
+\frac{\partial I_{\rm eff}}
+{\partial t}
++
+\frac{\delta I_{\rm eff}}
+{\delta\Phi}
+\frac{d\Phi_\ast}
+{dt}.
+]
+
+Since
+
+[
+\Phi_\ast
+]
+
+remains a stationary point,
+
+[
+\frac{\delta I_{\rm eff}}
+{\delta\Phi}
+
+0,
+]
+
+the second term vanishes identically,
+
+yielding
+
+[
+\boxed{
+\frac{dm}
+{dt}
+
+\frac{\partial I_{\rm eff}}
+{\partial t}.
+}
+]
+
+This result has no direct analogue in perturbative quantum field theory.
+
+It states that particle masses evolve exclusively through renormalization of the global phase functional rather than through additive corrections to elementary mass parameters.
+
+⸻
+
+5.10 Emergence of the Hierarchy
+
+The electroweak hierarchy now acquires a simple geometric interpretation.
+
+As microscopic fluctuations are progressively integrated into the coherent substrate,
+
+the stiffness tensor evolves,
+
+altering the shape of the variational landscape.
+
+Eventually,
+
+the electroweak minimum separates exponentially from the coherence scale,
+
+not because large positive and negative contributions cancel,
+
+but because the location of the global minimum migrates through functional space under logarithmic coarse-graining.
+
+The hierarchy therefore becomes a property of the evolving geometry of the phase-inconsistency functional itself.
+
+The weak scale is generated by the trajectory of the variational minimum through the renormalization flow, while the coherence scale remains fixed by the fundamental information bound of the substrate.
+
+This reformulation transforms the hierarchy problem from one of ultraviolet sensitivity into one of geometric evolution.
+
+The following section develops the resulting beta functional explicitly, deriving the logarithmic running of the electroweak phase stiffness from the coarse-grained dynamics established here.
+
+
