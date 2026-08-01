@@ -22,7 +22,7 @@
 
 ### Author
 
-*Author Name*
+Marlon Hanks
 
 ---
 
