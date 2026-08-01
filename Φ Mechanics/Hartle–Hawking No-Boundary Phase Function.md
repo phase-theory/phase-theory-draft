@@ -1,5 +1,3 @@
----
-
 # Hartle–Hawking No-Boundary Phase Function
 
 **Phase Mechanics Research Programme**
