@@ -133,7 +133,7 @@ Likewise, the oscillator modes \(\alpha_n^I\) of Section 6.1 are recovered as Fo
 |---|---|---|---|
 | Quantum mechanics | Qubit | Hilbert space dimension | Continuous wavefunction |
 | Phase Theory | Phaset | phase-admissibility | Phase field |
-| Mₜ Theory | Framet | \(S^1_t\) structure | Frame field |
+| Frame Theory | Framet | \(S^1_t\) Relativistic structure | Frame field |
 | SRSM | **Spectron** | resonance lattice spacing \(\Delta\) | Emergent coordinate field \(X^I(\sigma,\tau)\) / Polyakov string |
 
 ### 2.4.10 Summary
