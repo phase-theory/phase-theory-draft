@@ -1,0 +1,1203 @@
+# Self-Generating Measure Theory
+
+**A Recursive Foundation for Measures Arising from Local Structural Rules**
+
+---
+
+## Abstract
+
+We develop a systematic framework for **Self-Generating Measure Theory (SGMT)**, in which measures are not postulated as primitive assignments on a measurable space but are obtained as stable outcomes of recursive local structural rules. The central object is a measure generator  
+\[
+\mathcal{G}:\mathcal{M}_+(X)\to \mathcal{M}_+(X),
+\]
+acting on a class of positive measures, and the fundamental recursion is  
+\[
+\mu_{n+1}=\mathcal{G}(\mu_n).
+\]
+A measure \(\mu^\ast\) is called **self-generating** if it satisfies the fixed-point equation  
+\[
+\mu^\ast=\mathcal{G}(\mu^\ast),
+\]
+or, in the projective case,  
+\[
+\mathcal{G}(\mu^\ast)=\lambda \mu^\ast,\qquad \lambda>0.
+\]
+We establish fixed-point existence, uniqueness, convergence, and stability theorems under contractive, compactness, and monotonicity hypotheses. We then show that many classical and modern measure-theoretic constructions are naturally interpreted as self-generating systems: self-similar and self-conformal fractal measures, invariant measures of Markov operators, random cascade measures, McKean–Vlasov fixed points, curvature-coupled geometric measures, and Gibbs measures in statistical mechanics. The theory provides a unified language for measure generation in fractal geometry, probability, geometric analysis, and statistical mechanics.
+
+**Keywords:** self-generating measures, recursive measure theory, iterated function systems, Wasserstein contraction, Gibbs measures, fractal dimension, geometric analysis, statistical mechanics.
+
+---
+
+## 1. Introduction
+
+Classical measure theory begins with a measurable space \((X,\mathcal{B})\) and postulates a measure  
+\[
+\mu:\mathcal{B}\to[0,\infty]
+\]
+satisfying countable additivity. This axiom-first approach is extremely powerful, but in many areas of mathematics and mathematical physics the measures of interest are not naturally given by direct assignment. Instead, they emerge as the result of repeated application of **local structural rules**.
+
+Examples include:
+
+1. **Fractal geometry.** Self-similar measures satisfy  
+   \[
+   \mu=\sum_{i=1}^m p_i (S_i)_\#\mu,
+   \]
+   where \(S_i\) are contractions and \(p_i>0\).
+
+2. **Probability theory.** Stationary laws of Markov chains satisfy  
+   \[
+   \mu=\mu P,
+   \]
+   where \(P\) is a transition kernel.
+
+3. **Geometric analysis.** Equilibrium measures often arise as fixed points of diffusion, variational, or gradient-flow procedures.
+
+4. **Statistical mechanics.** Gibbs measures satisfy Dobrushin–Lanford–Ruelle (DLR) compatibility conditions, meaning that the global measure is regenerated from its local conditional distributions.
+
+The guiding principle of SGMT is therefore the following.
+
+> **Recursive Measure Principle.**  
+> A measure is not primitive; it is the stable state of a recursive local generation procedure.
+
+In its most basic form, SGMT replaces the direct assignment \(\mu(A)\) with a dynamical system on the space of measures:
+\[
+\mu_{n+1}=\mathcal{G}(\mu_n).
+\]
+The generator \(\mathcal{G}\) encodes the local rule. The measure of interest is then a fixed point, an attracting fixed point, or more generally an invariant object of the recursive dynamics.
+
+The purpose of this paper is to develop this principle into a general mathematical theory. We define measure generators, formulate locality, prove convergence and fixed-point theorems, and demonstrate that a wide variety of important measures are naturally self-generating.
+
+---
+
+## 2. Abstract Framework
+
+### 2.1 Spaces, measures, and generators
+
+Let \((X,d)\) be a Polish space with Borel \(\sigma\)-algebra \(\mathcal{B}(X)\). Let  
+\[
+\mathcal{M}_+(X)
+\]
+denote the cone of finite nonnegative Borel measures on \(X\), and let  
+\[
+\mathcal{P}(X)\subset \mathcal{M}_+(X)
+\]
+denote the subset of Borel probability measures.
+
+For \(p\geq 1\), let \(\mathcal{P}_p(X)\) be the space of probability measures with finite \(p\)-th moment, equipped with the \(p\)-Wasserstein distance
+\[
+W_p(\mu,\nu)
+=
+\left(
+\inf_{\pi\in\Pi(\mu,\nu)}
+\int_{X\times X} d(x,y)^p\,d\pi(x,y)
+\right)^{1/p}.
+\]
+
+A **measure generator** is a map
+\[
+\mathcal{G}:\mathcal{D}(\mathcal{G})\subset \mathcal{M}_+(X)\to \mathcal{M}_+(X).
+\]
+Given an initial measure \(\mu_0\in\mathcal{D}(\mathcal{G})\), the SGMT recursion is
+\[
+\mu_{n+1}=\mathcal{G}(\mu_n),\qquad n=0,1,2,\dots
+\]
+whenever the iterates remain in the domain.
+
+If \(\mathcal{G}\) does not preserve total mass, one often considers the normalized or **projective recursion**
+\[
+\mu_{n+1}
+=
+\frac{\mathcal{G}(\mu_n)}{\mathcal{G}(\mu_n)(X)}.
+\]
+A measure \(\mu^\ast\) is called **self-generating** if
+\[
+\mu^\ast=\mathcal{G}(\mu^\ast),
+\]
+or in the projective case,
+\[
+\mathcal{G}(\mu^\ast)=\lambda \mu^\ast
+\]
+for some \(\lambda>0\).
+
+---
+
+### 2.2 Local structural rules
+
+The central conceptual requirement in SGMT is that \(\mathcal{G}\) should be generated by **local rules**. A general and useful formulation is through measure-dependent transition kernels.
+
+A generator \(\mathcal{G}\) is called a **kernel generator** if for every \(\mu\) there exists a probability kernel
+\[
+K_\mu:X\times\mathcal{B}(X)\to[0,1]
+\]
+such that
+\[
+(\mathcal{G}\mu)(A)
+=
+\int_X K_\mu(x,A)\,d\mu(x).
+\]
+More generally, one may allow a source term \(S_\mu\):
+\[
+(\mathcal{G}\mu)(A)
+=
+\int_X K_\mu(x,A)\,d\mu(x)+S_\mu(A).
+\]
+
+We say that \(\mathcal{G}\) is **local of radius \(r>0\)** if \(K_\mu(x,\cdot)\) depends only on the restriction of \(\mu\) to \(B_r(x)\), and if mass is not transported outside a bounded local neighborhood. Formally, one may require
+\[
+K_\mu(x,A)=K_\mu\bigl(x,A\cap B_r(x)\bigr)
+\]
+and
+\[
+K_\mu(x,\cdot)=\widetilde K\bigl(x,\cdot,\mu|_{B_r(x)}\bigr).
+\]
+
+This captures the idea that the next-stage measure near \(x\) is determined by the present-stage measure near \(x\).
+
+---
+
+### 2.3 Refinement generators
+
+A particularly important class consists of **refinement generators**. Let
+\[
+T_i:X\to X,\qquad i=1,\dots,m,
+\]
+be measurable maps, and let
+\[
+p_i:X\times\mathcal{P}(X)\to[0,1]
+\]
+satisfy
+\[
+\sum_{i=1}^m p_i(x,\mu)=1.
+\]
+Define
+\[
+\mathcal{G}\mu
+=
+\sum_{i=1}^m (T_i)_\#\bigl(p_i(\cdot,\mu)\,\mu\bigr),
+\]
+where \((T_i)_\#\) denotes pushforward:
+\[
+(T_i)_\#\nu(A)=\nu(T_i^{-1}A).
+\]
+
+In the constant-weight case,
+\[
+p_i(x,\mu)=p_i,
+\]
+this becomes the linear iterated-function-system generator
+\[
+\mathcal{G}\mu
+=
+\sum_{i=1}^m p_i (T_i)_\#\mu.
+\]
+
+This is the basic recursive structure underlying self-similar and self-conformal measures.
+
+---
+
+### 2.4 Tensorial representation on manifolds
+
+Let \(M\) be a smooth manifold with Riemannian metric \(g\). In local coordinates \(x^i\), write
+\[
+g=g_{ij}\,dx^i\otimes dx^j,
+\]
+with inverse \(g^{ij}\). The Riemannian volume form is
+\[
+dV_g=\sqrt{|g|}\,dx^1\wedge\cdots\wedge dx^d,
+\]
+where \(|g|=\det(g_{ij})\).
+
+Suppose \(\mu=\rho\,dV_g\), and suppose \(T:M\to M\) is a smooth local diffeomorphism. The Jacobian density of \(T\) with respect to \(dV_g\) is
+\[
+J_T(x)
+=
+\frac{T^\ast dV_g}{dV_g}(x)
+=
+\frac{\sqrt{|g|(T(x))}\,\left|\det \partial_a T^b(x)\right|}{\sqrt{|g|(x)}}.
+\]
+Then for a weighted pushforward,
+\[
+(T)_\#(p\rho\,dV_g),
+\]
+the density transforms locally as
+\[
+\bigl((T)_\#(p\rho\,dV_g)\bigr)(y)
+=
+\sum_{x\in T^{-1}(y)}
+\frac{p(x)\rho(x)}{J_T(x)}.
+\]
+Therefore a smooth refinement generator on a Riemannian manifold has density recursion
+\[
+\rho_{n+1}(y)
+=
+\sum_{i=1}^m
+\sum_{x\in T_i^{-1}(y)}
+\frac{p_i(x,\mu_n)\rho_n(x)}{J_{T_i}(x)}.
+\]
+This is the natural tensorial/geometric form of SGMT for smooth maps.
+
+---
+
+## 3. Fixed Points, Convergence, and Stability
+
+### 3.1 Contractive generators
+
+The strongest SGMT results arise when \(\mathcal{G}\) is a contraction in a complete metric on measures.
+
+#### Theorem 3.1 — Contractive SGMT
+
+Let \((X,d)\) be a complete separable metric space, and let \(p\geq 1\). Suppose
+\[
+\mathcal{G}:\mathcal{P}_p(X)\to \mathcal{P}_p(X)
+\]
+satisfies
+\[
+W_p(\mathcal{G}\mu,\mathcal{G}\nu)
+\leq c\,W_p(\mu,\nu)
+\]
+for some \(0\leq c<1\) and all \(\mu,\nu\in\mathcal{P}_p(X)\). Then:
+
+1. \(\mathcal{G}\) has a unique fixed point \(\mu^\ast\in\mathcal{P}_p(X)\).
+2. For every initial \(\mu_0\in\mathcal{P}_p(X)\), the recursion
+   \[
+   \mu_{n+1}=\mathcal{G}(\mu_n)
+   \]
+   converges to \(\mu^\ast\) in \(W_p\).
+3. The convergence rate is geometric:
+   \[
+   W_p(\mu_n,\mu^\ast)
+   \leq
+   c^n W_p(\mu_0,\mu^\ast).
+   \]
+
+**Proof.**  
+The space \((\mathcal{P}_p(X),W_p)\) is complete. The map \(\mathcal{G}\) is a strict contraction. By the Banach fixed-point theorem, \(\mathcal{G}\) has a unique fixed point, and its iterates converge geometrically. \(\square\)
+
+---
+
+#### Corollary 3.2 — Self-similar measures as contractive fixed points
+
+Let \(T_i:X\to X\) be Lipschitz maps with Lipschitz constants \(L_i\), and let \(p_i>0\) satisfy \(\sum_i p_i=1\). Define
+\[
+\mathcal{G}\mu
+=
+\sum_{i=1}^m p_i (T_i)_\#\mu.
+\]
+Then for \(p\geq 1\),
+\[
+W_p(\mathcal{G}\mu,\mathcal{G}\nu)
+\leq
+\left(\sum_{i=1}^m p_i L_i^p\right)^{1/p}
+W_p(\mu,\nu).
+\]
+In particular, if
+\[
+\sum_{i=1}^m p_i L_i^p<1,
+\]
+then \(\mathcal{G}\) has a unique fixed point.
+
+**Proof.**  
+Let \(\pi\in\Pi(\mu,\nu)\) be an optimal coupling for \(W_p\). For each \(i\), the pushforward
+\[
+(T_i\times T_i)_\#\pi
+\]
+is a coupling between \((T_i)_\#\mu\) and \((T_i)_\#\nu\). Hence
+\[
+W_p^p((T_i)_\#\mu,(T_i)_\#\nu)
+\leq
+L_i^p W_p^p(\mu,\nu).
+\]
+Using the same branch index \(i\) in the mixture gives a coupling between
+\[
+\sum_i p_i(T_i)_\#\mu
+\quad\text{and}\quad
+\sum_i p_i(T_i)_\#\nu.
+\]
+Therefore
+\[
+W_p^p(\mathcal{G}\mu,\mathcal{G}\nu)
+\leq
+\sum_{i=1}^m p_i L_i^p W_p^p(\mu,\nu).
+\]
+Taking \(p\)-th roots yields the result. \(\square\)
+
+If each \(T_i\) is a contraction, then \(L_i<1\), and the condition is automatically satisfied for sufficiently many standard choices of \(p\), in particular for \(p=1\) if
+\[
+\sum_i p_i L_i<1.
+\]
+
+---
+
+### 3.2 Compactness and weak continuity
+
+Contraction is not necessary for existence. On compact spaces, weak continuity is often sufficient.
+
+#### Theorem 3.3 — Weak-continuous fixed-point theorem
+
+Let \(X\) be a compact metric space. Suppose
+\[
+\mathcal{G}:\mathcal{P}(X)\to\mathcal{P}(X)
+\]
+is continuous with respect to weak convergence of measures. Then \(\mathcal{G}\) admits at least one fixed point:
+\[
+\mu^\ast=\mathcal{G}\mu^\ast.
+\]
+
+**Proof.**  
+Since \(X\) is compact, \(\mathcal{P}(X)\) is compact in the weak topology and is convex as a subset of the dual space \(C(X)^\ast\). The weak topology is locally convex. A continuous map from a compact convex subset of a locally convex topological vector space into itself has a fixed point by the Schauder–Tychonoff fixed-point theorem. Hence there exists \(\mu^\ast\in\mathcal{P}(X)\) such that \(\mathcal{G}\mu^\ast=\mu^\ast\). \(\square\)
+
+This theorem is particularly useful when \(\mathcal{G}\) is nonlinear but continuous.
+
+---
+
+#### Proposition 3.4 — Weak continuity of refinement generators
+
+Let \(X\) be compact metric. Suppose \(T_i:X\to X\) are continuous, and the weights
+\[
+p_i:X\times\mathcal{P}(X)\to[0,1]
+\]
+are continuous in \(x\) and weakly continuous in \(\mu\), uniformly in \(x\). Then
+\[
+\mathcal{G}\mu
+=
+\sum_{i=1}^m (T_i)_\#\bigl(p_i(\cdot,\mu)\mu\bigr)
+\]
+is weakly continuous.
+
+**Proof.**  
+For \(f\in C(X)\),
+\[
+\int_X f\,d\mathcal{G}\mu
+=
+\sum_{i=1}^m
+\int_X p_i(x,\mu) f(T_i x)\,d\mu(x).
+\]
+If \(\mu_n\Rightarrow \mu\), then by weak continuity of \(p_i\),
+\[
+p_i(\cdot,\mu_n)\to p_i(\cdot,\mu)
+\]
+uniformly enough to pass to the limit, and since \(f\circ T_i\in C(X)\),
+\[
+\int_X p_i(x,\mu_n) f(T_i x)\,d\mu_n(x)
+\to
+\int_X p_i(x,\mu) f(T_i x)\,d\mu(x).
+\]
+Thus \(\mathcal{G}\mu_n\Rightarrow\mathcal{G}\mu\). \(\square\)
+
+---
+
+### 3.3 Monotone generators
+
+Another important mechanism is monotonicity.
+
+#### Theorem 3.5 — Monotone SGMT convergence
+
+Let \(\mathcal{G}:\mathcal{M}_+(X)\to\mathcal{M}_+(X)\) be monotone with respect to the natural order on measures:
+\[
+\mu\leq\nu
+\quad\Longrightarrow\quad
+\mathcal{G}\mu\leq\mathcal{G}\nu.
+\]
+Assume that \(\mu_0\leq \mathcal{G}\mu_0\), and that the total masses
+\[
+\mu_n(X)
+\]
+are uniformly bounded. Define
+\[
+\mu_{n+1}=\mathcal{G}\mu_n.
+\]
+Then \(\mu_n\) increases setwise to a finite measure \(\mu^\ast\):
+\[
+\mu^\ast(A)=\lim_{n\to\infty}\mu_n(A).
+\]
+If \(\mathcal{G}\) is continuous from below, then
+\[
+\mu^\ast=\mathcal{G}\mu^\ast.
+\]
+
+**Proof.**  
+Because \(\mu_0\leq\mathcal{G}\mu_0=\mu_1\) and \(\mathcal{G}\) is monotone, induction gives
+\[
+\mu_n\leq\mu_{n+1}.
+\]
+For each measurable \(A\), the sequence \(\mu_n(A)\) is increasing and bounded above by the uniform mass bound. Hence the pointwise limit
+\[
+\mu^\ast(A)=\lim_n\mu_n(A)
+\]
+exists and defines a finite measure. If \(\mathcal{G}\) commutes with increasing limits, then
+\[
+\mathcal{G}\mu^\ast
+=
+\mathcal{G}\left(\lim_n \mu_n\right)
+=
+\lim_n \mathcal{G}\mu_n
+=
+\lim_n \mu_{n+1}
+=
+\mu^\ast.
+\]
+Thus \(\mu^\ast\) is self-generating. \(\square\)
+
+A dual statement holds for decreasing sequences starting from \(\mu_0\geq\mathcal{G}\mu_0\).
+
+---
+
+### 3.4 Stability of self-generating measures
+
+If a generator is contractive, its fixed point is stable under perturbations of the generator.
+
+#### Proposition 3.6 — Perturbation stability
+
+Let \(\mathcal{G}\) be a contraction on \((\mathcal{P}_p(X),W_p)\) with constant \(c<1\), and let \(\mathcal{H}\) be another generator such that
+\[
+\sup_{\mu\in\mathcal{P}_p(X)} W_p(\mathcal{G}\mu,\mathcal{H}\mu)\leq \varepsilon.
+\]
+If \(\mu_\mathcal{G}\) and \(\mu_\mathcal{H}\) are fixed points of \(\mathcal{G}\) and \(\mathcal{H}\), respectively, then
+\[
+W_p(\mu_\mathcal{G},\mu_\mathcal{H})
+\leq
+\frac{\varepsilon}{1-c}.
+\]
+
+**Proof.**  
+Using the fixed-point equations,
+\[
+W_p(\mu_\mathcal{G},\mu_\mathcal{H})
+=
+W_p(\mathcal{G}\mu_\mathcal{G},\mathcal{H}\mu_\mathcal{H}).
+\]
+Then
+\[
+\begin{aligned}
+W_p(\mathcal{G}\mu_\mathcal{G},\mathcal{H}\mu_\mathcal{H})
+&\leq
+W_p(\mathcal{G}\mu_\mathcal{G},\mathcal{H}\mu_\mathcal{G})
++
+W_p(\mathcal{H}\mu_\mathcal{G},\mathcal{H}\mu_\mathcal{H})
+\\
+&\leq
+\varepsilon
++
+c\,W_p(\mu_\mathcal{G},\mu_\mathcal{H}).
+\end{aligned}
+\]
+Rearranging yields the claim. \(\square\)
+
+This proposition is important for numerical approximation and for perturbative models in physics.
+
+---
+
+## 4. Fractal Geometry
+
+SGMT is especially natural in fractal geometry, where measures are often defined by recursive self-similarity.
+
+### 4.1 Self-similar measures
+
+Let \(S_i:\mathbb{R}^d\to\mathbb{R}^d\), \(i=1,\dots,m\), be similarity contractions:
+\[
+|S_i(x)-S_i(y)|=r_i |x-y|,
+\qquad 0<r_i<1.
+\]
+Let \(p_i>0\), \(\sum_i p_i=1\). Define
+\[
+\mathcal{G}\mu
+=
+\sum_{i=1}^m p_i (S_i)_\#\mu.
+\]
+The SGMT recursion is
+\[
+\mu_{n+1}
+=
+\sum_{i=1}^m p_i (S_i)_\#\mu_n.
+\]
+By Corollary 3.2, there exists a unique self-generating probability measure \(\mu\) satisfying
+\[
+\mu
+=
+\sum_{i=1}^m p_i (S_i)_\#\mu.
+\]
+
+If the open set condition holds, the support of \(\mu\) is the self-similar attractor \(K\) satisfying
+\[
+K=\bigcup_{i=1}^m S_i(K).
+\]
+
+---
+
+### 4.2 Local dimension derivation
+
+Let \(I=(i_1,\dots,i_n)\) be a finite word. Define
+\[
+S_I=S_{i_1}\circ\cdots\circ S_{i_n},
+\]
+\[
+r_I=r_{i_1}\cdots r_{i_n},
+\]
+\[
+p_I=p_{i_1}\cdots p_{i_n}.
+\]
+Under strong separation, the cylinder sets \(S_I(K)\) are essentially disjoint, and the fixed-point equation implies
+\[
+\mu(S_I(K))=p_I.
+\]
+Let \(x\in K\) have symbolic itinerary \(i_1,i_2,\dots\). For a ball of radius comparable to \(r_{I_n}\), where \(I_n=(i_1,\dots,i_n)\), one has
+\[
+\mu(B(x,r_{I_n}))\asymp p_{I_n}.
+\]
+Therefore the local dimension, when it exists, is
+\[
+\dim_{\mathrm{loc}}\mu(x)
+=
+\lim_{r\to 0}
+\frac{\log \mu(B(x,r))}{\log r}
+=
+\lim_{n\to\infty}
+\frac{\sum_{k=1}^n \log p_{i_k}}
+{\sum_{k=1}^n \log r_{i_k}}.
+\]
+
+If the itinerary is typical for the Bernoulli measure with weights \(p_i\), the ergodic theorem gives
+\[
+\dim_{\mathrm{loc}}\mu(x)
+=
+\frac{\sum_{i=1}^m p_i\log p_i}
+{\sum_{i=1}^m p_i\log r_i}.
+\]
+Because the logarithms are negative, the ratio is positive.
+
+In the special case
+\[
+p_i=r_i^s,
+\qquad
+\sum_{i=1}^m r_i^s=1,
+\]
+the formula reduces to
+\[
+\dim_{\mathrm{loc}}\mu(x)=s.
+\]
+Thus the natural self-similar measure is exact dimensional, and its dimension agrees with the similarity dimension of the attractor.
+
+---
+
+### 4.3 Example: the middle-thirds Cantor measure
+
+Let
+\[
+S_0(x)=\frac{x}{3},
+\qquad
+S_1(x)=\frac{x}{3}+\frac{2}{3},
+\]
+and take
+\[
+p_0=p_1=\frac12.
+\]
+The SGMT recursion is
+\[
+\mu_{n+1}
+=
+\frac12 (S_0)_\#\mu_n
++
+\frac12 (S_1)_\#\mu_n.
+\]
+The fixed point satisfies
+\[
+\mu
+=
+\frac12 (S_0)_\#\mu
++
+\frac12 (S_1)_\#\mu.
+\]
+This is the standard Cantor measure. Since
+\[
+r_0=r_1=\frac13,
+\]
+the dimension is
+\[
+\dim\mu
+=
+\frac{\frac12\log\frac12+\frac12\log\frac12}
+{\frac12\log\frac13+\frac12\log\frac13}
+=
+\frac{\log 2}{\log 3}.
+\]
+
+---
+
+### 4.4 Self-conformal generalization
+
+Let \(S_i\) be \(C^{1+\alpha}\) conformal contractions. The local scaling factor is
+\[
+|S_i'(x)|.
+\]
+For a Gibbs-type weight system, one often has local weights of the form
+\[
+p_i(x)
+\approx
+\frac{e^{\varphi_i(x)}}{\sum_j e^{\varphi_j(x)}}.
+\]
+The fixed-point equation becomes
+\[
+\mu
+=
+\sum_i (S_i)_\#(p_i\mu).
+\]
+For typical points, the local dimension is given by a ratio of ergodic averages:
+\[
+\dim_{\mathrm{loc}}\mu(x)
+=
+\frac{\displaystyle \int \log p\,d\nu}
+{\displaystyle \int \log |S'|\,d\nu},
+\]
+where \(\nu\) is the symbolic invariant measure. In the thermodynamic formalism, the dimension is often determined by a pressure equation
+\[
+P(-t\log |S'|)=0.
+\]
+
+Thus SGMT naturally extends the classical self-similar theory to nonlinear, conformal, and thermodynamic settings.
+
+---
+
+## 5. Probability Theory
+
+### 5.1 Markov chains as self-generating systems
+
+Let \(P(x,dy)\) be a Markov transition kernel on \(X\). Define
+\[
+\mathcal{G}\mu(A)
+=
+\int_X P(x,A)\,d\mu(x).
+\]
+The recursion
+\[
+\mu_{n+1}=\mathcal{G}\mu_n
+\]
+is precisely the evolution of the law of a Markov chain. A stationary distribution is a self-generating measure:
+\[
+\mu=\mathcal{G}\mu.
+\]
+
+Define the Dobrushin contraction coefficient
+\[
+\delta(P)
+=
+\sup_{x,y\in X}
+\|P(x,\cdot)-P(y,\cdot)\|_{\mathrm{TV}}.
+\]
+If \(\delta(P)<1\), then
+\[
+\|\mathcal{G}\mu-\mathcal{G}\nu\|_{\mathrm{TV}}
+\leq
+\delta(P)\|\mu-\nu\|_{\mathrm{TV}}.
+\]
+Hence Theorem 3.1 gives a unique stationary distribution and geometric convergence in total variation.
+
+This is one of the simplest and most important examples of SGMT.
+
+---
+
+### 5.2 McKean–Vlasov and nonlinear probability laws
+
+Many interacting systems generate measures recursively through nonlinear rules. Let
+\[
+F:X\times\mathcal{P}_2(X)\to X
+\]
+and let \(\xi\) be a noise variable independent of \(X\). Define
+\[
+\mathcal{G}\mu
+=
+\operatorname{Law}\bigl(F(X,\mu)+\xi\bigr),
+\qquad X\sim\mu.
+\]
+Then
+\[
+\mu_{n+1}
+=
+\operatorname{Law}\bigl(F(X_n,\mu_n)+\xi_n\bigr).
+\]
+A fixed point satisfies
+\[
+\mu
+=
+\operatorname{Law}\bigl(F(X,\mu)+\xi\bigr),
+\qquad X\sim\mu.
+\]
+This is the McKean–Vlasov fixed-point structure.
+
+If \(F\) is contractive in both variables in the sense that
+\[
+W_2(\mathcal{G}\mu,\mathcal{G}\nu)
+\leq c W_2(\mu,\nu),
+\qquad c<1,
+\]
+then the SGMT contraction theorem yields existence and uniqueness of the nonlinear invariant law.
+
+---
+
+### 5.3 Random recursive measures and cascades
+
+Let \(\{1,\dots,m\}^{\mathbb{N}}\) be a symbolic space. For each finite word \(u\), let
+\[
+P_u=(P_{u,1},\dots,P_{u,m})
+\]
+be a random probability vector. Assume the vectors are independent and identically distributed across nodes.
+
+Define a random measure on cylinder sets by
+\[
+\mu([i_1,\dots,i_n])
+=
+\prod_{k=1}^n P_{(i_1,\dots,i_{k-1}),i_k}.
+\]
+The consistency condition
+\[
+\sum_{i=1}^m \mu([u,i])=\mu([u])
+\]
+holds because each \(P_u\) is a probability vector. Kolmogorov extension gives a random probability measure on the symbolic space.
+
+If the symbolic space is realized geometrically by maps \(S_i\) with contraction ratio \(r=1/m\), then the pushforward gives a random fractal measure. For \(\mu\)-almost every \(x\), under ergodicity and finite entropy assumptions,
+\[
+\dim_{\mathrm{loc}}\mu(x)
+=
+-\frac{\mathbb{E}\left[\sum_{i=1}^m P_i\log P_i\right]}
+{\log m}.
+\]
+This is the characteristic dimension formula for random recursive measures.
+
+More general multiplicative cascades use nonnegative weights \(W_{u,i}\) with
+\[
+\mathbb{E}\left[\sum_{i=1}^m W_{u,i}\right]=1.
+\]
+Define
+\[
+Z_n
+=
+\sum_{|u|=n}
+\prod_{k=1}^n W_{u|k}.
+\]
+Then \((Z_n)_{n\geq 0}\) is a nonnegative martingale, hence converges almost surely to \(Z_\infty\). Non-degeneracy conditions, such as appropriate \(W\log W\) moment conditions, determine whether the limiting random measure is nonzero.
+
+Thus random cascades are stochastic SGMT systems in which the local generation rule itself is random.
+
+---
+
+## 6. Geometric Analysis
+
+SGMT also provides a natural language for measures generated by geometric local rules on manifolds.
+
+### 6.1 Geometric notation
+
+Let \((M,g)\) be a compact Riemannian manifold without boundary. Let
+\[
+\nabla_i
+\]
+denote the Levi-Civita covariant derivative, and let
+\[
+\Delta_g f
+=
+g^{ij}\nabla_i\nabla_j f
+\]
+be the Laplace–Beltrami operator. The scalar curvature is
+\[
+\mathrm{Scal}_g.
+\]
+A probability measure absolutely continuous with respect to volume has the form
+\[
+\mu=\rho\,dV_g.
+\]
+
+---
+
+### 6.2 Self-generation through variational local rules
+
+A powerful SGMT construction on manifolds is obtained through Wasserstein gradient steps. Fix \(\tau>0\), a potential \(V:M\to\mathbb{R}\), and a curvature coupling constant \(\alpha\in\mathbb{R}\). Define the energy functional
+\[
+\mathcal{E}_g(\mu)
+=
+\int_M \rho\log\rho\,dV_g
++
+\int_M \bigl(V+\alpha\,\mathrm{Scal}_g\bigr)\rho\,dV_g,
+\]
+where \(\mu=\rho\,dV_g\).
+
+Define the generator \(\mathcal{G}_{g,\tau}\) by the minimizing-movement rule
+\[
+\mu_{n+1}
+=
+\mathcal{G}_{g,\tau}(\mu_n)
+=
+\operatorname*{argmin}_{\mu\in\mathcal{P}(M)}
+\left\{
+\frac{1}{2\tau} W_2^2(\mu,\mu_n)
++
+\mathcal{E}_g(\mu)
+\right\}.
+\]
+This is a recursive local structural rule: the energy depends on the pointwise density, the potential, and local curvature, while the Wasserstein term penalizes nonlocal transport.
+
+Formally, as \(\tau\to 0\), this recursion approximates the Wasserstein gradient flow
+\[
+\partial_t\rho
+=
+\nabla_i\left[
+\rho \nabla^i
+\left(
+\frac{\delta \mathcal{E}_g}{\delta\rho}
+\right)
+\right].
+\]
+Since
+\[
+\frac{\delta \mathcal{E}_g}{\delta\rho}
+=
+\log\rho+V+\alpha\,\mathrm{Scal}_g+1,
+\]
+we obtain
+\[
+\partial_t\rho
+=
+\Delta_g\rho
++
+\nabla_i\left[
+\rho \nabla^i
+\left(
+V+\alpha\,\mathrm{Scal}_g
+\right)
+\right].
+\]
+Equivalently,
+\[
+\partial_t\rho
+=
+g^{ij}\nabla_i\nabla_j\rho
++
+g^{ij}\nabla_i\left[
+\rho \nabla_j
+\left(
+V+\alpha\,\mathrm{Scal}_g
+\right)
+\right].
+\]
+
+A stationary solution satisfies
+\[
+\nabla_i\left[
+\rho \nabla^i
+\left(
+\log\rho+V+\alpha\,\mathrm{Scal}_g
+\right)
+\right]=0.
+\]
+On a compact manifold without boundary, this yields the Gibbs-type self-generating measure
+\[
+\rho^\ast
+=
+\frac{1}{Z}
+\exp\left(
+-V-\alpha\,\mathrm{Scal}_g
+\right),
+\]
+with normalization
+\[
+Z
+=
+\int_M
+\exp\left(
+-V-\alpha\,\mathrm{Scal}_g
+\right)
+\,dV_g.
+\]
+Thus the equilibrium measure is generated recursively from local geometric data.
+
+---
+
+### 6.3 Coupling measure generation with geometric evolution
+
+A more speculative but structurally natural extension is to allow the geometry itself to evolve in response to the generated measure. One may consider a coupled system
+\[
+\mu_{n+1}
+=
+\mathcal{G}_{g_n}(\mu_n),
+\]
+together with a geometric evolution rule
+\[
+\partial_t g_{ij}
+=
+-2\,\mathrm{Ric}_{ij}
++
+\lambda g_{ij}
++
+\kappa\,T_{ij}[\mu],
+\]
+where \(\mathrm{Ric}_{ij}\) is the Ricci tensor and \(T_{ij}[\mu]\) is a stress-energy tensor derived from the measure density. For example, if \(\mu=\rho\,dV_g\), one may take
+\[
+T_{ij}[\mu]
+=
+\nabla_i\rho\nabla_j\rho
+-
+\frac12 g_{ij}
+\left(
+g^{ab}\nabla_a\rho\nabla_b\rho
++
+W(\rho)
+\right),
+\]
+for some potential \(W\).
+
+Such systems describe **co-generation**: the measure generates geometry, and geometry regenerates the measure. This is a natural direction for future development of SGMT in geometric analysis.
+
+---
+
+## 7. Statistical Mechanics
+
+SGMT is closely related to the modern theory of Gibbs measures.
+
+### 7.1 Spin systems and interaction tensors
+
+Let \(\Lambda\) be a finite or countable lattice, for example \(\Lambda=\mathbb{Z}^d\). Let the spin at site \(i\) be
+\[
+\sigma_i=(\sigma_i^1,\dots,\sigma_i^q)\in\mathbb{R}^q.
+\]
+A Hamiltonian may be written using interaction tensors. For example,
+\[
+H_\Lambda(\sigma)
+=
+-
+\sum_{i,j\in\Lambda}
+J_{ij}^{ab}\sigma_i^a\sigma_j^b
+-
+\frac{1}{3!}
+\sum_{i,j,k\in\Lambda}
+K_{ijk}^{abc}
+\sigma_i^a\sigma_j^b\sigma_k^c
+-
+\sum_{i\in\Lambda}
+h_i^a\sigma_i^a.
+\]
+Here \(J_{ij}^{ab}\) is a pairwise interaction tensor, \(K_{ijk}^{abc}\) a three-body interaction tensor, and \(h_i^a\) an external field.
+
+For inverse temperature \(\beta>0\), the finite-volume Gibbs specification is
+\[
+\gamma_\Lambda(d\sigma\mid\omega)
+=
+\frac{1}{Z_\Lambda(\omega)}
+\exp\left(
+-\beta H_\Lambda(\sigma_\Lambda\omega_{\Lambda^c})
+\right)
+\lambda_\Lambda(d\sigma_\Lambda)
+\delta_{\omega_{\Lambda^c}}(d\sigma_{\Lambda^c}).
+\]
+
+---
+
+### 7.2 DLR equations as self-generation
+
+A probability measure \(\mu\) on the configuration space is a Gibbs measure if it satisfies the DLR equations:
+\[
+\mu(A)
+=
+\int \gamma_\Lambda(A\mid\omega)\,\mu(d\omega)
+\]
+for all finite volumes \(\Lambda\) and measurable sets \(A\). In operator notation,
+\[
+\mu=\mu\gamma_\Lambda.
+\]
+Thus a Gibbs measure is precisely a fixed point of a local regeneration operator.
+
+The SGMT recursion is
+\[
+\mu_{n+1}
+=
+\mu_n\gamma_{\Lambda_n},
+\]
+where \(\Lambda_n\) may be an increasing sequence of volumes or a sequence of block updates. The limiting measure, if it exists, is self-generating with respect to its local conditional distributions.
+
+---
+
+### 7.3 Dobrushin uniqueness and convergence
+
+For single-site specifications, define the influence coefficients
+\[
+c_{ij}
+=
+\sup_{\omega,\omega'}
+\left\|
+\gamma_i(\cdot\mid\omega)
+-
+\gamma_i(\cdot\mid\omega')
+\right\|_{\mathrm{TV}},
+\]
+where the supremum is over configurations \(\omega,\omega'\) differing only at site \(j\). Define
+\[
+C
+=
+\sup_i \sum_{j\neq i} c_{ij}.
+\]
+If
+\[
+C<1,
+\]
+then the Gibbs specification is a contraction in a suitable product metric. Consequently:
+
+1. There exists a unique Gibbs measure \(\mu^\ast\).
+2. The SGMT recursion
+   \[
+   \mu_{n+1}=\mu_n\gamma
+   \]
+   converges to \(\mu^\ast\).
+3. The convergence is geometric in total variation or an equivalent metric.
+
+This is the classical Dobrushin uniqueness condition, interpreted here as a contractive SGMT theorem.
+
+---
+
+### 7.4 Renormalization group as scale recursion
+
+In renormalization-group theory, one applies a coarse-graining map
+\[
+B_b:\Omega\to\Omega'
+\]
+followed by rescaling. The induced measure transformation is
+\[
+\mathcal{R}_b\mu
+=
+\mathcal{N}_b\bigl((B_b)_\#\mu\bigr),
+\]
+where \(\mathcal{N}_b\) denotes normalization or parameter re-identification. Fixed points satisfy
+\[
+\mu^\ast
+=
+\mathcal{R}_b\mu^\ast.
+\]
+Such fixed points describe scale-invariant statistical-mechanical systems. Critical phenomena are therefore naturally understood as self-generating measures under scale transformations.
+
+---
+
+## 8. Computational Aspects
+
+SGMT suggests several natural computational methods.
+
+### 8.1 Chaos game approximation
+
+For an IFS generator
+\[
+\mathcal{G}\mu
+=
+\sum_i p_i (S_i)_\#\mu,
+\]
+choose independent random indices \(I_n\) with
+\[
+\mathbb{P}(I_n=i)=p_i,
+\]
+and define
+\[
+X_{n+1}=S_{I_n}(X_n).
+\]
+The empirical measures
+\[
+\nu_N
+=
+\frac{1}{N}
+\sum_{n=1}^N \delta_{X_n}
+\]
+converge almost surely to the self-generating measure \(\mu^\ast\), under standard contraction and irreducibility assumptions.
+
+---
+
+### 8.2 Density iteration
+
+On a manifold, if
+\[
+\rho_{n+1}(y)
+=
+\sum_i
+\sum_{x\in T_i^{-1}(y)}
+\frac{p_i(x,\mu_n)\rho_n(x)}{J_{T_i}(x)},
+\]
+one may iterate densities on grids or finite-element spaces. The Jacobian factors ensure conservation of mass and geometric consistency.
+
+---
+
+### 8.3 Moment recursion
+
+If the maps \(T_i\) are affine, moments satisfy closed recursive equations. For a test monomial \(x^\alpha\),
+\[
+\int x^\alpha\,d\mu_{n+1}
+=
+\sum_i p_i
+\int (S_i x)^\alpha\,d\mu_n(x).
+\]
+Thus moment sequences can be generated recursively and, under determinacy conditions, used to reconstruct the limiting measure.
+
+---
+
+### 8.4 Particle approximation for nonlinear generators
+
+For nonlinear generators such as
+\[
+\mathcal{G}\mu
+=
+\operatorname{Law}(F(X,\mu)+\xi),
+\]
+one may approximate \(\mu_n\) by an empirical measure
+\[
+\mu_n^N
+=
+\frac{1}{N}\sum_{k=1}^N \delta_{X_n^{(k)}}.
+\]
+Then update particles by
+\[
+X_{n+1}^{(k)}
+=
+F\left(X_n^{(k)},\mu_n^N\right)+\xi_n^{(k)}.
+\]
+Under suitable Lipschitz and propagation-of-chaos assumptions, \(\mu_n^N\to\mu_n\) as \(N\to\infty\).
+
+---
+
+## 9. Conclusion
+
+Self-Generating Measure Theory provides a unifying framework in which measures are not assumed but produced by recursive local rules. The fundamental equation
+\[
+\mu_{n+1}=\mathcal{G}(\mu_n)
+\]
+leads naturally to fixed-point problems
+\[
+\mu^\ast=\mathcal{G}(\mu^\ast),
+\]
+and the resulting fixed points include many central objects in modern analysis:
+
+- self-similar and self-conformal fractal measures;
+- stationary laws of Markov processes;
+- McKean–Vlasov nonlinear invariant distributions;
+- random cascade measures;
+- curvature-coupled geometric Gibbs measures;
+- DLR Gibbs measures in statistical mechanics;
+- renormalization-group fixed points.
+
+The theory also clarifies the mechanisms responsible for existence and uniqueness: contraction, compactness, monotonicity, and stability. Conversely, failure of these mechanisms corresponds mathematically to phase transitions, non-uniqueness, intermittency, or non-convergence.
+
+Future directions include:
+
+1. A classification theory for self-generating operators.
+2. A systematic study of non-convergent SGMT dynamics and measure-valued attractors.
+3. Co-generative systems in which measures and geometries evolve together.
+4. Infinite-dimensional SGMT for fields and stochastic PDEs.
+5. Numerical analysis and error bounds for recursive measure generation.
+6. Applications to learning theory, where measures may be generated recursively from local data constraints.
+
+SGMT therefore suggests a broader philosophical shift: measures are not merely static objects assigned to spaces, but dynamic equilibria of local structural generation.
+
+---
+
+## References
+
+1. J. E. Hutchinson, *Fractals and self-similarity*, Indiana University Mathematics Journal, 1981.  
+2. K. Falconer, *Fractal Geometry: Mathematical Foundations and Applications*, Wiley.  
+3. V. I. Bogachev, *Measure Theory*, Springer.  
+4. P. Billingsley, *Convergence of Probability Measures*, Wiley.  
+5. C. Villani, *Optimal Transport: Old and New*, Springer.  
+6. R. Jordan, D. Kinderlehrer, F. Otto, *The variational formulation of the Fokker–Planck equation*, SIAM Journal on Mathematical Analysis, 1998.  
+7. H.-O. Georgii, *Gibbs Measures and Phase Transitions*, de Gruyter.  
+8. R. L. Dobrushin, *The description of random fields by means of conditional probabilities and conditions of its regularity*, Theory of Probability and its Applications, 1968.  
+9. D. Ruelle, *Thermodynamic Formalism*, Addison-Wesley.  
+10. B. B. Mandelbrot, *Intermittent turbulence in self-similar cascades*, Journal of Fluid Mechanics, 1974.  
+11. J.-P. Kahane, *Sur le modèle de turbulence de Benoît Mandelbrot*, Annales de l'Institut Fourier, 1974.
