@@ -5764,4 +5764,7051 @@ Thus the Lorentz transformation does more than solve the kinematic crisis of cla
 
 Special Relativity is therefore the flat-space limit of a much broader geometric program.
 
+# Part II — The Hierarchy of Relativity
+
+# Chapter 5 — Relativity 1.0: Special Relativity
+
+## 5.5 Minkowski Spacetime
+
+The Lorentz transformation reveals that space and time cannot be regarded as independent absolute entities. Their transformation laws are coupled, and the quantity preserved by all inertial observers is neither spatial distance nor temporal duration separately, but a four-dimensional interval.
+
+This observation leads naturally to the geometric formulation of Special Relativity developed by Hermann Minkowski. The fundamental arena of relativistic physics is a four-dimensional manifold equipped with a flat Lorentzian metric:
+
+[
+\boxed{
+(\mathcal M,\eta)
+}
+]
+
+where
+
+[
+\mathcal M\simeq\mathbb R^{1,3}
+]
+
+and
+
+[
+\eta_{\mu\nu}
+=============
+
+\operatorname{diag}(-1,1,1,1).
+]
+
+Minkowski spacetime is therefore not simply "space plus time." It is a unified geometric structure whose metric determines temporal intervals, spatial distances, inertial motion, causal relationships, and the invariant speed (c).
+
+The transition from Newtonian spacetime to Minkowski spacetime represents one of the deepest conceptual changes in modern physics:
+
+[
+\boxed{
+\text{absolute space + absolute time}
+\quad\longrightarrow\quad
+\text{invariant spacetime geometry}.
+}
+]
+
+---
+
+# 5.5.1 The Four-Dimensional Event
+
+The fundamental object of relativistic physics is an **event**.
+
+An event is specified by four coordinates,
+
+[
+x^\mu
+=====
+
+(ct,x,y,z),
+]
+
+with
+
+[
+\mu=0,1,2,3.
+]
+
+The zeroth coordinate is temporal,
+
+[
+x^0=ct,
+]
+
+while the spatial coordinates are
+
+[
+x^1=x,
+\qquad
+x^2=y,
+\qquad
+x^3=z.
+]
+
+The factor (c) converts time into units of length, allowing all four coordinates to possess the same physical dimension.
+
+An event is therefore represented as a point
+
+[
+p\in\mathcal M.
+]
+
+A particle does not occupy a single point of spacetime. Its history is represented by a continuous curve,
+
+[
+x^\mu(\lambda),
+]
+
+called its **worldline**.
+
+The parameter (\lambda) may be arbitrary. For a massive particle, the natural invariant parameter is proper time,
+
+[
+\tau.
+]
+
+Thus,
+
+[
+x^\mu=x^\mu(\tau).
+]
+
+---
+
+# 5.5.2 Minkowski Metric
+
+The geometric structure of Minkowski spacetime is determined by the metric tensor
+
+[
+\eta_{\mu\nu}.
+]
+
+With the mostly-plus convention,
+
+[
+\boxed{
+\eta_{\mu\nu}
+=============
+
+\begin{pmatrix}
+-1&0&0&0\
+0&1&0&0\
+0&0&1&0\
+0&0&0&1
+\end{pmatrix}.
+}
+]
+
+The infinitesimal spacetime interval is
+
+[
+\boxed{
+ds^2
+====
+
+\eta_{\mu\nu}dx^\mu dx^\nu.
+}
+]
+
+Explicitly,
+
+[
+\boxed{
+ds^2
+====
+
+-c^2dt^2
++
+dx^2
++
+dy^2
++
+dz^2.
+}
+]
+
+Unlike the Euclidean metric,
+
+[
+dl^2
+====
+
+dx^2+dy^2+dz^2,
+]
+
+the Minkowski metric is indefinite. The temporal direction enters with the opposite sign from the spatial directions.
+
+This indefinite signature is responsible for the existence of light cones and the distinction between timelike, null, and spacelike separations.
+
+---
+
+# 5.5.3 The Interval as the Fundamental Invariant
+
+Two inertial observers may assign different coordinates to the same pair of events.
+
+Observer (S) measures
+
+[
+(\Delta t,\Delta x,\Delta y,\Delta z),
+]
+
+while observer (S') measures
+
+[
+(\Delta t',\Delta x',\Delta y',\Delta z').
+]
+
+The individual quantities
+
+[
+\Delta t,
+\qquad
+\Delta x,
+]
+
+are not invariant.
+
+But the combination
+
+[
+\boxed{
+\Delta s^2
+==========
+
+-c^2\Delta t^2
++
+\Delta x^2
++
+\Delta y^2
++
+\Delta z^2
+}
+]
+
+satisfies
+
+[
+\boxed{
+\Delta s'^2=\Delta s^2.
+}
+]
+
+This is the central invariant of Special Relativity.
+
+The Lorentz transformation preserves precisely this quadratic form:
+
+[
+\Lambda^T\eta\Lambda=\eta.
+]
+
+Thus Minkowski geometry is the geometry naturally selected by Einstein's two postulates.
+
+---
+
+# 5.5.4 Proper Time
+
+For a timelike worldline,
+
+[
+ds^2<0.
+]
+
+The invariant proper time is defined by
+
+[
+\boxed{
+ds^2=-c^2d\tau^2.
+}
+]
+
+Therefore,
+
+[
+c^2d\tau^2
+==========
+
+c^2dt^2-d\mathbf{x}^2.
+]
+
+For a particle moving with ordinary three-velocity
+
+[
+\mathbf v
+=========
+
+\frac{d\mathbf x}{dt},
+]
+
+we obtain
+
+[
+d\mathbf x^2
+============
+
+v^2dt^2.
+]
+
+Hence,
+
+[
+d\tau
+=====
+
+dt
+\sqrt{1-\frac{v^2}{c^2}}.
+]
+
+Equivalently,
+
+[
+\boxed{
+d\tau
+=====
+
+\frac{dt}{\gamma}.
+}
+]
+
+Proper time is the time measured by a clock traveling along the worldline itself.
+
+It is invariant under Lorentz transformations and therefore provides the natural parameter for relativistic particle dynamics.
+
+---
+
+# 5.5.5 Classification of Intervals
+
+The sign of
+
+[
+ds^2
+]
+
+classifies the causal relationship between events.
+
+### Timelike separation
+
+If
+
+[
+ds^2<0,
+]
+
+the events can be connected by a massive particle traveling at
+
+[
+v<c.
+]
+
+A rest frame exists in which the two events occur at the same spatial position.
+
+For such events,
+
+[
+d\mathbf x'=0,
+]
+
+and therefore
+
+[
+ds^2=-c^2d\tau^2.
+]
+
+---
+
+### Null separation
+
+If
+
+[
+ds^2=0,
+]
+
+the events can be connected by light.
+
+Thus,
+
+[
+c^2dt^2=d\mathbf x^2,
+]
+
+giving
+
+[
+\left|
+\frac{d\mathbf x}{dt}
+\right|
+=c.
+]
+
+Null separation defines the boundary of causal influence.
+
+---
+
+### Spacelike separation
+
+If
+
+[
+ds^2>0,
+]
+
+no signal traveling at or below (c) can connect the events.
+
+There exists an inertial frame in which the events are simultaneous,
+
+[
+dt'=0.
+]
+
+The temporal ordering of spacelike-separated events is therefore not invariant.
+
+---
+
+# 5.5.6 The Light Cone
+
+Consider an event (O) located at
+
+[
+t=0,\qquad
+x=y=z=0.
+]
+
+The set of events reachable from (O) by light satisfies
+
+[
+ds^2=0.
+]
+
+Therefore,
+
+[
+c^2t^2
+======
+
+x^2+y^2+z^2.
+]
+
+At a fixed time (t),
+
+[
+r=ct.
+]
+
+The future light cone is therefore
+
+[
+r=ct,
+\qquad
+t>0,
+]
+
+while the past light cone is
+
+[
+r=-ct,
+\qquad
+t<0.
+]
+
+The light cone divides spacetime into causal regions:
+
+[
+\boxed{
+\text{future}
+;|;
+\text{present null boundary}
+;|;
+\text{past}.
+}
+]
+
+This causal structure is invariant under Lorentz transformations.
+
+Consequently, although observers disagree about spatial and temporal coordinates, they cannot disagree about whether two events are timelike, null, or spacelike separated.
+
+---
+
+# 5.5.7 Worldlines
+
+A particle's history is represented by a worldline
+
+[
+x^\mu(\tau).
+]
+
+Its four-velocity is
+
+[
+\boxed{
+U^\mu
+=====
+
+\frac{dx^\mu}{d\tau}.
+}
+]
+
+Since
+
+[
+x^0=ct,
+]
+
+we have
+
+[
+U^\mu
+=====
+
+\gamma(c,\mathbf v).
+]
+
+Explicitly,
+
+[
+\boxed{
+U^\mu
+=====
+
+\gamma
+(c,v_x,v_y,v_z).
+}
+]
+
+Its Minkowski norm is invariant:
+
+[
+\eta_{\mu\nu}U^\mu U^\nu
+========================
+
+-c^2.
+]
+
+Indeed,
+
+[
+U^\mu U_\mu
+===========
+
+\gamma^2(-c^2+v^2),
+]
+
+and since
+
+[
+\gamma^2
+\left(
+1-\frac{v^2}{c^2}
+\right)
+=1,
+]
+
+we obtain
+
+[
+\boxed{
+U^\mu U_\mu=-c^2.
+}
+]
+
+This normalization condition is the relativistic analogue of the unit tangent condition for curves in Riemannian geometry, modified by the Lorentzian signature.
+
+---
+
+# 5.5.8 Four-Momentum
+
+Multiplying four-velocity by invariant rest mass (m) gives the four-momentum,
+
+[
+\boxed{
+p^\mu
+=====
+
+mU^\mu.
+}
+]
+
+Therefore,
+
+[
+p^\mu
+=====
+
+\gamma
+\left(
+mc,\mathbf p
+\right),
+]
+
+where
+
+[
+\mathbf p
+=========
+
+\gamma m\mathbf v.
+]
+
+The temporal component is
+
+[
+p^0
+===
+
+\gamma mc.
+]
+
+Identifying
+
+[
+E=\gamma mc^2,
+]
+
+we obtain
+
+[
+\boxed{
+p^\mu
+=====
+
+\left(
+\frac Ec,
+\mathbf p
+\right).
+}
+]
+
+Its invariant norm is
+
+[
+p^\mu p_\mu
+===========
+
+-m^2c^2.
+]
+
+Therefore,
+
+[
+-\frac{E^2}{c^2}
++
+\mathbf p^2
+===========
+
+-m^2c^2.
+]
+
+Multiplying by (-c^2),
+
+[
+\boxed{
+E^2
+===
+
+p^2c^2+m^2c^4.
+}
+]
+
+The famous relativistic energy-momentum relation is therefore simply the invariant norm of a four-vector.
+
+---
+
+# 5.5.9 Mass as a Geometric Invariant
+
+The relation
+
+[
+E^2-p^2c^2
+==========
+
+m^2c^4
+]
+
+reveals that rest mass is not an independent mechanical parameter appended to relativistic dynamics. It is the invariant Minkowski norm of the particle's four-momentum.
+
+For a massive particle,
+
+[
+p^\mu p_\mu=-m^2c^2.
+]
+
+For a massless particle,
+
+[
+\boxed{
+p^\mu p_\mu=0.
+}
+]
+
+Thus,
+
+[
+E=pc.
+]
+
+Massless particles therefore occupy the null sector of momentum space in exactly the same way that light rays occupy the null sector of spacetime.
+
+---
+
+# 5.5.10 The Geometry of Energy and Momentum
+
+The energy-momentum relation can be represented geometrically in a manner analogous to the spacetime interval.
+
+In one spatial dimension,
+
+[
+E^2
+===
+
+p_x^2c^2+m^2c^4.
+]
+
+Dividing by (c^2),
+
+[
+\left(\frac Ec\right)^2
+-----------------------
+
+# p_x^2
+
+m^2c^2.
+]
+
+This is a hyperbola in energy-momentum space.
+
+The momentum four-vector therefore lives in a second Minkowski-like geometry, commonly called momentum space.
+
+This leads to an important structural principle:
+
+[
+\boxed{
+\text{spacetime geometry}
+\longleftrightarrow
+\text{momentum-space geometry}.
+}
+]
+
+The same Lorentz group acts on both.
+
+---
+
+# 5.5.11 Lorentzian Geometry Versus Euclidean Geometry
+
+Minkowski spacetime differs fundamentally from Euclidean geometry.
+
+In Euclidean space,
+
+[
+dl^2
+====
+
+dx^2+dy^2+dz^2,
+]
+
+and all nonzero vectors have positive norm.
+
+In Minkowski spacetime,
+
+[
+ds^2
+====
+
+-c^2dt^2+d\mathbf x^2,
+]
+
+so vectors can possess:
+
+[
+ds^2<0,
+]
+
+[
+ds^2=0,
+]
+
+or
+
+[
+ds^2>0.
+]
+
+This distinction produces causal structure.
+
+The geometry therefore does not merely measure distances. It determines which physical events can influence one another.
+
+In this sense,
+
+[
+\boxed{
+\text{Lorentzian geometry is causal geometry}.
+}
+]
+
+---
+
+# 5.5.12 Inertial Motion as Geodesic Motion
+
+Because Minkowski spacetime is flat, free-particle trajectories are straight worldlines.
+
+The geodesic equation is
+
+[
+\frac{d^2x^\mu}{d\tau^2}
++
+\Gamma^\mu_{\alpha\beta}
+\frac{dx^\alpha}{d\tau}
+\frac{dx^\beta}{d\tau}
+======================
+
+0.
+
+]
+
+In inertial Cartesian coordinates,
+
+[
+\Gamma^\mu_{\alpha\beta}=0.
+]
+
+Therefore,
+
+[
+\boxed{
+\frac{d^2x^\mu}{d\tau^2}=0.
+}
+]
+
+Integrating,
+
+[
+x^\mu(\tau)
+===========
+
+U^\mu\tau+x_0^\mu.
+]
+
+Thus a free particle follows a straight line in Minkowski spacetime.
+
+Newton's first law is consequently transformed from a statement concerning spatial acceleration into a geometric statement:
+
+[
+\boxed{
+\text{free motion}
+==================
+
+\text{geodesic motion}.
+}
+]
+
+This is precisely the concept that General Relativity will generalize to curved spacetime.
+
+---
+
+# 5.5.13 Flatness
+
+The Minkowski metric is constant:
+
+[
+\partial_\lambda\eta_{\mu\nu}=0.
+]
+
+Consequently, its Levi-Civita connection vanishes in Cartesian inertial coordinates,
+
+[
+\Gamma^\rho_{\mu\nu}=0.
+]
+
+The Riemann curvature tensor is therefore
+
+[
+\boxed{
+R^\rho_{\ \sigma\mu\nu}=0.
+}
+]
+
+Thus Minkowski spacetime is globally flat.
+
+This should not be confused with the statement that all coordinate systems have vanishing connection coefficients. In accelerated or curvilinear coordinates, nonzero Christoffel symbols can appear even though
+
+[
+R^\rho_{\ \sigma\mu\nu}=0.
+]
+
+Curvature is coordinate invariant; connection coefficients are not.
+
+This distinction becomes essential when passing from Special Relativity to General Relativity.
+
+---
+
+# 5.5.14 Inertial Coordinates and Coordinate Freedom
+
+Minkowski spacetime admits infinitely many possible coordinate systems.
+
+Cartesian inertial coordinates give
+
+[
+\eta_{\mu\nu}
+=============
+
+\operatorname{diag}(-1,1,1,1).
+]
+
+Other coordinates may produce a position-dependent metric representation.
+
+For example, spherical spatial coordinates give
+
+[
+ds^2
+====
+
+-c^2dt^2
++
+dr^2
++
+r^2d\theta^2
++
+r^2\sin^2\theta,d\phi^2.
+]
+
+The metric components are now coordinate-dependent,
+
+[
+g_{\mu\nu}=g_{\mu\nu}(x),
+]
+
+even though the spacetime remains flat.
+
+The invariant geometric object is therefore not the matrix of metric components itself but the metric tensor as a coordinate-independent field.
+
+---
+
+# 5.5.15 The Poincaré Structure of Minkowski Spacetime
+
+Minkowski spacetime possesses ten independent continuous isometries:
+
+[
+3
+]
+
+rotations,
+
+[
+3
+]
+
+boosts,
+
+[
+3
+]
+
+spatial translations,
+
+and
+
+[
+1
+]
+
+time translation.
+
+These form the Poincaré group,
+
+[
+\boxed{
+ISO(1,3).
+}
+]
+
+The group acts transitively on Minkowski spacetime: any event can be transformed into any other by a spacetime translation.
+
+The Lorentz subgroup,
+
+[
+SO^+(1,3),
+]
+
+acts on tangent vectors and preserves the metric.
+
+Thus the geometry is characterized by the symmetry hierarchy
+
+[
+\boxed{
+\text{Poincaré symmetry}
+\supset
+\text{Lorentz symmetry}.
+}
+]
+
+This global symmetry is one of the defining features distinguishing Special Relativity from General Relativity.
+
+---
+
+# 5.5.16 Minkowski Spacetime and Causality
+
+The light cone provides an invariant partial ordering of causally connected events.
+
+If
+
+[
+Q\in J^+(P),
+]
+
+then (Q) lies within the causal future of (P).
+
+Similarly,
+
+[
+Q\in J^-(P)
+]
+
+denotes the causal past.
+
+For timelike or null related events, the causal ordering is invariant:
+
+[
+P\prec Q.
+]
+
+For spacelike-separated events, however, different observers can disagree about temporal ordering.
+
+This distinction establishes the causal foundation of relativistic physics:
+
+[
+\boxed{
+\text{causal order is invariant where causal influence is possible}.
+}
+]
+
+No Lorentz transformation can convert a timelike interval into a spacelike interval.
+
+---
+
+# 5.5.17 The Emergence of Relativistic Causality
+
+The causal structure can be summarized through the three sectors of the tangent space at every event:
+
+[
+T_pM
+====
+
+T_p^{\mathrm{timelike}}M
+\cup
+T_p^{\mathrm{null}}M
+\cup
+T_p^{\mathrm{spacelike}}M.
+]
+
+The null vectors form the boundary between the timelike and spacelike sectors.
+
+The speed of light therefore has a geometric interpretation:
+
+[
+\boxed{
+c
+=
+
+\text{the slope of the null cone in spacetime coordinates}.
+}
+]
+
+It is not merely the speed at which electromagnetic radiation happens to propagate. It is the invariant limiting speed defining the causal geometry itself.
+
+---
+
+# 5.5.18 Minkowski Spacetime as the Prototype of Relativistic Geometry
+
+Minkowski spacetime establishes the first fully geometric realization of the Einsteinian principle of relativity.
+
+Its essential structure is
+
+[
+\boxed{
+\mathcal M
+==========
+
+(\mathbb R^{1,3},\eta_{\mu\nu}),
+}
+]
+
+with:
+
+[
+\eta_{\mu\nu}
+=============
+
+\operatorname{diag}(-1,1,1,1),
+]
+
+[
+R^\rho_{\ \sigma\mu\nu}=0,
+]
+
+[
+\Lambda^T\eta\Lambda=\eta,
+]
+
+and
+
+[
+ds^2
+====
+
+-c^2dt^2+d\mathbf x^2.
+]
+
+From this single structure follow:
+
+[
+\text{proper time},
+]
+
+[
+\text{time dilation},
+]
+
+[
+\text{length contraction},
+]
+
+[
+\text{relativity of simultaneity},
+]
+
+[
+\text{light cones},
+]
+
+[
+\text{four-momentum},
+]
+
+[
+E^2=p^2c^2+m^2c^4,
+]
+
+and
+
+[
+\text{geodesic inertial motion}.
+]
+
+The apparent diversity of relativistic effects is therefore unified by one geometric object: the Lorentzian metric.
+
+---
+
+# 5.5.19 The Einsteinian Transition to General Relativity
+
+Minkowski spacetime also exposes the precise limitation that Einstein would overcome.
+
+The metric
+
+[
+\eta_{\mu\nu}
+]
+
+is fixed.
+
+The curvature satisfies
+
+[
+R^\rho_{\ \sigma\mu\nu}=0.
+]
+
+Gravity is therefore absent as an intrinsic geometric field.
+
+General Relativity makes the decisive replacement
+
+[
+\boxed{
+\eta_{\mu\nu}
+\longrightarrow
+g_{\mu\nu}(x).
+}
+]
+
+The metric becomes dynamical, and consequently
+
+[
+R^\rho_{\ \sigma\mu\nu}
+\neq0
+]
+
+in general.
+
+The hierarchy is therefore
+
+[
+\boxed{
+\begin{aligned}
+\text{Newtonian mechanics}
+&:\quad
+\text{absolute spacetime},
+[3pt]
+\text{Special Relativity}
+&:\quad
+\text{flat Lorentzian spacetime},
+[3pt]
+\text{General Relativity}
+&:\quad
+\text{curved dynamical spacetime}.
+\end{aligned}
+}
+]
+
+Special Relativity is thus not discarded by General Relativity. It survives as the local tangent-space structure of curved spacetime.
+
+---
+
+# 5.5.20 Toward the Hierarchy of Relativity
+
+The conceptual importance of Minkowski spacetime extends beyond the transition to General Relativity. It establishes a hierarchy in which each successive theory preserves the invariant structure of its predecessor while enlarging the class of admissible physical configurations.
+
+The progression may be represented as
+
+[
+\boxed{
+\begin{array}{ccc}
+\text{Newton} &
+\longrightarrow &
+\text{absolute spacetime}
+[4pt]
+\downarrow &&
+\downarrow
+[4pt]
+\text{Einstein} &
+\longrightarrow &
+\text{Lorentzian spacetime}
+[4pt]
+\downarrow &&
+\downarrow
+[4pt]
+\text{General Relativity} &
+\longrightarrow &
+\text{dynamical Lorentzian geometry}
+[4pt]
+\downarrow &&
+\downarrow
+[4pt]
+\text{Extended Relativity} &
+\longrightarrow &
+\text{generalized invariant geometry}.
+\end{array}
+}
+]
+
+Minkowski spacetime is therefore the first geometric layer of the hierarchy.
+
+It demonstrates that physical reality can be expressed through invariant geometric relations without invoking absolute space or absolute time. General Relativity subsequently promotes this geometry from fixed background to dynamical field. Extended Relativity will investigate whether even the Lorentzian manifold itself should ultimately be regarded as an emergent structure within a still more comprehensive invariant framework.
+
+---
+
+# 5.5.21 Conclusion
+
+Minkowski spacetime provides the geometric foundation of Special Relativity. The replacement of independent space and time by a four-dimensional Lorentzian manifold transforms the conceptual structure of physics.
+
+The fundamental invariant is
+
+[
+\boxed{
+ds^2
+====
+
+\eta_{\mu\nu}dx^\mu dx^\nu,
+}
+]
+
+rather than (dt) or (d\mathbf x) separately.
+
+From this invariant follow the causal classification of events,
+
+[
+ds^2<0,\qquad
+ds^2=0,\qquad
+ds^2>0,
+]
+
+the proper time of massive observers,
+
+[
+d\tau^2
+=======
+
+-\frac{ds^2}{c^2},
+]
+
+the four-velocity,
+
+[
+U^\mu
+=====
+
+\frac{dx^\mu}{d\tau},
+]
+
+and the four-momentum,
+
+[
+p^\mu
+=====
+
+\left(
+\frac Ec,\mathbf p
+\right),
+]
+
+whose invariant norm yields
+
+[
+\boxed{
+E^2=p^2c^2+m^2c^4.
+}
+]
+
+Minkowski spacetime therefore unifies kinematics, dynamics, causality, and symmetry within a single geometric framework.
+
+Its deepest significance is methodological. Physical quantities that appear observer-dependent individually become components of geometric objects whose invariant relations possess universal physical meaning.
+
+The next section develops this principle systematically through **four-vectors and Lorentz tensors**, establishing the tensorial language required to formulate relativistic mechanics and electrodynamics in manifestly covariant form.
+
+# Part II — The Hierarchy of Relativity
+
+# Chapter 5 — Relativity 1.0: Special Relativity
+
+## 5.6 Four-Vectors and Lorentz Tensors
+
+The geometric formulation of Special Relativity requires a mathematical language capable of expressing physical laws independently of any particular inertial coordinate system. Minkowski spacetime provides the underlying geometry; four-vectors and Lorentz tensors provide its algebraic and differential language.
+
+The central principle is that physical quantities should be organized according to how they transform under the Lorentz group. A scalar is invariant. A four-vector transforms linearly under Lorentz transformations. Higher-rank tensors transform through the corresponding tensor products of the Lorentz representation.
+
+The resulting hierarchy is
+
+[
+\boxed{
+\text{scalar}
+;\longrightarrow;
+\text{vector}
+;\longrightarrow;
+\text{tensor}
+;\longrightarrow;
+\text{tensor field}.
+}
+]
+
+This hierarchy allows relativistic physics to be written in manifestly covariant form.
+
+The fundamental transformation law is
+
+[
+\boxed{
+x'^\mu
+======
+
+\Lambda^\mu_{\ \nu}x^\nu,
+}
+]
+
+with
+
+[
+\Lambda^\rho_{\ \mu}
+\Lambda^\sigma_{\ \nu}
+\eta_{\rho\sigma}
+=================
+
+\eta_{\mu\nu}.
+]
+
+Every Lorentz-covariant physical quantity must transform consistently with this structure.
+
+---
+
+# 5.6.1 The Four-Dimensional Vector Space
+
+At every event of Minkowski spacetime, the tangent space is a four-dimensional real vector space,
+
+[
+T_p\mathcal M\simeq\mathbb R^{1,3}.
+]
+
+A four-vector is an element
+
+[
+V\in T_p\mathcal M.
+]
+
+In a coordinate basis,
+
+[
+\mathbf V
+=========
+
+V^\mu \mathbf e_\mu,
+]
+
+where
+
+[
+\mu=0,1,2,3.
+]
+
+The components are written
+
+[
+V^\mu
+=====
+
+(V^0,V^1,V^2,V^3).
+]
+
+For spacetime position,
+
+[
+x^\mu=(ct,x,y,z).
+]
+
+The four-vector itself is geometric; its components depend upon the chosen coordinate basis.
+
+Thus,
+
+[
+\boxed{
+\text{vector}
+\neq
+\text{list of four numbers}.
+}
+]
+
+The numbers (V^\mu) are merely the coordinate representation of an underlying geometric object.
+
+---
+
+# 5.6.2 Contravariant Four-Vectors
+
+A contravariant four-vector transforms according to
+
+[
+\boxed{
+V'^\mu
+======
+
+\Lambda^\mu_{\ \nu}V^\nu.
+}
+]
+
+For a boost along the (x)-axis,
+
+[
+\begin{pmatrix}
+V'^0\
+V'^1\
+V'^2\
+V'^3
+\end{pmatrix}
+=============
+
+\begin{pmatrix}
+\gamma&-\gamma\beta&0&0\
+-\gamma\beta&\gamma&0&0\
+0&0&1&0\
+0&0&0&1
+\end{pmatrix}
+\begin{pmatrix}
+V^0\
+V^1\
+V^2\
+V^3
+\end{pmatrix}.
+]
+
+Therefore,
+
+[
+V'^0
+====
+
+\gamma(V^0-\beta V^1),
+]
+
+[
+V'^1
+====
+
+\gamma(V^1-\beta V^0),
+]
+
+while
+
+[
+V'^2=V^2,
+\qquad
+V'^3=V^3.
+]
+
+The time-like and longitudinal spatial components mix, while transverse components remain unchanged under this particular boost.
+
+---
+
+# 5.6.3 Covariant Four-Vectors
+
+The Minkowski metric provides a natural map between vectors and covectors.
+
+Given
+
+[
+V^\mu,
+]
+
+define
+
+[
+\boxed{
+V_\mu
+=====
+
+\eta_{\mu\nu}V^\nu.
+}
+]
+
+With the mostly-plus convention,
+
+[
+V_\mu
+=====
+
+(-V^0,V^1,V^2,V^3).
+]
+
+Thus lowering an index changes the sign of the temporal component:
+
+[
+V_0=-V^0,
+]
+
+while
+
+[
+V_i=V^i
+]
+
+for spatial indices.
+
+The distinction between upper and lower indices is therefore not typographical. It records whether an object belongs to the vector space or its dual.
+
+---
+
+# 5.6.4 The Lorentz-Invariant Inner Product
+
+Two four-vectors (V^\mu) and (W^\mu) possess the invariant Minkowski inner product
+
+[
+\boxed{
+V\cdot W
+========
+
+\eta_{\mu\nu}V^\mu W^\nu.
+}
+]
+
+Explicitly,
+
+[
+V\cdot W
+========
+
+-V^0W^0
++
+V^1W^1
++
+V^2W^2
++
+V^3W^3.
+]
+
+Under a Lorentz transformation,
+
+[
+V'^\mu
+======
+
+\Lambda^\mu_{\ \rho}V^\rho,
+]
+
+[
+W'^\nu
+======
+
+\Lambda^\nu_{\ \sigma}W^\sigma.
+]
+
+Therefore,
+
+[
+V'\cdot W'
+==========
+
+\eta_{\mu\nu}
+\Lambda^\mu_{\ \rho}
+\Lambda^\nu_{\ \sigma}
+V^\rho W^\sigma.
+]
+
+Using
+
+[
+\eta_{\mu\nu}
+\Lambda^\mu_{\ \rho}
+\Lambda^\nu_{\ \sigma}
+======================
+
+\eta_{\rho\sigma},
+]
+
+we obtain
+
+[
+\boxed{
+V'\cdot W'
+==========
+
+V\cdot W.
+}
+]
+
+The inner product is therefore a Lorentz scalar.
+
+---
+
+# 5.6.5 Classification of Four-Vectors
+
+The Minkowski norm
+
+[
+V^2
+===
+
+V_\mu V^\mu
+]
+
+classifies a four-vector according to its causal character.
+
+For the mostly-plus convention:
+
+### Timelike
+
+[
+V^2<0.
+]
+
+### Null
+
+[
+V^2=0.
+]
+
+### Spacelike
+
+[
+V^2>0.
+]
+
+This classification is invariant under Lorentz transformations.
+
+A Lorentz transformation can alter the components of (V^\mu), but cannot change the sign of
+
+[
+V_\mu V^\mu.
+]
+
+Thus the causal character of a vector is geometric rather than coordinate-dependent.
+
+---
+
+# 5.6.6 The Four-Gradient
+
+The differential operator
+
+[
+\partial_\mu
+\equiv
+\frac{\partial}{\partial x^\mu}
+]
+
+is naturally a covector.
+
+Since
+
+[
+x^\mu=(ct,x,y,z),
+]
+
+we have
+
+[
+\partial_\mu
+============
+
+\left(
+\frac{\partial}{\partial(ct)},
+\frac{\partial}{\partial x},
+\frac{\partial}{\partial y},
+\frac{\partial}{\partial z}
+\right).
+]
+
+Equivalently,
+
+[
+\partial_\mu
+============
+
+\left(
+\frac1c\frac{\partial}{\partial t},
+\nabla
+\right).
+]
+
+Raising the index gives
+
+[
+\partial^\mu
+============
+
+\eta^{\mu\nu}\partial_\nu.
+]
+
+With the chosen signature,
+
+[
+\boxed{
+\partial^\mu
+============
+
+\left(
+-\frac1c\frac{\partial}{\partial t},
+\nabla
+\right).
+}
+]
+
+The four-gradient transforms covariantly and provides the basic differential operator of relativistic field theory.
+
+---
+
+# 5.6.7 The D'Alembert Operator
+
+Contracting the four-gradient with itself produces the invariant wave operator,
+
+[
+\Box
+\equiv
+\partial_\mu\partial^\mu.
+]
+
+Therefore,
+
+[
+\Box
+====
+
+-\frac{1}{c^2}
+\frac{\partial^2}{\partial t^2}
++
+\nabla^2.
+]
+
+Thus,
+
+[
+\boxed{
+\Box
+====
+
+## \nabla^2
+
+\frac1{c^2}\partial_t^2.
+}
+]
+
+The scalar wave equation becomes
+
+[
+\boxed{
+\Box\phi=0.
+}
+]
+
+Its manifestly covariant form makes clear that the propagation of relativistic waves is controlled by Minkowski geometry.
+
+---
+
+# 5.6.8 Four-Velocity
+
+For a massive particle, the worldline is
+
+[
+x^\mu(\tau),
+]
+
+where (\tau) is proper time.
+
+The four-velocity is
+
+[
+\boxed{
+U^\mu
+=====
+
+\frac{dx^\mu}{d\tau}.
+}
+]
+
+Since
+
+[
+x^\mu=(ct,\mathbf x),
+]
+
+and
+
+[
+d\tau=\frac{dt}{\gamma},
+]
+
+we obtain
+
+[
+U^\mu
+=====
+
+\gamma(c,\mathbf v).
+]
+
+Thus,
+
+[
+\boxed{
+U^\mu
+=====
+
+(\gamma c,\gamma\mathbf v).
+}
+]
+
+Its invariant norm is
+
+[
+U_\mu U^\mu=-c^2.
+]
+
+This normalization holds in every inertial frame.
+
+---
+
+# 5.6.9 Four-Momentum
+
+Multiplication by invariant rest mass gives
+
+[
+\boxed{
+p^\mu=mU^\mu.
+}
+]
+
+Consequently,
+
+[
+p^\mu
+=====
+
+(\gamma mc,\gamma m\mathbf v).
+]
+
+Define
+
+[
+E=\gamma mc^2,
+]
+
+and
+
+[
+\mathbf p=\gamma m\mathbf v.
+]
+
+Then
+
+[
+\boxed{
+p^\mu
+=====
+
+\left(
+\frac Ec,\mathbf p
+\right).
+}
+]
+
+The covariant components are
+
+[
+p_\mu
+=====
+
+\left(
+-\frac Ec,\mathbf p
+\right).
+]
+
+Its invariant norm is
+
+[
+p_\mu p^\mu
+===========
+
+-\frac{E^2}{c^2}+p^2.
+]
+
+Since
+
+[
+p_\mu p^\mu=-m^2c^2,
+]
+
+we obtain
+
+[
+\boxed{
+E^2
+===
+
+p^2c^2+m^2c^4.
+}
+]
+
+Energy and momentum are therefore not separate relativistic quantities. They are components of a single four-vector.
+
+---
+
+# 5.6.10 Four-Acceleration
+
+The four-acceleration is defined by
+
+[
+\boxed{
+A^\mu
+=====
+
+\frac{dU^\mu}{d\tau}.
+}
+]
+
+Because
+
+[
+U_\mu U^\mu=-c^2,
+]
+
+differentiation gives
+
+[
+\frac{d}{d\tau}
+(U_\mu U^\mu)
+=============
+
+# 2U_\mu A^\mu
+
+0.
+
+]
+
+Therefore,
+
+[
+\boxed{
+U_\mu A^\mu=0.
+}
+]
+
+The four-acceleration is orthogonal to the four-velocity in Minkowski geometry.
+
+This is the relativistic generalization of the familiar orthogonality structure between velocity and acceleration in the appropriate invariant formulation.
+
+---
+
+# 5.6.11 Four-Force
+
+The four-force is defined as
+
+[
+\boxed{
+F^\mu
+=====
+
+\frac{dp^\mu}{d\tau}.
+}
+]
+
+For constant rest mass,
+
+[
+F^\mu
+=====
+
+mA^\mu.
+]
+
+The temporal component encodes the rate of energy transfer, while the spatial components encode relativistic three-force.
+
+Writing
+
+[
+p^\mu
+=====
+
+\left(
+\frac Ec,\mathbf p
+\right),
+]
+
+we have
+
+[
+F^\mu
+=====
+
+\left(
+\frac1c\frac{dE}{d\tau},
+\frac{d\mathbf p}{d\tau}
+\right).
+]
+
+Since
+
+[
+\frac{d}{d\tau}
+===============
+
+\gamma\frac{d}{dt},
+]
+
+this becomes
+
+[
+\boxed{
+F^\mu
+=====
+
+\gamma
+\left(
+\frac{\mathbf F\cdot\mathbf v}{c},
+\mathbf F
+\right),
+}
+]
+
+where
+
+[
+\mathbf F=\frac{d\mathbf p}{dt}.
+]
+
+The relativistic work-energy relation,
+
+[
+\frac{dE}{dt}
+=============
+
+\mathbf F\cdot\mathbf v,
+]
+
+is therefore incorporated into the four-dimensional force vector.
+
+---
+
+# 5.6.12 Lorentz Scalars
+
+A Lorentz scalar is a quantity whose value is identical in every inertial frame:
+
+[
+\boxed{
+\phi'=\phi.
+}
+]
+
+Examples include:
+
+[
+m,
+]
+
+[
+d\tau,
+]
+
+[
+p_\mu p^\mu,
+]
+
+[
+V_\mu V^\mu,
+]
+
+and
+
+[
+F_{\mu\nu}F^{\mu\nu}.
+]
+
+A scalar field
+
+[
+\phi(x)
+]
+
+transforms according to
+
+[
+\boxed{
+\phi'(x')=\phi(x).
+}
+]
+
+The numerical value associated with the same event is therefore independent of the inertial observer.
+
+---
+
+# 5.6.13 Rank-2 Lorentz Tensors
+
+A contravariant rank-2 tensor transforms according to
+
+[
+\boxed{
+T'^{\mu\nu}
+===========
+
+\Lambda^\mu_{\ \rho}
+\Lambda^\nu_{\ \sigma}
+T^{\rho\sigma}.
+}
+]
+
+A covariant tensor transforms as
+
+[
+\boxed{
+T'_{\mu\nu}
+===========
+
+(\Lambda^{-1})^\rho_{\ \mu}
+(\Lambda^{-1})^\sigma_{\ \nu}
+T_{\rho\sigma}.
+}
+]
+
+A mixed tensor transforms as
+
+[
+\boxed{
+T'^\mu_{\ \nu}
+==============
+
+\Lambda^\mu_{\ \rho}
+(\Lambda^{-1})^\sigma_{\ \nu}
+T^\rho_{\ \sigma}.
+}
+]
+
+These transformation laws ensure that tensor equations remain valid in every inertial coordinate system.
+
+---
+
+# 5.6.14 Tensor Contraction
+
+A fundamental operation in tensor calculus is contraction.
+
+Given a mixed tensor
+
+[
+T^\mu_{\ \nu},
+]
+
+its trace is
+
+[
+\boxed{
+T^\mu_{\ \mu}.
+}
+]
+
+The result is a Lorentz scalar.
+
+Likewise,
+
+[
+A_\mu B^\mu
+]
+
+is a scalar formed by contracting two four-vectors.
+
+The general principle is
+
+[
+\boxed{
+\text{complete contraction of Lorentz indices}
+\Longrightarrow
+\text{Lorentz scalar}.
+}
+]
+
+This principle permits the construction of invariant physical laws directly from tensors.
+
+---
+
+# 5.6.15 Symmetric and Antisymmetric Tensors
+
+A rank-2 tensor can be decomposed as
+
+[
+T_{\mu\nu}
+==========
+
+T_{(\mu\nu)}
++
+T_{[\mu\nu]},
+]
+
+where
+
+[
+T_{(\mu\nu)}
+============
+
+\frac12
+(T_{\mu\nu}+T_{\nu\mu})
+]
+
+is symmetric and
+
+[
+T_{[\mu\nu]}
+============
+
+\frac12
+(T_{\mu\nu}-T_{\nu\mu})
+]
+
+is antisymmetric.
+
+Thus,
+
+[
+T_{\mu\nu}
+==========
+
+S_{\mu\nu}+A_{\mu\nu}.
+]
+
+In four dimensions, a symmetric rank-2 tensor has
+
+[
+\frac{4(5)}2=10
+]
+
+independent components, while an antisymmetric rank-2 tensor has
+
+[
+\frac{4(3)}2=6.
+]
+
+These component counts become important in both relativistic mechanics and field theory.
+
+---
+
+# 5.6.16 The Electromagnetic Field Tensor
+
+Electromagnetism provides the canonical example of tensorial unification.
+
+The electric and magnetic fields are combined into the antisymmetric electromagnetic field tensor
+
+[
+\boxed{
+F_{\mu\nu}
+==========
+
+\partial_\mu A_\nu-\partial_\nu A_\mu,
+}
+]
+
+where
+
+[
+A^\mu
+=====
+
+\left(
+\frac{\phi}{c},\mathbf A
+\right)
+]
+
+is the electromagnetic four-potential.
+
+Because
+
+[
+F_{\mu\nu}=-F_{\nu\mu},
+]
+
+it has six independent components, corresponding precisely to the three components of (\mathbf E) and the three components of (\mathbf B).
+
+The relativistic tensor therefore reveals that electric and magnetic fields are not fundamentally independent entities. They are different components of a single spacetime tensor.
+
+---
+
+# 5.6.17 Maxwell's Equations in Tensor Form
+
+The inhomogeneous Maxwell equations become
+
+[
+\boxed{
+\partial_\mu F^{\mu\nu}
+=======================
+
+\mu_0J^\nu,
+}
+]
+
+where
+
+[
+J^\mu
+=====
+
+(c\rho,\mathbf J)
+]
+
+is the electromagnetic four-current.
+
+The homogeneous equations are
+
+[
+\boxed{
+\partial_{[\lambda}F_{\mu\nu]}=0.
+}
+]
+
+Equivalently,
+
+[
+\boxed{
+\partial_\lambda F_{\mu\nu}
++
+\partial_\mu F_{\nu\lambda}
++
+\partial_\nu F_{\lambda\mu}
+===========================
+
+0.
+
+}
+]
+
+The four-dimensional formulation compresses the traditional three-dimensional Maxwell system into two tensor equations.
+
+More importantly, covariance becomes manifest.
+
+---
+
+# 5.6.18 The Stress-Energy Tensor
+
+The distribution of energy, momentum, stress, and energy flux is encoded in the rank-2 stress-energy tensor,
+
+[
+\boxed{
+T^{\mu\nu}.
+}
+]
+
+For a relativistic system, its components have the schematic interpretation
+
+[
+T^{00}
+======
+
+\text{energy density},
+]
+
+[
+T^{0i}
+======
+
+\text{energy flux}/c,
+]
+
+[
+T^{i0}
+======
+
+\text{momentum density}\times c,
+]
+
+[
+T^{ij}
+======
+
+\text{stress}.
+]
+
+Local conservation becomes
+
+[
+\boxed{
+\partial_\mu T^{\mu\nu}=0.
+}
+]
+
+The four equations represented by this single tensor equation express conservation of energy and the three components of momentum.
+
+This structure will become fundamental in General Relativity, where
+
+[
+T_{\mu\nu}
+]
+
+acts as the source of spacetime curvature.
+
+---
+
+# 5.6.19 Lorentz Covariance of Physical Laws
+
+A relativistic physical law should possess the form
+
+[
+\boxed{
+\mathcal E
+(T_1,T_2,\ldots)=0,
+}
+]
+
+where all terms transform consistently under the Lorentz group.
+
+If
+
+[
+T_i
+]
+
+are tensors of appropriate rank, then tensor operations such as
+
+[
+\text{addition},
+\qquad
+\text{tensor product},
+\qquad
+\text{contraction},
+\qquad
+\text{differentiation}
+]
+
+can produce new covariant objects.
+
+A tensor equation that vanishes in one inertial frame therefore vanishes in every inertial frame.
+
+This is the mathematical content of relativistic covariance.
+
+---
+
+# 5.6.20 Tensor Products
+
+Given two vectors,
+
+[
+V^\mu,
+\qquad
+W^\nu,
+]
+
+their tensor product is
+
+[
+\boxed{
+(V\otimes W)^{\mu\nu}
+=====================
+
+V^\mu W^\nu.
+}
+]
+
+Under Lorentz transformations,
+
+[
+(V\otimes W)'^{\mu\nu}
+======================
+
+\Lambda^\mu_{\ \rho}
+\Lambda^\nu_{\ \sigma}
+V^\rho W^\sigma.
+]
+
+Thus the tensor product naturally generates higher-rank representations of the Lorentz group.
+
+Repeated tensor products generate
+
+[
+V^{\otimes n}.
+]
+
+The decomposition of these tensor products into irreducible representations provides the representation-theoretic foundation of relativistic field theory.
+
+---
+
+# 5.6.21 The Levi-Civita Tensor
+
+The totally antisymmetric Levi-Civita symbol is defined by
+
+[
+\epsilon_{0123}=+1.
+]
+
+It satisfies
+
+[
+\epsilon_{\mu\nu\rho\sigma}
+===========================
+
+\epsilon_{[\mu\nu\rho\sigma]}.
+]
+
+It permits the construction of dual tensors.
+
+For an antisymmetric tensor (F_{\mu\nu}), define its Hodge dual by
+
+[
+\boxed{
+{}^\star F_{\mu\nu}
+===================
+
+\frac12
+\epsilon_{\mu\nu\rho\sigma}
+F^{\rho\sigma}.
+}
+]
+
+In electromagnetism, the dual field exchanges the electric and magnetic sectors, up to the sign conventions associated with the chosen metric and orientation.
+
+The tensorial formalism therefore exposes a deeper duality between the two components of the electromagnetic field.
+
+---
+
+# 5.6.22 The Invariants of Electromagnetism
+
+Two fundamental Lorentz scalars can be constructed from (F_{\mu\nu}):
+
+[
+\boxed{
+F_{\mu\nu}F^{\mu\nu},
+}
+]
+
+and
+
+[
+\boxed{
+F_{\mu\nu}{}^\star F^{\mu\nu}.
+}
+]
+
+In standard conventions these correspond, up to normalization and signature-dependent signs, to
+
+[
+B^2-\frac{E^2}{c^2}
+]
+
+and
+
+[
+\mathbf E\cdot\mathbf B.
+]
+
+Thus observers may disagree about the magnitudes of (\mathbf E) and (\mathbf B) separately while agreeing upon these invariant combinations.
+
+This is a direct example of the Einsteinian principle that physically fundamental information resides in invariant geometric relations.
+
+---
+
+# 5.6.23 Tensor Fields
+
+A tensor need not be constant throughout spacetime.
+
+A tensor field assigns a tensor to every event:
+
+[
+T:
+\mathcal M
+\rightarrow
+T^{(r,s)}\mathcal M.
+]
+
+For example,
+
+[
+A^\mu(x)
+]
+
+is a vector field,
+
+[
+F_{\mu\nu}(x)
+]
+
+is a rank-((0,2)) tensor field, and
+
+[
+T^{\mu\nu}(x)
+]
+
+is a rank-((2,0)) tensor field.
+
+The transformation law applies pointwise.
+
+For a Lorentz transformation,
+
+[
+T'^{\mu\nu}(x')
+===============
+
+\Lambda^\mu_{\ \rho}
+\Lambda^\nu_{\ \sigma}
+T^{\rho\sigma}(x).
+]
+
+Tensor fields therefore provide the natural language for relativistic continuum physics and field theory.
+
+---
+
+# 5.6.24 The Distinction Between Lorentz Tensors and General Tensors
+
+In Special Relativity, one often speaks of Lorentz tensors because the relevant global symmetry is the Lorentz group.
+
+In General Relativity, tensors are instead defined intrinsically on a differentiable manifold and transform under arbitrary coordinate transformations.
+
+The distinction is important.
+
+Special Relativity:
+
+[
+\boxed{
+\text{global Lorentz covariance}.
+}
+]
+
+General Relativity:
+
+[
+\boxed{
+\text{general covariance}.
+}
+]
+
+A Lorentz tensor is therefore the flat-spacetime precursor of the more general tensor fields of differential geometry.
+
+The transition
+
+[
+\Lambda
+\longrightarrow
+\frac{\partial x'^\mu}{\partial x^\nu}
+]
+
+will become central in the next level of the relativistic hierarchy.
+
+---
+
+# 5.6.25 From Lorentz Tensors to General Covariance
+
+In Minkowski spacetime, Cartesian coordinates allow the metric to be written as
+
+[
+\eta_{\mu\nu}
+=============
+
+\text{constant}.
+]
+
+In a general coordinate system,
+
+[
+g_{\mu\nu}(x)
+]
+
+may vary with position even when spacetime remains flat.
+
+General Relativity removes the restriction to inertial coordinates entirely. The transformation law becomes
+
+[
+\boxed{
+T'^{\mu_1\cdots\mu_r}_{\qquad\quad\nu_1\cdots\nu_s}
+===================================================
+
+\frac{\partial x'^{\mu_1}}{\partial x^{\alpha_1}}
+\cdots
+\frac{\partial x'^{\mu_r}}{\partial x^{\alpha_r}}
+\frac{\partial x^{\beta_1}}{\partial x'^{\nu_1}}
+\cdots
+\frac{\partial x^{\beta_s}}{\partial x'^{\nu_s}}
+T^{\alpha_1\cdots\alpha_r}_{\qquad\quad\beta_1\cdots\beta_s}.
+}
+]
+
+The Lorentz transformation is recovered when the Jacobian is constant and satisfies the Lorentz condition.
+
+Thus,
+
+[
+\boxed{
+\text{Lorentz tensor calculus}
+\subset
+\text{tensor calculus on spacetime}.
+}
+]
+
+---
+
+# 5.6.26 The Hierarchy of Relativistic Objects
+
+The mathematical hierarchy can now be summarized:
+
+[
+\boxed{
+\begin{array}{rcl}
+\text{scalar} &:& \phi [3pt]
+\text{vector} &:& V^\mu [3pt]
+\text{covector} &:& V_\mu [3pt]
+\text{rank-2 tensor} &:& T^{\mu\nu} [3pt]
+\text{tensor field} &:& T^{\mu\nu}(x) [3pt]
+\text{geometric field} &:& g_{\mu\nu}(x).
+\end{array}
+}
+]
+
+Each successive level enlarges the descriptive capacity of relativistic physics.
+
+Scalars describe invariant magnitudes.
+
+Vectors encode directional and causal information.
+
+Tensors encode multilinear relationships among vectors and covectors.
+
+Tensor fields encode physical quantities distributed throughout spacetime.
+
+The metric itself is a tensor field that determines the geometry used to define all of these structures.
+
+---
+
+# 5.6.27 The Deep Structural Principle
+
+The tensor formalism makes a fundamental principle of relativity precise:
+
+[
+\boxed{
+\text{physical law}
+===================
+
+\text{geometric relation between covariant objects}.
+}
+]
+
+The coordinate components may change,
+
+[
+T^\mu
+\rightarrow
+T'^\mu,
+]
+
+but the geometric equation remains unchanged.
+
+Thus,
+
+[
+\mathcal E(T)=0
+]
+
+has invariant meaning if (\mathcal E) is constructed tensorially.
+
+This is the mathematical realization of the principle of relativity.
+
+It replaces the question
+
+[
+\text{"What are the coordinates?"}
+]
+
+with the deeper question
+
+[
+\boxed{
+\text{"What geometric object is invariantly represented by those coordinates?"}
+}
+]
+
+---
+
+# 5.6.28 Conclusion
+
+Four-vectors and Lorentz tensors provide the natural language of Special Relativity.
+
+The four-vector
+
+[
+V^\mu
+]
+
+transforms according to
+
+[
+V'^\mu
+======
+
+\Lambda^\mu_{\ \nu}V^\nu,
+]
+
+while the Minkowski metric satisfies
+
+[
+\Lambda^T\eta\Lambda=\eta.
+]
+
+Their invariant contraction,
+
+[
+V_\mu W^\mu,
+]
+
+provides a scalar independent of the inertial observer.
+
+From this structure emerge the principal objects of relativistic physics:
+
+[
+x^\mu,
+\qquad
+U^\mu,
+\qquad
+p^\mu,
+\qquad
+F^\mu,
+\qquad
+F_{\mu\nu},
+\qquad
+T^{\mu\nu}.
+]
+
+The electromagnetic field becomes a single antisymmetric tensor; energy and momentum become components of one four-vector; energy density, momentum density, stresses, and energy flux become components of the stress-energy tensor.
+
+The resulting hierarchy is
+
+[
+\boxed{
+\text{Lorentz invariance}
+\rightarrow
+\text{tensorial covariance}
+\rightarrow
+\text{geometric formulation of physics}.
+}
+]
+
+The decisive conceptual step has therefore been completed. Relativity is no longer merely a collection of transformation rules. It has become a geometric language in which physical quantities are classified by their transformation properties and physical laws are expressed through invariant tensorial relations.
+
+The next stage develops the **relativistic action principle and covariant dynamics**, showing how free particles, conserved quantities, and relativistic equations of motion emerge from a Lorentz-invariant variational formulation.
+
+# Part II — The Hierarchy of Relativity
+
+# Chapter 5 — Relativity 1.0: Special Relativity
+
+## 5.7 Relativistic Mechanics
+
+Special Relativity transforms mechanics from a theory formulated in terms of three-dimensional positions, velocities, and forces into a covariant theory of worldlines, four-momentum, invariant mass, and relativistic action. The central dynamical object is no longer the ordinary velocity
+
+[
+\mathbf v=\frac{d\mathbf x}{dt},
+]
+
+but the four-momentum
+
+[
+p^\mu=mU^\mu,
+]
+
+whose invariant norm determines the rest mass.
+
+The relativistic mechanical framework is therefore organized around the sequence
+
+[
+\boxed{
+\text{worldline}
+\rightarrow
+\text{proper time}
+\rightarrow
+\text{four-velocity}
+\rightarrow
+\text{four-momentum}
+\rightarrow
+\text{action}
+\rightarrow
+\text{equations of motion}.
+}
+]
+
+The Newtonian theory is recovered in the limit
+
+[
+\frac{v}{c}\rightarrow0,
+]
+
+but the relativistic formulation is fundamentally more general.
+
+---
+
+## 5.7.1 The Failure of Newtonian Momentum
+
+Newtonian mechanics begins with
+
+[
+\mathbf p=m\mathbf v.
+]
+
+If this relation were retained unchanged in Special Relativity, momentum would transform as an ordinary three-vector. But the temporal and spatial components of relativistic motion mix under Lorentz transformations.
+
+The invariant structure instead requires the four-momentum
+
+[
+p^\mu
+=====
+
+\left(
+\frac Ec,\mathbf p
+\right).
+]
+
+For a particle of invariant rest mass (m),
+
+[
+p^\mu=mU^\mu.
+]
+
+Since
+
+[
+U^\mu
+=====
+
+\gamma(c,\mathbf v),
+]
+
+we obtain
+
+[
+\boxed{
+p^\mu
+=====
+
+\gamma m(c,\mathbf v).
+}
+]
+
+Therefore the relativistic three-momentum is
+
+[
+\boxed{
+\mathbf p
+=========
+
+\gamma m\mathbf v,
+}
+]
+
+with
+
+[
+\gamma
+======
+
+\frac{1}{\sqrt{1-v^2/c^2}}.
+]
+
+The Newtonian expression emerges only when
+
+[
+v\ll c,
+]
+
+because
+
+[
+\gamma
+======
+
+1+\frac12\frac{v^2}{c^2}
++\mathcal O\left(\frac{v^4}{c^4}\right).
+]
+
+---
+
+# 5.7.2 Proper Time as the Mechanical Parameter
+
+For a timelike worldline,
+
+[
+ds^2=-c^2d\tau^2.
+]
+
+Therefore,
+
+[
+d\tau
+=====
+
+dt\sqrt{1-\frac{v^2}{c^2}}.
+]
+
+Proper time is invariant:
+
+[
+\boxed{
+d\tau'=d\tau.
+}
+]
+
+This makes it the natural parameter for relativistic particle dynamics.
+
+The worldline can consequently be written as
+
+[
+x^\mu=x^\mu(\tau).
+]
+
+The four-velocity is then
+
+[
+U^\mu
+=====
+
+\frac{dx^\mu}{d\tau},
+]
+
+and satisfies
+
+[
+U_\mu U^\mu=-c^2.
+]
+
+The normalization is a direct consequence of the definition of proper time.
+
+---
+
+# 5.7.3 Relativistic Three-Velocity
+
+The ordinary three-velocity remains useful, but it is no longer the fundamental covariant quantity.
+
+It is defined by
+
+[
+\mathbf v
+=========
+
+\frac{d\mathbf x}{dt}.
+]
+
+The four-velocity is related to it through
+
+[
+\boxed{
+U^\mu
+=====
+
+\gamma(c,\mathbf v).
+}
+]
+
+Thus,
+
+[
+U^0=\gamma c,
+]
+
+and
+
+[
+U^i=\gamma v^i.
+]
+
+The factor (\gamma) is not an arbitrary correction to Newtonian mechanics. It arises geometrically from the relation between coordinate time and proper time.
+
+---
+
+# 5.7.4 Relativistic Momentum
+
+The four-momentum is
+
+[
+p^\mu=mU^\mu.
+]
+
+Consequently,
+
+[
+\boxed{
+p^\mu
+=====
+
+\left(
+\gamma mc,
+\gamma m\mathbf v
+\right).
+}
+]
+
+The spatial part gives
+
+[
+\boxed{
+\mathbf p=\gamma m\mathbf v.
+}
+]
+
+The temporal part motivates the definition of total energy,
+
+[
+\boxed{
+E=\gamma mc^2.
+}
+]
+
+Hence,
+
+[
+\boxed{
+p^\mu
+=====
+
+\left(
+\frac Ec,\mathbf p
+\right).
+}
+]
+
+This unification is one of the central achievements of relativistic mechanics.
+
+Energy and momentum are not independent conserved quantities. They are components of one Lorentz four-vector.
+
+---
+
+# 5.7.5 The Relativistic Energy-Momentum Relation
+
+The invariant norm of four-momentum is
+
+[
+p_\mu p^\mu
+===========
+
+-m^2c^2.
+]
+
+Using
+
+[
+p^\mu
+=====
+
+\left(
+\frac Ec,\mathbf p
+\right),
+]
+
+we obtain
+
+[
+-\frac{E^2}{c^2}
++
+p^2
+===
+
+-m^2c^2.
+]
+
+Therefore,
+
+[
+\boxed{
+E^2
+===
+
+p^2c^2+m^2c^4.
+}
+]
+
+This equation is more fundamental than the separate expressions for energy and momentum.
+
+For a particle at rest,
+
+[
+\mathbf p=0,
+]
+
+and therefore
+
+[
+\boxed{
+E_0=mc^2.
+}
+]
+
+The rest energy is consequently the invariant energy associated with the particle's timelike four-momentum.
+
+---
+
+# 5.7.6 Total Energy and Kinetic Energy
+
+The total relativistic energy is
+
+[
+E=\gamma mc^2.
+]
+
+The rest energy is
+
+[
+E_0=mc^2.
+]
+
+Therefore the kinetic energy is
+
+[
+\boxed{
+K=E-E_0
+=======
+
+(\gamma-1)mc^2.
+}
+]
+
+For small velocities,
+
+[
+\gamma
+======
+
+1+\frac12\frac{v^2}{c^2}
++\frac38\frac{v^4}{c^4}
++\cdots.
+]
+
+Consequently,
+
+[
+K
+=
+
+\frac12mv^2
++
+\frac38m\frac{v^4}{c^2}
++\cdots.
+]
+
+The Newtonian kinetic energy is therefore the leading-order approximation:
+
+[
+\boxed{
+K\longrightarrow\frac12mv^2
+\qquad
+(v\ll c).
+}
+]
+
+---
+
+# 5.7.7 Relativistic Hamiltonian
+
+The energy-momentum relation can be solved for energy:
+
+[
+\boxed{
+E(\mathbf p)
+============
+
+\sqrt{p^2c^2+m^2c^4}.
+}
+]
+
+For a free relativistic particle, the Hamiltonian is therefore
+
+[
+\boxed{
+H
+=
+
+\sqrt{c^2\mathbf p^2+m^2c^4}.
+}
+]
+
+Hamilton's equation gives
+
+[
+\dot x^i
+========
+
+\frac{\partial H}{\partial p_i}.
+]
+
+Thus,
+
+[
+\dot x^i
+========
+
+\frac{c^2p_i}
+{\sqrt{c^2p^2+m^2c^4}}.
+]
+
+Since
+
+[
+E
+=
+
+\sqrt{c^2p^2+m^2c^4},
+]
+
+we obtain
+
+[
+\boxed{
+\mathbf v
+=========
+
+\frac{c^2\mathbf p}{E}.
+}
+]
+
+Equivalently,
+
+[
+\boxed{
+\mathbf p
+=========
+
+\frac{E}{c^2}\mathbf v.
+}
+]
+
+For a massive particle,
+
+[
+E=\gamma mc^2,
+]
+
+so
+
+[
+\mathbf p
+=========
+
+\gamma m\mathbf v.
+]
+
+---
+
+# 5.7.8 Relativistic Lagrangian
+
+A relativistic action must be Lorentz invariant.
+
+For a free massive particle, the natural scalar available along its worldline is the proper time. The action is therefore
+
+[
+\boxed{
+S
+=
+
+-mc^2\int d\tau.
+}
+]
+
+Using
+
+[
+d\tau
+=====
+
+dt\sqrt{1-\frac{v^2}{c^2}},
+]
+
+we obtain
+
+[
+S
+=
+
+\int L,dt,
+]
+
+with
+
+[
+\boxed{
+L
+=
+
+-mc^2
+\sqrt{1-\frac{v^2}{c^2}}.
+}
+]
+
+This is the relativistic free-particle Lagrangian.
+
+The square root is not introduced as a phenomenological modification. It is forced by Lorentz invariance and the geometry of the worldline.
+
+---
+
+# 5.7.9 Derivation of Relativistic Momentum from the Action
+
+The canonical momentum is
+
+[
+p_i
+===
+
+\frac{\partial L}{\partial v^i}.
+]
+
+For
+
+[
+L
+=
+
+-mc^2
+\sqrt{1-\frac{v^2}{c^2}},
+]
+
+we obtain
+
+[
+p_i
+===
+
+-mc^2
+\frac{1}{2}
+\left(
+1-\frac{v^2}{c^2}
+\right)^{-1/2}
+\left(
+-\frac{2v_i}{c^2}
+\right).
+]
+
+Therefore,
+
+[
+\boxed{
+p_i
+===
+
+\frac{mv_i}
+{\sqrt{1-v^2/c^2}}
+==================
+
+\gamma mv_i.
+}
+]
+
+Hence,
+
+[
+\boxed{
+\mathbf p=\gamma m\mathbf v.
+}
+]
+
+The relativistic momentum therefore follows directly from the invariant action.
+
+---
+
+# 5.7.10 Hamiltonian from the Legendre Transformation
+
+The Hamiltonian is
+
+[
+H
+=
+
+\mathbf p\cdot\mathbf v-L.
+]
+
+Using
+
+[
+\mathbf p=\gamma m\mathbf v
+]
+
+and
+
+[
+L=-\frac{mc^2}{\gamma},
+]
+
+we have
+
+[
+H
+=
+
+\gamma mv^2
++
+\frac{mc^2}{\gamma}.
+]
+
+Since
+
+[
+v^2=c^2\left(1-\frac1{\gamma^2}\right),
+]
+
+it follows that
+
+[
+H
+=
+
+\gamma mc^2.
+]
+
+Therefore,
+
+[
+\boxed{
+H=E=\gamma mc^2.
+}
+]
+
+The relativistic energy is thus the Hamiltonian generated by the Lorentz-invariant particle action.
+
+---
+
+# 5.7.11 Euler-Lagrange Equations
+
+The relativistic equations of motion follow from
+
+[
+\frac{d}{dt}
+\left(
+\frac{\partial L}{\partial v^i}
+\right)
+-------
+
+# \frac{\partial L}{\partial x^i}
+
+0.
+
+]
+
+For a free particle,
+
+[
+\frac{\partial L}{\partial x^i}=0.
+]
+
+Therefore,
+
+[
+\boxed{
+\frac{d p_i}{dt}=0.
+}
+]
+
+Hence,
+
+[
+\mathbf p=\text{constant}.
+]
+
+Since the rest mass is constant,
+
+[
+\gamma m\mathbf v=\text{constant}.
+]
+
+For free motion this implies constant velocity and therefore a straight worldline.
+
+The action principle thus reproduces inertial motion while simultaneously preserving Lorentz covariance.
+
+---
+
+# 5.7.12 Covariant Particle Action
+
+The coordinate-time action
+
+[
+S
+=
+
+\int dt,L
+]
+
+can be written more geometrically as
+
+[
+\boxed{
+S
+=
+
+-mc
+\int
+\sqrt{-\eta_{\mu\nu}dx^\mu dx^\nu}.
+}
+]
+
+Since
+
+[
+\sqrt{-\eta_{\mu\nu}dx^\mu dx^\nu}
+==================================
+
+c,d\tau,
+]
+
+this becomes
+
+[
+S
+=
+
+-mc^2\int d\tau.
+]
+
+The covariant form makes the geometric origin of the dynamics explicit.
+
+The action is proportional to the proper length of the particle's timelike worldline.
+
+Thus the free relativistic particle extremizes its proper time:
+
+[
+\boxed{
+\delta\int d\tau=0.
+}
+]
+
+---
+
+# 5.7.13 Geodesic Motion from the Particle Action
+
+Consider
+
+[
+S
+=
+
+-mc
+\int
+\sqrt{-\eta_{\mu\nu}
+\frac{dx^\mu}{d\lambda}
+\frac{dx^\nu}{d\lambda}}
+,d\lambda.
+]
+
+Variation with respect to (x^\mu(\lambda)) gives the geodesic equation.
+
+In general geometric notation,
+
+[
+\boxed{
+\frac{d^2x^\mu}{d\tau^2}
++
+\Gamma^\mu_{\alpha\beta}
+\frac{dx^\alpha}{d\tau}
+\frac{dx^\beta}{d\tau}
+=0.
+}
+]
+
+For Minkowski spacetime in inertial coordinates,
+
+[
+\Gamma^\mu_{\alpha\beta}=0.
+]
+
+Therefore,
+
+[
+\boxed{
+\frac{d^2x^\mu}{d\tau^2}=0.
+}
+]
+
+The worldline is a straight line.
+
+Relativistic inertial motion is therefore the geodesic motion of a flat Lorentzian geometry.
+
+---
+
+# 5.7.14 Four-Force
+
+When external interactions are present,
+
+[
+p^\mu
+]
+
+is no longer constant.
+
+Define the four-force by
+
+[
+\boxed{
+K^\mu
+=====
+
+\frac{dp^\mu}{d\tau}.
+}
+]
+
+Because
+
+[
+p^\mu=mU^\mu
+]
+
+for constant (m),
+
+[
+K^\mu=mA^\mu.
+]
+
+Since
+
+[
+U_\mu A^\mu=0,
+]
+
+we have
+
+[
+\boxed{
+U_\mu K^\mu=0.
+}
+]
+
+The four-force is therefore orthogonal to the four-velocity.
+
+---
+
+# 5.7.15 Relativistic Force and Power
+
+Writing
+
+[
+p^\mu
+=====
+
+\left(
+\frac Ec,\mathbf p
+\right),
+]
+
+the four-force becomes
+
+[
+K^\mu
+=====
+
+\gamma
+\left(
+\frac{1}{c}\frac{dE}{dt},
+\frac{d\mathbf p}{dt}
+\right).
+]
+
+Defining the three-force
+
+[
+\mathbf F
+=========
+
+\frac{d\mathbf p}{dt},
+]
+
+and using
+
+[
+\frac{dE}{dt}
+=============
+
+\mathbf F\cdot\mathbf v,
+]
+
+we obtain
+
+[
+\boxed{
+K^\mu
+=====
+
+\gamma
+\left(
+\frac{\mathbf F\cdot\mathbf v}{c},
+\mathbf F
+\right).
+}
+]
+
+The temporal component is therefore directly related to power,
+
+[
+P=\mathbf F\cdot\mathbf v.
+]
+
+Energy transfer and momentum transfer are unified within the four-force.
+
+---
+
+# 5.7.16 Relativistic Work-Energy Theorem
+
+Starting from
+
+[
+\mathbf F
+=========
+
+\frac{d\mathbf p}{dt},
+]
+
+we calculate
+
+[
+\mathbf F\cdot\mathbf v
+=======================
+
+\mathbf v\cdot\frac{d\mathbf p}{dt}.
+]
+
+For
+
+[
+E^2=p^2c^2+m^2c^4,
+]
+
+differentiation gives
+
+[
+2E,dE
+=====
+
+2c^2\mathbf p\cdot d\mathbf p.
+]
+
+Therefore,
+
+[
+\frac{dE}{dt}
+=============
+
+\frac{c^2\mathbf p}{E}
+\cdot
+\frac{d\mathbf p}{dt}.
+]
+
+Since
+
+[
+\mathbf v
+=========
+
+\frac{c^2\mathbf p}{E},
+]
+
+we obtain
+
+[
+\boxed{
+\frac{dE}{dt}
+=============
+
+\mathbf F\cdot\mathbf v.
+}
+]
+
+Thus the relativistic work-energy theorem retains the same structural form as in classical mechanics, but with relativistic momentum and energy.
+
+---
+
+# 5.7.17 Parallel and Transverse Acceleration
+
+Relativistic inertia depends upon the direction of acceleration relative to velocity.
+
+Decompose
+
+[
+\mathbf a
+=========
+
+\mathbf a_\parallel
++
+\mathbf a_\perp.
+]
+
+For
+
+[
+\mathbf p=\gamma m\mathbf v,
+]
+
+differentiation yields
+
+[
+\boxed{
+\mathbf F_\parallel
+===================
+
+\gamma^3m\mathbf a_\parallel,
+}
+]
+
+and
+
+[
+\boxed{
+\mathbf F_\perp
+===============
+
+\gamma m\mathbf a_\perp.
+}
+]
+
+Thus the relation between force and acceleration is anisotropic relative to the particle's instantaneous motion.
+
+At low velocity,
+
+[
+\gamma\rightarrow1,
+]
+
+and both expressions reduce to
+
+[
+\mathbf F=m\mathbf a.
+]
+
+---
+
+# 5.7.18 The Relativistic Mass Concept
+
+The invariant mass is
+
+[
+\boxed{
+m=\text{constant Lorentz scalar}.
+}
+]
+
+Historically one sometimes defines a velocity-dependent "relativistic mass"
+
+[
+m_{\rm rel}=\gamma m.
+]
+
+However, the covariant formulation makes this unnecessary.
+
+The physically fundamental quantities are
+
+[
+m,
+\qquad
+U^\mu,
+\qquad
+p^\mu.
+]
+
+Thus,
+
+[
+p^\mu=mU^\mu
+]
+
+is preferred over introducing a velocity-dependent mass.
+
+The increase of energy and momentum with velocity is then attributed to the four-momentum rather than to a changing invariant mass.
+
+---
+
+# 5.7.19 Massless Particles
+
+The proper time of a null worldline vanishes:
+
+[
+d\tau=0.
+]
+
+Consequently, the definition
+
+[
+U^\mu=\frac{dx^\mu}{d\tau}
+]
+
+cannot be used for a massless particle.
+
+Instead, one introduces an arbitrary affine parameter (\lambda),
+
+[
+p^\mu
+=====
+
+\frac{dx^\mu}{d\lambda},
+]
+
+up to an appropriate normalization.
+
+For a massless particle,
+
+[
+\boxed{
+p_\mu p^\mu=0.
+}
+]
+
+Hence,
+
+[
+E^2=p^2c^2,
+]
+
+and therefore
+
+[
+\boxed{
+E=pc.
+}
+]
+
+Massless particles propagate along null trajectories.
+
+---
+
+# 5.7.20 Relativistic Composition of Velocities
+
+Consider two inertial frames with relative velocity (u) along the (x)-axis.
+
+The Lorentz transformation gives
+
+[
+dx'
+===
+
+\gamma_u(dx-u,dt),
+]
+
+and
+
+[
+dt'
+===
+
+\gamma_u
+\left(
+dt-\frac{u}{c^2}dx
+\right).
+]
+
+Therefore,
+
+[
+v'_x
+====
+
+# \frac{dx'}{dt'}
+
+\boxed{
+\frac{v_x-u}
+{1-\frac{uv_x}{c^2}}.
+}
+]
+
+For transverse motion,
+
+[
+\boxed{
+v'_y
+====
+
+\frac{v_y}
+{\gamma_u
+\left(
+1-\frac{uv_x}{c^2}
+\right)},
+}
+]
+
+and similarly for (v_z).
+
+The classical relation
+
+[
+v'_x=v_x-u
+]
+
+is recovered only in the limit
+
+[
+c\rightarrow\infty.
+]
+
+---
+
+# 5.7.21 Invariance of the Speed of Light
+
+For
+
+[
+v_x=c,
+]
+
+the velocity transformation gives
+
+[
+v'_x
+====
+
+\frac{c-u}
+{1-u/c}.
+]
+
+Multiplying numerator and denominator by (c),
+
+[
+v'_x
+====
+
+# \frac{c(c-u)}{c-u}
+
+c.
+]
+
+Thus,
+
+[
+\boxed{
+v=c
+\quad\Longrightarrow\quad
+v'=c.
+}
+]
+
+The speed of light is therefore a fixed point of relativistic velocity composition.
+
+This is the mechanical manifestation of the null structure of Minkowski spacetime.
+
+---
+
+# 5.7.22 Conservation of Four-Momentum
+
+For an isolated relativistic system,
+
+[
+\boxed{
+\sum_a p_a^\mu
+==============
+
+\text{constant}.
+}
+]
+
+This compact equation contains both energy and momentum conservation:
+
+[
+\sum_a E_a
+==========
+
+\text{constant},
+]
+
+and
+
+[
+\sum_a\mathbf p_a
+=================
+
+\text{constant}.
+]
+
+Because the total quantity is a four-vector, conservation is preserved under Lorentz transformations.
+
+If
+
+[
+P^\mu
+=====
+
+\sum_a p_a^\mu,
+]
+
+then
+
+[
+P_\mu P^\mu
+]
+
+is also invariant.
+
+The invariant mass of a composite system is therefore
+
+[
+\boxed{
+M^2c^2
+======
+
+-P_\mu P^\mu.
+}
+]
+
+---
+
+# 5.7.23 Center-of-Momentum Frame
+
+For an isolated system, one may choose a frame in which
+
+[
+\mathbf P=0.
+]
+
+This is the center-of-momentum frame.
+
+There,
+
+[
+P^\mu
+=====
+
+\left(
+\frac{E_{\rm CM}}c,
+\mathbf 0
+\right).
+]
+
+Therefore,
+
+[
+P_\mu P^\mu
+===========
+
+-\frac{E_{\rm CM}^2}{c^2}.
+]
+
+Defining the invariant system mass (M),
+
+[
+P_\mu P^\mu=-M^2c^2,
+]
+
+we obtain
+
+[
+\boxed{
+E_{\rm CM}=Mc^2.
+}
+]
+
+The invariant mass of a composite system therefore includes kinetic energy, binding energy, field energy, and internal energy.
+
+---
+
+# 5.7.24 Relativistic Collisions
+
+For any isolated collision,
+
+[
+\boxed{
+\sum_i p_i^\mu
+==============
+
+\sum_f p_f^\mu.
+}
+]
+
+The temporal component gives
+
+[
+\sum_i E_i
+==========
+
+\sum_f E_f,
+]
+
+while the spatial components give
+
+[
+\sum_i\mathbf p_i
+=================
+
+\sum_f\mathbf p_f.
+]
+
+The invariant mass relation
+
+[
+P^2=-M^2c^2
+]
+
+provides an additional frame-independent diagnostic.
+
+This formulation is particularly powerful because the collision can be analyzed in whichever inertial frame simplifies the calculation without changing the physical invariant.
+
+---
+
+# 5.7.25 Relativistic Action with External Fields
+
+Interactions can be incorporated into the action while preserving covariance.
+
+For electromagnetic coupling,
+
+[
+\boxed{
+S
+=
+
+## -mc\int ds
+
+q\int A_\mu dx^\mu,
+}
+]
+
+where
+
+[
+ds
+==
+
+\sqrt{-\eta_{\mu\nu}dx^\mu dx^\nu}.
+]
+
+The first term describes free relativistic motion, while the second represents electromagnetic interaction.
+
+Variation of this action gives
+
+[
+\boxed{
+m\frac{dU^\mu}{d\tau}
+=====================
+
+qF^\mu_{\ \nu}U^\nu.
+}
+]
+
+This is the covariant Lorentz-force equation.
+
+Its spatial and temporal components reproduce the familiar three-dimensional equations for electromagnetic force and power.
+
+---
+
+# 5.7.26 Gauge Invariance and Mechanical Coupling
+
+Under a gauge transformation,
+
+[
+A_\mu
+\rightarrow
+A_\mu+\partial_\mu\Lambda,
+]
+
+the interaction term changes by
+
+[
+-q\int
+\partial_\mu\Lambda,dx^\mu
+==========================
+
+-q\int d\Lambda.
+]
+
+Thus,
+
+[
+S_{\rm int}
+\rightarrow
+S_{\rm int}
+-q[\Lambda_f-\Lambda_i].
+]
+
+The action changes only by a boundary term, leaving the equations of motion invariant.
+
+This demonstrates an important structural principle:
+
+[
+\boxed{
+\text{relativistic mechanics}
++
+\text{gauge symmetry}
+\rightarrow
+\text{covariant interaction dynamics}.
+}
+]
+
+---
+
+# 5.7.27 Hamilton-Jacobi Formulation
+
+The relativistic Hamilton-Jacobi equation follows from the invariant mass-shell condition.
+
+Let
+
+[
+p_\mu
+=====
+
+\partial_\mu S.
+]
+
+Then
+
+[
+p_\mu p^\mu=-m^2c^2
+]
+
+becomes
+
+[
+\boxed{
+\eta^{\mu\nu}
+\partial_\mu S
+\partial_\nu S
++
+m^2c^2
+======
+
+0.
+
+}
+]
+
+In explicit coordinates,
+
+[
+-\frac1{c^2}
+\left(
+\frac{\partial S}{\partial t}
+\right)^2
++
+|\nabla S|^2
++
+m^2c^2
+======
+
+0.
+
+]
+
+This is the relativistic Hamilton-Jacobi equation.
+
+It provides the bridge from classical relativistic mechanics to relativistic quantum theory.
+
+---
+
+# 5.7.28 Relativistic Mechanics as Geometry
+
+The complete structure of free relativistic mechanics can be compressed into a small set of geometric statements:
+
+[
+\boxed{
+ds^2
+====
+
+\eta_{\mu\nu}dx^\mu dx^\nu,
+}
+]
+
+[
+\boxed{
+S=-mc^2\int d\tau,
+}
+]
+
+[
+\boxed{
+U^\mu=\frac{dx^\mu}{d\tau},
+}
+]
+
+[
+\boxed{
+p^\mu=mU^\mu,
+}
+]
+
+[
+\boxed{
+p_\mu p^\mu=-m^2c^2,
+}
+]
+
+and
+
+[
+\boxed{
+\frac{d p^\mu}{d\tau}=K^\mu.
+}
+]
+
+The Newtonian quantities
+
+[
+\mathbf x,\quad
+\mathbf v,\quad
+\mathbf p,\quad
+E
+]
+
+are not discarded. They are reorganized as components or projections of covariant geometric objects.
+
+The conceptual transition is therefore
+
+[
+\boxed{
+\text{Newtonian mechanics}
+\rightarrow
+\text{Lorentz-covariant mechanics}.
+}
+]
+
+---
+
+# 5.7.29 The Newtonian Limit
+
+A relativistic theory must reproduce classical mechanics when
+
+[
+\epsilon
+========
+
+\frac{v}{c}
+\ll1.
+]
+
+Expanding,
+
+[
+\gamma
+======
+
+1+\frac12\epsilon^2
++\frac38\epsilon^4+\cdots.
+]
+
+Therefore,
+
+[
+E
+=
+
+mc^2
++
+\frac12mv^2
++
+\frac38m\frac{v^4}{c^2}
++\cdots.
+]
+
+Subtracting the invariant rest energy,
+
+[
+K
+=
+
+\frac12mv^2
++
+\mathcal O\left(\frac{v^4}{c^2}\right).
+]
+
+Likewise,
+
+[
+\mathbf p
+=========
+
+m\mathbf v
++
+\frac12m\frac{v^2}{c^2}\mathbf v
++\cdots.
+]
+
+Hence,
+
+[
+\boxed{
+\lim_{c\rightarrow\infty}
+\mathbf p
+=========
+
+m\mathbf v,
+}
+]
+
+and
+
+[
+\boxed{
+\lim_{c\rightarrow\infty}
+K
+=
+
+\frac12mv^2.
+}
+]
+
+Newtonian mechanics is therefore the low-velocity asymptotic sector of relativistic mechanics.
+
+---
+
+# 5.7.30 Structural Synthesis
+
+Relativistic mechanics replaces the Newtonian separation of position, time, momentum, and energy with a unified four-dimensional structure.
+
+The central correspondence is
+
+[
+\boxed{
+\begin{array}{ccc}
+\text{Newtonian quantity}
+&
+\longrightarrow
+&
+\text{Relativistic object}
+[4pt]
+t,\mathbf x
+&
+\longrightarrow
+&
+x^\mu
+[4pt]
+\mathbf v
+&
+\longrightarrow
+&
+U^\mu
+[4pt]
+\mathbf p,E
+&
+\longrightarrow
+&
+p^\mu
+[4pt]
+\mathbf F,P
+&
+\longrightarrow
+&
+K^\mu
+[4pt]
+\text{trajectory}
+&
+\longrightarrow
+&
+\text{worldline}
+[4pt]
+\text{straight-line motion}
+&
+\longrightarrow
+&
+\text{geodesic motion}.
+\end{array}
+}
+]
+
+The theory is consequently governed by invariants rather than frame-dependent components.
+
+The fundamental invariant,
+
+[
+p_\mu p^\mu=-m^2c^2,
+]
+
+generates the mass-shell relation,
+
+[
+E^2=p^2c^2+m^2c^4.
+]
+
+The invariant action,
+
+[
+S=-mc^2\int d\tau,
+]
+
+generates the free-particle geodesic.
+
+The four-force,
+
+[
+K^\mu=\frac{dp^\mu}{d\tau},
+]
+
+unifies momentum change and energy transfer.
+
+The mechanics of Special Relativity is therefore not Newtonian mechanics with correction factors. It is a geometrically reorganized dynamical theory whose Newtonian limit emerges from the Lorentzian structure.
+
+---
+
+# 5.7.31 Conclusion
+
+Relativistic mechanics completes the dynamical formulation of Special Relativity.
+
+The fundamental particle is represented by a timelike worldline
+
+[
+x^\mu(\tau),
+]
+
+whose invariant proper time determines its natural parameter. Its four-velocity,
+
+[
+U^\mu=\frac{dx^\mu}{d\tau},
+]
+
+is normalized by
+
+[
+U_\mu U^\mu=-c^2.
+]
+
+Multiplication by invariant rest mass produces the four-momentum,
+
+[
+p^\mu=mU^\mu,
+]
+
+whose invariant norm gives
+
+[
+\boxed{
+E^2=p^2c^2+m^2c^4.
+}
+]
+
+The free-particle action,
+
+[
+\boxed{
+S=-mc^2\int d\tau,
+}
+]
+
+shows that inertial motion is the extremization of proper time and therefore geodesic motion in Minkowski spacetime.
+
+Interactions are represented covariantly through the four-force,
+
+[
+K^\mu=\frac{dp^\mu}{d\tau},
+]
+
+while electromagnetic coupling yields
+
+[
+m\frac{dU^\mu}{d\tau}
+=====================
+
+qF^\mu_{\ \nu}U^\nu.
+]
+
+The complete theory may therefore be summarized as
+
+[
+\boxed{
+\text{Lorentz symmetry}
+\rightarrow
+\text{invariant action}
+\rightarrow
+\text{four-momentum}
+\rightarrow
+\text{conservation laws}
+\rightarrow
+\text{relativistic dynamics}.
+}
+]
+
+The next section develops **Relativistic Energy and Momentum**, treating energy, momentum, rest energy, mass-shell geometry, center-of-momentum frames, relativistic collisions, and the invariant structure of composite systems in greater depth.
+
+# Part II — The Hierarchy of Relativity
+
+# Chapter 5 — Relativity 1.0: Special Relativity
+
+## 5.8 Energy–Momentum Geometry
+
+The preceding sections established that relativistic energy and momentum are not independent dynamical quantities but components of a single four-vector,
+
+[
+p^\mu=\left(\frac{E}{c},\mathbf p\right).
+]
+
+The deeper consequence is that relativistic dynamics possesses a second Lorentzian geometry in addition to spacetime geometry: **energy–momentum space**.
+
+Just as Minkowski spacetime is equipped with the invariant interval
+
+[
+ds^2=\eta_{\mu\nu}dx^\mu dx^\nu,
+]
+
+momentum space is equipped with the invariant quadratic form
+
+[
+dp^2=\eta_{\mu\nu}dp^\mu dp^\nu.
+]
+
+The physical states of a particle are consequently constrained to hypersurfaces in momentum space. For a particle of invariant mass (m),
+
+[
+\boxed{
+p_\mu p^\mu=-m^2c^2,
+}
+]
+
+or equivalently,
+
+[
+\boxed{
+E^2-c^2\mathbf p^2=m^2c^4.
+}
+]
+
+This relation defines the **mass shell**.
+
+Energy–momentum geometry therefore provides the invariant language of relativistic dynamics, particle kinematics, scattering theory, conservation laws, and ultimately relativistic quantum theory.
+
+---
+
+## 5.8.1 Spacetime and Momentum Space
+
+Minkowski spacetime is the affine space
+
+[
+\mathcal M\simeq\mathbb R^{1,3},
+]
+
+equipped with the metric
+
+[
+\eta_{\mu\nu}.
+]
+
+Its coordinates are
+
+[
+x^\mu=(ct,\mathbf x).
+]
+
+The corresponding momentum space is the dual vector space
+
+[
+\mathcal P=T^*_p\mathcal M,
+]
+
+with coordinates
+
+[
+p_\mu.
+]
+
+Using the Minkowski metric to identify vectors and covectors, one may equally write
+
+[
+p^\mu=
+\left(
+\frac Ec,\mathbf p
+\right).
+]
+
+The Lorentz group acts on both spaces:
+
+[
+x'^\mu
+======
+
+\Lambda^\mu_{\ \nu}x^\nu,
+]
+
+and
+
+[
+p'^\mu
+======
+
+\Lambda^\mu_{\ \nu}p^\nu.
+]
+
+Thus the same Lorentz symmetry governs both spacetime and energy–momentum space.
+
+The correspondence is
+
+[
+\boxed{
+x^\mu
+\longleftrightarrow
+p^\mu
+}
+]
+
+as dual geometric descriptions of relativistic kinematics.
+
+---
+
+# 5.8.2 The Momentum-Space Metric
+
+The Minkowski metric induces the invariant quadratic form
+
+[
+\boxed{
+p^2
+\equiv
+\eta_{\mu\nu}p^\mu p^\nu.
+}
+]
+
+With signature
+
+[
+(-,+,+,+),
+]
+
+we have
+
+[
+p^2
+===
+
+-\frac{E^2}{c^2}
++
+\mathbf p^2.
+]
+
+For a massive particle,
+
+[
+p^2=-m^2c^2.
+]
+
+Therefore,
+
+[
+\boxed{
+E^2
+===
+
+c^2\mathbf p^2+m^2c^4.
+}
+]
+
+This equation is not merely an energy formula. It is the equation of a Lorentz-invariant hypersurface embedded in four-dimensional momentum space.
+
+---
+
+# 5.8.3 The Mass Shell
+
+For fixed invariant mass (m), physical four-momenta satisfy
+
+[
+\boxed{
+p_\mu p^\mu=-m^2c^2.
+}
+]
+
+The set
+
+[
+\mathcal H_m
+============
+
+\left{
+p^\mu\in\mathcal P
+;|;
+p_\mu p^\mu=-m^2c^2
+\right}
+]
+
+is the mass shell.
+
+Solving for energy gives
+
+[
+E_\pm(\mathbf p)
+================
+
+\pm
+\sqrt{
+c^2\mathbf p^2+m^2c^4
+}.
+]
+
+For ordinary positive-energy particles,
+
+[
+\boxed{
+E>0.
+}
+]
+
+The physical branch is therefore
+
+[
+\mathcal H_m^+
+==============
+
+\left{
+p^\mu:
+p^2=-m^2c^2,;
+p^0>0
+\right}.
+]
+
+This positive-energy mass shell is a three-dimensional hyperboloid in four-dimensional momentum space.
+
+---
+
+# 5.8.4 Hyperbolic Geometry of Massive Momentum
+
+Introduce the rapidity parameter (\chi) through
+
+[
+\beta=\frac vc=\tanh\chi.
+]
+
+Then
+
+[
+\gamma=\cosh\chi,
+]
+
+and
+
+[
+\gamma\beta=\sinh\chi.
+]
+
+The four-momentum becomes
+
+[
+\boxed{
+p^\mu
+=====
+
+mc
+\left(
+\cosh\chi,
+\sinh\chi,\hat{\mathbf v}
+\right).
+}
+]
+
+For one-dimensional motion,
+
+[
+p^0=mc\cosh\chi,
+]
+
+[
+p^1=mc\sinh\chi.
+]
+
+Consequently,
+
+[
+-(p^0)^2+(p^1)^2
+================
+
+-m^2c^2.
+]
+
+Thus the mass shell is a hyperbola.
+
+Lorentz boosts act as translations of rapidity:
+
+[
+\boxed{
+\chi'!=\chi-\chi_{\rm boost}.
+}
+]
+
+The additive nature of rapidity is therefore the natural coordinate structure of relativistic velocity composition.
+
+---
+
+# 5.8.5 Energy–Momentum as a Lorentzian Manifold
+
+The positive-energy mass shell can be viewed intrinsically as a Riemannian three-manifold embedded in Lorentzian momentum space.
+
+Parameterize it by
+
+[
+p^i.
+]
+
+Then
+
+[
+E
+=
+
+\sqrt{
+c^2p^2+m^2c^4
+}.
+]
+
+Differentiating,
+
+[
+dE
+==
+
+\frac{c^2\mathbf p\cdot d\mathbf p}{E}.
+]
+
+The induced metric on the mass shell follows from
+
+[
+ds_p^2
+======
+
+\eta_{\mu\nu}dp^\mu dp^\nu.
+]
+
+Since
+
+[
+p^0=\frac Ec,
+]
+
+we have
+
+[
+dp^0=\frac{dE}{c}.
+]
+
+Therefore,
+
+[
+ds_p^2
+======
+
+-\frac{dE^2}{c^2}
++
+d\mathbf p^2.
+]
+
+Using
+
+[
+dE
+==
+
+\frac{c^2\mathbf p\cdot d\mathbf p}{E},
+]
+
+we obtain
+
+[
+\boxed{
+ds_p^2
+======
+
+## d\mathbf p^2
+
+\frac{
+c^2(\mathbf p\cdot d\mathbf p)^2
+}{
+E^2
+}.
+}
+]
+
+This induced geometry encodes the invariant structure of momentum-space states of fixed mass.
+
+---
+
+# 5.8.6 The Massless Cone
+
+For a massless particle,
+
+[
+m=0.
+]
+
+The mass-shell equation becomes
+
+[
+\boxed{
+p_\mu p^\mu=0.
+}
+]
+
+Therefore,
+
+[
+E^2=c^2p^2,
+]
+
+and for positive energy,
+
+[
+\boxed{
+E=cp.
+}
+]
+
+The mass shell becomes the future light cone in momentum space:
+
+[
+\boxed{
+\mathcal C^+
+============
+
+{p^\mu:p^2=0,;p^0>0}.
+}
+]
+
+This is the momentum-space counterpart of the null cone in spacetime.
+
+The same Lorentzian structure therefore governs both the propagation of light in spacetime and the kinematics of massless states in momentum space.
+
+---
+
+# 5.8.7 Timelike, Null, and Spacelike Momentum
+
+The Lorentzian classification applies directly to momentum vectors.
+
+### Timelike momentum
+
+[
+p^2<0.
+]
+
+For a massive particle,
+
+[
+p^2=-m^2c^2.
+]
+
+### Null momentum
+
+[
+p^2=0.
+]
+
+This characterizes massless particles.
+
+### Spacelike momentum
+
+[
+p^2>0.
+]
+
+A physical isolated particle with positive energy and real invariant mass does not possess a spacelike four-momentum.
+
+Thus,
+
+[
+\boxed{
+\text{mass classification}
+==========================
+
+\text{causal classification of four-momentum}.
+}
+]
+
+---
+
+# 5.8.8 The Energy–Momentum Four-Vector
+
+The components
+
+[
+p^\mu
+=====
+
+\left(
+\frac Ec,
+p_x,p_y,p_z
+\right)
+]
+
+transform under Lorentz boosts exactly as spacetime coordinates do.
+
+For a boost along (x),
+
+[
+\boxed{
+E'
+==
+
+\gamma_u(E-u p_x),
+}
+]
+
+and
+
+[
+\boxed{
+p_x'
+====
+
+\gamma_u
+\left(
+p_x-\frac{uE}{c^2}
+\right).
+}
+]
+
+The transverse momenta satisfy
+
+[
+p_y'=p_y,
+\qquad
+p_z'=p_z.
+]
+
+Energy and longitudinal momentum therefore mix under boosts.
+
+The observer-dependent quantities are
+
+[
+E,\quad p_x,\quad p_y,\quad p_z,
+]
+
+while the invariant
+
+[
+E^2-c^2p^2
+]
+
+is the same for every inertial observer.
+
+---
+
+# 5.8.9 Energy Is the Temporal Component of Momentum
+
+The identification
+
+[
+p^0=\frac Ec
+]
+
+is not merely an analogy with
+
+[
+x^0=ct.
+]
+
+Both arise because time and energy are associated with the temporal direction of their respective four-dimensional structures.
+
+The correspondence is
+
+[
+\boxed{
+ct
+\longleftrightarrow
+\frac Ec,
+}
+]
+
+and
+
+[
+\boxed{
+\mathbf x
+\longleftrightarrow
+\mathbf p.
+}
+]
+
+The analogy becomes deeper through the canonical relation
+
+[
+p_\mu dx^\mu,
+]
+
+which is an invariant scalar.
+
+Explicitly,
+
+[
+p_\mu dx^\mu
+============
+
+-E,dt
++
+\mathbf p\cdot d\mathbf x.
+]
+
+Depending upon metric and action conventions, the canonical one-form may equivalently be written with the opposite overall sign. The invariant content is the same.
+
+---
+
+# 5.8.10 The Relativistic Phase-Space Structure
+
+The pair
+
+[
+(x^\mu,p_\mu)
+]
+
+defines relativistic phase space.
+
+Its canonical one-form is
+
+[
+\boxed{
+\theta=p_\mu dx^\mu.
+}
+]
+
+Taking the exterior derivative,
+
+[
+\boxed{
+\omega=d\theta
+==============
+
+dp_\mu\wedge dx^\mu.
+}
+]
+
+This is the symplectic two-form.
+
+Thus relativistic mechanics possesses two complementary geometric structures:
+
+[
+\boxed{
+\begin{array}{c}
+\text{Lorentzian metric geometry}
+\
+\eta_{\mu\nu}
+[4pt]
+\text{Symplectic phase-space geometry}
+\
+\omega=dp_\mu\wedge dx^\mu.
+\end{array}
+}
+]
+
+The first governs spacetime intervals and causal structure; the second governs Hamiltonian dynamics.
+
+---
+
+# 5.8.11 The Mass-Shell Constraint
+
+The relativistic particle is subject to the constraint
+
+[
+\boxed{
+\mathcal C
+==========
+
+# p_\mu p^\mu+m^2c^2
+
+0.
+
+}
+]
+
+This constraint removes one degree of freedom from the unconstrained four-momentum.
+
+Solving for (p_0),
+
+[
+p_0
+===
+
+-\frac Ec,
+]
+
+with
+
+[
+E=
+\sqrt{
+c^2\mathbf p^2+m^2c^4
+}.
+]
+
+The covariant formulation therefore contains a constrained Hamiltonian system.
+
+The physical phase space is not the entire eight-dimensional space
+
+[
+(x^\mu,p_\mu),
+]
+
+but the submanifold satisfying the mass-shell constraint, together with the appropriate identification of gauge-equivalent worldline parameterizations.
+
+---
+
+# 5.8.12 Reparameterization Invariance
+
+The covariant particle action
+
+[
+S=-mc
+\int d\lambda
+\sqrt{
+-\eta_{\mu\nu}
+\dot x^\mu\dot x^\nu
+}
+]
+
+is invariant under arbitrary monotonic reparameterizations
+
+[
+\lambda\rightarrow\lambda'(\lambda).
+]
+
+The worldline itself is physical; the choice of parameter is not.
+
+This gauge redundancy reflects the fact that a particle trajectory is a geometric curve rather than a particular parametrized sequence of coordinate values.
+
+The constraint associated with this invariance is precisely the mass-shell condition
+
+[
+p^2+m^2c^2=0.
+]
+
+Thus,
+
+[
+\boxed{
+\text{worldline reparameterization}
+\Longleftrightarrow
+\text{mass-shell constraint}.
+}
+]
+
+---
+
+# 5.8.13 Energy–Momentum Conservation as Translation Symmetry
+
+The conservation of four-momentum is not an independent empirical rule.
+
+It follows from spacetime translation invariance.
+
+Consider a field theory with action
+
+[
+S[\phi]
+=======
+
+\int d^4x,\mathcal L.
+]
+
+Under translations,
+
+[
+x^\mu\rightarrow x^\mu+a^\mu,
+]
+
+the action remains invariant if there is no explicit spacetime dependence.
+
+Noether's theorem then gives
+
+[
+\boxed{
+\partial_\mu T^{\mu\nu}=0.
+}
+]
+
+The conserved quantities are
+
+[
+P^\nu
+=====
+
+\int d^3x,T^{0\nu}.
+]
+
+Thus,
+
+[
+P^\mu
+=====
+
+\left(
+\frac Ec,\mathbf P
+\right).
+]
+
+Energy–momentum conservation is therefore the Noether charge associated with translational symmetry.
+
+---
+
+# 5.8.14 The Total Four-Momentum of a System
+
+For a collection of particles,
+
+[
+\boxed{
+P^\mu
+=====
+
+\sum_a p_a^\mu.
+}
+]
+
+For a continuous system,
+
+[
+\boxed{
+P^\mu
+=====
+
+\int_\Sigma
+T^{\mu\nu}d\Sigma_\nu.
+}
+]
+
+In an inertial frame with constant-time hypersurface,
+
+[
+P^\mu
+=====
+
+\int d^3x,T^{0\mu}.
+]
+
+The total four-momentum transforms as a four-vector.
+
+Consequently,
+
+[
+P_\mu P^\mu
+]
+
+is invariant.
+
+Define the invariant mass of the entire system by
+
+[
+\boxed{
+P_\mu P^\mu=-M^2c^2.
+}
+]
+
+Then
+
+[
+\boxed{
+E_{\rm CM}=Mc^2
+}
+]
+
+in the center-of-momentum frame.
+
+---
+
+# 5.8.15 The Invariant Mass of a Composite System
+
+For several particles,
+
+[
+P^\mu
+=====
+
+\sum_i p_i^\mu.
+]
+
+Therefore,
+
+[
+P^2
+===
+
+\sum_i p_i^2
++
+2\sum_{i<j}p_i\cdot p_j.
+]
+
+Since
+
+[
+p_i^2=-m_i^2c^2,
+]
+
+we obtain
+
+[
+\boxed{
+M^2c^2
+======
+
+## \sum_i m_i^2c^2
+
+2\sum_{i<j}p_i\cdot p_j.
+}
+]
+
+The invariant mass of a composite system is therefore not generally equal to the sum of the individual rest masses.
+
+Internal kinetic energy and interaction energy contribute to (M).
+
+This is the geometric origin of the familiar physical fact that energy stored in a system contributes to its invariant mass.
+
+---
+
+# 5.8.16 Two-Particle Invariants
+
+For two incoming particles,
+
+[
+P^\mu=p_1^\mu+p_2^\mu.
+]
+
+The invariant center-of-momentum energy is determined by
+
+[
+s
+\equiv
+-P_\mu P^\mu c^2.
+]
+
+With our signature,
+
+[
+\boxed{
+s
+=
+
+## (E_1+E_2)^2
+
+c^2|\mathbf p_1+\mathbf p_2|^2.
+}
+]
+
+In units with (c=1),
+
+[
+\boxed{
+s=(p_1+p_2)^2
+}
+]
+
+under the corresponding mostly-minus convention.
+
+The scalar (s) is invariant under Lorentz transformations.
+
+It is therefore the natural energy variable for relativistic collision physics.
+
+---
+
+# 5.8.17 Mandelstam Geometry
+
+For a (2\rightarrow2) process,
+
+[
+p_1+p_2\rightarrow p_3+p_4,
+]
+
+define the invariant quantities
+
+[
+\boxed{
+s=(p_1+p_2)^2,
+}
+]
+
+[
+\boxed{
+t=(p_1-p_3)^2,
+}
+]
+
+[
+\boxed{
+u=(p_1-p_4)^2,
+}
+]
+
+with signs adjusted consistently to the chosen metric convention.
+
+These quantities remain unchanged under Lorentz transformations.
+
+They replace frame-dependent collision energies and scattering angles with invariant geometric quantities.
+
+For fixed particle masses,
+
+[
+s+t+u
+=====
+
+\sum_i m_i^2c^2
+]
+
+up to the chosen sign convention.
+
+The Mandelstam variables are therefore coordinates on the invariant kinematic space of relativistic scattering.
+
+---
+
+# 5.8.18 Center-of-Momentum Geometry
+
+The center-of-momentum frame is defined by
+
+[
+\boxed{
+\mathbf P_{\rm CM}=0.
+}
+]
+
+The total momentum is therefore
+
+[
+P^\mu_{\rm CM}
+==============
+
+\left(
+\frac{E_{\rm CM}}c,
+\mathbf0
+\right).
+]
+
+The invariant mass is
+
+[
+M=\frac{E_{\rm CM}}{c^2}.
+]
+
+For a two-body final state,
+
+[
+\mathbf p_1+\mathbf p_2=0.
+]
+
+Thus the geometry of a collision can be represented by equal and opposite momentum vectors on the center-of-momentum hypersurface.
+
+This frame is not physically preferred; it is mathematically distinguished because the spatial part of the total four-momentum vanishes.
+
+---
+
+# 5.8.19 Threshold Energy
+
+Suppose an incoming projectile collides with a target at rest:
+
+[
+p_1+p_2\rightarrow \text{final state}.
+]
+
+The invariant
+
+[
+s=(p_1+p_2)^2
+]
+
+determines the threshold condition.
+
+At threshold, the final particles have zero relative momentum in the center-of-momentum frame. Thus,
+
+[
+E_{\rm CM,threshold}
+====================
+
+\left(
+\sum_f m_f
+\right)c^2.
+]
+
+Therefore,
+
+[
+\boxed{
+s_{\rm threshold}
+=================
+
+\left(
+\sum_f m_f c
+\right)^2
+}
+]
+
+with the appropriate convention for (s).
+
+This demonstrates why relativistic collision energy cannot be identified simply with the laboratory kinetic energy of the projectile.
+
+Momentum carried by the incoming system contributes to the invariant geometry.
+
+---
+
+# 5.8.20 Energy–Momentum Transfer
+
+For an interaction,
+
+[
+q^\mu
+=====
+
+p'^\mu-p^\mu
+]
+
+defines the four-momentum transfer.
+
+Its invariant square,
+
+[
+\boxed{
+q^2=q_\mu q^\mu,
+}
+]
+
+is frame-independent.
+
+For spacelike momentum transfer,
+
+[
+q^2>0
+]
+
+in the mostly-plus convention.
+
+For timelike transfer,
+
+[
+q^2<0.
+]
+
+The causal character of momentum transfer becomes an important invariant classification in relativistic scattering and field theory.
+
+---
+
+# 5.8.21 Four-Momentum and Causality
+
+The same Lorentzian classification that governs spacetime intervals governs momentum vectors.
+
+For a massive particle,
+
+[
+p^2<0.
+]
+
+For a massless particle,
+
+[
+p^2=0.
+]
+
+The future-directed condition
+
+[
+p^0>0
+]
+
+selects the physical positive-energy branch.
+
+Thus the physical momentum space is naturally divided into
+
+[
+\boxed{
+\text{future timelike cone},
+\quad
+\text{future null cone},
+\quad
+\text{other Lorentz sectors}.
+}
+]
+
+The positivity of energy is therefore geometrically connected to the orientation of momentum relative to the future light cone.
+
+---
+
+# 5.8.22 The Energy–Momentum Four-Vector and Proper Velocity
+
+For a massive particle,
+
+[
+p^\mu=mU^\mu.
+]
+
+Therefore,
+
+[
+p^\mu
+=====
+
+m\gamma(c,\mathbf v).
+]
+
+The ratio
+
+[
+\frac{\mathbf p c}{E}
+]
+
+is
+
+[
+\frac{\gamma m\mathbf v c}
+{\gamma mc^2}
+=============
+
+\frac{\mathbf v}{c}.
+]
+
+Hence,
+
+[
+\boxed{
+\mathbf v
+=========
+
+c^2\frac{\mathbf p}{E}.
+}
+]
+
+The ordinary velocity is thus recoverable directly from the energy–momentum geometry.
+
+For massive particles,
+
+[
+\frac{pc}{E}<1.
+]
+
+For massless particles,
+
+[
+\frac{pc}{E}=1.
+]
+
+This gives a direct momentum-space characterization of causal propagation.
+
+---
+
+# 5.8.23 Rapidity as a Coordinate on the Mass Shell
+
+For one-dimensional massive motion,
+
+[
+E=mc^2\cosh\chi,
+]
+
+and
+
+[
+pc=mc^2\sinh\chi.
+]
+
+Therefore,
+
+[
+\boxed{
+\frac{E}{mc^2}=\cosh\chi,
+}
+]
+
+[
+\boxed{
+\frac{pc}{mc^2}=\sinh\chi.
+}
+]
+
+The mass-shell condition becomes the hyperbolic identity
+
+[
+\cosh^2\chi-\sinh^2\chi=1.
+]
+
+The relativistic dispersion relation is therefore literally a hyperbolic geometric relation.
+
+---
+
+# 5.8.24 Energy–Momentum Distance Between States
+
+For two four-momenta (p^\mu) and (q^\mu), their difference
+
+[
+\Delta p^\mu=p^\mu-q^\mu
+]
+
+has invariant norm
+
+[
+\boxed{
+(\Delta p)^2
+============
+
+(p-q)_\mu(p-q)^\mu.
+}
+]
+
+This quantity characterizes the Lorentzian separation between momentum states.
+
+In scattering,
+
+[
+q^\mu=p'^\mu-p^\mu
+]
+
+is precisely such a difference.
+
+Thus momentum transfer is geometrically a displacement in energy–momentum space.
+
+---
+
+# 5.8.25 The Duality of Spacetime and Momentum Space
+
+The invariant pairing
+
+[
+p_\mu dx^\mu
+]
+
+connects spacetime and momentum space.
+
+Under a Lorentz transformation,
+
+[
+x'^\mu
+======
+
+\Lambda^\mu_{\ \nu}x^\nu,
+]
+
+while
+
+[
+p'_\mu
+======
+
+(\Lambda^{-1})^\nu_{\ \mu}p_\nu.
+]
+
+Therefore,
+
+[
+p'_\mu dx'^\mu
+==============
+
+p_\mu dx^\mu.
+]
+
+The pairing is invariant.
+
+This provides the geometric foundation for Fourier analysis:
+
+[
+\boxed{
+e^{,\frac{i}{\hbar}p_\mu x^\mu}
+}
+]
+
+is Lorentz invariant.
+
+Momentum therefore appears as the covector dual to spacetime displacement.
+
+---
+
+# 5.8.26 Plane Waves and the Mass Shell
+
+A relativistic plane wave has the form
+
+[
+\psi(x)
+=======
+
+e^{-\frac{i}{\hbar}p_\mu x^\mu}.
+]
+
+For a free massive particle,
+
+[
+p_\mu p^\mu=-m^2c^2.
+]
+
+Replacing
+
+[
+p_\mu
+\rightarrow
+-i\hbar\partial_\mu
+]
+
+gives
+
+[
+\left(
+-\hbar^2\partial_\mu\partial^\mu
++
+m^2c^2
+\right)\psi=0,
+]
+
+with the precise overall signs depending on the adopted metric and Fourier convention.
+
+This produces the Klein-Gordon equation.
+
+The mass shell is therefore not merely classical kinematics. It becomes the spectral condition defining relativistic quantum propagation.
+
+---
+
+# 5.8.27 Energy–Momentum Geometry and Quantum Theory
+
+The relativistic relation
+
+[
+p_\mu p^\mu=-m^2c^2
+]
+
+becomes an operator constraint in quantum theory.
+
+The replacement
+
+[
+p_\mu
+\rightarrow
+-i\hbar\partial_\mu
+]
+
+turns the geometric mass-shell equation into a differential field equation.
+
+Thus,
+
+[
+\boxed{
+\text{mass-shell geometry}
+\rightarrow
+\text{relativistic wave equation}.
+}
+]
+
+For scalar fields this yields Klein-Gordon theory; for spinor fields, the mass-shell condition is factorized by the Dirac operator.
+
+The geometry of energy–momentum space therefore lies beneath the relativistic quantum description.
+
+---
+
+# 5.8.28 The Dirac Factorization
+
+The scalar mass-shell equation can be written schematically as
+
+[
+p^2+m^2c^2=0.
+]
+
+Dirac sought a first-order operator whose square reproduces this quadratic constraint.
+
+Introduce matrices satisfying
+
+[
+\boxed{
+{\gamma^\mu,\gamma^\nu}
+=======================
+
+2\eta^{\mu\nu}.
+}
+]
+
+Then
+
+[
+(\gamma^\mu p_\mu)^2
+====================
+
+p_\mu p^\mu.
+]
+
+The relativistic mass-shell condition can therefore be factorized as
+
+[
+\boxed{
+(\gamma^\mu p_\mu-mc)\psi=0,
+}
+]
+
+with sign conventions determined by the metric choice.
+
+The Dirac equation is consequently a representation-theoretic square root of the energy–momentum mass shell.
+
+---
+
+# 5.8.29 Energy–Momentum Geometry and Relativistic Symmetry
+
+The Lorentz group preserves
+
+[
+p^2.
+]
+
+The full Poincaré group preserves both the Minkowski metric and spacetime translations.
+
+Its generators consist of
+
+[
+P_\mu
+]
+
+for translations and
+
+[
+M_{\mu\nu}
+]
+
+for Lorentz transformations.
+
+The Casimir invariant
+
+[
+\boxed{
+P_\mu P^\mu
+}
+]
+
+classifies representations according to invariant mass.
+
+A second Casimir,
+
+constructed from the Pauli-Lubanski vector,
+
+[
+W^\mu
+=====
+
+\frac12
+\epsilon^{\mu\nu\rho\sigma}
+P_\nu M_{\rho\sigma},
+]
+
+classifies spin.
+
+Thus particle properties arise from invariants of the Poincaré representation.
+
+---
+
+# 5.8.30 Mass and Spin as Geometric Invariants
+
+The invariant mass satisfies
+
+[
+\boxed{
+P_\mu P^\mu=-m^2c^2.
+}
+]
+
+The Pauli-Lubanski invariant satisfies, schematically,
+
+[
+W_\mu W^\mu
+\propto
+-m^2c^2s(s+1)
+]
+
+for massive representations, with the proportionality depending upon conventions and normalization.
+
+Thus,
+
+[
+\boxed{
+\text{mass}
+\sim
+\text{first Poincaré invariant},
+}
+]
+
+while
+
+[
+\boxed{
+\text{spin}
+\sim
+\text{second Poincaré invariant}.
+}
+]
+
+Energy–momentum geometry therefore connects classical kinematics directly to the representation theory underlying relativistic quantum physics.
+
+---
+
+# 5.8.31 The Geometry of Negative-Energy Branches
+
+The algebraic mass-shell equation has two branches:
+
+[
+E_\pm
+=====
+
+\pm\sqrt{c^2p^2+m^2c^4}.
+]
+
+Classically, ordinary positive-energy particles occupy
+
+[
+E>0.
+]
+
+The negative branch nevertheless becomes mathematically significant in relativistic quantum theory, where the complete spectrum of relativistic wave equations contains both signs.
+
+The modern interpretation does not require assigning ordinary negative-energy particles to the classical spectrum. Instead, quantum field theory reorganizes these modes in terms of particles and antiparticles.
+
+The geometric origin of the two branches remains the same:
+
+[
+\boxed{
+E^2=c^2p^2+m^2c^4.
+}
+]
+
+---
+
+# 5.8.32 Energy–Momentum Geometry of Bound Systems
+
+For a composite object,
+
+[
+P^\mu
+=====
+
+\sum_i p_i^\mu
++
+P^\mu_{\rm field}
++\cdots.
+]
+
+Its invariant mass is determined by
+
+[
+M^2c^2=-P^2.
+]
+
+Binding energy modifies (M).
+
+If a system has total rest-frame energy
+
+[
+E_{\rm rest},
+]
+
+then
+
+[
+\boxed{
+M=\frac{E_{\rm rest}}{c^2}.
+}
+]
+
+Consequently, internal kinetic and potential contributions are encoded geometrically in the total four-momentum.
+
+Mass is therefore not simply the sum of the rest masses of constituent particles.
+
+---
+
+# 5.8.33 Relativistic Center of Energy
+
+For an isolated system, the total four-momentum determines a preferred center-of-momentum frame.
+
+If
+
+[
+P^\mu
+=====
+
+\left(
+\frac Ec,\mathbf P
+\right),
+]
+
+the velocity of the center-of-momentum frame relative to a given inertial frame is
+
+[
+\boxed{
+\mathbf V_{\rm CM}
+==================
+
+\frac{c^2\mathbf P}{E}.
+}
+]
+
+This follows directly from the transformation that sets
+
+[
+\mathbf P'=0.
+]
+
+The same relation as
+
+[
+\mathbf v=\frac{c^2\mathbf p}{E}
+]
+
+therefore applies to the collective motion of an isolated system.
+
+---
+
+# 5.8.34 The Convex Structure of Future Momentum
+
+Future-directed timelike momenta satisfy
+
+[
+p^0>0,
+\qquad
+p^2<0.
+]
+
+The sum of future-directed timelike momenta is again future-directed timelike.
+
+Thus, for physical particles,
+
+[
+p_1^\mu+p_2^\mu
+]
+
+remains within the future timelike sector.
+
+This gives the total momentum a stable causal orientation.
+
+For massless momenta,
+
+[
+p_i^2=0,
+]
+
+the sum is generally timelike unless all momenta are exactly parallel.
+
+Hence a collection of massless particles can possess a nonzero invariant mass even though each individual particle has
+
+[
+m_i=0.
+]
+
+---
+
+# 5.8.35 A Geometric Origin of Center-of-Momentum Energy
+
+Consider two photons with four-momenta
+
+[
+p_1^\mu
+=======
+
+\left(
+\frac{E_1}{c},
+\mathbf p_1
+\right),
+]
+
+[
+p_2^\mu
+=======
+
+\left(
+\frac{E_2}{c},
+\mathbf p_2
+\right).
+]
+
+Each satisfies
+
+[
+p_1^2=p_2^2=0.
+]
+
+But their sum satisfies
+
+[
+P^2
+===
+
+2p_1\cdot p_2.
+]
+
+If the photons are not parallel,
+
+[
+P^2\neq0.
+]
+
+Therefore,
+
+[
+\boxed{
+M_{\rm system}\neq0
+}
+]
+
+in general.
+
+This is a striking demonstration that invariant mass is a property of the total energy–momentum configuration rather than simply the sum of constituent rest masses.
+
+---
+
+# 5.8.36 Momentum Space as a Kinematic Arena
+
+The ordinary description of particle motion emphasizes trajectories
+
+[
+x^\mu(\tau).
+]
+
+The energy–momentum description emphasizes states
+
+[
+p^\mu.
+]
+
+These are complementary.
+
+Spacetime asks:
+
+[
+\text{Where and when does the system evolve?}
+]
+
+Momentum space asks:
+
+[
+\text{What energy and momentum does the system carry?}
+]
+
+The complete relativistic phase-space description combines both:
+
+[
+\boxed{
+(x^\mu,p_\mu).
+}
+]
+
+The dynamics is then a trajectory through phase space subject to
+
+[
+p^2+m^2c^2=0.
+]
+
+---
+
+# 5.8.37 Fundamental Invariants
+
+The energy–momentum formulation is controlled by a hierarchy of invariant quantities:
+
+[
+\boxed{
+p^2
+}
+]
+
+for individual particle mass,
+
+[
+\boxed{
+P^2
+}
+]
+
+for total system invariant mass,
+
+[
+\boxed{
+(p_i+p_j)^2
+}
+]
+
+for subsystem energies,
+
+and
+
+[
+\boxed{
+(p_i-p_j)^2
+}
+]
+
+for momentum transfer.
+
+These quantities remain unchanged under arbitrary Lorentz boosts.
+
+They therefore provide the natural variables for relativistic physics.
+
+---
+
+# 5.8.38 The Relativistic Dispersion Relation
+
+The equation
+
+[
+\boxed{
+E(\mathbf p)
+============
+
+\sqrt{
+c^2p^2+m^2c^4
+}
+}
+]
+
+is the relativistic dispersion relation.
+
+Its derivative gives
+
+[
+\frac{\partial E}{\partial p_i}
+===============================
+
+\frac{c^2p_i}{E}.
+]
+
+Therefore,
+
+[
+\boxed{
+\mathbf v
+=========
+
+\nabla_{\mathbf p}E.
+}
+]
+
+This relation acquires fundamental significance in relativistic quantum mechanics and field theory, where the gradient of the dispersion relation governs group velocity.
+
+For (m=0),
+
+[
+E=cp,
+]
+
+so
+
+[
+|\nabla_{\mathbf p}E|=c.
+]
+
+---
+
+# 5.8.39 High-Energy and Low-Energy Regimes
+
+For
+
+[
+p\ll mc,
+]
+
+the dispersion relation expands as
+
+[
+E
+=
+
+mc^2
++
+\frac{p^2}{2m}
+--------------
+
+\frac{p^4}{8m^3c^2}
++\cdots.
+]
+
+The Newtonian kinetic term appears as the leading correction to rest energy.
+
+For
+
+[
+p\gg mc,
+]
+
+we obtain
+
+[
+E
+=
+
+pc
++
+\frac{m^2c^3}{2p}
++\cdots.
+]
+
+Thus the high-energy limit approaches the massless dispersion relation
+
+[
+E\approx pc.
+]
+
+The mass shell therefore interpolates continuously between Newtonian mechanics and ultrarelativistic dynamics.
+
+---
+
+# 5.8.40 Energy–Momentum Geometry as the Foundation of Relativistic Kinematics
+
+The essential structure can now be summarized as
+
+[
+\boxed{
+\mathcal P
+==========
+
+(\mathbb R^{1,3},\eta).
+}
+]
+
+A massive particle occupies
+
+[
+\boxed{
+\mathcal H_m^+
+==============
+
+{p\in\mathcal P:
+p^2=-m^2c^2,;p^0>0}.
+}
+]
+
+A massless particle occupies
+
+[
+\boxed{
+\mathcal C^+
+============
+
+{p\in\mathcal P:
+p^2=0,;p^0>0}.
+}
+]
+
+Lorentz transformations act as isometries:
+
+[
+p\rightarrow\Lambda p.
+]
+
+Conservation laws act by vector addition:
+
+[
+P=\sum_i p_i.
+]
+
+Invariant masses arise from quadratic norms:
+
+[
+M^2c^2=-P^2.
+]
+
+Scattering kinematics is organized by invariant products:
+
+[
+p_i\cdot p_j.
+]
+
+The entire kinematic structure is therefore geometric.
+
+---
+
+# 5.8.41 From Energy–Momentum Geometry to Dynamics
+
+Geometry alone determines the allowed kinematic states, but dynamics determines how systems move between those states.
+
+The mass shell specifies
+
+[
+\boxed{
+\text{allowed states}.
+}
+]
+
+The action specifies
+
+[
+\boxed{
+\text{allowed histories}.
+}
+]
+
+Conservation laws specify
+
+[
+\boxed{
+\text{allowed transitions}.
+}
+]
+
+The three structures combine as
+
+[
+\boxed{
+\text{kinematic geometry}
++
+\text{variational dynamics}
++
+\text{symmetry}
+===============
+
+\text{relativistic mechanics}.
+}
+]
+
+This distinction will become increasingly important as the hierarchy proceeds beyond Special Relativity.
+
+---
+
+# 5.8.42 Toward General Relativity
+
+In Special Relativity,
+
+[
+\eta_{\mu\nu}
+]
+
+is globally constant, and momentum space is globally related to the tangent and cotangent spaces of Minkowski spacetime.
+
+In General Relativity, the metric becomes dynamical:
+
+[
+\eta_{\mu\nu}
+\longrightarrow
+g_{\mu\nu}(x).
+]
+
+The local mass-shell condition becomes
+
+[
+\boxed{
+g^{\mu\nu}(x)p_\mu p_\nu
+========================
+
+-m^2c^2.
+}
+]
+
+The distinction between spacetime geometry and momentum geometry therefore becomes subtler.
+
+The local cotangent bundle
+
+[
+T^*\mathcal M
+]
+
+becomes the natural arena for relativistic phase space.
+
+This provides the conceptual bridge from Special Relativity to the geometric dynamics of General Relativity.
+
+---
+
+# 5.8.43 Toward the Relativistic Hierarchy
+
+The development can now be represented schematically:
+
+[
+\boxed{
+\begin{array}{c}
+\text{Minkowski spacetime}
+\
+\downarrow
+\
+\text{Lorentz transformations}
+\
+\downarrow
+\
+\text{four-momentum}
+\
+\downarrow
+\
+\text{mass shell}
+\
+\downarrow
+\
+\text{energy--momentum geometry}
+\
+\downarrow
+\
+\text{Poincaré invariants}
+\
+\downarrow
+\
+\text{relativistic dynamics}
+\
+\downarrow
+\
+\text{field theory}
+\
+\downarrow
+\
+\text{curved spacetime}.
+\end{array}
+}
+]
+
+The energy–momentum structure is therefore not an auxiliary construction. It is the second geometric pillar of relativistic physics.
+
+---
+
+# 5.8.44 Conclusion
+
+Energy and momentum form a single Lorentz four-vector,
+
+[
+\boxed{
+p^\mu
+=====
+
+\left(
+\frac Ec,\mathbf p
+\right).
+}
+]
+
+Its invariant norm,
+
+[
+\boxed{
+p_\mu p^\mu=-m^2c^2,
+}
+]
+
+defines the mass shell
+
+[
+\boxed{
+E^2-c^2p^2=m^2c^4.
+}
+]
+
+For massive particles this is a hyperboloid in momentum space; for massless particles it becomes the null cone.
+
+The Lorentz group acts as an isometry of this energy–momentum geometry. Rapidity provides natural hyperbolic coordinates, invariant masses arise as Lorentzian norms, and collision physics is governed by scalar products and Mandelstam invariants.
+
+At the level of many-particle systems,
+
+[
+P^\mu=\sum_i p_i^\mu,
+]
+
+and
+
+[
+P_\mu P^\mu=-M^2c^2
+]
+
+defines the invariant mass of the complete system. Energy conservation and momentum conservation are consequently the temporal and spatial projections of one covariant conservation law.
+
+The resulting conceptual structure is
+
+[
+\boxed{
+\text{energy}
+\leftrightarrow
+\text{time component},
+\qquad
+\text{momentum}
+\leftrightarrow
+\text{spatial components},
+}
+]
+
+[
+\boxed{
+\text{mass}
+\leftrightarrow
+\text{Lorentzian norm},
+}
+]
+
+[
+\boxed{
+\text{particle state}
+\leftrightarrow
+\text{point on a mass shell}.
+}
+]
+
+Energy–momentum geometry therefore establishes a second arena of relativistic geometry alongside spacetime itself. It is the structure upon which relativistic scattering, particle classification, quantum wave equations, and the Poincaré representation theory of matter are built.
+
+The next development is the **Relativistic Action Principle**, in which spacetime geometry, energy–momentum geometry, symmetry, and dynamics are unified through a covariant variational formulation.
 
