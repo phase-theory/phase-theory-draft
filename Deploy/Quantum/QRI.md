@@ -2318,3 +2318,452 @@ while preserving positivity, normalization, covariance, no-signaling, classical 
 }
 ]
 
+PART III — MATHEMATICAL PRIMITIVES
+
+4. Hilbert Space
+
+The Quantum Resonance Interpretation begins from the mathematical framework of orthodox quantum mechanics. The Hilbert-space formalism is retained without modification; QRI changes the ontology assigned to its elements, not the underlying linear algebra.
+
+Every isolated quantum system is associated with a complex, separable Hilbert space
+
+\mathcal H_S,
+
+whose elements represent the complete quantum possibility structure of the system prior to actualization.
+
+4.1 Definition of the Hilbert Space
+
+A Hilbert space is a complete complex vector space equipped with an inner product
+
+\langle\cdot,\cdot\rangle :
+\mathcal H_S\times\mathcal H_S
+\rightarrow
+\mathbb C,
+
+satisfying:
+
+* Conjugate symmetry
+
+\langle\phi|\psi\rangle
+
+\langle\psi|\phi\rangle^{*},
+
+* Linearity
+
+\langle\phi|
+(a\psi+b\chi)
+\rangle
+
+a\langle\phi|\psi\rangle
++
+b\langle\phi|\chi\rangle,
+
+* Positive definiteness
+
+\langle\psi|\psi\rangle
+\geq0,
+
+with equality only when
+
+|\psi\rangle=0.
+
+Completeness guarantees that every Cauchy sequence converges within the space, ensuring well-defined quantum dynamics.
+
+4.2 Quantum States
+
+A pure quantum state is represented by a normalized vector
+
+|\psi\rangle
+\in
+\mathcal H_S,
+
+satisfying
+
+\boxed{
+\langle\psi|\psi\rangle=1.
+}
+
+The norm of an arbitrary vector is therefore
+
+\boxed{
+\|\psi\|^2
+
+\langle\psi|\psi\rangle.
+}
+
+The normalization condition ensures that the total quantum possibility weight is conserved.
+
+4.3 Rays as Physical States
+
+Physical states are not individual vectors but rays.
+
+If
+
+|\psi\rangle
+
+and
+
+e^{i\theta}|\psi\rangle
+
+differ only by a global phase, they represent the same physical state.
+
+Formally,
+
+\boxed{
+|\psi\rangle
+\sim
+e^{i\theta}|\psi\rangle.
+}
+
+The physical state space of pure states is therefore the projective Hilbert space
+
+\boxed{
+\mathbb P(\mathcal H_S)
+
+\mathcal H_S/\sim.
+}
+
+QRI preserves this equivalence because global phase has no observable physical consequence.
+
+4.4 Superposition Principle
+
+For normalized states
+
+|\phi\rangle,
+|\chi\rangle
+\in
+\mathcal H_S,
+
+any linear combination
+
+|\psi\rangle
+
+a|\phi\rangle+b|\chi\rangle
+
+also belongs to .
+
+This is the mathematical origin of quantum superposition.
+
+QRI interprets the resulting state as a structured possibility field, not as multiple simultaneously actual physical worlds.
+
+Thus the superposition principle becomes
+
+\boxed{
+\text{linear combination}
+\Longrightarrow
+\text{combined quantum possibility}.
+}
+
+4.5 Basis Decomposition
+
+Let
+
+\{|i\rangle\}_{i=1}^{n}
+
+be an orthonormal basis satisfying
+
+\langle i|j\rangle
+
+\delta_{ij},
+
+and
+
+\sum_i
+|i\rangle\langle i|
+
+I.
+
+Every state admits the expansion
+
+\boxed{
+|\psi\rangle
+
+\sum_i
+c_i|i\rangle,
+}
+
+where
+
+c_i
+
+\langle i|\psi\rangle.
+
+The coefficients satisfy
+
+\sum_i|c_i|^2=1.
+
+QRI identifies the set
+
+\{c_i\}
+
+as the coordinate representation of quantum possibility relative to the chosen relational basis.
+
+4.6 Complex Structure
+
+Each amplitude decomposes into magnitude and phase:
+
+\boxed{
+c_i
+
+r_ie^{i\phi_i},
+}
+
+with
+
+r_i
+
+|c_i|,
+\qquad
+0\leq r_i\leq1.
+
+The probability weight is
+
+\pi_i
+
+r_i^2,
+
+while the phase
+
+\phi_i
+
+governs interference.
+
+QRI therefore distinguishes two complementary structures:
+
+Component	Physical role
+	Possibility weight
+	Relational coherence
+
+This distinction is essential because actualization depends on possibility weight, whereas interference depends on relative phase.
+
+4.7 Mixed States
+
+Not every physical system is described by a pure state.
+
+The general quantum state is represented by a density operator
+
+\boxed{
+\rho:
+\mathcal H_S
+\rightarrow
+\mathcal H_S.
+}
+
+A physical density operator satisfies
+
+\boxed{
+\rho^\dagger=\rho,
+}\boxed{
+\rho\geq0,
+}
+
+and
+
+\boxed{
+\operatorname{Tr}\rho=1.
+}
+
+Pure states are recovered as
+
+\rho
+
+|\psi\rangle
+\langle\psi|.
+
+Mixed states admit spectral decomposition
+
+\boxed{
+\rho
+
+\sum_k
+p_k
+|\psi_k\rangle
+\langle\psi_k|,
+}
+
+where
+
+p_k\geq0,
+\qquad
+\sum_kp_k=1.
+
+In QRI, a mixed state still represents a structured possibility object rather than ignorance concerning a predetermined classical reality.
+
+4.8 State Space Geometry
+
+The set of density operators forms the convex state space
+
+\boxed{
+\mathcal S(\mathcal H)
+
+\left\{
+\rho\geq0
+\mid
+\operatorname{Tr}\rho=1
+\right\}.
+}
+
+Convexity follows because
+
+\rho
+
+\lambda\rho_1
++
+(1-\lambda)\rho_2,
+\qquad
+0\leq\lambda\leq1,
+
+is again a valid density operator.
+
+Pure states are the extremal points of this convex set.
+
+QRI interprets this geometry as the landscape of admissible quantum possibility structures.
+
+4.9 Composite Systems
+
+For systems and ,
+
+\boxed{
+\mathcal H_{AB}
+
+\mathcal H_A
+\otimes
+\mathcal H_B.
+}
+
+A product state has the form
+
+|\psi_A\rangle
+\otimes
+|\psi_B\rangle.
+
+An entangled state is one that cannot be expressed in this form.
+
+QRI treats entanglement as a primitive relational structure within the tensor-product Hilbert space rather than evidence for multiple actual universes.
+
+4.10 Observables
+
+Every observable corresponds to a self-adjoint operator
+
+\boxed{
+A=A^\dagger.
+}
+
+Its spectral decomposition is
+
+A
+
+\sum_i
+a_iP_i,
+
+where
+
+P_iP_j
+
+\delta_{ij}P_i
+
+and
+
+\sum_iP_i=I.
+
+Expectation values are
+
+\boxed{
+\langle A\rangle
+
+\operatorname{Tr}(\rho A).
+}
+
+The operators identify possibility channels within QRI.
+
+The corresponding actual events belong to a different mathematical category.
+
+4.11 Unitary Transformations
+
+Symmetry transformations preserve the Hilbert-space structure.
+
+A unitary operator satisfies
+
+\boxed{
+U^\dagger U
+
+UU^\dagger
+
+I.
+}
+
+Quantum evolution is generated by such transformations:
+
+|\psi(t)\rangle
+
+U(t,t_0)
+|\psi(t_0)\rangle.
+
+Consequently,
+
+\boxed{
+\langle\psi(t)|\psi(t)\rangle
+
+1,
+}
+
+ensuring conservation of total possibility weight.
+
+4.12 Hilbert Space as Possibility Geometry
+
+The central interpretive statement of QRI is that Hilbert space is not the space of simultaneously existing classical realities.
+
+Instead,
+
+\boxed{
+\mathcal H
+
+\text{geometry of quantum possibility}.
+}
+
+Vectors represent possible relational configurations.
+
+Inner products quantify relational compatibility.
+
+Tensor products encode relational composition.
+
+Unitary evolution governs the continuous transformation of possibility.
+
+Actuality, however, is not an element of Hilbert space alone.
+
+It requires the additional structures introduced later in the corpus:
+
+\boxed{
+\mathcal H
+\rightarrow
+\mathfrak P
+\rightarrow
+\Gamma
+\rightarrow
+\mathfrak A.
+}
+
+Thus Hilbert space provides the kinematic foundation of QRI, while resonance and actualization provide its ontological completion.
+
+4.13 Foundational Hilbert Principle
+
+The Hilbert-space postulate of QRI may be summarized as follows:
+
+Every isolated quantum system possesses a complex Hilbert space whose vectors represent physically meaningful quantum possibilities. The linear structure governs the evolution and interference of possibilities, while actuality requires additional relational and dynamical structure beyond Hilbert space itself.
+
+Formally,
+
+\boxed{
+\mathcal H
+\neq
+\mathfrak A,
+\qquad
+\mathcal H
+\supset
+\mathfrak P.
+}
+
+Hilbert space contains the geometry of possible states.
+
+Actual events belong to the realized history constructed from those possibilities.
+
+This distinction is the mathematical foundation upon which the remainder of the Quantum Resonance Interpretation is built.
