@@ -1,4 +1,4 @@
-**# Universal Structural Harmonics  
+# Universal Structural Harmonics  
 ## A Metric-Free Spectral Theory of Mathematical Structures  
 
 **Preprint**
