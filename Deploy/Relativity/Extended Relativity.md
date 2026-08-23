@@ -127389,3 +127389,7263 @@ Within the unified framework of Extended Relativity, this provides a crucial con
 ]
 
 The Einstein equation can consequently be regarded not only as a dynamical law for a metric, but as the macroscopic geometric expression of a deeper thermodynamic constraint on causal horizons.
+
+# Appendix J — Noncommutative Geometry and Deformation Quantization
+
+## J.1 Purpose and Scope
+
+Noncommutative geometry generalizes ordinary geometry by replacing the commutative algebra of functions on a space with a potentially noncommutative algebra.
+
+The foundational replacement is
+
+[
+\boxed{
+\mathcal M
+\quad\longleftrightarrow\quad
+C^\infty(\mathcal M)
+}
+]
+
+followed by the generalized correspondence
+
+[
+\boxed{
+\text{space}
+\quad\longleftrightarrow\quad
+\text{algebra}.
+}
+]
+
+In ordinary geometry,
+
+[
+fg=gf,
+]
+
+whereas a noncommutative coordinate algebra may satisfy
+
+[
+\boxed{
+[x^\mu,x^\nu]\neq0.
+}
+]
+
+Deformation quantization provides a related but distinct construction: instead of replacing the algebra of functions outright, one deforms its multiplication,
+
+[
+\boxed{
+f g
+\quad\longrightarrow\quad
+f\star g.
+}
+]
+
+The two frameworks provide complementary mathematical languages for Planck-scale geometry, quantum coordinates, generalized gauge structures, and the possible emergence of classical spacetime.
+
+---
+
+# J.2 Commutative Geometry as an Algebra
+
+Let
+
+[
+\mathcal M
+]
+
+be a smooth manifold.
+
+Its smooth functions form the commutative algebra
+
+[
+\boxed{
+\mathcal A=C^\infty(\mathcal M).
+}
+]
+
+For
+
+[
+f,g\in\mathcal A,
+]
+
+ordinary multiplication satisfies
+
+[
+\boxed{
+fg=gf.
+}
+]
+
+The algebra contains geometric information about (\mathcal M).
+
+The central idea of noncommutative geometry is therefore:
+
+[
+\boxed{
+\text{replace the commutative algebra }
+C^\infty(\mathcal M)
+\text{ by a noncommutative algebra }\mathcal A.
+}
+]
+
+Geometry is then reconstructed from algebraic structures rather than assumed as a primitive manifold.
+
+---
+
+# J.3 The Noncommutative Replacement
+
+A noncommutative coordinate algebra satisfies
+
+[
+\boxed{
+ab\neq ba
+}
+]
+
+for some
+
+[
+a,b\in\mathcal A.
+]
+
+The coordinates themselves may obey
+
+[
+\boxed{
+[\hat x^\mu,\hat x^\nu]
+=======================
+
+i\Theta^{\mu\nu},
+}
+]
+
+where
+
+[
+\Theta^{\mu\nu}
+]
+
+is an antisymmetric deformation tensor.
+
+In the commutative limit,
+
+[
+\boxed{
+\Theta^{\mu\nu}\rightarrow0,
+}
+]
+
+and ordinary coordinates are recovered.
+
+---
+
+# J.4 Quantum Coordinates
+
+The fundamental coordinates may be treated as operators,
+
+[
+\boxed{
+\hat x^\mu.
+}
+]
+
+Their commutator,
+
+[
+\boxed{
+[\hat x^\mu,\hat x^\nu]
+=======================
+
+## \hat x^\mu\hat x^\nu
+
+\hat x^\nu\hat x^\mu,
+}
+]
+
+measures the failure of simultaneous classical localization.
+
+For constant noncommutativity,
+
+[
+\boxed{
+[\hat x^\mu,\hat x^\nu]
+=======================
+
+i\theta^{\mu\nu}.
+}
+]
+
+This produces uncertainty relations of the schematic form
+
+[
+\boxed{
+\Delta x^\mu\Delta x^\nu
+\gtrsim
+\frac12
+|\theta^{\mu\nu}|.
+}
+]
+
+Thus pointlike localization is replaced by an algebraically constrained localization scale.
+
+---
+
+# J.5 Classical Limit
+
+A deformation parameter
+
+[
+\hbar
+]
+
+provides the natural bridge between quantum and classical structures.
+
+Suppose
+
+[
+[\hat x^\mu,\hat x^\nu]
+=======================
+
+i\hbar
+\theta^{\mu\nu}.
+]
+
+Then
+
+[
+\boxed{
+\hbar\rightarrow0
+}
+]
+
+restores commutativity.
+
+The classical limit is therefore
+
+[
+\boxed{
+[\hat x^\mu,\hat x^\nu]
+\rightarrow0.
+}
+]
+
+This provides a mathematical mechanism for the emergence of ordinary geometry from a noncommutative quantum description.
+
+---
+
+# J.6 Deformation Quantization
+
+Deformation quantization begins with a classical phase space
+
+[
+(\mathcal P,\omega)
+]
+
+and its algebra of smooth functions
+
+[
+C^\infty(\mathcal P).
+]
+
+The classical product
+
+[
+fg
+]
+
+is replaced by a deformed associative product
+
+[
+\boxed{
+f\star g.
+}
+]
+
+The star product depends formally on (\hbar):
+
+[
+\boxed{
+f\star g
+========
+
+fg
++
+\sum_{n=1}^{\infty}
+\hbar^n C_n(f,g).
+}
+]
+
+The zeroth-order term is ordinary multiplication.
+
+---
+
+# J.7 Classical Limit of the Star Product
+
+The deformation must satisfy
+
+[
+\boxed{
+\lim_{\hbar\rightarrow0}
+f\star g
+========
+
+fg.
+}
+]
+
+The antisymmetric part reproduces the Poisson bracket:
+
+[
+\boxed{
+\frac{1}{i\hbar}
+(f\star g-g\star f)
+\longrightarrow
+{f,g}.
+}
+]
+
+Thus
+
+[
+\boxed{
+\text{Poisson geometry}
+\rightarrow
+\text{deformed algebra}
+\rightarrow
+\text{quantum algebra}.
+}
+]
+
+---
+
+# J.8 Poisson Manifolds
+
+A Poisson manifold possesses a bilinear bracket
+
+[
+\boxed{
+{f,g}.
+}
+]
+
+It obeys antisymmetry,
+
+[
+\boxed{
+{f,g}
+=====
+
+-{g,f},
+}
+]
+
+the Leibniz rule,
+
+[
+\boxed{
+{f,gh}
+======
+
+{f,g}h
++
+g{f,h},
+}
+]
+
+and the Jacobi identity,
+
+[
+\boxed{
+{f,{g,h}}
++
+{g,{h,f}}
++
+{h,{f,g}}
+=========
+
+0.
+
+}
+]
+
+The Poisson bracket is therefore the classical precursor of the quantum commutator.
+
+---
+
+# J.9 Symplectic Geometry
+
+On a symplectic manifold,
+
+[
+\boxed{
+\omega
+}
+]
+
+is a closed nondegenerate two-form:
+
+[
+\boxed{
+d\omega=0.
+}
+]
+
+Its inverse defines the Poisson tensor
+
+[
+\boxed{
+\theta^{ij}
+===========
+
+(\omega^{-1})^{ij}.
+}
+]
+
+Then
+
+[
+\boxed{
+{f,g}
+=====
+
+\theta^{ij}
+\partial_i f
+\partial_j g.
+}
+]
+
+Deformation quantization replaces this Poisson algebra with a noncommutative algebra.
+
+---
+
+# J.10 Moyal Product
+
+For a constant Poisson tensor,
+
+[
+\boxed{
+f\star g
+========
+
+f
+\exp
+\left[
+\frac{i\hbar}{2}
+\overleftarrow{\partial_i}
+\theta^{ij}
+\overrightarrow{\partial_j}
+\right]
+g.
+}
+]
+
+Expanding,
+
+[
+\boxed{
+f\star g
+========
+
+fg
++
+\frac{i\hbar}{2}
+\theta^{ij}
+\partial_i f,\partial_j g
++
+O(\hbar^2).
+}
+]
+
+The star commutator becomes
+
+[
+\boxed{
+[f,g]_\star
+===========
+
+# f\star g-g\star f
+
+i\hbar{f,g}
++
+O(\hbar^3).
+}
+]
+
+---
+
+# J.11 Associativity
+
+A fundamental requirement is
+
+[
+\boxed{
+(f\star g)\star h
+=================
+
+f\star(g\star h).
+}
+]
+
+Associativity is essential because it permits the deformed algebra to represent a consistent multiplication law.
+
+The star commutator consequently satisfies the Jacobi identity:
+
+[
+\boxed{
+[f,[g,h]*\star]*\star
++
+[g,[h,f]*\star]*\star
++
+[h,[f,g]*\star]*\star
+=====================
+
+0.
+
+}
+]
+
+---
+
+# J.12 Weyl Quantization
+
+A classical phase-space function
+
+[
+f(x,p)
+]
+
+may be mapped to an operator
+
+[
+\boxed{
+f
+\longrightarrow
+\widehat f.
+}
+]
+
+Weyl quantization symmetrizes position and momentum variables.
+
+The operator product corresponds to the star product:
+
+[
+\boxed{
+\widehat{f\star g}
+==================
+
+\hat f,\hat g.
+}
+]
+
+Thus deformation quantization provides an algebraic representation of quantum mechanics without requiring operators to be introduced as the initial primitive objects.
+
+---
+
+# J.13 Phase-Space Formulation
+
+Quantum states can be represented using phase-space distributions such as the Wigner function,
+
+[
+\boxed{
+W(x,p).
+}
+]
+
+Expectation values are written schematically as
+
+[
+\boxed{
+\langle\hat A\rangle
+====================
+
+\int
+dx,dp,
+W(x,p)A(x,p).
+}
+]
+
+Quantum dynamics becomes
+
+[
+\boxed{
+\frac{\partial W}{\partial t}
+=============================
+
+\frac1{i\hbar}
+[H,W]_\star.
+}
+]
+
+The classical Liouville equation is recovered as
+
+[
+\boxed{
+\hbar\rightarrow0.
+}
+]
+
+---
+
+# J.14 Noncommutative Differential Geometry
+
+Ordinary differential geometry uses the exterior derivative
+
+[
+\boxed{
+d:\Omega^p(\mathcal M)
+\rightarrow
+\Omega^{p+1}(\mathcal M).
+}
+]
+
+Noncommutative geometry replaces differential forms on a manifold with an algebraically defined differential calculus.
+
+One seeks
+
+[
+\boxed{
+\Omega^\bullet(\mathcal A)
+}
+]
+
+together with
+
+[
+d^2=0.
+]
+
+The graded Leibniz rule becomes
+
+[
+\boxed{
+d(\omega\eta)
+=============
+
+d\omega,\eta
++
+(-1)^p\omega,d\eta,
+}
+]
+
+for
+
+[
+\omega\in\Omega^p(\mathcal A).
+]
+
+---
+
+# J.15 Derivations
+
+A derivation
+
+[
+\delta:\mathcal A\rightarrow\mathcal A
+]
+
+satisfies
+
+[
+\boxed{
+\delta(ab)
+==========
+
+\delta(a)b+a\delta(b).
+}
+]
+
+Derivations generalize vector fields.
+
+In noncommutative geometry, inner derivations take the form
+
+[
+\boxed{
+\delta_a(b)
+===========
+
+[a,b].
+}
+]
+
+Thus commutators can themselves act as generalized differential operators.
+
+---
+
+# J.16 Spectral Geometry
+
+A central construction associates geometry with spectral data
+
+[
+\boxed{
+(\mathcal A,\mathcal H,D),
+}
+]
+
+where
+
+* (\mathcal A) is an algebra,
+* (\mathcal H) is a Hilbert space,
+* (D) is a generalized Dirac operator.
+
+The Dirac operator encodes metric information.
+
+Schematically,
+
+[
+\boxed{
+\text{geometry}
+\longleftrightarrow
+\text{spectral properties of }D.
+}
+]
+
+---
+
+# J.17 Spectral Distance
+
+For suitable spectral triples, distance can be characterized by
+
+[
+\boxed{
+d(x,y)
+======
+
+\sup_{a\in\mathcal A}
+\left{
+|a(x)-a(y)|
+:
+|[D,a]|\le1
+\right}.
+}
+]
+
+The metric is therefore encoded by commutators with the Dirac operator.
+
+This illustrates a fundamental principle:
+
+[
+\boxed{
+\text{metric geometry}
+\rightarrow
+\text{operator algebra}.
+}
+]
+
+---
+
+# J.18 Dirac Operator and Classical Geometry
+
+On an ordinary Riemannian spin manifold,
+
+[
+\boxed{
+D
+=
+
+i\gamma^\mu\nabla_\mu.
+}
+]
+
+Its square is related to the Laplacian and curvature through a Weitzenböck/Lichnerowicz-type identity,
+
+[
+\boxed{
+D^2
+===
+
+\nabla^\ast\nabla
++
+\frac14R
+}
+]
+
+for the standard Dirac operator on spinors.
+
+Consequently,
+
+[
+\boxed{
+D
+]
+
+contains both differential and curvature information.
+
+---
+
+# J.19 Spectral Action
+
+A geometric action may be constructed from the spectrum of (D):
+
+[
+\boxed{
+S_{\rm spec}
+============
+
+\operatorname{Tr}
+f!\left(\frac{D}{\Lambda}\right).
+}
+]
+
+Here
+
+[
+\Lambda
+]
+
+is a spectral cutoff and (f) is a suitable test function.
+
+The asymptotic expansion generates geometric invariants:
+
+[
+\boxed{
+S_{\rm spec}
+\sim
+\sum_n
+\Lambda^{d-n}a_n(D^2).
+}
+]
+
+The coefficients (a_n) are heat-kernel coefficients.
+
+---
+
+# J.20 Geometry from Spectral Data
+
+The spectral viewpoint reverses the usual order:
+
+[
+\boxed{
+g_{\mu\nu}
+\rightarrow
+D
+\rightarrow
+\operatorname{Spec}(D).
+}
+]
+
+The noncommutative formulation asks whether one can reconstruct the geometric information in the reverse direction:
+
+[
+\boxed{
+\operatorname{Spec}(D)
+\rightarrow
+D
+\rightarrow
+\text{geometry}.
+}
+]
+
+This becomes particularly important when no classical manifold exists.
+
+---
+
+# J.21 Noncommutative Gauge Theory
+
+Gauge transformations act naturally on modules over an algebra.
+
+For a gauge potential
+
+[
+\boxed{
+A,
+}
+]
+
+the curvature is
+
+[
+\boxed{
+F
+=
+
+dA+A\star A.
+}
+]
+
+The gauge transformation is
+
+[
+\boxed{
+A
+\rightarrow
+U^{-1}\star A\star U
++
+U^{-1}\star dU.
+}
+]
+
+The curvature transforms covariantly:
+
+[
+\boxed{
+F
+\rightarrow
+U^{-1}\star F\star U.
+}
+]
+
+Thus deformation quantization naturally generalizes gauge theory.
+
+---
+
+# J.22 Noncommutative Field Theory
+
+A scalar field on a noncommutative space can have action
+
+[
+\boxed{
+S
+=
+
+\int d^dx
+\left[
+\frac12
+\partial_\mu\phi\star\partial^\mu\phi
++
+\frac12m^2\phi\star\phi
++
+\frac{\lambda}{4!}
+\phi\star\phi\star\phi\star\phi
+\right].
+}
+]
+
+Because
+
+[
+\star
+]
+
+is generally noncommutative, interaction terms retain ordering information.
+
+The ordinary local product is recovered when
+
+[
+\boxed{
+\theta^{\mu\nu}\rightarrow0.
+}
+]
+
+---
+
+# J.23 UV/IR Mixing
+
+Noncommutative field theories can exhibit a characteristic relationship between ultraviolet and infrared behavior.
+
+Schematically,
+
+[
+\boxed{
+\text{UV structure}
+\leftrightarrow
+\text{IR singular behavior}.
+}
+]
+
+This phenomenon demonstrates that noncommutativity modifies the standard separation between short- and long-distance physics.
+
+---
+
+# J.24 Minimal Localization
+
+For
+
+[
+[\hat x,\hat y]
+===============
+
+i\theta,
+]
+
+the uncertainty relation gives
+
+[
+\boxed{
+\Delta x,\Delta y
+\ge
+\frac{|\theta|}{2}.
+}
+]
+
+Consequently, the concept of an arbitrarily small point can fail.
+
+Geometry becomes intrinsically resolution-dependent.
+
+This motivates the interpretation
+
+[
+\boxed{
+\text{Planck-scale geometry}
+\neq
+\text{continuum point geometry}.
+}
+]
+
+---
+
+# J.25 Noncommutative Plane
+
+The simplest model satisfies
+
+[
+\boxed{
+[\hat x,\hat y]
+===============
+
+i\theta.
+}
+]
+
+Introducing
+
+[
+\boxed{
+a
+=
+
+\frac{\hat x+i\hat y}{\sqrt{2\theta}},
+}
+]
+
+gives
+
+[
+\boxed{
+[a,a^\dagger]=1.
+}
+]
+
+The noncommutative plane can therefore be represented through an oscillator Hilbert space.
+
+This establishes a direct bridge between geometry and quantum operator algebra.
+
+---
+
+# J.26 Fuzzy Geometry
+
+A fuzzy space replaces continuous coordinate functions with finite- or countably-dimensional matrix algebras.
+
+For example,
+
+[
+\boxed{
+[\hat x_i,\hat x_j]
+===================
+
+i\lambda
+\epsilon_{ijk}\hat x_k.
+}
+]
+
+Together with
+
+[
+\boxed{
+\sum_i\hat x_i^2
+================
+
+R^2,
+}
+]
+
+this defines a fuzzy analogue of the two-sphere.
+
+The classical sphere emerges as the appropriate large-representation or commutative limit.
+
+---
+
+# J.27 Matrix Geometry
+
+More generally, one may represent coordinates as matrices:
+
+[
+\boxed{
+X^\mu\in M_N(\mathbb C).
+}
+]
+
+Geometry is then encoded by matrix commutators
+
+[
+\boxed{
+[X^\mu,X^\nu].
+}
+]
+
+A classical manifold may emerge from collective properties of large matrices.
+
+This provides a natural bridge to matrix models of quantum geometry.
+
+---
+
+# J.28 Noncommutative Spacetime
+
+A generalized spacetime may be specified by
+
+[
+\boxed{
+\mathcal A_{\rm spacetime}
+==========================
+
+\langle
+\hat x^\mu
+\rangle
+}
+]
+
+with
+
+[
+\boxed{
+[\hat x^\mu,\hat x^\nu]
+=======================
+
+i\Theta^{\mu\nu}(\hat x).
+}
+]
+
+If (\Theta^{\mu\nu}) depends on position or the coordinates themselves, the noncommutativity becomes dynamical.
+
+The geometry is then characterized by an algebra rather than a fixed tensor field on a classical manifold.
+
+---
+
+# J.29 Quantum Metric
+
+A metric can itself become operator-valued:
+
+[
+\boxed{
+\hat g_{\mu\nu}.
+}
+]
+
+One may define an expectation geometry
+
+[
+\boxed{
+g_{\mu\nu}^{\rm eff}
+====================
+
+\langle
+\hat g_{\mu\nu}
+\rangle.
+}
+]
+
+Fluctuations are measured by
+
+[
+\boxed{
+\Delta g_{\mu\nu}^2
+===================
+
+\langle
+\hat g_{\mu\nu}^2
+\rangle
+-------
+
+\langle
+\hat g_{\mu\nu}
+\rangle^2.
+}
+]
+
+Classical geometry corresponds to a regime in which these fluctuations become negligible.
+
+---
+
+# J.30 Noncommutative Gravity
+
+The gravitational field may be formulated through spectral, algebraic, or matrix structures rather than a fundamental classical metric.
+
+The schematic replacement is
+
+[
+\boxed{
+g_{\mu\nu}
+\quad\longrightarrow\quad
+(\mathcal A,\mathcal H,D).
+}
+]
+
+The Einstein metric then appears as an effective geometric description extracted from the underlying algebraic data.
+
+---
+
+# J.31 Relation to Quantum Gravity
+
+Noncommutative geometry addresses the problem
+
+[
+\boxed{
+\text{What replaces the classical manifold at quantum scales?}
+}
+]
+
+Instead of assuming
+
+[
+\mathcal M
+]
+
+as fundamental, one considers
+
+[
+\boxed{
+\mathcal A
+}
+]
+
+as primary.
+
+The resulting conceptual sequence is
+
+[
+\boxed{
+\text{manifold}
+\rightarrow
+\text{algebra}
+\rightarrow
+\text{operator algebra}
+\rightarrow
+\text{quantum geometry}.
+}
+]
+
+---
+
+# J.32 Deformation of the Metric Algebra
+
+Suppose classical coordinates satisfy
+
+[
+[x^\mu,x^\nu]=0.
+]
+
+A deformation introduces
+
+[
+\boxed{
+[x^\mu,x^\nu]_\star
+===================
+
+i\hbar\theta^{\mu\nu}
++
+O(\hbar^2).
+}
+]
+
+The classical geometry is therefore the zeroth-order member of a one-parameter family
+
+[
+\boxed{
+\mathcal A_\hbar.
+}
+]
+
+with
+
+[
+\boxed{
+\mathcal A_0=C^\infty(\mathcal M).
+}
+]
+
+---
+
+# J.33 Formal Deformation Series
+
+The algebraic structure can be represented formally as
+
+[
+\boxed{
+\mathcal A_\hbar
+================
+
+\mathcal A[[\hbar]],
+}
+]
+
+with product
+
+[
+\boxed{
+f\star g
+========
+
+fg
++
+\hbar C_1(f,g)
++
+\hbar^2C_2(f,g)
++\cdots.
+}
+]
+
+Associativity imposes order-by-order constraints on the operators (C_n).
+
+At first order,
+
+[
+\boxed{
+C_1(f,g)-C_1(g,f)
+\propto
+i{f,g}.
+}
+]
+
+Thus the Poisson structure controls the first-order departure from classical commutativity.
+
+---
+
+# J.34 Kontsevich-Type Deformation
+
+For a general Poisson manifold, deformation quantization constructs an associative star product whose first-order antisymmetric term reproduces the Poisson bracket.
+
+Schematically,
+
+[
+\boxed{
+f\star g
+========
+
+fg
++
+\frac{i\hbar}{2}{f,g}
++
+O(\hbar^2).
+}
+]
+
+The existence of such deformations demonstrates that classical Poisson geometry can serve as the seed of a noncommutative quantum algebra.
+
+---
+
+# J.35 Morita Equivalence
+
+Two algebras may represent equivalent noncommutative geometries even when they are not isomorphic.
+
+This is captured by Morita equivalence:
+
+[
+\boxed{
+\mathcal A
+\sim_{\rm Morita}
+\mathcal B.
+}
+]
+
+The relevant physical structures—such as module categories and representation-theoretic information—can therefore agree despite different algebraic presentations.
+
+This is analogous to using different coordinate descriptions of the same classical geometry.
+
+---
+
+# J.36 Modules as Vector Bundles
+
+In ordinary geometry,
+
+[
+\boxed{
+\text{vector bundles}
+\leftrightarrow
+\text{projective modules over }C^\infty(\mathcal M).
+}
+]
+
+Noncommutative geometry retains the algebraic side:
+
+[
+\boxed{
+\text{projective modules over }\mathcal A
+}
+]
+
+serve as generalized vector bundles.
+
+Connections can then be defined algebraically,
+
+[
+\boxed{
+\nabla(ma)
+==========
+
+(\nabla m)a+m,da.
+}
+]
+
+---
+
+# J.37 Curvature
+
+For a connection
+
+[
+\nabla,
+]
+
+the curvature is
+
+[
+\boxed{
+F=\nabla^2.
+}
+]
+
+In a gauge representation,
+
+[
+\boxed{
+F=dA+A\star A.
+}
+]
+
+The same algebraic structure that defines noncommutative differentiation therefore generates generalized gauge curvature.
+
+---
+
+# J.38 Topological Information
+
+Noncommutative algebras can possess topological invariants even without an underlying classical manifold.
+
+One replaces ordinary differential forms and characteristic classes with cyclic-cohomological and (K)-theoretic structures.
+
+Schematically,
+
+[
+\boxed{
+\text{topology}
+\longrightarrow
+K\text{-theory}
++
+\text{cyclic cohomology}.
+}
+]
+
+This allows topological sectors to survive the transition from classical to noncommutative geometry.
+
+---
+
+# J.39 Quantum Causality
+
+If spacetime coordinates do not commute,
+
+[
+[\hat x^\mu,\hat x^\nu]\neq0,
+]
+
+then the classical causal ordering of arbitrarily localized events may cease to be fundamental.
+
+The classical light-cone structure
+
+[
+ds^2=0
+]
+
+can become an emergent approximation to a deeper operator-algebraic causal structure.
+
+Thus
+
+[
+\boxed{
+\text{classical causality}
+\rightarrow
+\text{quantum causal algebra}.
+}
+]
+
+---
+
+# J.40 Relative Locality
+
+In Planck-scale regimes, localization may depend on quantum state, momentum, or observer.
+
+A generalized localization relation can be represented schematically by
+
+[
+\boxed{
+\Delta x
+========
+
+\Delta x(p,\mathcal A,\rho).
+}
+]
+
+The classical notion of an observer-independent point can therefore become an emergent concept.
+
+This connects noncommutative geometry with the relative-locality structures developed in Part X.
+
+---
+
+# J.41 Relation to Modified Dispersion Relations
+
+Noncommutative coordinates can modify momentum-space propagation.
+
+A generalized dispersion relation may take the form
+
+[
+\boxed{
+E^2
+===
+
+p^2+m^2
++
+\sum_{n\ge1}
+\alpha_n
+\frac{p^{n+2}}{M_{\rm P}^n}.
+}
+]
+
+Such corrections are not automatic consequences of noncommutativity alone; they depend on the particular model and symmetry realization.
+
+The relevant conceptual link is
+
+[
+\boxed{
+\text{quantum geometry}
+\rightarrow
+\text{modified kinematics}
+\rightarrow
+\text{observable Planck-scale effects}.
+}
+]
+
+---
+
+# J.42 Spectral Dimension
+
+At quantum scales, the effective dimension of a space may differ from its classical value.
+
+A diffusion process can define a scale-dependent spectral dimension
+
+[
+\boxed{
+d_s(\sigma)
+===========
+
+-2
+\frac{d\ln P(\sigma)}
+{d\ln\sigma},
+}
+]
+
+where (P(\sigma)) is the return probability.
+
+Thus
+
+[
+\boxed{
+d_s(\sigma)
+\rightarrow
+d
+}
+]
+
+in the classical large-scale limit, while
+
+[
+\boxed{
+d_s(\sigma)
+\neq d
+}
+]
+
+may occur in the ultraviolet.
+
+---
+
+# J.43 Classical Emergence
+
+The classical geometric limit requires several structures to become effectively commutative.
+
+Schematically,
+
+[
+\boxed{
+\begin{aligned}
+[\hat x^\mu,\hat x^\nu]&\rightarrow0,\
+\Delta g_{\mu\nu}&\rightarrow0,\
+\hbar&\rightarrow0,\
+d_s&\rightarrow d.
+\end{aligned}
+}
+]
+
+The result is
+
+[
+\boxed{
+(\mathcal A,\mathcal H,D)
+\rightarrow
+(\mathcal M,g).
+}
+]
+
+Thus classical spacetime appears as a low-energy, low-fluctuation limit of generalized geometry.
+
+---
+
+# J.44 Relation to Extended Relativity
+
+Noncommutative geometry extends the Einstein principle by questioning the assumption that spacetime points and coordinates are fundamental.
+
+General Relativity begins with
+
+[
+\boxed{
+(\mathcal M,g_{\mu\nu}).
+}
+]
+
+Noncommutative geometry replaces this with
+
+[
+\boxed{
+(\mathcal A,\mathcal H,D).
+}
+]
+
+The generalized principle becomes
+
+[
+\boxed{
+\text{physical laws must remain meaningful under the generalized transformations of the underlying algebraic geometry}.
+}
+]
+
+This is an extension from covariance of geometric coordinates to covariance of the algebraic structures defining geometry itself.
+
+---
+
+# J.45 Noncommutative Covariance
+
+An ordinary coordinate transformation acts as
+
+[
+x^\mu\rightarrow x'^\mu(x).
+]
+
+A noncommutative transformation instead acts on the algebra:
+
+[
+\boxed{
+\mathcal A
+\rightarrow
+\mathcal A'.
+}
+]
+
+An admissible equivalence should preserve the relevant algebraic, differential, spectral, and representation-theoretic structures.
+
+Thus the generalized covariance principle becomes
+
+[
+\boxed{
+\text{geometry-independent physical content}
+============================================
+
+\text{invariant algebraic structure}.
+}
+]
+
+---
+
+# J.46 Unified Quantum-Geometric Hierarchy
+
+The structures introduced in this appendix fit into the hierarchy
+
+[
+\boxed{
+\begin{aligned}
+\text{Classical manifold}
+&\rightarrow
+C^\infty(\mathcal M),\
+C^\infty(\mathcal M)
+&\rightarrow
+\text{Poisson algebra},\
+\text{Poisson algebra}
+&\rightarrow
+\text{deformed algebra},\
+\text{deformed algebra}
+&\rightarrow
+\text{operator algebra},\
+\text{operator algebra}
+&\rightarrow
+\text{spectral geometry}.
+\end{aligned}
+}
+]
+
+This provides several mathematically distinct routes from classical to quantum geometry.
+
+---
+
+# J.47 Comparison of Classical and Noncommutative Geometry
+
+| Classical geometry    | Noncommutative geometry                 |
+| --------------------- | --------------------------------------- |
+| Manifold (\mathcal M) | Algebra (\mathcal A)                    |
+| Point (x)             | Algebraic state/representation          |
+| Coordinate (x^\mu)    | Operator (\hat x^\mu)                   |
+| (fg=gf)               | (ab\neq ba)                             |
+| Vector bundle         | Projective module                       |
+| Vector field          | Derivation                              |
+| Differential forms    | Differential calculus over (\mathcal A) |
+| Metric (g_{\mu\nu})   | Spectral/Dirac data                     |
+| Distance (d(x,y))     | Operator norm relation                  |
+| Gauge field           | Connection on a module                  |
+| Curvature (F)         | (\nabla^2)                              |
+| Topology              | (K)-theory/cohomological data           |
+| Classical phase space | Poisson algebra                         |
+| Quantization          | Star product                            |
+| Classical limit       | (\hbar\rightarrow0)                     |
+
+---
+
+# J.48 Relation to Planck-Scale Relativity
+
+The structures of Part X can be summarized as
+
+[
+\boxed{
+\text{noncommutative coordinates}
+\rightarrow
+\text{quantum localization}
+\rightarrow
+\text{modified kinematics}
+\rightarrow
+\text{quantum causal structure}.
+}
+]
+
+The corresponding scale hierarchy is
+
+[
+\boxed{
+L\gg L_{\rm P}
+\quad\Rightarrow\quad
+\text{classical geometry},
+}
+]
+
+while
+
+[
+\boxed{
+L\sim L_{\rm P}
+\quad\Rightarrow\quad
+\text{quantum-geometric effects may become relevant}.
+}
+]
+
+The Planck scale is therefore a natural regime in which the algebraic structure of spacetime may cease to be effectively commutative.
+
+---
+
+# J.49 Master Deformation Principle
+
+The entire construction can be compressed into
+
+[
+\boxed{
+\mathcal A_0
+============
+
+C^\infty(\mathcal M)
+}
+]
+
+and
+
+[
+\boxed{
+\mathcal A_\hbar
+================
+
+(\mathcal A[[\hbar]],\star).
+}
+]
+
+The multiplication satisfies
+
+[
+\boxed{
+f\star g
+========
+
+fg
++
+\frac{i\hbar}{2}{f,g}
++
+O(\hbar^2).
+}
+]
+
+Consequently,
+
+[
+\boxed{
+\frac{1}{i\hbar}
+[f,g]_\star
+\rightarrow
+{f,g}
+}
+]
+
+as
+
+[
+\boxed{
+\hbar\rightarrow0.
+}
+]
+
+This is the mathematical statement that quantum noncommutativity deforms classical Poisson geometry.
+
+---
+
+# J.50 Final Synthesis
+
+Noncommutative geometry and deformation quantization provide two complementary formulations of quantum geometry.
+
+The first replaces the manifold:
+
+[
+\boxed{
+\mathcal M
+\rightarrow
+\mathcal A.
+}
+]
+
+The second deforms the algebra of classical observables:
+
+[
+\boxed{
+fg
+\rightarrow
+f\star g.
+}
+]
+
+The resulting hierarchy is
+
+[
+\boxed{
+\text{manifold}
+\rightarrow
+\text{Poisson geometry}
+\rightarrow
+\text{deformation}
+\rightarrow
+\text{noncommutative algebra}
+\rightarrow
+\text{quantum geometry}.
+}
+]
+
+At the coordinate level,
+
+[
+\boxed{
+[\hat x^\mu,\hat x^\nu]
+=======================
+
+i\hbar\theta^{\mu\nu}
+}
+]
+
+replaces exact classical commutativity.
+
+At the differential level,
+
+[
+\boxed{
+d^2=0
+}
+]
+
+survives as an algebraic differential principle.
+
+At the geometric level,
+
+[
+\boxed{
+(\mathcal A,\mathcal H,D)
+}
+]
+
+can replace
+
+[
+\boxed{
+(\mathcal M,g).
+}
+]
+
+At the classical limit,
+
+[
+\boxed{
+\hbar\rightarrow0
+}
+]
+
+returns
+
+[
+\boxed{
+[\hat x^\mu,\hat x^\nu]\rightarrow0,
+}
+]
+
+and ordinary spacetime geometry emerges.
+
+The conceptual progression for Extended Relativity is therefore
+
+[
+\boxed{
+\text{Einsteinian geometry}
+\rightarrow
+\text{quantum geometry}
+\rightarrow
+\text{noncommutative geometry}
+\rightarrow
+\text{algebraic covariance}.
+}
+]
+
+The deepest principle is that **geometry need not be identified fundamentally with a set of points and a metric. It may instead be encoded in an algebra of observables, its representations, its differential structure, and its spectrum.** Classical spacetime then becomes a particular commutative, semiclassical regime of a more general quantum-geometric structure.
+
+# Appendix K — Celestial Conformal Field Theory
+
+## K.1 Purpose and Scope
+
+Celestial Conformal Field Theory (CCFT) reformulates scattering in asymptotically flat spacetime as correlation functions of operators living on the celestial sphere.
+
+The central correspondence is
+
+[
+\boxed{
+\text{bulk scattering}
+\quad\longleftrightarrow\quad
+\text{celestial correlators}.
+}
+]
+
+Instead of organizing asymptotic physics primarily by momentum-space amplitudes,
+
+[
+\mathcal A_n(p_1,\ldots,p_n),
+]
+
+one performs a Mellin transformation with respect to particle energies and obtains celestial operators
+
+[
+\mathcal O_{\Delta,J}(z,\bar z),
+]
+
+where
+
+[
+\Delta
+]
+
+is the conformal dimension and
+
+[
+J
+]
+
+is the two-dimensional celestial spin.
+
+The resulting amplitudes take the schematic form
+
+[
+\boxed{
+\widetilde{\mathcal A}_n
+========================
+
+\left\langle
+\mathcal O_1(z_1,\bar z_1)
+\cdots
+\mathcal O_n(z_n,\bar z_n)
+\right\rangle.
+}
+]
+
+The celestial formulation therefore converts the asymptotic symmetry and scattering structure of four-dimensional spacetime into a two-dimensional conformal framework.
+
+---
+
+# K.2 The Celestial Sphere
+
+For four-dimensional asymptotically flat spacetime, future null infinity has topology
+
+[
+\boxed{
+\mathscr I^+
+\simeq
+\mathbb R_u\times S^2.
+}
+]
+
+The angular directions of outgoing null rays are parameterized by
+
+[
+(z,\bar z),
+]
+
+where (z) is a complex stereographic coordinate on
+
+[
+\boxed{
+S^2\simeq\mathbb{CP}^1.
+}
+]
+
+The celestial sphere records the asymptotic direction of each massless particle.
+
+Thus a null momentum is naturally decomposed into
+
+[
+\boxed{
+p^\mu
+=====
+
+\omega,q^\mu(z,\bar z),
+}
+]
+
+where
+
+[
+\omega>0
+]
+
+is the particle energy and
+
+[
+q^\mu
+]
+
+is a null direction determined by the celestial coordinates.
+
+---
+
+# K.3 Null Momentum Parametrization
+
+A convenient parametrization is
+
+[
+\boxed{
+q^\mu(z,\bar z)
+===============
+
+\left(
+1+z\bar z,,
+z+\bar z,,
+-i(z-\bar z),,
+1-z\bar z
+\right),
+}
+]
+
+up to conventional normalization and metric signature.
+
+It satisfies
+
+[
+\boxed{
+q^\mu q_\mu=0.
+}
+]
+
+Therefore,
+
+[
+\boxed{
+p^\mu
+=====
+
+\omega q^\mu
+}
+]
+
+automatically satisfies
+
+[
+p^2=0.
+]
+
+The momentum-space variables have thus been separated into
+
+[
+\boxed{
+(\omega,z,\bar z).
+}
+]
+
+---
+
+# K.4 Celestial Coordinates and Lorentz Symmetry
+
+The Lorentz group in four dimensions is locally
+
+[
+\boxed{
+SO^+(3,1)
+\simeq
+SL(2,\mathbb C)/\mathbb Z_2.
+}
+]
+
+Its action on the celestial sphere is represented by Möbius transformations,
+
+[
+\boxed{
+z
+\rightarrow
+z'
+==
+
+\frac{az+b}{cz+d},
+\qquad
+ad-bc=1.
+}
+]
+
+Thus ordinary Lorentz transformations become global conformal transformations of the celestial sphere.
+
+This is the first fundamental bridge:
+
+[
+\boxed{
+\text{4D Lorentz symmetry}
+\longrightarrow
+\text{2D global conformal symmetry}.
+}
+]
+
+---
+
+# K.5 Conformal Primary Operators
+
+A celestial operator is labeled by
+
+[
+\boxed{
+(\Delta,J).
+}
+]
+
+Its holomorphic and antiholomorphic weights are
+
+[
+\boxed{
+h=\frac{\Delta+J}{2},
+\qquad
+\bar h=\frac{\Delta-J}{2}.
+}
+]
+
+Consequently,
+
+[
+\boxed{
+\Delta=h+\bar h,
+}
+]
+
+and
+
+[
+\boxed{
+J=h-\bar h.
+}
+]
+
+Under a conformal transformation,
+
+[
+z\rightarrow z'(z),
+]
+
+a primary operator transforms as
+
+[
+\boxed{
+\mathcal O_{h,\bar h}(z,\bar z)
+\rightarrow
+\left(\frac{\partial z'}{\partial z}\right)^h
+\left(\frac{\partial\bar z'}{\partial\bar z}\right)^{\bar h}
+\mathcal O_{h,\bar h}(z',\bar z').
+}
+]
+
+---
+
+# K.6 Mellin Transform
+
+The celestial basis is obtained by Mellin transforming the energy dependence of momentum-space states.
+
+For a massless external particle,
+
+[
+\boxed{
+\mathcal O_{\Delta,J}(z,\bar z)
+===============================
+
+\int_0^\infty
+d\omega,
+\omega^{\Delta-1}
+\mathcal O_{\omega,J}(z,\bar z).
+}
+]
+
+Likewise, a scattering amplitude transforms as
+
+[
+\boxed{
+\widetilde{\mathcal A}_n
+========================
+
+\prod_{i=1}^n
+\left[
+\int_0^\infty
+d\omega_i,
+\omega_i^{\Delta_i-1}
+\right]
+\mathcal A_n.
+}
+]
+
+The Mellin transform converts energy scaling into conformal dimension.
+
+---
+
+# K.7 Momentum Basis versus Celestial Basis
+
+The ordinary scattering basis is
+
+[
+\boxed{
+|\omega,z,\bar z,J\rangle.
+}
+]
+
+The celestial basis is
+
+[
+\boxed{
+|\Delta,J,z,\bar z\rangle.
+}
+]
+
+The relation is
+
+[
+\boxed{
+|\Delta,J,z,\bar z\rangle
+=========================
+
+\int_0^\infty
+d\omega,
+\omega^{\Delta-1}
+|\omega,z,\bar z,J\rangle.
+}
+]
+
+Thus CCFT does not discard the ordinary scattering description.
+
+It performs a basis transformation:
+
+[
+\boxed{
+\text{momentum basis}
+\longrightarrow
+\text{conformal basis}.
+}
+]
+
+---
+
+# K.8 Principal Continuous Series
+
+For ordinary massless scattering in Lorentzian signature, the natural conformal dimensions are often taken along the principal continuous series,
+
+[
+\boxed{
+\Delta=1+i\nu,
+\qquad
+\nu\in\mathbb R.
+}
+]
+
+The Mellin transform becomes
+
+[
+\boxed{
+\int_0^\infty
+d\omega,
+\omega^{i\nu}.
+}
+]
+
+This basis is particularly suited to unitary representations of the Lorentz group.
+
+---
+
+# K.9 Celestial Scattering Amplitudes
+
+The celestial amplitude is defined by
+
+[
+\boxed{
+\widetilde{\mathcal A}_n
+========================
+
+\left\langle
+\prod_{i=1}^n
+\mathcal O_{\Delta_i,J_i}(z_i,\bar z_i)
+\right\rangle.
+}
+]
+
+The momentum-conserving delta function remains encoded within the transformed correlator.
+
+Thus the celestial amplitude contains both
+
+[
+\boxed{
+\text{kinematic conservation}
+}
+]
+
+and
+
+[
+\boxed{
+\text{conformal covariance}.
+}
+]
+
+---
+
+# K.10 Two-Point Function
+
+Conformal covariance constrains the two-point function to the form
+
+[
+\boxed{
+\left\langle
+\mathcal O_1(z_1,\bar z_1)
+\mathcal O_2(z_2,\bar z_2)
+\right\rangle
+\propto
+\frac{
+\delta_{\Delta_1,\Delta_2}
+\delta_{J_1,-J_2}
+}{
+z_{12}^{2h_1}
+\bar z_{12}^{2\bar h_1}
+}
+}
+]
+
+with appropriate delta-function normalization for the continuous spectrum.
+
+Here
+
+[
+\boxed{
+z_{12}=z_1-z_2.
+}
+]
+
+---
+
+# K.11 Three-Point Function
+
+Global conformal invariance fixes the scalar three-point structure:
+
+[
+\boxed{
+\left\langle
+\mathcal O_1
+\mathcal O_2
+\mathcal O_3
+\right\rangle
+=============
+
+\frac{
+C_{123}
+}{
+z_{12}^{h_1+h_2-h_3}
+z_{23}^{h_2+h_3-h_1}
+z_{31}^{h_3+h_1-h_2}
+}
+}
+]
+
+times the corresponding antiholomorphic factor
+
+[
+\boxed{
+\frac{1}{
+\bar z_{12}^{\bar h_1+\bar h_2-\bar h_3}
+\bar z_{23}^{\bar h_2+\bar h_3-\bar h_1}
+\bar z_{31}^{\bar h_3+\bar h_1-\bar h_2}
+}.
+}
+]
+
+Thus Lorentz covariance strongly constrains celestial scattering data.
+
+---
+
+# K.12 Higher-Point Correlators
+
+For (n\ge4), conformal invariance no longer fixes the full correlator.
+
+Cross-ratios appear.
+
+For four points,
+
+[
+\boxed{
+z
+=
+
+\frac{
+z_{12}z_{34}
+}{
+z_{13}z_{24}
+}.
+}
+]
+
+The correlator therefore takes the schematic form
+
+[
+\boxed{
+\langle
+\mathcal O_1
+\mathcal O_2
+\mathcal O_3
+\mathcal O_4
+\rangle
+=======
+
+\mathcal K(z_i,\bar z_i)
+,
+\mathcal F(z,\bar z).
+}
+]
+
+The nontrivial function
+
+[
+\mathcal F(z,\bar z)
+]
+
+contains dynamical information.
+
+---
+
+# K.13 Operator Product Expansion
+
+A central CCFT structure is the celestial operator product expansion,
+
+[
+\boxed{
+\mathcal O_1(z_1,\bar z_1)
+\mathcal O_2(z_2,\bar z_2)
+\sim
+\sum_k
+C_{12}^{;;k}
+(z_{12})^{h_k-h_1-h_2}
+(\bar z_{12})^{\bar h_k-\bar h_1-\bar h_2}
+\mathcal O_k(z_2,\bar z_2).
+}
+]
+
+In scattering theory, this OPE is often related to collinear limits.
+
+Thus
+
+[
+\boxed{
+\text{collinear factorization}
+\longleftrightarrow
+\text{celestial OPE}.
+}
+]
+
+---
+
+# K.14 Collinear Singularities
+
+When two outgoing particles become collinear,
+
+[
+z_{12}\rightarrow0,
+]
+
+the momentum-space amplitude develops a collinear singularity.
+
+In the celestial representation,
+
+[
+\boxed{
+z_{12}\rightarrow0
+}
+]
+
+produces an OPE singularity.
+
+The two descriptions are therefore related by
+
+[
+\boxed{
+\text{momentum-space collinear limit}
+=====================================
+
+\text{celestial short-distance limit}.
+}
+]
+
+---
+
+# K.15 Soft Theorems
+
+Soft theorems describe amplitudes in the limit
+
+[
+\boxed{
+\omega\rightarrow0.
+}
+]
+
+For a soft gauge boson,
+
+[
+\mathcal A_{n+1}
+\sim
+S^{(0)}\mathcal A_n+\cdots.
+]
+
+For gravity,
+
+[
+\boxed{
+\mathcal A_{n+1}
+\sim
+S_{\rm grav}^{(0)}
+\mathcal A_n+\cdots.
+}
+]
+
+After Mellin transformation, these soft limits become singular structures in conformal dimension.
+
+---
+
+# K.16 Conformally Soft Operators
+
+The soft limit is associated with special values of
+
+[
+\Delta.
+]
+
+A conformally soft operator arises schematically through
+
+[
+\boxed{
+\mathcal O_{\Delta,J}
+\quad\text{near}\quad
+\Delta=\Delta_{\rm soft}.
+}
+]
+
+Poles or residues in the conformal dimension encode soft data.
+
+Therefore,
+
+[
+\boxed{
+\text{soft theorem}
+\longleftrightarrow
+\text{celestial conformally soft operator}.
+}
+]
+
+---
+
+# K.17 Large Gauge Symmetry
+
+Gauge theories possess asymptotic large gauge transformations.
+
+The associated charges act on celestial operators.
+
+Schematically,
+
+[
+\boxed{
+Q_\varepsilon
+=============
+
+Q_{\mathscr I}
++
+Q_{\rm hard}.
+}
+]
+
+Ward identities take the form
+
+[
+\boxed{
+\langle
+[Q_\varepsilon,
+\prod_i\mathcal O_i]
+\rangle
+=0.
+}
+]
+
+These identities reproduce soft gauge-boson theorems.
+
+---
+
+# K.18 BMS Symmetry
+
+For asymptotically flat gravity, the Bondi–Metzner–Sachs group contains
+
+[
+\boxed{
+\mathrm{BMS}
+============
+
+\mathrm{Lorentz}
+\ltimes
+\mathrm{Supertranslations}.
+}
+]
+
+Supertranslations act as angle-dependent translations along null infinity:
+
+[
+\boxed{
+u
+\rightarrow
+u+f(z,\bar z).
+}
+]
+
+The celestial sphere therefore becomes the natural arena for organizing asymptotic gravitational symmetries.
+
+---
+
+# K.19 Superrotations
+
+The BMS extension may include local conformal transformations of the celestial sphere,
+
+[
+\boxed{
+z\rightarrow z+\epsilon(z).
+}
+]
+
+These are associated with superrotations.
+
+The resulting symmetry algebra can be related to Virasoro-like structures,
+
+[
+\boxed{
+[L_m,L_n]
+=========
+
+(m-n)L_{m+n}.
+}
+]
+
+The precise global and local status of these transformations depends on the asymptotic boundary conditions and phase space under consideration.
+
+---
+
+# K.20 Gravitational Memory
+
+A gravitational wave burst can produce a permanent relative displacement of freely falling detectors.
+
+This is the gravitational memory effect.
+
+Schematically,
+
+[
+\boxed{
+\Delta C_{AB}
+\neq0
+}
+]
+
+after radiation passes through null infinity.
+
+The memory effect is linked to changes in asymptotic charges:
+
+[
+\boxed{
+\text{soft radiation}
+\leftrightarrow
+\text{charge transition}
+\leftrightarrow
+\text{memory}.
+}
+]
+
+---
+
+# K.21 Soft Theorem–Memory–Symmetry Triangle
+
+The three structures form the celebrated correspondence
+
+[
+\boxed{
+\text{asymptotic symmetry}
+\Longleftrightarrow
+\text{soft theorem}
+\Longleftrightarrow
+\text{memory effect}.
+}
+]
+
+In celestial language,
+
+[
+\boxed{
+\text{asymptotic symmetry}
+\rightarrow
+\text{celestial Ward identity}.
+}
+]
+
+This provides a symmetry-based organization of infrared gravitational physics.
+
+---
+
+# K.22 Celestial Stress Tensor
+
+A two-dimensional stress tensor
+
+[
+\boxed{
+T(z)
+}
+]
+
+generates local conformal transformations.
+
+Its OPE with a primary operator is
+
+[
+\boxed{
+T(z)\mathcal O(w)
+\sim
+\frac{h,\mathcal O(w)}{(z-w)^2}
++
+\frac{\partial_w\mathcal O(w)}{z-w}
++\cdots.
+}
+]
+
+The antiholomorphic sector has
+
+[
+\boxed{
+\bar T(\bar z).
+}
+]
+
+In celestial gravity, stress-tensor-like operators can emerge from soft gravitational modes and asymptotic symmetries.
+
+---
+
+# K.23 Virasoro Structure
+
+The modes
+
+[
+\boxed{
+L_n
+===
+
+\oint
+\frac{dz}{2\pi i}
+z^{n+1}T(z)
+}
+]
+
+satisfy
+
+[
+\boxed{
+[L_m,L_n]
+=========
+
+(m-n)L_{m+n}
++
+\frac{c}{12}
+m(m^2-1)\delta_{m+n,0}.
+}
+]
+
+Whether a given celestial gravitational construction realizes a genuine Virasoro algebra with a conventional central charge depends on the precise theory and boundary conditions.
+
+---
+
+# K.24 Celestial Operator Algebra
+
+The celestial theory can therefore be organized around
+
+[
+\boxed{
+{\mathcal O_{\Delta,J}},
+}
+]
+
+with structures including
+
+[
+\boxed{
+\text{two-point functions},
+\quad
+\text{three-point functions},
+\quad
+\text{OPEs},
+\quad
+\text{Ward identities},
+\quad
+\text{conformal blocks}.
+}
+]
+
+The S-matrix becomes the dynamical data of this operator algebra.
+
+---
+
+# K.25 Conformal Blocks
+
+A four-point celestial correlator can be decomposed schematically as
+
+[
+\boxed{
+\mathcal G(z,\bar z)
+====================
+
+\sum_{\mathcal O}
+C_{12\mathcal O}
+C_{34\mathcal O}
+,
+\mathcal G_{\Delta,J}(z,\bar z).
+}
+]
+
+The conformal blocks
+
+[
+\boxed{
+\mathcal G_{\Delta,J}
+}
+]
+
+represent contributions from intermediate celestial representations.
+
+This creates a bridge between scattering amplitudes and standard CFT bootstrap techniques.
+
+---
+
+# K.26 Celestial Unitarity
+
+Ordinary unitarity requires
+
+[
+\boxed{
+S^\dagger S=1.
+}
+]
+
+In the celestial basis, unitarity becomes a constraint on the inner products and operator decomposition of celestial states.
+
+The continuous spectrum in
+
+[
+\boxed{
+\Delta=1+i\nu
+}
+]
+
+plays an important role in maintaining a natural Lorentzian inner-product structure.
+
+---
+
+# K.27 Crossing Symmetry
+
+Scattering amplitudes possess crossing relations between incoming and outgoing particles.
+
+The celestial formulation translates these into relations among celestial operators with analytically continued quantum numbers.
+
+Schematically,
+
+[
+\boxed{
+\mathcal O_{\rm in}
+\leftrightarrow
+\mathcal O_{\rm out}.
+}
+]
+
+The resulting crossing relations constrain celestial correlators.
+
+---
+
+# K.28 Massive Particles
+
+Massless particles are naturally associated with points on the celestial sphere.
+
+Massive particles require an additional radial or hyperbolic structure.
+
+Their momenta satisfy
+
+[
+\boxed{
+p^2=-m^2
+}
+]
+
+and can be parametrized using points on the unit hyperboloid
+
+[
+\boxed{
+H_3.
+}
+]
+
+The celestial transform then involves harmonic analysis on hyperbolic space in addition to Mellin-type energy transforms.
+
+---
+
+# K.29 Massive Celestial Operators
+
+A massive celestial operator can be schematically represented as
+
+[
+\boxed{
+\mathcal O_{\Delta,J}(z,\bar z)
+===============================
+
+\int_{H_3}
+d\mu(y),
+K_\Delta(y;z,\bar z)
+,
+\mathcal O(y),
+}
+]
+
+where
+
+[
+K_\Delta
+]
+
+is an appropriate bulk-to-boundary kernel.
+
+Thus the celestial construction can accommodate massive external states, although the representation theory is more involved than for massless particles.
+
+---
+
+# K.30 Celestial Basis as a Mellin-Harmonic Basis
+
+The celestial transform is more than a Fourier transform.
+
+Momentum-space scattering uses
+
+[
+\boxed{
+e^{ip\cdot x}
+}
+]
+
+as the basic plane-wave structure.
+
+Celestial scattering instead decomposes energy through
+
+[
+\boxed{
+\omega^{\Delta-1}.
+}
+]
+
+The Mellin basis diagonalizes scaling rather than translations.
+
+Hence
+
+[
+\boxed{
+\text{Fourier basis}
+\leftrightarrow
+\text{translation symmetry},
+}
+]
+
+while
+
+[
+\boxed{
+\text{Mellin basis}
+\leftrightarrow
+\text{scale/conformal structure}.
+}
+]
+
+---
+
+# K.31 Conformal Dimension as Energy-Scaling Data
+
+The conformal dimension (\Delta) is generated by the Mellin transform.
+
+Under
+
+[
+\omega\rightarrow\lambda\omega,
+]
+
+one obtains
+
+[
+\omega^{\Delta-1}
+\rightarrow
+\lambda^{\Delta-1}
+\omega^{\Delta-1}.
+]
+
+Therefore,
+
+[
+\boxed{
+\Delta
+}
+]
+
+encodes scaling behavior in the original energy variable.
+
+The celestial conformal dimension is consequently directly tied to four-dimensional scattering kinematics.
+
+---
+
+# K.32 Celestial Sphere and Null Infinity
+
+The geometric picture is
+
+[
+\boxed{
+\mathscr I^+
+\simeq
+\mathbb R_u\times S^2.
+}
+]
+
+The coordinate (u) describes retarded time.
+
+The pair
+
+[
+(z,\bar z)
+]
+
+labels angular directions.
+
+Celestial CFT reorganizes the radiative data at (\mathscr I^+) primarily in terms of these angular coordinates and conformal weights.
+
+---
+
+# K.33 Bondi Expansion
+
+Near future null infinity, the metric can be expressed in Bondi coordinates as
+
+[
+\boxed{
+ds^2
+====
+
+-du^2
+-2,du,dr
++
+r^2\gamma_{AB}dx^Adx^B
++\cdots.
+}
+]
+
+The asymptotic metric data include the shear
+
+[
+\boxed{
+C_{AB}(u,z,\bar z).
+}
+]
+
+Its retarded-time derivative defines the Bondi news:
+
+[
+\boxed{
+N_{AB}
+======
+
+\partial_uC_{AB}.
+}
+]
+
+Radiative gravitational information is therefore encoded at the celestial boundary.
+
+---
+
+# K.34 Celestial Soft Sector
+
+The zero-frequency or soft sector of the radiative field is especially important.
+
+Schematically,
+
+[
+\boxed{
+N_{AB}
+\rightarrow
+\int du,N_{AB}
+==============
+
+\Delta C_{AB}.
+}
+]
+
+This quantity contains memory information and is connected to soft graviton operators.
+
+Thus
+
+[
+\boxed{
+\text{celestial soft sector}
+\leftrightarrow
+\text{asymptotic gravitational memory}.
+}
+]
+
+---
+
+# K.35 Celestial Current Algebra
+
+Gauge-theory soft modes can behave as two-dimensional currents,
+
+[
+\boxed{
+J(z).
+}
+]
+
+Their OPE may take the form
+
+[
+\boxed{
+J(z)J(w)
+\sim
+\frac{k}{(z-w)^2}
++\cdots.
+}
+]
+
+Their action on charged operators is
+
+[
+\boxed{
+J(z)\mathcal O_q(w)
+\sim
+\frac{q}{z-w}
+\mathcal O_q(w)
++\cdots.
+}
+]
+
+The resulting current algebra encodes asymptotic gauge symmetry.
+
+---
+
+# K.36 Celestial Gravity as an Infrared Theory
+
+A large fraction of the cleanest celestial structures arise in the infrared sector of gauge and gravitational theories.
+
+The hierarchy is
+
+[
+\boxed{
+\text{soft theorem}
+\rightarrow
+\text{asymptotic charge}
+\rightarrow
+\text{Ward identity}
+\rightarrow
+\text{celestial operator relation}.
+}
+]
+
+Celestial CFT therefore provides a natural language for organizing infrared information that is distributed across ordinary momentum-space amplitudes.
+
+---
+
+# K.37 Celestial Holography
+
+The term "celestial holography" refers to the proposed correspondence
+
+[
+\boxed{
+\text{4D asymptotically flat quantum gravity}
+\quad\longleftrightarrow\quad
+\text{2D celestial theory}.
+}
+]
+
+The boundary is not a conventional spatial boundary.
+
+It is the celestial sphere associated with null infinity.
+
+Thus
+
+[
+\boxed{
+\text{bulk scattering}
+\rightarrow
+\text{boundary correlators}.
+}
+]
+
+---
+
+# K.38 Difference from AdS/CFT
+
+Anti-de Sitter holography involves
+
+[
+\boxed{
+\text{AdS}_{d+1}
+\leftrightarrow
+\text{CFT}_d.
+}
+]
+
+Celestial holography instead concerns asymptotically flat spacetime:
+
+[
+\boxed{
+\text{Flat}_{4}
+\leftrightarrow
+\text{celestial theory on }S^2.
+}
+]
+
+The holographic data are therefore scattering amplitudes and asymptotic states rather than ordinary Euclidean partition functions with a timelike conformal boundary.
+
+---
+
+# K.39 The S-Matrix as a Correlator
+
+The central proposed identification is
+
+[
+\boxed{
+\mathcal S
+\quad\longleftrightarrow\quad
+\langle
+\mathcal O_1\cdots\mathcal O_n
+\rangle_{\rm celestial}.
+}
+]
+
+This is conceptually significant because the S-matrix is traditionally viewed as an operator mapping asymptotic states,
+
+[
+\boxed{
+\mathcal S:
+\mathcal H_{\rm in}
+\rightarrow
+\mathcal H_{\rm out}.
+}
+]
+
+The celestial formulation reorganizes the same information into conformal correlation functions.
+
+---
+
+# K.40 Infrared Data as Operator Data
+
+The infrared structure of the S-matrix becomes operator algebra.
+
+Specifically,
+
+[
+\boxed{
+\begin{aligned}
+\text{soft theorem}
+&\rightarrow
+\text{soft operator},\
+\text{collinear factorization}
+&\rightarrow
+\text{OPE},\
+\text{asymptotic symmetry}
+&\rightarrow
+\text{Ward identity},\
+\text{factorization}
+&\rightarrow
+\text{operator decomposition}.
+\end{aligned}
+}
+]
+
+This is one of the principal reasons celestial methods are relevant to fundamental scattering theory.
+
+---
+
+# K.41 Relation to Infinite-Dimensional Relativity
+
+The celestial formulation gives a concrete realization of the principle developed in Chapter 44.
+
+Einstein's original Lorentz covariance involves the finite-dimensional group
+
+[
+\boxed{
+SL(2,\mathbb C).
+}
+]
+
+Asymptotic flatness enlarges the symmetry structure to include
+
+[
+\boxed{
+\mathrm{BMS}
+}
+]
+
+and possible extensions involving local conformal transformations.
+
+Thus
+
+[
+\boxed{
+\text{Lorentz covariance}
+\rightarrow
+\text{BMS covariance}
+\rightarrow
+\text{celestial conformal structure}.
+}
+]
+
+---
+
+# K.42 Celestial Relativity
+
+Within Extended Relativity, celestial CFT represents a further transformation of the basic relativistic viewpoint:
+
+[
+\boxed{
+\text{spacetime covariance}
+\rightarrow
+\text{asymptotic covariance}
+\rightarrow
+\text{celestial covariance}.
+}
+]
+
+The physical content is no longer organized only around local bulk coordinates.
+
+Instead, the asymptotic observer sees physical processes encoded through
+
+[
+\boxed{
+(z,\bar z,\Delta,J).
+}
+]
+
+---
+
+# K.43 Celestial Kinematics
+
+The four-dimensional massless momentum is encoded by
+
+[
+\boxed{
+p^\mu
+=====
+
+\omega q^\mu(z,\bar z).
+}
+]
+
+After Mellin transformation,
+
+[
+\boxed{
+\omega
+\rightarrow
+\Delta.
+}
+]
+
+Thus
+
+[
+\boxed{
+p^\mu
+\quad\longrightarrow\quad
+(\Delta,J,z,\bar z).
+}
+]
+
+The celestial variables reorganize ordinary relativistic kinematics into conformal representation data.
+
+---
+
+# K.44 Celestial Dynamics
+
+The dynamical information resides in celestial OPE coefficients,
+
+[
+\boxed{
+C_{12}^{;;k},
+}
+]
+
+correlator coefficients,
+
+[
+\boxed{
+C_{123},
+}
+]
+
+and conformal-block data.
+
+Hence a complete celestial theory would require
+
+[
+\boxed{
+{\Delta,J,C_{ijk},\mathcal G_{\Delta,J},\ldots}.
+}
+]
+
+These data collectively encode the underlying scattering dynamics.
+
+---
+
+# K.45 Analytic Structure
+
+Momentum-space amplitudes contain poles, branch cuts, and factorization singularities.
+
+Under Mellin transformation these become nontrivial analytic structures in
+
+[
+\boxed{
+\Delta
+}
+]
+
+and in celestial cross-ratios.
+
+Therefore,
+
+[
+\boxed{
+\text{momentum-space analyticity}
+\rightarrow
+\text{celestial analytic structure}.
+}
+]
+
+Understanding this map is central to constructing a complete celestial bootstrap.
+
+---
+
+# K.46 Factorization
+
+When an internal channel becomes on shell,
+
+[
+\boxed{
+P^2\rightarrow0,
+}
+]
+
+the momentum-space amplitude factorizes:
+
+[
+\boxed{
+\mathcal A_n
+\rightarrow
+\mathcal A_L
+\frac1{P^2}
+\mathcal A_R.
+}
+]
+
+In celestial language, this corresponds to a decomposition into intermediate celestial states,
+
+[
+\boxed{
+\mathcal G_n
+\rightarrow
+\sum_{\mathcal O}
+C_L,C_R,\mathcal G_{\mathcal O}.
+}
+]
+
+Thus ordinary S-matrix factorization is naturally related to conformal operator decomposition.
+
+---
+
+# K.47 Bootstrap Perspective
+
+A hypothetical celestial bootstrap would impose
+
+[
+\boxed{
+\text{conformal symmetry}
++
+\text{unitarity}
++
+\text{crossing}
++
+\text{factorization}
++
+\text{asymptotic symmetry}.
+}
+]
+
+The goal would be to determine celestial correlators without directly calculating every bulk scattering amplitude.
+
+This creates the possibility of reconstructing four-dimensional scattering from boundary consistency conditions.
+
+---
+
+# K.48 Mathematical Structure
+
+The complete celestial framework combines
+
+[
+\boxed{
+\begin{aligned}
+&\text{representation theory of }SL(2,\mathbb C),\
+&\text{Mellin analysis},\
+&\text{two-dimensional conformal symmetry},\
+&\text{asymptotic symmetry},\
+&\text{soft theorems},\
+&\text{OPE/factorization theory},\
+&\text{infrared quantum field theory}.
+\end{aligned}
+}
+]
+
+The celestial theory is therefore not merely a coordinate transformation of ordinary scattering. It reorganizes its analytic, symmetry, and infrared structures into a common conformal language.
+
+---
+
+# K.49 Master Celestial Dictionary
+
+| Four-dimensional scattering | Celestial description                   |
+| --------------------------- | --------------------------------------- |
+| Null momentum (p^\mu)       | ((\omega,z,\bar z))                     |
+| Energy (\omega)             | Mellin dimension (\Delta)               |
+| Helicity                    | Celestial spin (J)                      |
+| Lorentz symmetry            | Global conformal symmetry               |
+| Collinear limit             | OPE limit                               |
+| Soft limit                  | Conformally soft operator               |
+| Soft theorem                | Ward identity                           |
+| Large gauge symmetry        | Celestial current algebra               |
+| BMS symmetry                | Celestial asymptotic symmetry           |
+| Gravitational memory        | Soft-sector charge transition           |
+| Factorization               | Operator decomposition                  |
+| S-matrix                    | Celestial correlator                    |
+| Momentum conservation       | Mellin-transformed kinematic constraint |
+| Infrared structure          | Celestial operator algebra              |
+| Asymptotic spacetime        | Celestial sphere                        |
+
+---
+
+# K.50 Final Synthesis
+
+Celestial Conformal Field Theory reorganizes asymptotically flat scattering around the geometry of the celestial sphere.
+
+The fundamental map is
+
+[
+\boxed{
+p^\mu
+=====
+
+\omega q^\mu(z,\bar z)
+}
+]
+
+followed by the Mellin transformation
+
+[
+\boxed{
+\mathcal O_{\Delta,J}
+=====================
+
+\int_0^\infty
+d\omega,
+\omega^{\Delta-1}
+\mathcal O_{\omega,J}.
+}
+]
+
+The Lorentz group becomes
+
+[
+\boxed{
+SL(2,\mathbb C)
+\rightarrow
+\text{global conformal transformations of }S^2.
+}
+]
+
+The scattering amplitude becomes
+
+[
+\boxed{
+\boxed{
+\mathcal A_n
+\rightarrow
+\left\langle
+\mathcal O_1\cdots\mathcal O_n
+\right\rangle_{\rm celestial}.
+}
+}
+]
+
+The infrared structures reorganize according to
+
+[
+\boxed{
+\begin{aligned}
+\text{soft theorems}
+&\leftrightarrow
+\text{Ward identities},\
+\text{collinear limits}
+&\leftrightarrow
+\text{OPEs},\
+\text{asymptotic symmetries}
+&\leftrightarrow
+\text{celestial currents},\
+\text{memory effects}
+&\leftrightarrow
+\text{soft charge transitions},\
+\text{S-matrix factorization}
+&\leftrightarrow
+\text{conformal operator decomposition}.
+\end{aligned}
+}
+]
+
+The resulting conceptual hierarchy is
+
+[
+\boxed{
+\text{bulk spacetime}
+\rightarrow
+\text{null infinity}
+\rightarrow
+\text{celestial sphere}
+\rightarrow
+\text{conformal operators}
+\rightarrow
+\text{scattering correlators}.
+}
+]
+
+Within Extended Relativity, celestial CFT therefore represents the asymptotic counterpart of Einstein's covariance principle:
+
+[
+\boxed{
+\text{local covariance}
+\rightarrow
+\text{global asymptotic symmetry}
+\rightarrow
+\text{infinite-dimensional celestial covariance}.
+}
+]
+
+The ultimate objective is a formulation in which the four-dimensional gravitational S-matrix is reconstructed from the symmetry, analyticity, unitarity, factorization, and operator-algebraic consistency of a theory living on the celestial sphere.
+
+# Appendix L — Complete Symbol Index and Notation
+
+## L.1 Purpose and Scope
+
+This appendix establishes the unified notation used throughout the **Extended Relativity** corpus.
+
+The purpose of the index is to ensure that geometric, gravitational, quantum, thermodynamic, informational, holographic, cosmological, categorical, and Planck-scale constructions employ a consistent symbolic language.
+
+The fundamental convention is
+
+[
+\boxed{
+\text{same symbol}
+;\Longrightarrow;
+\text{same mathematical role},
+}
+]
+
+unless a chapter explicitly declares a specialized convention.
+
+---
+
+# L.2 Fundamental Spacetime Symbols
+
+| Symbol                    | Meaning                                     |
+| ------------------------- | ------------------------------------------- |
+| (M)                       | Four-dimensional spacetime manifold         |
+| (x^\mu)                   | Spacetime coordinates                       |
+| (x^\mu=(x^0,x^1,x^2,x^3)) | Local coordinate system                     |
+| (\mu,\nu,\rho,\sigma)     | Spacetime indices                           |
+| (a,b,c,d)                 | Abstract spacetime/tangent-space indices    |
+| (i,j,k,l)                 | Spatial indices                             |
+| (A,B,C,D)                 | Internal or abstract geometric indices      |
+| (p,q)                     | Generic spacetime points                    |
+| (T_pM)                    | Tangent space at (p\in M)                   |
+| (T_p^*M)                  | Cotangent space at (p)                      |
+| (TM)                      | Tangent bundle                              |
+| (T^*M)                    | Cotangent bundle                            |
+| (\mathcal M)              | Generic spacetime or configuration manifold |
+| (\partial_\mu)            | Coordinate derivative                       |
+| (d)                       | Exterior derivative                         |
+
+The spacetime metric is
+
+[
+\boxed{
+g_{\mu\nu}.
+}
+]
+
+Its inverse satisfies
+
+[
+\boxed{
+g^{\mu\rho}g_{\rho\nu}
+======================
+
+\delta^\mu_{\ \nu}.
+}
+]
+
+The line element is
+
+[
+\boxed{
+ds^2
+====
+
+g_{\mu\nu}dx^\mu dx^\nu.
+}
+]
+
+---
+
+# L.3 Metric and Index Conventions
+
+Indices are raised and lowered using the metric:
+
+[
+\boxed{
+V^\mu=g^{\mu\nu}V_\nu,
+\qquad
+V_\mu=g_{\mu\nu}V^\nu.
+}
+]
+
+For a rank-two tensor,
+
+[
+\boxed{
+T^\mu_{\ \nu}
+=============
+
+g^{\mu\rho}T_{\rho\nu}.
+}
+]
+
+The Kronecker delta is
+
+[
+\boxed{
+\delta^\mu_{\ \nu}.
+}
+]
+
+The determinant of the metric is
+
+[
+\boxed{
+g=\det(g_{\mu\nu}).
+}
+]
+
+The invariant volume element is
+
+[
+\boxed{
+d^4x\sqrt{-g}
+}
+]
+
+for Lorentzian signature.
+
+---
+
+# L.4 Signature
+
+Unless otherwise specified, the Lorentzian metric convention is
+
+[
+\boxed{
+(-,+,+,+).
+}
+]
+
+Thus a timelike vector satisfies
+
+[
+\boxed{
+V^\mu V_\mu<0,
+}
+]
+
+a null vector satisfies
+
+[
+\boxed{
+V^\mu V_\mu=0,
+}
+]
+
+and a spacelike vector satisfies
+
+[
+\boxed{
+V^\mu V_\mu>0.
+}
+]
+
+---
+
+# L.5 Proper Time and Four-Velocity
+
+For a timelike worldline,
+
+[
+\boxed{
+d\tau^2=-ds^2.
+}
+]
+
+The four-velocity is
+
+[
+\boxed{
+u^\mu
+=====
+
+\frac{dx^\mu}{d\tau},
+}
+]
+
+with normalization
+
+[
+\boxed{
+u^\mu u_\mu=-1.
+}
+]
+
+The four-acceleration is
+
+[
+\boxed{
+a^\mu
+=====
+
+u^\nu\nabla_\nu u^\mu.
+}
+]
+
+---
+
+# L.6 Connection Symbols
+
+The Levi-Civita connection is represented by
+
+[
+\boxed{
+\Gamma^\rho_{\mu\nu}.
+}
+]
+
+For the torsion-free metric-compatible connection,
+
+[
+\boxed{
+\Gamma^\rho_{\mu\nu}
+====================
+
+\frac12g^{\rho\sigma}
+\left(
+\partial_\mu g_{\sigma\nu}
++
+\partial_\nu g_{\sigma\mu}
+--------------------------
+
+\partial_\sigma g_{\mu\nu}
+\right).
+}
+]
+
+Metric compatibility is
+
+[
+\boxed{
+\nabla_\rho g_{\mu\nu}=0.
+}
+]
+
+Torsion vanishes:
+
+[
+\boxed{
+T^\rho_{\mu\nu}=0.
+}
+]
+
+---
+
+# L.7 Covariant Derivatives
+
+The covariant derivative is denoted by
+
+[
+\boxed{
+\nabla_\mu.
+}
+]
+
+For a vector,
+
+[
+\boxed{
+\nabla_\mu V^\nu
+================
+
+\partial_\mu V^\nu
++
+\Gamma^\nu_{\mu\rho}V^\rho.
+}
+]
+
+For a covector,
+
+[
+\boxed{
+\nabla_\mu V_\nu
+================
+
+## \partial_\mu V_\nu
+
+\Gamma^\rho_{\mu\nu}V_\rho.
+}
+]
+
+The d'Alembertian is
+
+[
+\boxed{
+\Box
+====
+
+\nabla_\mu\nabla^\mu.
+}
+]
+
+---
+
+# L.8 Curvature Tensor
+
+The Riemann tensor is
+
+[
+\boxed{
+R^\rho_{\ \sigma\mu\nu}.
+}
+]
+
+Our convention is
+
+[
+\boxed{
+R^\rho_{\ \sigma\mu\nu}
+=======================
+
+## \partial_\mu\Gamma^\rho_{\nu\sigma}
+
+\partial_\nu\Gamma^\rho_{\mu\sigma}
++
+\Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma}
+--------------------------------------------------
+
+\Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma}.
+}
+]
+
+The Ricci tensor is
+
+[
+\boxed{
+R_{\mu\nu}
+==========
+
+R^\rho_{\ \mu\rho\nu}.
+}
+]
+
+The Ricci scalar is
+
+[
+\boxed{
+R
+=
+
+g^{\mu\nu}R_{\mu\nu}.
+}
+]
+
+---
+
+# L.9 Einstein Tensor
+
+The Einstein tensor is
+
+[
+\boxed{
+G_{\mu\nu}
+==========
+
+## R_{\mu\nu}
+
+\frac12Rg_{\mu\nu}.
+}
+]
+
+The contracted Bianchi identity gives
+
+[
+\boxed{
+\nabla^\mu G_{\mu\nu}=0.
+}
+]
+
+Einstein's field equation is
+
+[
+\boxed{
+G_{\mu\nu}
++
+\Lambda g_{\mu\nu}
+==================
+
+8\pi G,T_{\mu\nu}.
+}
+]
+
+---
+
+# L.10 Cosmological Symbols
+
+| Symbol     | Meaning                         |
+| ---------- | ------------------------------- |
+| (\Lambda)  | Cosmological constant           |
+| (H)        | Hubble parameter                |
+| (a(t))     | Cosmological scale factor       |
+| (k)        | Spatial curvature parameter     |
+| (\rho)     | Energy density                  |
+| (P)        | Pressure                        |
+| (w)        | Equation-of-state parameter     |
+| (H_0)      | Present Hubble parameter        |
+| (\Omega_i) | Cosmological density parameters |
+
+The Hubble parameter is
+
+[
+\boxed{
+H=\frac{\dot a}{a}.
+}
+]
+
+---
+
+# L.11 Matter and Stress-Energy
+
+The stress-energy tensor is
+
+[
+\boxed{
+T_{\mu\nu}.
+}
+]
+
+Its trace is
+
+[
+\boxed{
+T
+=
+
+g^{\mu\nu}T_{\mu\nu}.
+}
+]
+
+For a perfect fluid,
+
+[
+\boxed{
+T_{\mu\nu}
+==========
+
+(\rho+P)u_\mu u_\nu
++
+Pg_{\mu\nu}.
+}
+]
+
+Conservation gives
+
+[
+\boxed{
+\nabla_\mu T^{\mu\nu}=0.
+}
+]
+
+---
+
+# L.12 Gravitational Constants
+
+| Symbol   | Meaning                         |
+| -------- | ------------------------------- |
+| (G)      | Newton's gravitational constant |
+| (c)      | Speed of light                  |
+| (\hbar)  | Reduced Planck constant         |
+| (k_B)    | Boltzmann constant              |
+| (\ell_P) | Planck length                   |
+| (t_P)    | Planck time                     |
+| (m_P)    | Planck mass                     |
+| (E_P)    | Planck energy                   |
+
+The Planck length is
+
+[
+\boxed{
+\ell_P
+======
+
+\sqrt{\frac{\hbar G}{c^3}}.
+}
+]
+
+In natural units,
+
+[
+\boxed{
+c=\hbar=k_B=1.
+}
+]
+
+---
+
+# L.13 Action and Variational Symbols
+
+The action is
+
+[
+\boxed{
+S.
+}
+]
+
+The Lagrangian is
+
+[
+\boxed{
+L,
+}
+]
+
+and the Lagrangian density is
+
+[
+\boxed{
+\mathcal L.
+}
+]
+
+The action is
+
+[
+\boxed{
+S
+=
+
+\int d^4x,\mathcal L.
+}
+]
+
+The variational derivative is
+
+[
+\boxed{
+\frac{\delta S}{\delta\phi}.
+}
+]
+
+The Euler–Lagrange equation is
+
+[
+\boxed{
+\frac{\partial\mathcal L}{\partial\phi}
+---------------------------------------
+
+\nabla_\mu
+\frac{\partial\mathcal L}
+{\partial(\nabla_\mu\phi)}
+=0.
+}
+]
+
+---
+
+# L.14 Einstein–Hilbert Action
+
+The gravitational action is
+
+[
+\boxed{
+S_{\rm EH}
+==========
+
+\frac{1}{16\pi G}
+\int d^4x\sqrt{-g},
+(R-2\Lambda).
+}
+]
+
+The complete low-energy action is schematically
+
+[
+\boxed{
+S
+=
+
+S_{\rm gravity}
++
+S_{\rm matter}.
+}
+]
+
+---
+
+# L.15 Effective Field Theory
+
+The effective gravitational action takes the form
+
+[
+\boxed{
+S_{\rm EFT}
+===========
+
+\int d^4x\sqrt{-g}
+\left[
+\frac{R}{16\pi G}
+-\Lambda
++
+\sum_i c_i\mathcal O_i
+\right].
+}
+]
+
+Here
+
+[
+\boxed{
+c_i
+}
+]
+
+are Wilson coefficients and
+
+[
+\boxed{
+\mathcal O_i
+}
+]
+
+are higher-dimension operators.
+
+---
+
+# L.16 Curvature Invariants
+
+Common quadratic curvature invariants are
+
+[
+\boxed{
+R^2,
+\qquad
+R_{\mu\nu}R^{\mu\nu},
+\qquad
+R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}.
+}
+]
+
+The Weyl tensor is
+
+[
+\boxed{
+C_{\mu\nu\rho\sigma}.
+}
+]
+
+The Euler density in four dimensions is
+
+[
+\boxed{
+E_4
+===
+
+## R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}
+
+4R_{\mu\nu}R^{\mu\nu}
++
+R^2.
+}
+]
+
+---
+
+# L.17 Quantum Symbols
+
+| Symbol             | Meaning            |               |
+| ------------------ | ------------------ | ------------- |
+| (\mathcal H)       | Hilbert space      |               |
+| (                  | \psi\rangle)       | Quantum state |
+| (\rho)             | Density operator   |               |
+| (\hat A)           | Quantum operator   |               |
+| (\langle A\rangle) | Expectation value  |               |
+| ([\hat A,\hat B])  | Commutator         |               |
+| ({\hat A,\hat B})  | Anticommutator     |               |
+| (U)                | Unitary operator   |               |
+| (H)                | Hamiltonian        |               |
+| (\mathcal Z)       | Partition function |               |
+
+Expectation values are
+
+[
+\boxed{
+\langle\hat A\rangle
+====================
+
+\operatorname{Tr}(\rho\hat A).
+}
+]
+
+---
+
+# L.18 Quantum Metric
+
+The quantum metric operator is denoted
+
+[
+\boxed{
+\hat g_{\mu\nu}.
+}
+]
+
+Its expectation geometry is
+
+[
+\boxed{
+g^{\rm eff}_{\mu\nu}
+====================
+
+\langle
+\hat g_{\mu\nu}
+\rangle.
+}
+]
+
+More generally,
+
+[
+\boxed{
+g^{(\rho)}_{\mu\nu}
+===================
+
+\operatorname{Tr}
+\left(
+\rho\hat g_{\mu\nu}
+\right).
+}
+]
+
+---
+
+# L.19 Semiclassical Gravity
+
+The semiclassical Einstein equation is
+
+[
+\boxed{
+G_{\mu\nu}
++
+\Lambda g_{\mu\nu}
+==================
+
+8\pi G
+\langle
+\hat T_{\mu\nu}
+\rangle.
+}
+]
+
+This distinguishes
+
+[
+\boxed{
+\hat g_{\mu\nu}
+}
+]
+
+from its expectation geometry
+
+[
+\boxed{
+\langle\hat g_{\mu\nu}\rangle.
+}
+]
+
+---
+
+# L.20 Quantum Geometric Operators
+
+Area and volume operators are denoted
+
+[
+\boxed{
+\hat A(S),
+\qquad
+\hat V(R).
+}
+]
+
+Their eigenvalue equations are
+
+[
+\boxed{
+\hat A(S)|\psi\rangle
+=====================
+
+A_\psi(S)|\psi\rangle,
+}
+]
+
+and
+
+[
+\boxed{
+\hat V(R)|\psi\rangle
+=====================
+
+V_\psi(R)|\psi\rangle.
+}
+]
+
+---
+
+# L.21 Spin Networks and Spin Foams
+
+A spin-network state is denoted
+
+[
+\boxed{
+|\Gamma,j_e,\iota_v\rangle.
+}
+]
+
+Here
+
+[
+\Gamma
+]
+
+is the graph,
+
+[
+j_e
+]
+
+are edge representations, and
+
+[
+\iota_v
+]
+
+are vertex intertwiners.
+
+A spin-foam history is schematically
+
+[
+\boxed{
+\mathcal F.
+}
+]
+
+Its transition amplitude is
+
+[
+\boxed{
+Z[\mathcal F].
+}
+]
+
+---
+
+# L.22 Wheeler–DeWitt Symbols
+
+The spatial metric is
+
+[
+\boxed{
+h_{ij}.
+}
+]
+
+Its canonical momentum is
+
+[
+\boxed{
+\pi^{ij}.
+}
+]
+
+The Wheeler–DeWitt wave functional is
+
+[
+\boxed{
+\Psi[h_{ij}].
+}
+]
+
+The Hamiltonian constraint is
+
+[
+\boxed{
+\hat{\mathcal H}\Psi=0.
+}
+]
+
+The momentum constraint is
+
+[
+\boxed{
+\hat{\mathcal H}_i\Psi=0.
+}
+]
+
+---
+
+# L.23 Thermodynamic Symbols
+
+| Symbol  | Meaning             |
+| ------- | ------------------- |
+| (S)     | Entropy             |
+| (T)     | Temperature         |
+| (E)     | Energy              |
+| (F)     | Free energy         |
+| (Z)     | Partition function  |
+| (\beta) | Inverse temperature |
+| (P)     | Pressure            |
+| (V)     | Volume              |
+| (\mu)   | Chemical potential  |
+| (N)     | Particle number     |
+
+The inverse temperature is
+
+[
+\boxed{
+\beta=\frac1{k_BT}.
+}
+]
+
+The first law is
+
+[
+\boxed{
+dE=T,dS-P,dV+\mu,dN.
+}
+]
+
+---
+
+# L.24 Black-Hole Symbols
+
+| Symbol       | Meaning                    |
+| ------------ | -------------------------- |
+| (A_H)        | Horizon area               |
+| (\kappa)     | Surface gravity            |
+| (T_H)        | Hawking temperature        |
+| (S_{\rm BH}) | Bekenstein–Hawking entropy |
+| (r_H)        | Horizon radius             |
+| (M)          | Black-hole mass            |
+| (J)          | Angular momentum           |
+| (Q)          | Electric charge            |
+
+The Bekenstein–Hawking entropy is
+
+[
+\boxed{
+S_{\rm BH}
+==========
+
+\frac{A_H}{4G\hbar}.
+}
+]
+
+The Hawking temperature is
+
+[
+\boxed{
+T_H
+===
+
+\frac{\hbar\kappa}{2\pi k_Bc}.
+}
+]
+
+---
+
+# L.25 Holographic Symbols
+
+| Symbol                   | Meaning                  |
+| ------------------------ | ------------------------ |
+| (\mathcal A)             | Boundary region          |
+| (\mathcal E(\mathcal A)) | Entanglement wedge       |
+| (\gamma_{\mathcal A})    | Extremal/minimal surface |
+| (S(\mathcal A))          | Entanglement entropy     |
+| (I(A:B))                 | Mutual information       |
+| (\rho_A)                 | Reduced density matrix   |
+| (K_A)                    | Modular Hamiltonian      |
+
+The von Neumann entropy is
+
+[
+\boxed{
+S_A
+===
+
+-\operatorname{Tr}
+(\rho_A\log\rho_A).
+}
+]
+
+---
+
+# L.26 Entanglement Geometry
+
+The reduced density matrix is
+
+[
+\boxed{
+\rho_A
+======
+
+\operatorname{Tr}_{\bar A}\rho.
+}
+]
+
+The modular Hamiltonian is defined through
+
+[
+\boxed{
+\rho_A
+======
+
+\frac{e^{-K_A}}{\operatorname{Tr}(e^{-K_A})}.
+}
+]
+
+The mutual information is
+
+[
+\boxed{
+I(A:B)
+======
+
+S_A+S_B-S_{AB}.
+}
+]
+
+---
+
+# L.27 Information-Theoretic Symbols
+
+| Symbol           | Meaning               |
+| ---------------- | --------------------- |
+| (I(X:Y))         | Mutual information    |
+| (D(\rho|\sigma)) | Relative entropy      |
+| (S(\rho))        | von Neumann entropy   |
+| (K)              | Modular Hamiltonian   |
+| (\mathcal I)     | Information quantity  |
+| (\mathcal C)     | Correlation structure |
+
+Relative entropy is
+
+[
+\boxed{
+D(\rho|\sigma)
+==============
+
+\operatorname{Tr}
+\left[
+\rho(\log\rho-\log\sigma)
+\right].
+}
+]
+
+---
+
+# L.28 Quantum Reference Frames
+
+A quantum reference frame is denoted schematically by
+
+[
+\boxed{
+\mathsf F.
+}
+]
+
+A quantum reference transformation is represented by
+
+[
+\boxed{
+U_{\mathsf F\rightarrow\mathsf F'}.
+}
+]
+
+States transform as
+
+[
+\boxed{
+|\psi\rangle_{\mathsf F'}
+=========================
+
+U_{\mathsf F\rightarrow\mathsf F'}
+|\psi\rangle_{\mathsf F}.
+}
+]
+
+---
+
+# L.29 Gauge Theory
+
+The gauge connection is
+
+[
+\boxed{
+A_\mu.
+}
+]
+
+The field strength is
+
+[
+\boxed{
+F_{\mu\nu}
+==========
+
+## \partial_\mu A_\nu
+
+\partial_\nu A_\mu
++
+[A_\mu,A_\nu].
+}
+]
+
+The covariant derivative is
+
+[
+\boxed{
+D_\mu
+=====
+
+\partial_\mu+A_\mu.
+}
+]
+
+---
+
+# L.30 Gauge Group Symbols
+
+| Symbol           | Meaning                     |
+| ---------------- | --------------------------- |
+| (G)              | Generic gauge group         |
+| (\mathfrak g)    | Lie algebra of (G)          |
+| (T_a)            | Lie algebra generators      |
+| (f_{ab}^{\ \ c}) | Structure constants         |
+| (A)              | Gauge connection            |
+| (F)              | Gauge curvature             |
+| (\omega)         | Generic connection one-form |
+
+The algebra is
+
+[
+\boxed{
+[T_a,T_b]
+=========
+
+f_{ab}^{\ \ c}T_c.
+}
+]
+
+---
+
+# L.31 Differential Forms
+
+A (p)-form is denoted
+
+[
+\boxed{
+\omega^{(p)}.
+}
+]
+
+The exterior derivative satisfies
+
+[
+\boxed{
+d^2=0.
+}
+]
+
+The wedge product is
+
+[
+\boxed{
+\wedge.
+}
+]
+
+The Hodge dual is
+
+[
+\boxed{
+\star.
+}
+]
+
+The codifferential is
+
+[
+\boxed{
+\delta.
+}
+]
+
+---
+
+# L.32 Cohomology
+
+The (p)-th cohomology group is
+
+[
+\boxed{
+H^p(M).
+}
+]
+
+A closed form satisfies
+
+[
+\boxed{
+d\omega=0,
+}
+]
+
+while an exact form satisfies
+
+[
+\boxed{
+\omega=d\eta.
+}
+]
+
+The cohomology class is
+
+[
+\boxed{
+[\omega]\in H^p(M).
+}
+]
+
+---
+
+# L.33 Lie Groups
+
+A Lie group is denoted
+
+[
+\boxed{
+G.
+}
+]
+
+Its Lie algebra is
+
+[
+\boxed{
+\mathfrak g.
+}
+]
+
+The exponential map is
+
+[
+\boxed{
+\exp:\mathfrak g\rightarrow G.
+}
+]
+
+A group representation is
+
+[
+\boxed{
+\rho:G\rightarrow GL(V).
+}
+]
+
+---
+
+# L.34 Fiber Bundles
+
+A fiber bundle is
+
+[
+\boxed{
+E\xrightarrow{\pi}M.
+}
+]
+
+Here
+
+[
+E
+]
+
+is the total space,
+
+[
+M
+]
+
+the base manifold, and
+
+[
+\pi
+]
+
+the projection.
+
+A fiber is
+
+[
+\boxed{
+E_x=\pi^{-1}(x).
+}
+]
+
+A principal bundle is denoted
+
+[
+\boxed{
+P(M,G).
+}
+]
+
+---
+
+# L.35 Connections and Curvature
+
+A connection one-form is
+
+[
+\boxed{
+\omega.
+}
+]
+
+Its curvature is
+
+[
+\boxed{
+\Omega
+======
+
+d\omega+\omega\wedge\omega.
+}
+]
+
+The Bianchi identity is
+
+[
+\boxed{
+D\Omega=0.
+}
+]
+
+For Yang–Mills theory,
+
+[
+\boxed{
+DF=0.
+}
+]
+
+---
+
+# L.36 Noncommutative Geometry
+
+Coordinate operators are denoted
+
+[
+\boxed{
+\hat x^\mu.
+}
+]
+
+They may satisfy
+
+[
+\boxed{
+[\hat x^\mu,\hat x^\nu]
+=======================
+
+i\theta^{\mu\nu}.
+}
+]
+
+Here
+
+[
+\boxed{
+\theta^{\mu\nu}
+}
+]
+
+is the noncommutativity tensor.
+
+The star product is
+
+[
+\boxed{
+f\star g.
+}
+]
+
+---
+
+# L.37 Deformation Quantization
+
+The star product admits the expansion
+
+[
+\boxed{
+f\star g
+========
+
+fg
++
+\frac{i\hbar}{2}{f,g}_{\rm P}
++
+O(\hbar^2).
+}
+]
+
+Here
+
+[
+\boxed{
+{f,g}_{\rm P}
+}
+]
+
+is the Poisson bracket.
+
+---
+
+# L.38 Relative Locality
+
+Momentum space is denoted
+
+[
+\boxed{
+\mathcal P.
+}
+]
+
+Its metric is
+
+[
+\boxed{
+h^{ab}(p).
+}
+]
+
+A momentum-space connection is
+
+[
+\boxed{
+\Gamma^a_{\ bc}(p).
+}
+]
+
+Observer-dependent locality is encoded through the geometry of momentum space rather than solely through spacetime coordinates.
+
+---
+
+# L.39 Modified Dispersion Relations
+
+A generic modified dispersion relation is
+
+[
+\boxed{
+E^2
+===
+
+p^2c^2
++
+m^2c^4
++
+\sum_n
+\frac{\alpha_n}{M_*^{n}}
+\mathcal F_n(E,p).
+}
+]
+
+Here
+
+[
+\boxed{
+M_*
+}
+]
+
+is a high-energy scale and
+
+[
+\boxed{
+\alpha_n
+}
+]
+
+are dimensionless coefficients.
+
+---
+
+# L.40 Quantum Causal Structure
+
+Causal relations are denoted
+
+[
+\boxed{
+p\prec q.
+}
+]
+
+A causal structure may be represented by a relation
+
+[
+\boxed{
+\mathcal C\subset M\times M.
+}
+]
+
+A causal network is
+
+[
+\boxed{
+\mathcal N=(V,E,\prec),
+}
+]
+
+where (V) denotes events and (E) causal relations.
+
+---
+
+# L.41 Cosmological Horizon Symbols
+
+| Symbol       | Meaning                     |
+| ------------ | --------------------------- |
+| (R_H)        | Horizon scale               |
+| (r_A)        | Apparent-horizon radius     |
+| (r_c)        | Cosmological horizon radius |
+| (T_{\rm dS}) | de Sitter temperature       |
+| (S_{\rm dS}) | de Sitter entropy           |
+
+For de Sitter spacetime,
+
+[
+\boxed{
+T_{\rm dS}
+==========
+
+\frac{\hbar H}{2\pi k_B}.
+}
+]
+
+---
+
+# L.42 Inflation
+
+The inflaton is
+
+[
+\boxed{
+\phi.
+}
+]
+
+Its potential is
+
+[
+\boxed{
+V(\phi).
+}
+]
+
+The slow-roll parameters are conventionally
+
+[
+\boxed{
+\epsilon
+========
+
+\frac{M_P^2}{2}
+\left(
+\frac{V'}V
+\right)^2,
+}
+]
+
+and
+
+[
+\boxed{
+\eta
+====
+
+M_P^2\frac{V''}{V}.
+}
+]
+
+---
+
+# L.43 Celestial Variables
+
+| Symbol     | Meaning                       |
+| ---------- | ----------------------------- |
+| (z,\bar z) | Celestial coordinates         |
+| (S^2)      | Celestial sphere              |
+| (\omega)   | Particle energy               |
+| (q^\mu)    | Null direction vector         |
+| (p^\mu)    | Four-momentum                 |
+| (\Delta)   | Celestial conformal dimension |
+| (J)        | Celestial spin                |
+| (h,\bar h) | Holomorphic weights           |
+
+The weights satisfy
+
+[
+\boxed{
+h=\frac{\Delta+J}{2},
+\qquad
+\bar h=\frac{\Delta-J}{2}.
+}
+]
+
+---
+
+# L.44 Celestial Operators
+
+A celestial operator is
+
+[
+\boxed{
+\mathcal O_{\Delta,J}(z,\bar z).
+}
+]
+
+The celestial amplitude is
+
+[
+\boxed{
+\widetilde{\mathcal A}_n
+========================
+
+\left\langle
+\prod_{i=1}^n
+\mathcal O_i
+\right\rangle.
+}
+]
+
+The celestial OPE is
+
+[
+\boxed{
+\mathcal O_1(z_1)
+\mathcal O_2(z_2)
+\sim
+\sum_k
+C_{12}^{\ k}
+z_{12}^{h_k-h_1-h_2}
+\mathcal O_k(z_2).
+}
+]
+
+---
+
+# L.45 Asymptotic Symmetry
+
+The Bondi–Metzner–Sachs group is
+
+[
+\boxed{
+\mathrm{BMS}.
+}
+]
+
+A supertranslation parameter is
+
+[
+\boxed{
+f(z,\bar z).
+}
+]
+
+The Bondi shear is
+
+[
+\boxed{
+C_{AB}.
+}
+]
+
+The Bondi news is
+
+[
+\boxed{
+N_{AB}
+======
+
+\partial_uC_{AB}.
+}
+]
+
+---
+
+# L.46 Scattering Symbols
+
+| Symbol         | Meaning                           |
+| -------------- | --------------------------------- |
+| (S)            | S-matrix                          |
+| (\mathcal A_n) | (n)-particle scattering amplitude |
+| (p_i)          | External momentum                 |
+| (k)            | Internal momentum                 |
+| (s,t,u)        | Mandelstam invariants             |
+| (M)            | Scattering matrix element         |
+| (S^{(0)})      | Leading soft factor               |
+| (S^{(1)})      | Subleading soft factor            |
+
+The Mandelstam variables are
+
+[
+\boxed{
+s=(p_1+p_2)^2,
+}
+]
+
+[
+\boxed{
+t=(p_1-p_3)^2,
+}
+]
+
+[
+\boxed{
+u=(p_1-p_4)^2.
+}
+]
+
+---
+
+# L.47 Quantum Field Theory
+
+The quantum field is
+
+[
+\boxed{
+\phi(x).
+}
+]
+
+A generic field multiplet is
+
+[
+\boxed{
+\Phi.
+}
+]
+
+The generating functional is
+
+[
+\boxed{
+Z[J].
+}
+]
+
+The effective action is
+
+[
+\boxed{
+\Gamma[\phi].
+}
+]
+
+The one-particle-irreducible effective action satisfies
+
+[
+\boxed{
+\frac{\delta\Gamma}{\delta\phi}=0
+}
+]
+
+at the quantum-corrected stationary point.
+
+---
+
+# L.48 Path Integral
+
+The path integral is
+
+[
+\boxed{
+Z
+=
+
+\int\mathcal D\phi,
+e^{iS[\phi]/\hbar}.
+}
+]
+
+Expectation values are
+
+[
+\boxed{
+\langle\mathcal O\rangle
+========================
+
+\frac1Z
+\int\mathcal D\phi,
+\mathcal O[\phi]
+e^{iS[\phi]/\hbar}.
+}
+]
+
+---
+
+# L.49 Renormalization
+
+The renormalization scale is
+
+[
+\boxed{
+\mu.
+}
+]
+
+A running coupling is
+
+[
+\boxed{
+g(\mu).
+}
+]
+
+Its beta function is
+
+[
+\boxed{
+\beta_g
+=======
+
+\mu\frac{dg}{d\mu}.
+}
+]
+
+An anomalous dimension is
+
+[
+\boxed{
+\gamma
+======
+
+\mu\frac{d\ln Z}{d\mu}.
+}
+]
+
+---
+
+# L.50 Heat-Kernel Symbols
+
+The heat kernel is
+
+[
+\boxed{
+K(x,x';s).
+}
+]
+
+The proper-time parameter is
+
+[
+\boxed{
+s.
+}
+]
+
+The trace admits an asymptotic expansion
+
+[
+\boxed{
+\operatorname{Tr}e^{-s\Delta}
+\sim
+\frac1{(4\pi s)^{d/2}}
+\sum_{n=0}^{\infty}
+a_n s^n.
+}
+]
+
+The coefficients
+
+[
+\boxed{
+a_n
+}
+]
+
+are the Seeley–DeWitt coefficients.
+
+---
+
+# L.51 Functional Analysis
+
+| Symbol                      | Meaning                |
+| --------------------------- | ---------------------- |
+| (\mathcal H)                | Hilbert space          |
+| (\mathcal B(\mathcal H))    | Bounded operators      |
+| (\mathcal A)                | Operator algebra       |
+| (\mathcal A^*)              | Dual space             |
+| (|\cdot|)                   | Norm                   |
+| (\langle\cdot,\cdot\rangle) | Inner product          |
+| (\sigma(A))                 | Spectrum               |
+| (D(A))                      | Domain of operator (A) |
+
+---
+
+# L.52 Operator Algebras
+
+An operator algebra is
+
+[
+\boxed{
+\mathcal A.
+}
+]
+
+A state on the algebra is
+
+[
+\boxed{
+\omega:\mathcal A\rightarrow\mathbb C.
+}
+]
+
+It satisfies
+
+[
+\boxed{
+\omega(A^\dagger A)\ge0.
+}
+]
+
+The commutant is
+
+[
+\boxed{
+\mathcal A'.
+}
+]
+
+---
+
+# L.53 Category-Theoretic Symbols
+
+| Symbol                    | Meaning                 |
+| ------------------------- | ----------------------- |
+| (\mathcal C)              | Category                |
+| (X,Y,Z)                   | Objects                 |
+| (f:X\to Y)                | Morphism                |
+| (\circ)                   | Composition             |
+| (\mathrm{Hom}(X,Y))       | Morphism set            |
+| (\mathrm{Ob}(\mathcal C)) | Objects of (\mathcal C) |
+| (F,G)                     | Functors                |
+| (\eta:F\Rightarrow G)     | Natural transformation  |
+
+Associativity requires
+
+[
+\boxed{
+(h\circ g)\circ f
+=================
+
+h\circ(g\circ f).
+}
+]
+
+---
+
+# L.54 Higher Gauge Theory
+
+A higher connection may be written schematically as
+
+[
+\boxed{
+\mathcal A
+==========
+
+A+B+\cdots.
+}
+]
+
+Here
+
+[
+A
+]
+
+is a one-form connection,
+
+[
+B
+]
+
+a higher-form gauge field.
+
+Higher curvature is denoted
+
+[
+\boxed{
+\mathcal F.
+}
+]
+
+Higher gauge transformations are represented schematically by
+
+[
+\boxed{
+\mathcal G.
+}
+]
+
+---
+
+# L.55 Exceptional Geometry
+
+Exceptional duality groups are denoted
+
+[
+\boxed{
+E_{d(d)}.
+}
+]
+
+The generalized tangent bundle is schematically
+
+[
+\boxed{
+E
+}
+]
+
+or
+
+[
+\boxed{
+TM\oplus T^*M\oplus\cdots.
+}
+]
+
+The generalized metric is
+
+[
+\boxed{
+\mathcal H.
+}
+]
+
+---
+
+# L.56 Information Geometry
+
+A statistical manifold is
+
+[
+\boxed{
+\mathcal M_\theta.
+}
+]
+
+Its coordinates are
+
+[
+\boxed{
+\theta^i.
+}
+]
+
+The information metric is
+
+[
+\boxed{
+g_{ij}^{\rm I}.
+}
+]
+
+The Fisher information metric is
+
+[
+\boxed{
+g_{ij}^{\rm F}
+==============
+
+\mathbb E
+\left[
+\partial_i\ln p,
+\partial_j\ln p
+\right].
+}
+]
+
+---
+
+# L.57 Master Action Symbols
+
+The unified action is denoted
+
+[
+\boxed{
+S_{\rm U}
+}
+]
+
+or simply
+
+[
+\boxed{
+S_{\rm master}.
+}
+]
+
+Its sectors may be decomposed as
+
+[
+\boxed{
+S_{\rm U}
+=========
+
+S_{\rm grav}
++
+S_{\rm gauge}
++
+S_{\rm matter}
++
+S_{\rm quantum}
++
+S_{\rm thermo}
++
+S_{\rm info}
++
+S_{\rm causal}
++\cdots.
+}
+]
+
+The unified field multiplet is
+
+[
+\boxed{
+\Psi_{\rm U}.
+}
+]
+
+---
+
+# L.58 Universal Covariance
+
+The generalized covariance group is denoted
+
+[
+\boxed{
+\mathfrak G_{\rm ext}.
+}
+]
+
+Its action on the unified state space is schematically
+
+[
+\boxed{
+\Psi_{\rm U}
+\rightarrow
+U(g)\Psi_{\rm U},
+\qquad
+g\in\mathfrak G_{\rm ext}.
+}
+]
+
+The generalized covariance principle is
+
+[
+\boxed{
+\mathcal O[\Psi]
+================
+
+\mathcal O[U(g)\Psi].
+}
+]
+
+---
+
+# L.59 Limiting-Theory Symbols
+
+The principal limiting regimes are
+
+[
+\boxed{
+\begin{aligned}
+c\rightarrow\infty
+&:\quad \text{Newtonian limit},\
+G\rightarrow0
+&:\quad \text{nongravitational limit},\
+\hbar\rightarrow0
+&:\quad \text{classical limit},\
+\ell_P\rightarrow0
+&:\quad \text{continuum limit},\
+k_B\rightarrow0
+&:\quad \text{zero-entropy scaling limit}.
+\end{aligned}
+}
+]
+
+The unified framework is required to reproduce known physical sectors under appropriate limiting procedures.
+
+---
+
+# L.60 Index Hierarchy
+
+The following index convention is adopted throughout:
+
+[
+\boxed{
+\begin{array}{ccl}
+\mu,\nu,\rho,\sigma
+&:&
+\text{spacetime},[2mm]
+i,j,k,l
+&:&
+\text{spatial},[2mm]
+a,b,c,d
+&:&
+\text{tangent/internal},[2mm]
+A,B,C,D
+&:&
+\text{abstract or internal},[2mm]
+I,J,K,L
+&:&
+\text{generalized/internal},[2mm]
+m,n,p,q
+&:&
+\text{generic labels}.
+\end{array}
+}
+]
+
+Repeated indices are summed according to Einstein's convention unless explicitly stated otherwise.
+
+---
+
+# L.61 Symmetrization and Antisymmetrization
+
+Symmetrization is denoted
+
+[
+\boxed{
+T_{(\mu\nu)}
+============
+
+\frac12
+(T_{\mu\nu}+T_{\nu\mu}).
+}
+]
+
+Antisymmetrization is
+
+[
+\boxed{
+T_{[\mu\nu]}
+============
+
+\frac12
+(T_{\mu\nu}-T_{\nu\mu}).
+}
+]
+
+For (p) indices,
+
+[
+\boxed{
+T_{[\mu_1\cdots\mu_p]}
+}
+]
+
+denotes complete antisymmetrization with unit-weight normalization unless otherwise specified.
+
+---
+
+# L.62 Levi-Civita Tensor
+
+The Levi-Civita symbol is
+
+[
+\boxed{
+\epsilon_{\mu\nu\rho\sigma}.
+}
+]
+
+The corresponding tensor is
+
+[
+\boxed{
+\varepsilon_{\mu\nu\rho\sigma}
+==============================
+
+\sqrt{-g},
+\epsilon_{\mu\nu\rho\sigma}.
+}
+]
+
+The Hodge dual of a two-form is
+
+[
+\boxed{
+(\star F)_{\mu\nu}
+==================
+
+\frac12
+\varepsilon_{\mu\nu\rho\sigma}
+F^{\rho\sigma}.
+}
+]
+
+---
+
+# L.63 Common Differential Operators
+
+| Symbol         | Meaning                                             |
+| -------------- | --------------------------------------------------- |
+| (\partial_\mu) | Partial derivative                                  |
+| (\nabla_\mu)   | Covariant derivative                                |
+| (D_\mu)        | Gauge-covariant derivative                          |
+| (d)            | Exterior derivative                                 |
+| (\delta)       | Codifferential                                      |
+| (\star)        | Hodge dual                                          |
+| (\Box)         | Covariant wave operator                             |
+| (\Delta)       | Laplacian or conformal dimension, context-dependent |
+| (\mathcal L_X) | Lie derivative                                      |
+| (\mathcal D)   | Generic differential operator                       |
+
+The Lie derivative is
+
+[
+\boxed{
+\mathcal L_X.
+}
+]
+
+---
+
+# L.64 Lie Derivative
+
+For a metric,
+
+[
+\boxed{
+(\mathcal L_Xg)_{\mu\nu}
+========================
+
+\nabla_\mu X_\nu
++
+\nabla_\nu X_\mu.
+}
+]
+
+A Killing vector satisfies
+
+[
+\boxed{
+\mathcal L_Xg_{\mu\nu}=0.
+}
+]
+
+---
+
+# L.65 Geodesics
+
+The geodesic equation is
+
+[
+\boxed{
+\frac{d^2x^\mu}{d\lambda^2}
++
+\Gamma^\mu_{\nu\rho}
+\frac{dx^\nu}{d\lambda}
+\frac{dx^\rho}{d\lambda}
+=0.
+}
+]
+
+Here
+
+[
+\boxed{
+\lambda
+}
+]
+
+is an affine parameter.
+
+---
+
+# L.66 Perturbation Theory
+
+A perturbed metric is written
+
+[
+\boxed{
+g_{\mu\nu}
+==========
+
+\bar g_{\mu\nu}
++
+h_{\mu\nu}.
+}
+]
+
+Here
+
+[
+\boxed{
+\bar g_{\mu\nu}
+}
+]
+
+is the background geometry and
+
+[
+\boxed{
+h_{\mu\nu}
+}
+]
+
+the perturbation.
+
+For linearized gravity,
+
+[
+\boxed{
+|h_{\mu\nu}|\ll|\bar g_{\mu\nu}|.
+}
+]
+
+---
+
+# L.67 Gravitational Waves
+
+The transverse-traceless perturbation is
+
+[
+\boxed{
+h_{ij}^{\rm TT}.
+}
+]
+
+The two polarizations are
+
+[
+\boxed{
+h_+,
+\qquad
+h_\times.
+}
+]
+
+The strain is commonly denoted
+
+[
+\boxed{
+h(t).
+}
+]
+
+---
+
+# L.68 Black-Hole Imaging and Observational Symbols
+
+| Symbol   | Meaning                                       |
+| -------- | --------------------------------------------- |
+| (r_g)    | Gravitational radius                          |
+| (M)      | Compact-object mass                           |
+| (a_*)    | Dimensionless spin                            |
+| (\chi)   | Dimensionless spin parameter                  |
+| (D)      | Distance                                      |
+| (\theta) | Angular scale                                 |
+| (\rho)   | Signal-to-noise or density, context-dependent |
+
+---
+
+# L.69 Post-Einsteinian Parameters
+
+Generic deviations from General Relativity are denoted
+
+[
+\boxed{
+\delta\mathcal P_i.
+}
+]
+
+Parameterized modifications may be written
+
+[
+\boxed{
+\mathcal O_i
+============
+
+\mathcal O_i^{\rm GR}
++
+\delta\mathcal O_i.
+}
+]
+
+Parameterized post-Einsteinian coefficients are represented generically by
+
+[
+\boxed{
+\beta_i,
+\qquad
+\alpha_i.
+}
+]
+
+---
+
+# L.70 Causal-Informational Variables
+
+The fundamental information field is denoted
+
+[
+\boxed{
+\mathcal I.
+}
+]
+
+A causal relation is
+
+[
+\boxed{
+\prec.
+}
+]
+
+An event is
+
+[
+\boxed{
+e_i.
+}
+]
+
+A causal network is
+
+[
+\boxed{
+\mathcal N.
+}
+]
+
+The emergent metric is
+
+[
+\boxed{
+g_{\mu\nu}^{\rm emergent}.
+}
+]
+
+---
+
+# L.71 Emergence Notation
+
+Microscopic variables are denoted generically by
+
+[
+\boxed{
+\xi.
+}
+]
+
+Macroscopic variables are
+
+[
+\boxed{
+X.
+}
+]
+
+A coarse-graining map is
+
+[
+\boxed{
+\mathcal C:
+\xi\mapsto X.
+}
+]
+
+The emergent geometry is represented as
+
+[
+\boxed{
+g_{\mu\nu}
+==========
+
+\mathcal E[\xi]
+}
+]
+
+for an appropriate emergence map
+
+[
+\boxed{
+\mathcal E.
+}
+]
+
+---
+
+# L.72 Coarse Graining
+
+A coarse-graining transformation is denoted
+
+[
+\boxed{
+\mathcal R_\Lambda.
+}
+]
+
+The scale is
+
+[
+\boxed{
+\Lambda.
+}
+]
+
+A renormalization-group trajectory is
+
+[
+\boxed{
+\mathcal T(\Lambda).
+}
+]
+
+Fixed points satisfy
+
+[
+\boxed{
+\beta_i(g_*)=0.
+}
+]
+
+---
+
+# L.73 Statistical Geometry
+
+The microscopic state is
+
+[
+\boxed{
+\omega.
+}
+]
+
+The macroscopic state is
+
+[
+\boxed{
+\rho.
+}
+]
+
+The statistical manifold is
+
+[
+\boxed{
+\mathcal M_{\rm stat}.
+}
+]
+
+Its metric is
+
+[
+\boxed{
+g^{\rm stat}_{ij}.
+}
+]
+
+---
+
+# L.74 Notation for Limits
+
+Classical limits are denoted
+
+[
+\boxed{
+\hbar\to0.
+}
+]
+
+Low-energy limits are
+
+[
+\boxed{
+E/M_P\to0.
+}
+]
+
+Weak-field limits are
+
+[
+\boxed{
+GM/(rc^2)\ll1.
+}
+]
+
+Large-scale limits are denoted
+
+[
+\boxed{
+L\gg\ell_P.
+}
+]
+
+Flat-space limits are
+
+[
+\boxed{
+R_{\mu\nu\rho\sigma}\rightarrow0.
+}
+]
+
+---
+
+# L.75 Units
+
+Unless otherwise stated, natural units are used:
+
+[
+\boxed{
+c=\hbar=k_B=1.
+}
+]
+
+In these units,
+
+[
+[G]=L^2
+]
+
+in four spacetime dimensions, and
+
+[
+\boxed{
+\ell_P^2\sim G.
+}
+]
+
+When numerical observational quantities are discussed, conventional SI units may be restored.
+
+---
+
+# L.76 Equality, Approximation, and Definition
+
+The notation
+
+[
+\boxed{
+=======
+
+}
+]
+
+denotes mathematical equality.
+
+The notation
+
+[
+\boxed{
+\equiv
+}
+]
+
+denotes definition or identity by convention.
+
+The notation
+
+[
+\boxed{
+\approx
+}
+]
+
+denotes approximation.
+
+The notation
+
+[
+\boxed{
+\sim
+}
+]
+
+denotes asymptotic scaling or proportionality up to context-dependent factors.
+
+The notation
+
+[
+\boxed{
+\propto
+}
+]
+
+denotes proportionality.
+
+---
+
+# L.77 Order Symbols
+
+The notation
+
+[
+\boxed{
+O(\epsilon^n)
+}
+]
+
+denotes terms of order (\epsilon^n) or higher.
+
+The notation
+
+[
+\boxed{
+o(\epsilon^n)
+}
+]
+
+denotes terms asymptotically smaller than (\epsilon^n).
+
+---
+
+# L.78 Functional and Path-Integral Measures
+
+The functional measure is
+
+[
+\boxed{
+\mathcal D\phi.
+}
+]
+
+For gauge fields,
+
+[
+\boxed{
+\mathcal DA.
+}
+]
+
+For metrics,
+
+[
+\boxed{
+\mathcal Dg.
+}
+]
+
+A generic gravitational path integral is
+
+[
+\boxed{
+Z
+=
+
+\int
+\frac{\mathcal Dg}{\mathrm{Diff}(M)}
+e^{iS[g]/\hbar}.
+}
+]
+
+---
+
+# L.79 Boundary and Asymptotic Symbols
+
+| Symbol         | Meaning               |
+| -------------- | --------------------- |
+| (\partial M)   | Boundary of spacetime |
+| (\mathscr I^+) | Future null infinity  |
+| (\mathscr I^-) | Past null infinity    |
+| (\mathscr H)   | Horizon               |
+| (\mathscr H^+) | Future horizon        |
+| (\mathscr H^-) | Past horizon          |
+| (\mathscr B)   | Generic boundary      |
+| (u)            | Retarded time         |
+| (v)            | Advanced time         |
+
+---
+
+# L.80 Projection Operators
+
+A projection is denoted
+
+[
+\boxed{
+P.
+}
+]
+
+It satisfies
+
+[
+\boxed{
+P^2=P.
+}
+]
+
+The complementary projector is
+
+[
+\boxed{
+Q=1-P.
+}
+]
+
+These symbols are also applicable to decompositions of Hilbert spaces, bundles, sectors, and generalized state spaces.
+
+---
+
+# L.81 Operators and Spectra
+
+An operator is denoted
+
+[
+\boxed{
+\hat A.
+}
+]
+
+Its eigenvalue equation is
+
+[
+\boxed{
+\hat A|\psi_a\rangle
+====================
+
+a|\psi_a\rangle.
+}
+]
+
+Its spectrum is
+
+[
+\boxed{
+\sigma(\hat A).
+}
+]
+
+The spectral decomposition is schematically
+
+[
+\boxed{
+\hat A
+======
+
+\int a,dE(a).
+}
+]
+
+---
+
+# L.82 Commutators
+
+The commutator is
+
+[
+\boxed{
+[A,B]=AB-BA.
+}
+]
+
+Canonical quantization imposes
+
+[
+\boxed{
+[\hat x^i,\hat p_j]
+===================
+
+i\hbar\delta^i_j.
+}
+]
+
+The classical Poisson bracket is
+
+[
+\boxed{
+{x^i,p_j}_{\rm P}
+=================
+
+\delta^i_j.
+}
+]
+
+---
+
+# L.83 Quantum Entropy
+
+The von Neumann entropy is
+
+[
+\boxed{
+S_{\rm vN}
+==========
+
+-\operatorname{Tr}(\rho\ln\rho).
+}
+]
+
+For a pure state,
+
+[
+\boxed{
+\rho=|\psi\rangle\langle\psi|,
+\qquad
+S_{\rm vN}=0.
+}
+]
+
+---
+
+# L.84 Relative Entropy
+
+The quantum relative entropy is
+
+[
+\boxed{
+S(\rho|\sigma)
+==============
+
+\operatorname{Tr}
+[
+\rho(\ln\rho-\ln\sigma)
+].
+}
+]
+
+It satisfies
+
+[
+\boxed{
+S(\rho|\sigma)\ge0
+}
+]
+
+under the standard assumptions on (\rho) and (\sigma).
+
+---
+
+# L.85 Density Matrices and Subsystems
+
+The total state is
+
+[
+\boxed{
+\rho_{AB}.
+}
+]
+
+The reduced states are
+
+[
+\boxed{
+\rho_A
+======
+
+\operatorname{Tr}*B\rho*{AB},
+}
+]
+
+[
+\boxed{
+\rho_B
+======
+
+\operatorname{Tr}*A\rho*{AB}.
+}
+]
+
+The entanglement entropy is
+
+[
+\boxed{
+S(A)
+====
+
+-\operatorname{Tr}
+(\rho_A\ln\rho_A).
+}
+]
+
+---
+
+# L.86 Partition Functions
+
+The canonical partition function is
+
+[
+\boxed{
+Z(\beta)
+========
+
+\operatorname{Tr}
+e^{-\beta H}.
+}
+]
+
+The free energy is
+
+[
+\boxed{
+F
+=
+
+-\frac1\beta\ln Z.
+}
+]
+
+The expectation energy is
+
+[
+\boxed{
+E
+=
+
+-\frac{\partial}{\partial\beta}
+\ln Z.
+}
+]
+
+---
+
+# L.87 Modular Quantities
+
+The modular operator is
+
+[
+\boxed{
+\Delta_{\rho|\sigma}.
+}
+]
+
+The modular Hamiltonian is
+
+[
+\boxed{
+K_\rho=-\ln\rho
+}
+]
+
+up to normalization and additive constants.
+
+Modular flow is
+
+[
+\boxed{
+\rho^{it}.
+}
+]
+
+---
+
+# L.88 Holographic Entropy
+
+The holographic entropy relation is schematically
+
+[
+\boxed{
+S_A
+===
+
+\frac{\operatorname{Area}(\gamma_A)}
+{4G_N}
++
+S_{\rm bulk}
++\cdots.
+}
+]
+
+Here
+
+[
+\boxed{
+\gamma_A
+}
+]
+
+is the relevant extremal surface.
+
+---
+
+# L.89 Thermodynamic Geometry
+
+The thermodynamic metric is denoted
+
+[
+\boxed{
+g^{\rm th}_{ij}.
+}
+]
+
+Thermodynamic state variables are
+
+[
+\boxed{
+X^i.
+}
+]
+
+The thermodynamic potential is
+
+[
+\boxed{
+\Phi(X).
+}
+]
+
+Its Hessian may define
+
+[
+\boxed{
+g^{\rm th}_{ij}
+===============
+
+\frac{\partial^2\Phi}
+{\partial X^i\partial X^j}.
+}
+]
+
+---
+
+# L.90 Generalized Geometry
+
+A generalized tangent bundle is denoted
+
+[
+\boxed{
+E=TM\oplus T^*M.
+}
+]
+
+A generalized vector is
+
+[
+\boxed{
+V=X+\xi,
+}
+]
+
+with
+
+[
+X\in\Gamma(TM),
+\qquad
+\xi\in\Gamma(T^*M).
+]
+
+The generalized metric is
+
+[
+\boxed{
+\mathcal G.
+}
+]
+
+---
+
+# L.91 Differential Graded Structures
+
+A graded space is
+
+[
+\boxed{
+C^\bullet
+=========
+
+\bigoplus_n C^n.
+}
+]
+
+The differential is
+
+[
+\boxed{
+d:C^n\rightarrow C^{n+1}.
+}
+]
+
+It satisfies
+
+[
+\boxed{
+d^2=0.
+}
+]
+
+A graded degree is denoted
+
+[
+\boxed{
+|\alpha|.
+}
+]
+
+---
+
+# L.92 Master Hierarchy of Structures
+
+The corpus employs the following conceptual hierarchy:
+
+[
+\boxed{
+\begin{aligned}
+\text{Manifold}
+&\rightarrow
+\text{Metric},\
+\text{Metric}
+&\rightarrow
+\text{Connection},\
+\text{Connection}
+&\rightarrow
+\text{Curvature},\
+\text{Curvature}
+&\rightarrow
+\text{Dynamics},\
+\text{Dynamics}
+&\rightarrow
+\text{Quantum theory},\
+\text{Quantum theory}
+&\rightarrow
+\text{Information},\
+\text{Information}
+&\rightarrow
+\text{Thermodynamics},\
+\text{Thermodynamics}
+&\rightarrow
+\text{Emergent geometry},\
+\text{Geometry}
+&\rightarrow
+\text{Causal structure},\
+\text{Causality}
+&\rightarrow
+\text{Relational covariance}.
+\end{aligned}
+}
+]
+
+---
+
+# L.93 Symbol Overloading Convention
+
+Some symbols necessarily have multiple meanings in different mathematical contexts.
+
+The following contextual distinctions are mandatory:
+
+[
+\boxed{
+\begin{array}{c|c}
+\text{Symbol} & \text{Contextual meanings}\
+\hline
+G & \text{Newton constant / gauge group}\
+H & \text{Hubble parameter / Hamiltonian}\
+S & \text{action / entropy / S-matrix}\
+T & \text{temperature / stress tensor / transformation}\
+\Delta & \text{conformal dimension / Laplacian / variation}\
+\rho & \text{density / density matrix / Ricci quantity in specialized notation}\
+\Gamma & \text{Christoffel symbols / effective action / group}\
+A & \text{area / gauge connection / generic operator}\
+J & \text{angular momentum / celestial spin / current}\
+P & \text{pressure / projector / momentum}\
+V & \text{volume / potential / vector space}\
+\mathcal A & \text{amplitude / algebra / boundary region}.
+\end{array}
+}
+]
+
+Context determines the intended meaning.
+
+---
+
+# L.94 Core Relativity Symbol Set
+
+The minimal gravitational symbol set is
+
+[
+\boxed{
+\left{
+g_{\mu\nu},
+\Gamma^\rho_{\mu\nu},
+R^\rho_{\ \sigma\mu\nu},
+R_{\mu\nu},
+R,
+G_{\mu\nu},
+T_{\mu\nu},
+\Lambda,
+G
+\right}.
+}
+]
+
+These constitute the fundamental tensorial vocabulary of Einstein gravity.
+
+---
+
+# L.95 Core Quantum-Gravity Symbol Set
+
+The quantum-geometric sector is characterized by
+
+[
+\boxed{
+\left{
+\hat g_{\mu\nu},
+\hat A,
+\hat V,
+\Psi[g],
+\hat{\mathcal H},
+\rho,
+\mathcal H,
+S_{\rm eff}
+\right}.
+}
+]
+
+---
+
+# L.96 Core Holographic Symbol Set
+
+The holographic sector uses
+
+[
+\boxed{
+\left{
+\rho_A,
+S_A,
+K_A,
+\gamma_A,
+\mathcal E(A),
+I(A:B)
+\right}.
+}
+]
+
+---
+
+# L.97 Core Thermodynamic Symbol Set
+
+The thermodynamic sector is characterized by
+
+[
+\boxed{
+\left{
+E,T,S,P,V,\mu,N,\beta,Z,F
+\right}.
+}
+]
+
+---
+
+# L.98 Core Celestial Symbol Set
+
+The celestial sector is characterized by
+
+[
+\boxed{
+\left{
+z,\bar z,
+\omega,
+q^\mu,
+p^\mu,
+\Delta,
+J,
+h,\bar h,
+\mathcal O_{\Delta,J},
+\mathcal A_n
+\right}.
+}
+]
+
+---
+
+# L.99 Core Unified Symbol Set
+
+The Extended Relativity formalism ultimately combines
+
+[
+\boxed{
+\mathfrak U
+===========
+
+{
+g,\Gamma,R,T,
+A,F,
+\Psi,\rho,
+S,T_{\rm therm},
+\mathcal I,
+\mathcal C,
+\mathcal O,
+\Delta,J,
+\mathcal G
+}.
+}
+]
+
+The symbol
+
+[
+\boxed{
+\mathfrak U
+}
+]
+
+denotes the unified mathematical structure only when explicitly introduced in a chapter; it should not be confused with the conventional unitary operator (U).
+
+---
+
+# L.100 Final Notational Principle
+
+The complete corpus is organized around the progressive enlargement
+
+[
+\boxed{
+\begin{aligned}
+\text{coordinates}
+&\rightarrow
+\text{metric},\
+\text{metric}
+&\rightarrow
+\text{connection},\
+\text{connection}
+&\rightarrow
+\text{curvature},\
+\text{curvature}
+&\rightarrow
+\text{action},\
+\text{action}
+&\rightarrow
+\text{quantum state},\
+\text{quantum state}
+&\rightarrow
+\text{information},\
+\text{information}
+&\rightarrow
+\text{thermodynamics},\
+\text{thermodynamics}
+&\rightarrow
+\text{emergent geometry},\
+\text{geometry}
+&\rightarrow
+\text{causal structure},\
+\text{causal structure}
+&\rightarrow
+\text{asymptotic symmetry},\
+\text{asymptotic symmetry}
+&\rightarrow
+\text{celestial representation},\
+\text{all sectors}
+&\rightarrow
+\text{unified covariance}.
+\end{aligned}
+}
+]
+
+Accordingly, the notation of **Extended Relativity** is not merely an index of symbols. It encodes the architecture of the theory itself:
+
+[
+\boxed{
+\text{Geometry}
+;\subset;
+\text{Dynamics}
+;\subset;
+\text{Quantum Structure}
+;\subset;
+\text{Information}
+;\subset;
+\text{Causality}
+;\subset;
+\text{Universal Covariance}.
+}
+]
+
+This completes the notation reference for the corpus and establishes the symbolic vocabulary used by the unified formalism.
