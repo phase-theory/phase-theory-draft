@@ -325,7 +325,8 @@ Consider an erasure protocol \(\mathcal E\) acting on a computational ensemble o
 \[
 \Pi_{\mathcal O}\mathcal E(B_a)=B_0
 \qquad
-\text{for all }a\in\mathcal A_{m in}.
+\text{for all }a\in\mathcal A_{
+m in}.
 \]
 The final observable state is independent of the initial logical sector. The protocol may preserve microscopic reversibility by exporting the initial sector label to unobserved degrees of freedom.
 
