@@ -1,0 +1,1413 @@
+# Curved BRST and Depth-Resolved Physics:  
+## A Flux-Cohomological Field Theory
+
+**Preprint — Derivative Exposition**  
+**Date:** September 20, 2026  
+**PACS:** 02.40.-k, 11.15.-q, 11.30.-j, 05.70.Ln  
+**Mathematics Subject Classification:** 55Nxx, 58A10, 53C05, 81T13, 81T50  
+
+---
+
+## Abstract
+
+This paper derives a physical theory from flux cohomology. The starting point is a graded physical configuration space equipped with a curved differential, or curved supercharge, \(D\), satisfying
+\[
+D^{2}=K\neq 0,
+\]
+where \(K\) is interpreted as a curvature or anomaly operator. Ordinary BRST cohomology, ordinary gauge conservation laws, and ordinary supersymmetric ground-state counting all fail when \(D^{2}\neq 0\). Flux cohomology replaces the failed nilpotency by a canonical curvature-depth filtration and produces bona fide cohomology groups \(H^{p,r}_{\Phi}\).
+
+Here I show that this mathematical construction has a direct physical interpretation. The operator \(D\) is a **curved BRST charge** or **curved supersymmetry generator**. The curvature \(K\) is not a defect to be removed but a physical depth-lowering operator. The associated graded differential \(d_{r}\) defines a family of nilpotent physical supercharges, one for each curvature depth. The resulting physical Hilbert space is bigraded by cohomological degree \(p\) and curvature depth \(r\). Its harmonic states are precisely the flux cohomology classes.
+
+The main physical results derived here are:
+
+1. A **curved BRST algebra**
+   \[
+   D^{2}=K,\qquad DK=KD,
+   \]
+   and its resolution into depth-resolved nilpotent charges \(d_{r}\).
+
+2. A **depth-resolved supersymmetric quantum mechanics** with Hamiltonian
+   \[
+   H_{\Phi}=\bigoplus_{r}\Delta_{r},
+   \qquad
+   \Delta_{r}=d_{r}d_{r}^{\dagger}+d_{r}^{\dagger}d_{r},
+   \]
+   whose zero-energy states are exactly the flux cohomology classes.
+
+3. A **refined Witten index**
+   \[
+   I_{\Phi}(v)
+   =
+   \operatorname{Tr}\bigl((-1)^{F}v^{R}e^{-\beta H_{\Phi}}\bigr)
+   =
+   P_{\Phi}(-1,v),
+   \]
+   where \(R\) is the curvature-depth grading.
+
+4. A **flux Noether theorem**: continuous symmetries preserve depth-projected currents,
+   \[
+   d_{r}j_{r}=0,
+   \]
+   rather than ordinary currents. Curvature produces controlled non-conservation and depth conversion.
+
+5. A **depth-resolved anomaly descent formalism**. Anomalies are classes in flux cohomology, and anomaly cancellation becomes a depth-refined condition.
+
+6. A **local index theorem** for elliptic flux strata, expressing depth Euler characteristics as integrals of local curvature-depth densities.
+
+7. Explicit physical examples showing **depth shift**, **flux mass generation**, and **curvature-induced spectral phase transitions**.
+
+The central physical principle is:
+
+\[
+\boxed{\text{Curvature is a quantum number; depth is a superselection sector.}}
+\]
+
+---
+
+# 1. Physical Postulates
+
+Let \((C,D,g)\) be a finite-dimensional Hermitian graded cochain system, or its smooth elliptic analogue, with
+\[
+C=\bigoplus_{p}C^{p},
+\qquad
+D:C^{p}\to C^{p+1},
+\qquad
+D^{2}=K\neq 0.
+\]
+The operator \(K\) has degree \(+2\) and is called the curvature. The fundamental identity
+\[
+DK=KD
+\]
+is the flux Bianchi identity.
+
+The physical interpretation is as follows.
+
+## Postulate 1: Curved BRST charge
+
+The operator \(D\) is the physical BRST charge, or equivalently an odd supersymmetry generator, of a possibly anomalous or non-conservative system.
+
+In ordinary gauge or topological theories one requires
+\[
+D^{2}=0.
+\]
+Here this condition is relaxed. The failure of nilpotency is measured by \(K\).
+
+## Postulate 2: Physical states are flux cohomology classes
+
+A physical state is not simply a \(D\)-closed state modulo \(D\)-exact states. Instead, physical states are elements of the flux cohomology groups
+\[
+H^{p,r}_{\Phi}(C)
+=
+H^{p}\bigl(\operatorname{Gr}_{r},d_{r}\bigr),
+\]
+where
+\[
+\operatorname{Gr}_{r}^{p}
+=
+F^{r+1}C^{p}/F^{r}C^{p},
+\qquad
+F^{r}C^{p}=\ker K^{r}.
+\]
+
+The integer \(r\) is the **curvature depth** of the state.
+
+## Postulate 3: Dynamics is stratified Hodge dynamics
+
+On each curvature stratum \(\operatorname{Gr}_{r}\), the induced differential \(d_{r}\) satisfies
+\[
+d_{r}^{2}=0.
+\]
+The physical Hamiltonian is the direct sum of the depth-resolved Hodge Laplacians
+\[
+H_{\Phi}
+=
+\bigoplus_{r}\Delta_{r},
+\qquad
+\Delta_{r}
+=
+d_{r}d_{r}^{\dagger}+d_{r}^{\dagger}d_{r}.
+\]
+Physical ground states are harmonic representatives of flux cohomology.
+
+These postulates convert the algebraic construction of flux cohomology into a physical theory.
+
+---
+
+# 2. Curved Supersymmetry Algebra
+
+The operator \(D\) is odd with respect to the cohomological parity
+\[
+F=p \pmod 2.
+\]
+The curvature \(K=D^{2}\) is even. The identity
+\[
+DK=KD
+\]
+is the simplest example of a curved supersymmetry algebra.
+
+## 2.1 Curved BRST algebra
+
+Define the algebra generated by \(D\) and \(K\) with relations
+\[
+D^{2}=K,
+\qquad
+[D,K]=0.
+\]
+Because \(K\) has even degree, this is a curved differential graded algebra rather than an ordinary differential graded algebra.
+
+In physics language, \(D\) is a supercharge whose square is not zero but a central, nilpotent even operator:
+\[
+Q^{2}=K,
+\qquad
+[Q,K]=0.
+\]
+The nilpotency of \(K\) follows from boundedness of the graded system:
+\[
+K^{N}=0
+\]
+for sufficiently large \(N\).
+
+Thus the algebra is a nilpotent-central-extension of a supersymmetry algebra.
+
+## 2.2 Filtration preservation
+
+Because \(DK=KD\), for every \(r\ge 0\),
+\[
+D(\ker K^{r})\subseteq \ker K^{r}.
+\]
+Indeed, if \(K^{r}\alpha=0\), then
+\[
+K^{r}D\alpha
+=
+DK^{r}\alpha
+=
+0.
+\]
+Therefore \(D\) preserves the curvature-depth filtration
+\[
+0=F^{0}C\subseteq F^{1}C\subseteq F^{2}C\subseteq\cdots\subseteq C.
+\]
+
+This is the physical statement that curved BRST transport cannot increase curvature depth.
+
+## 2.3 Associated graded supercharges
+
+Choose a Hermitian splitting
+\[
+F^{r+1}C
+=
+F^{r}C\oplus G_{r},
+\]
+so that
+\[
+G_{r}\cong \operatorname{Gr}_{r}.
+\]
+Let
+\[
+i_{r}:G_{r}\hookrightarrow C,
+\qquad
+P_{r}:C\to G_{r}
+\]
+denote inclusion and orthogonal projection. Define
+\[
+q_{r}=P_{r}D i_{r}:G_{r}\to G_{r}.
+\]
+Then
+\[
+q_{r}^{2}=0.
+\]
+
+Thus each curvature stratum carries a genuine nilpotent supercharge.
+
+## 2.4 Block structure of the curved charge
+
+With respect to the depth decomposition
+\[
+C\cong\bigoplus_{r}G_{r},
+\]
+the curved differential has block form
+\[
+D=
+\begin{pmatrix}
+q_{0} & 0 & 0 & \cdots \\
+D_{1,0} & q_{1} & 0 & \cdots \\
+D_{2,0} & D_{2,1} & q_{2} & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix}.
+\]
+The diagonal blocks \(q_{r}\) are nilpotent:
+\[
+q_{r}^{2}=0.
+\]
+The lower-triangular blocks encode curvature-induced mixing between depths.
+
+Squaring \(D\) gives
+\[
+K=D^{2}
+=
+\begin{pmatrix}
+0 & 0 & 0 & \cdots \\
+\kappa_{1} & 0 & 0 & \cdots \\
+\kappa_{2,0} & \kappa_{2} & 0 & \cdots \\
+\vdots & \vdots & \vdots & \ddots
+\end{pmatrix}.
+\]
+The diagonal of \(K\) vanishes because \(q_{r}^{2}=0\). Hence curvature strictly lowers depth.
+
+The leading curvature maps
+\[
+\kappa_{r}:G_{r}\to G_{r-1}
+\]
+are the physical depth-conversion operators.
+
+## 2.5 Depth grading algebra
+
+Let \(R\) be the depth operator defined on the associated graded by
+\[
+R|_{\operatorname{Gr}_{r}}=r.
+\]
+Then
+\[
+[R,q_{r}]=0,
+\]
+while the leading curvature map satisfies
+\[
+[R,\kappa_{r}]=-\kappa_{r}.
+\]
+Thus \(q_{r}\) conserves curvature depth, whereas curvature lowers it.
+
+This gives the fundamental physical selection rule:
+
+\[
+\boxed{
+\text{Nilpotent physical supersymmetry conserves depth; curvature lowers depth.}
+}
+\]
+
+---
+
+# 3. Depth-Resolved Supersymmetric Quantum Mechanics
+
+We now construct the quantum theory.
+
+Let
+\[
+\mathcal H
+=
+\bigoplus_{r,p}G_{r}^{p}
+\]
+be the physical Hilbert space. Define fermion number
+\[
+F=p\pmod 2
+\]
+and depth grading
+\[
+R=r.
+\]
+Define the depth-resolved supercharge
+\[
+Q_{\Phi}
+=
+\bigoplus_{r}q_{r}.
+\]
+Then
+\[
+Q_{\Phi}^{2}=0.
+\]
+
+The Hamiltonian is
+\[
+H_{\Phi}
+=
+\{Q_{\Phi},Q_{\Phi}^{\dagger}\}
+=
+\bigoplus_{r}\Delta_{r},
+\]
+where
+\[
+\Delta_{r}
+=
+q_{r}q_{r}^{\dagger}+q_{r}^{\dagger}q_{r}.
+\]
+
+## 3.1 Physical ground states
+
+A state \(\psi\in G_{r}^{p}\) is a zero-energy state iff
+\[
+\Delta_{r}\psi=0.
+\]
+By finite-dimensional Hodge theory,
+\[
+\ker\Delta_{r}\cap G_{r}^{p}
+\cong
+H^{p,r}_{\Phi}(C).
+\]
+Therefore
+\[
+\ker H_{\Phi}
+\cong
+\bigoplus_{p,r}H^{p,r}_{\Phi}(C).
+\]
+
+Thus flux cohomology is precisely the space of supersymmetric ground states.
+
+## 3.2 Refined Witten index
+
+Define the depth-refined Witten index
+\[
+I_{\Phi}(v)
+=
+\operatorname{Tr}_{\mathcal H}
+\left(
+(-1)^{F}v^{R}e^{-\beta H_{\Phi}}
+\right).
+\]
+Since non-zero eigenvalues occur in boson-fermion pairs, only harmonic states contribute. Hence
+\[
+I_{\Phi}(v)
+=
+\sum_{p,r}(-1)^{p}v^{r}\dim H^{p,r}_{\Phi}(C).
+\]
+Using the flux Poincaré polynomial
+\[
+P_{\Phi}(u,v)
+=
+\sum_{p,r}\dim H^{p,r}_{\Phi}(C)u^{p}v^{r},
+\]
+we obtain
+\[
+\boxed{
+I_{\Phi}(v)
+=
+P_{\Phi}(-1,v).
+}
+\]
+
+At \(v=1\),
+\[
+I_{\Phi}(1)
+=
+\sum_{p}(-1)^{p}\dim C^{p},
+\]
+which is the ordinary Euler characteristic of the underlying graded space. Curvature does not destroy the total index; it redistributes it among depths.
+
+## 3.3 Curvature-shadow maps
+
+The curvature operator induces natural maps between flux cohomology groups.
+
+For \(1\le s\le r\), define
+\[
+\mathcal K_{s}:
+H^{p,r}_{\Phi}(C)
+\longrightarrow
+H^{p+2s,r-s}_{\Phi}(C)
+\]
+by
+\[
+\mathcal K_{s}([\alpha])
+=
+[K^{s}\alpha].
+\]
+
+This is well-defined. If \(\alpha\in F^{r+1}C^{p}\), then
+\[
+K^{s}\alpha\in F^{r-s+1}C^{p+2s},
+\]
+and its class lies in \(\operatorname{Gr}_{r-s}\). If \(\alpha\) is changed by a \(d_{r}\)-coboundary,
+\[
+\alpha\mapsto \alpha+D\beta,
+\]
+then
+\[
+K^{s}D\beta
+=
+DK^{s}\beta,
+\]
+which is exact in the lower-depth complex. Hence the cohomology class is unchanged.
+
+The most important case is the full shadow map
+\[
+\mathcal K_{r}:
+H^{p,r}_{\Phi}(C)
+\longrightarrow
+H^{p+2r,0}_{\Phi}(C).
+\]
+It says:
+
+\[
+\boxed{
+\text{Every depth-}r\text{ state casts a depth-zero curvature shadow.}
+}
+\]
+
+Physically, a higher-depth excitation can carry lower-depth conserved charges.
+
+---
+
+# 4. Flux Field Theory on Smooth Manifolds
+
+Let \(M\) be a smooth manifold and \(E\to M\) a Hermitian vector bundle. Let
+\[
+A\in\Omega^{1}(M,\operatorname{End}(E))
+\]
+be a smooth flux, and define
+\[
+D=d+A\wedge.
+\]
+The curvature is
+\[
+K=D^{2}=dA+A\wedge A.
+\]
+In components,
+\[
+D_{\mu}
+=
+\partial_{\mu}+A_{\mu},
+\]
+and
+\[
+K_{\mu\nu}
+=
+2\partial_{[\mu}A_{\nu]}
++
+2A_{[\mu}A_{\nu]}.
+\]
+The Bianchi identity is
+\[
+D_{[\lambda}K_{\mu\nu]}=0.
+\]
+
+Assume the curvature-depth filtration has constant rank, so that the quotients
+\[
+\operatorname{Gr}_{r}
+=
+\mathcal F^{r+1}/\mathcal F^{r}
+\]
+are smooth vector bundles. Let
+\[
+\Pi_{r}:\Omega^{\bullet}(M,E)\to \Gamma(\operatorname{Gr}_{r})
+\]
+be the smooth quotient projection. The induced differential is
+\[
+d_{r}=\Pi_{r}D.
+\]
+
+## 4.1 Depth-resolved matter action
+
+Let \(\alpha\in\Gamma(\operatorname{Gr}_{r}^{p})\) be a depth-\(r\) field. Define the Euclidean action
+\[
+S_{r}[\alpha]
+=
+\frac12
+\int_{M}
+\left\langle d_{r}\alpha,*_{r}d_{r}\alpha\right\rangle
++
+\frac{m_{r}^{2}}{2}
+\int_{M}
+\left\langle \alpha,*_{r}\alpha\right\rangle,
+\]
+where \(*_{r}\) is the Hodge operator on the quotient bundle and \(m_{r}\) is a depth-dependent mass.
+
+Varying \(\alpha\) gives
+\[
+\delta S_{r}
+=
+\int_{M}
+\left\langle
+\delta\alpha,
+\left(d_{r}^{\dagger}d_{r}+m_{r}^{2}\right)\alpha
+\right\rangle.
+\]
+Thus the field equation is
+\[
+\boxed{
+\left(d_{r}^{\dagger}d_{r}+m_{r}^{2}\right)\alpha=0.
+}
+\]
+In the topological massless case \(m_{r}=0\), after imposing the gauge condition \(d_{r}^{\dagger}\alpha=0\), the equation becomes
+\[
+\Delta_{r}\alpha=0.
+\]
+Thus classical solutions are harmonic flux representatives.
+
+## 4.2 Component form
+
+For \(\alpha^{a}\in\Gamma(\operatorname{Gr}_{r}^{p})\),
+\[
+(d_{r}\alpha)^{a}{}_{\mu_{1}\dots\mu_{p+1}}
+=
+(p+1)
+\Pi_{r}{}^{a}{}_{b}
+D_{[\mu_{1}}
+\alpha^{b}{}_{\mu_{2}\dots\mu_{p+1}]}.
+\]
+The Euler-Lagrange equation is
+\[
+\Pi_{r}{}^{a}{}_{c}
+D^{\mu\,c}{}_{b}
+(d_{r}\alpha)^{b}{}_{\mu\mu_{1}\dots\mu_{p}}
++
+m_{r}^{2}\alpha^{a}{}_{\mu_{1}\dots\mu_{p}}
+=
+0,
+\]
+modulo the lower filtration \(F^{r}\).
+
+For a depth-\(r\) scalar \(\phi\), this becomes
+\[
+\boxed{
+\Pi_{r}D_{\mu}\Pi_{r}D^{\mu}\phi
++
+m_{r}^{2}\phi
+=
+0.
+}
+\]
+Expanding,
+\[
+\Pi_{r}D_{\mu}\Pi_{r}D^{\mu}\phi
+=
+\Pi_{r}D_{\mu}D^{\mu}\phi
++
+\Pi_{r}(D_{\mu}\Pi_{r})D^{\mu}\phi.
+\]
+The second term is a new physical effect: a **depth-gradient force** caused by spatial variation of the curvature filtration.
+
+## 4.3 Weitzenböck form and flux mass
+
+Each quotient bundle carries an induced connection and curvature. The depth Laplacian admits a Weitzenböck decomposition
+\[
+\Delta_{r}
+=
+\nabla_{r}^{\dagger}\nabla_{r}
++
+\mathcal R_{r},
+\]
+where \(\mathcal R_{r}\) is an effective curvature potential containing:
+
+1. the original bundle curvature \(K\);
+2. derivatives of the projection \(\Pi_{r}\);
+3. extrinsic curvature of the filtration subbundles.
+
+Thus curvature depth modifies the effective mass spectrum. In particular, modes in different depth sectors can acquire different flux-induced masses even when their bare masses are equal.
+
+The physical mass-shell condition is
+\[
+\boxed{
+p^{2}+m_{r}^{2}+\lambda_{r}(K,\nabla\Pi_{r})=0,
+}
+\]
+where \(\lambda_{r}\) denotes the eigenvalue of the effective curvature potential \(\mathcal R_{r}\).
+
+---
+
+# 5. Flux Noether Theorem and Depth-Resolved Conservation
+
+In ordinary field theory, a continuous symmetry implies a conserved current:
+\[
+dj=0.
+\]
+In flux-cohomological physics, the conservation law is depth-resolved.
+
+## 5.1 General variation
+
+Let \(\mathcal L_{r}\) be a Lagrangian depending on \(\alpha\) and \(d_{r}\alpha\). Under a variation
+\[
+\delta\alpha=\varepsilon,
+\]
+one obtains
+\[
+\delta\mathcal L_{r}
+=
+\left\langle \frac{\delta S_{r}}{\delta\alpha},\varepsilon\right\rangle
++
+d_{r}j_{r}
+-
+\left\langle \pi_{r},d_{r}\varepsilon\right\rangle,
+\]
+where
+\[
+\pi_{r}
+=
+\frac{\partial\mathcal L_{r}}{\partial(d_{r}\alpha)}
+\]
+is the conjugate momentum and \(j_{r}\) is the associated current.
+
+On shell,
+\[
+\frac{\delta S_{r}}{\delta\alpha}=0,
+\]
+so
+\[
+\boxed{
+d_{r}j_{r}
+=
+\left\langle \pi_{r},d_{r}\varepsilon\right\rangle.
+}
+\]
+
+If the symmetry parameter satisfies
+\[
+d_{r}\varepsilon=0,
+\]
+then
+\[
+\boxed{
+d_{r}j_{r}=0.
+}
+\]
+
+Thus the physical conservation law is not ordinary closure but closure in the associated graded flux complex.
+
+## 5.2 Component conservation law
+
+In components, a depth-\(r\) current \(J_{r}^{\mu}\) satisfies
+\[
+\boxed{
+\left[
+\Pi_{r}D_{\mu}J_{r}^{\mu}
+\right]
+=
+0
+\quad\text{in}\quad
+\operatorname{Gr}_{r}.
+}
+\]
+Equivalently,
+\[
+K^{r}\left(D_{\mu}J_{r}^{\mu}\right)=0,
+\]
+and the class of \(D_{\mu}J_{r}^{\mu}\) in \(\operatorname{Gr}_{r}\) vanishes.
+
+Thus the current may fail to be ordinarily conserved, but its failure is exactly controlled by lower curvature depth.
+
+## 5.3 Depth charges
+
+Let \(\Sigma\) be a spatial cycle of appropriate dimension. Define the depth-\(r\) charge
+\[
+Q_{r}(\Sigma)
+=
+\int_{\Sigma}[j_{r}]
+\in
+H^{p,r}_{\Phi}.
+\]
+By Stokes’ theorem in the associated graded complex,
+\[
+Q_{r}(\Sigma_{2})-Q_{r}(\Sigma_{1})
+=
+\int_{V}d_{r}j_{r}
+=
+0.
+\]
+Therefore depth-projected charges are conserved.
+
+The total unrefined charge corresponds to setting \(v=1\):
+\[
+Q_{\mathrm{tot}}
+=
+\sum_{r}Q_{r}.
+\]
+Curvature can redistribute charge among depths but cannot destroy the total topological charge.
+
+## 5.4 Curvature-induced depth conversion
+
+The curvature maps
+\[
+\kappa_{r}:H^{p,r}_{\Phi}\to H^{p+2,r-1}_{\Phi}
+\]
+describe physical conversion processes. A depth-\(r\) excitation can decay or convert into a depth-\((r-1)\) excitation by emitting or absorbing curvature.
+
+Schematically,
+\[
+\boxed{
+\text{Depth }r
+\;\xrightarrow{\;K\;}\;
+\text{Depth }r-1.
+}
+\]
+The full hierarchy is
+\[
+H^{p,r}_{\Phi}
+\xrightarrow{\;K\;}
+H^{p+2,r-1}_{\Phi}
+\xrightarrow{\;K\;}
+\cdots
+\xrightarrow{\;K\;}
+H^{p+2r,0}_{\Phi}.
+\]
+
+This is the physical meaning of curvature memory: a depth-\(r\) state can undergo at most \(r\) curvature-mediated conversions before reaching the flat sector.
+
+---
+
+# 6. Curved BRST Quantization and Depth-Resolved Anomalies
+
+In standard BRST quantization, the physical state condition is
+\[
+Q|\psi\rangle=0,
+\qquad
+|\psi\rangle\sim |\psi\rangle+Q|\lambda\rangle,
+\]
+with \(Q^{2}=0\). If \(Q^{2}\neq0\), the usual construction collapses.
+
+Flux cohomology provides the replacement.
+
+## 6.1 Curved BRST charge
+
+Let
+\[
+Q=D.
+\]
+Then
+\[
+Q^{2}=K.
+\]
+The Bianchi identity gives
+\[
+[Q,K]=0.
+\]
+The physical state space is not \(\ker Q/\operatorname{im}Q\), but
+\[
+\bigoplus_{p,r}H^{p,r}_{\Phi}.
+\]
+
+## 6.2 Ward identity
+
+Let \(\mathcal O\) be an observable of depth \(r\). The flux Ward identity is
+\[
+\boxed{
+\langle d_{r}\mathcal O\rangle
+=
+\mathcal A_{r}(\mathcal O),
+}
+\]
+where \(\mathcal A_{r}\) is the depth-\(r\) anomaly.
+
+Consistency of the curved BRST algebra implies
+\[
+d_{r}\mathcal A_{r}=0.
+\]
+Thus anomalies are depth-cocycles. An anomaly is trivial if
+\[
+\mathcal A_{r}=d_{r}\mathcal B_{r}.
+\]
+Therefore anomaly classes live in flux cohomology:
+\[
+[\mathcal A_{r}]\in H^{\bullet,r}_{\Phi}.
+\]
+
+This is the central physical refinement of ordinary anomaly theory.
+
+## 6.3 Depth-resolved descent equations
+
+Let \(K\) be the curvature two-form. For each integer \(r\ge0\), define the invariant curvature polynomial
+\[
+P_{r+1}(K)
+=
+\frac{1}{(r+1)!}\operatorname{Tr}(K^{r+1}).
+\]
+The Bianchi identity and cyclic invariance of the trace give
+\[
+dP_{r+1}(K)=0.
+\]
+Locally,
+\[
+P_{r+1}(K)
+=
+d\,\mathrm{CS}_{2r+1}(A),
+\]
+where \(\mathrm{CS}_{2r+1}\) is the Chern-Simons transgression form.
+
+Under an infinitesimal gauge transformation
+\[
+\delta_{\varepsilon}A=D\varepsilon,
+\]
+one obtains the descent equation
+\[
+\delta_{\varepsilon}\mathrm{CS}_{2r+1}
+=
+d\,\omega^{(1)}_{2r}(\varepsilon,A).
+\]
+The consistent anomaly in the corresponding physical dimension is
+\[
+\mathcal A_{r}(\varepsilon)
+=
+\int \omega^{(1)}_{2r}(\varepsilon,A).
+\]
+
+Because depth-\(r\) states are annihilated by \(K^{r+1}\), the polynomial \(P_{r+1}\) is the natural anomaly polynomial for the depth-\(r\) sector. Thus:
+
+\[
+\boxed{
+\text{Depth }r\text{ anomalies are governed by curvature power }K^{r+1}.
+}
+\]
+
+## 6.4 Depth-refined anomaly cancellation
+
+The total anomaly is the depth-sum
+\[
+\mathcal A_{\Phi}
+=
+\sum_{r}\mathcal A_{r}.
+\]
+The refined cancellation condition is
+\[
+\boxed{
+[\mathcal A_{r}]=0
+\quad\text{in}\quad
+H^{\bullet,r}_{\Phi}
+\quad\text{for each }r,
+}
+\]
+if depth superselection is exact.
+
+If curvature mixing is allowed, anomalies may cancel across depths through the curvature-shadow maps:
+\[
+\mathcal K_{1}[\mathcal A_{r}]
++
+[\mathcal A_{r-1}]
+=
+0.
+\]
+This gives a new mechanism: **anomaly inflow between curvature depths**.
+
+---
+
+# 7. Local Index Theory and Depth Densities
+
+For each depth \(r\), the Euler characteristic of the associated graded complex is
+\[
+\chi_{r}
+=
+\sum_{p}(-1)^{p}\dim H^{p,r}_{\Phi}.
+\]
+The depth Euler theorem gives
+\[
+\chi_{r}
+=
+\sum_{p}(-1)^{p}\dim\operatorname{Gr}_{r}^{p},
+\]
+and
+\[
+\chi_{\Phi}
+=
+\sum_{r}\chi_{r}
+=
+\sum_{p}(-1)^{p}\dim C^{p}.
+\]
+
+In the smooth elliptic case, McKean-Singer gives
+\[
+\chi_{r}
+=
+\operatorname{Str}\left(e^{-t\Delta_{r}}\right)
+\]
+for all \(t>0\). The heat kernel expansion yields
+\[
+\operatorname{Str}\left(e^{-t\Delta_{r}}\right)
+\sim
+\sum_{k}t^{(k-n)/2}
+\int_{M}a_{k,r}(x).
+\]
+Only the middle coefficient contributes to the index:
+\[
+\boxed{
+\chi_{r}
+=
+\int_{M}a_{n,r}(x).
+}
+\]
+
+The total refined density is
+\[
+a_{n}(x;v)
+=
+\sum_{r}v^{r}a_{n,r}(x).
+\]
+At the symbol level, the principal symbol of \(d_{r}\) is that of the ordinary de Rham operator, twisted by the depth projection \(\Pi_{r}\). Hence the leading local density is
+\[
+a_{n,r}^{\mathrm{sym}}(x)
+=
+e(M,x)\,\operatorname{tr}\bigl(\Pi_{r}(x)\bigr),
+\]
+where \(e(M,x)\) is the Euler density. Subleading corrections involve the curvature \(K\) and derivatives of \(\Pi_{r}\).
+
+Thus curvature depth becomes locally measurable through index densities.
+
+---
+
+# 8. Example: Curved Three-State Supersymmetric System
+
+Consider the three-dimensional complex from the inaugural flux-cohomology paper:
+\[
+C^{0}=\mathbb K\langle x\rangle,
+\qquad
+C^{1}=\mathbb K\langle e\rangle,
+\qquad
+C^{2}=\mathbb K\langle f\rangle.
+\]
+Let \(d_{0}=0\) and define
+\[
+Dx=be,
+\qquad
+De=af,
+\qquad
+Df=0.
+\]
+In matrix form, with basis \((x,e,f)\),
+\[
+D=
+\begin{pmatrix}
+0&0&0\\
+b&0&0\\
+0&a&0
+\end{pmatrix}.
+\]
+Then
+\[
+K=D^{2}
+=
+\begin{pmatrix}
+0&0&0\\
+0&0&0\\
+ab&0&0
+\end{pmatrix}.
+\]
+Assume \(ab\neq0\). Then \(K^{2}=0\).
+
+The filtration is
+\[
+F^{1}C^{0}=0,
+\qquad
+F^{1}C^{1}=C^{1},
+\qquad
+F^{1}C^{2}=C^{2},
+\]
+and
+\[
+F^{2}C^{p}=C^{p}.
+\]
+
+The depth-zero sector is
+\[
+\operatorname{Gr}_{0}^{1}=C^{1},
+\qquad
+\operatorname{Gr}_{0}^{2}=C^{2},
+\]
+with differential
+\[
+q_{0}e=af,
+\qquad
+q_{0}f=0.
+\]
+With unit weights,
+\[
+q_{0}^{\dagger}f=\overline a e,
+\qquad
+q_{0}^{\dagger}e=0.
+\]
+Thus
+\[
+\Delta_{0}e=|a|^{2}e,
+\qquad
+\Delta_{0}f=|a|^{2}f.
+\]
+There are no depth-zero harmonic states.
+
+The depth-one sector is
+\[
+\operatorname{Gr}_{1}^{0}=C^{0},
+\]
+with
+\[
+q_{1}=0.
+\]
+Therefore
+\[
+\Delta_{1}x=0.
+\]
+The unique harmonic state is \(x\), and
+\[
+H^{0,1}_{\Phi}\cong\mathbb K.
+\]
+The flux Poincaré polynomial is
+\[
+P_{\Phi}(u,v)=v.
+\]
+
+## Physical interpretation
+
+If the system were flat, the degree-zero state \(x\) would have been an ordinary cohomology class. Curvature removes it from depth zero and shifts it to depth one. The depth-zero modes \(e,f\) acquire a flux mass
+\[
+m_{\Phi}^{2}=|a|^{2}.
+\]
+The refined index is
+\[
+I_{\Phi}(v)=v.
+\]
+At \(v=1\), the total index is \(1\), preserving the Euler count.
+
+When \(ab\to0\), the rank of \(K\) changes and the depth distribution jumps. This is a curvature-depth spectral phase transition.
+
+---
+
+# 9. Non-Conservative Transport and Irreversibility
+
+Flux cohomology also gives a physical theory of non-conservative transport.
+
+Let \(C^{0}\) be node potentials and \(C^{1}\) edge currents in a network. A conservative force is a gradient:
+\[
+F=d_{0}\psi.
+\]
+A non-conservative force cannot be written globally as a gradient. In flux language, the transport operator is
+\[
+D=d_{0}+\Phi,
+\]
+and curvature
+\[
+K=D^{2}
+\]
+measures non-conservative cycle affinity.
+
+## 9.1 Depth-resolved constitutive law
+
+Let \(\mu\) be a chemical potential. The depth-\(r\) thermodynamic force is
+\[
+X_{r}=d_{r}\mu.
+\]
+A linear constitutive relation takes the form
+\[
+j_{r}=L_{r}d_{r}\mu,
+\]
+where \(L_{r}\) is a positive Onsager operator on \(\operatorname{Gr}_{r}\).
+
+The depth-resolved continuity equation is
+\[
+d_{r}j_{r}=0.
+\]
+Therefore
+\[
+d_{r}L_{r}d_{r}\mu=0.
+\]
+
+## 9.2 Entropy production
+
+The entropy production rate is
+\[
+\sigma
+=
+\sum_{r}
+\left\langle d_{r}\mu,L_{r}d_{r}\mu\right\rangle.
+\]
+Since \(L_{r}\ge0\),
+\[
+\sigma\ge0.
+\]
+
+The depth-zero part corresponds to ordinary reversible or gradient-driven transport. Higher-depth parts correspond to irreversible circulations that cannot be removed by reweighting.
+
+The Betti numbers
+\[
+\beta^{1,r}_{\Phi}
+=
+\dim H^{1,r}_{\Phi}
+\]
+count independent depth-\(r\) non-conservative circulation modes. Thus flux cohomology gives a topological classification of irreversible currents.
+
+---
+
+# 10. Physical Predictions
+
+The flux-cohomological framework yields several concrete physical consequences.
+
+## 10.1 Depth superselection
+
+In the absence of curvature-insertion processes, physical transitions conserve curvature depth:
+\[
+\Delta r=0.
+\]
+This follows from
+\[
+[R,Q_{\Phi}]=0.
+\]
+
+## 10.2 Curvature-mediated transitions
+
+Curvature lowers depth:
+\[
+[R,K]=-K.
+\]
+Therefore a transition changing depth by \(-1\) requires one curvature insertion. A transition changing depth by \(-s\) requires \(s\) curvature insertions.
+
+The amplitude for a depth-\(r\) state to reach depth zero is controlled by
+\[
+K^{r}.
+\]
+Because \(K^{r+1}=0\) on depth-\(r\) states, curvature memory is finite.
+
+## 10.3 Flux mass generation
+
+Modes in different curvature sectors acquire different effective masses. In a depth-\(r\) sector,
+\[
+m_{\mathrm{eff},r}^{2}
+=
+m_{r}^{2}
++
+\lambda_{r}(K,\nabla\Pi_{r}).
+\]
+Thus curvature can generate mass splittings without spontaneous symmetry breaking.
+
+## 10.4 Spectral phase transitions at rank changes
+
+The flux Betti numbers are locally constant under deformations for which the ranks of \(K^{s}\) and \(d_{r}\) remain constant. When these ranks change, protected ground states can appear or disappear.
+
+Therefore phase transitions are predicted at curvature-rank-changing loci:
+\[
+\operatorname{rank}K^{s}\ \text{changes}.
+\]
+
+## 10.5 Depth-refined anomaly cancellation
+
+Gauge consistency requires not merely cancellation of the total anomaly, but cancellation of its depth components:
+\[
+[\mathcal A_{r}]=0
+\quad
+\text{in }H^{\bullet,r}_{\Phi}.
+\]
+Alternatively, anomalies may cancel through curvature-shadow maps between depths.
+
+This gives a new criterion for consistency of anomalous or open gauge systems.
+
+## 10.6 Topological transport coefficients
+
+The dimensions
+\[
+\beta^{p,r}_{\Phi}
+=
+\dim H^{p,r}_{\Phi}
+\]
+are robust under constant-rank deformations. In non-equilibrium systems, they predict robust transport channels. In topological matter or metamaterials, they predict curvature-filtered edge or cycle modes that persist despite non-conservative forcing.
+
+---
+
+# 11. Conclusion
+
+Starting from flux cohomology, I have derived a physical theory of curved cochain systems. The central object is a curved BRST charge \(D\) satisfying
+\[
+D^{2}=K.
+\]
+The Bianchi identity
+\[
+DK=KD
+\]
+ensures that curvature defines a canonical depth filtration. On the associated graded complex, the induced differentials \(d_{r}\) are nilpotent and define ordinary supersymmetric quantum theories on each curvature stratum.
+
+The resulting physics is governed by three principles:
+
+1. **Physical states are flux cohomology classes.**
+2. **Curvature is a depth-lowering operator.**
+3. **Conservation laws, anomalies, and indices are depth-resolved.**
+
+The theory predicts depth superselection, curvature-mediated transitions, flux mass generation, refined anomaly cancellation, and spectral phase transitions at curvature-rank changes. It applies equally to topological field theory, gauge anomalies, supersymmetric quantum mechanics, non-Hermitian or non-conservative systems, and irreversible transport.
+
+The foundational physical equation is not \(D^{2}=0\), but
+\[
+\boxed{
+D^{2}=K,
+\qquad
+DK=KD,
+\qquad
+H_{\Phi}=\bigoplus_{r}\Delta_{r},
+\qquad
+\ker H_{\Phi}\cong H_{\Phi}^{\bullet,\bullet}.
+}
+\]
+
+Curvature is therefore not a failure of physical consistency. It is the structure that organizes physical information into depth.
+
+---
+
+# Appendix A: Proof that the Associated Graded Charge is Nilpotent
+
+Let \(\alpha\in F^{r+1}C^{p}\). Its class in \(\operatorname{Gr}_{r}^{p}\) is \([\alpha]\). Define
+\[
+d_{r}[\alpha]=[D\alpha].
+\]
+Then
+\[
+d_{r}^{2}[\alpha]
+=
+[D^{2}\alpha]
+=
+[K\alpha].
+\]
+Since \(\alpha\in F^{r+1}\), we have
+\[
+K^{r+1}\alpha=0.
+\]
+Therefore
+\[
+K^{r}(K\alpha)=K^{r+1}\alpha=0,
+\]
+so
+\[
+K\alpha\in F^{r}C^{p+2}.
+\]
+Hence \([K\alpha]=0\) in \(\operatorname{Gr}_{r}^{p+2}\). Thus
+\[
+d_{r}^{2}=0.
+\]
+
+---
+
+# Appendix B: Proof of the Curvature-Shadow Map
+
+Let \([\alpha]\in H^{p,r}_{\Phi}\), represented by \(\alpha\in F^{r+1}C^{p}\) with
+\[
+D\alpha\in F^{r}C^{p+1}.
+\]
+Define
+\[
+\mathcal K_{r}([\alpha])=[K^{r}\alpha]\in H^{p+2r,0}_{\Phi}.
+\]
+
+First, since \(\alpha\in F^{r+1}\),
+\[
+K(K^{r}\alpha)=K^{r+1}\alpha=0,
+\]
+so \(K^{r}\alpha\in F^{1}\), the depth-zero sector.
+
+Second,
+\[
+D(K^{r}\alpha)
+=
+K^{r}D\alpha.
+\]
+Because \(D\alpha\in F^{r}\),
+\[
+K^{r}D\alpha=0.
+\]
+Therefore \(K^{r}\alpha\) is \(D\)-closed in the depth-zero sector.
+
+If \(\alpha\mapsto\alpha+D\beta\), then
+\[
+K^{r}(\alpha+D\beta)
+=
+K^{r}\alpha+K^{r}D\beta
+=
+K^{r}\alpha+DK^{r}\beta.
+\]
+Thus the class changes by a depth-zero coboundary. Hence the map is well-defined.
+
+---
+
+# Appendix C: Depth Ward Identity
+
+Let \(S_{r}\) be invariant under a transformation
+\[
+\delta\alpha=\varepsilon
+\]
+with
+\[
+d_{r}\varepsilon=0.
+\]
+The variation of the action is
+\[
+\delta S_{r}
+=
+\int
+\left\langle
+\frac{\delta S_{r}}{\delta\alpha},
+\varepsilon
+\right\rangle
++
+\int d_{r}j_{r}.
+\]
+On shell,
+\[
+\frac{\delta S_{r}}{\delta\alpha}=0,
+\]
+so
+\[
+\int d_{r}j_{r}=0.
+\]
+Since this holds locally for arbitrary supports, one obtains
+\[
+d_{r}j_{r}=0.
+\]
+
+If the symmetry is broken by curvature, so that
+\[
+d_{r}\varepsilon\neq0,
+\]
+then
+\[
+d_{r}j_{r}
+=
+\left\langle\pi_{r},d_{r}\varepsilon\right\rangle.
+\]
+Applying \(d_{r}\) gives
+\[
+d_{r}^{2}j_{r}
+=
+d_{r}\left\langle\pi_{r},d_{r}\varepsilon\right\rangle
+=
+0
+\]
+on shell, by \(d_{r}^{2}=0\). Thus the anomaly is automatically depth-closed.
+
+---
+
+# Appendix D: Refined Index Independence
+
+The refined index is
+\[
+I_{\Phi}(v)
+=
+\operatorname{Tr}\left((-1)^{F}v^{R}e^{-\beta H_{\Phi}}\right).
+\]
+Because
+\[
+[H_{\Phi},Q_{\Phi}]=0,
+\]
+all nonzero eigenvalues of \(H_{\Phi}\) occur in \(Q_{\Phi}\)-paired doublets with opposite fermion parity and the same depth. Their contribution to the supertrace cancels. Only zero modes survive:
+\[
+I_{\Phi}(v)
+=
+\operatorname{Tr}_{\ker H_{\Phi}}
+\left((-1)^{F}v^{R}\right).
+\]
+Using
+\[
+\ker H_{\Phi}
+\cong
+\bigoplus_{p,r}H^{p,r}_{\Phi},
+\]
+we obtain
+\[
+I_{\Phi}(v)
+=
+\sum_{p,r}(-1)^{p}v^{r}\dim H^{p,r}_{\Phi}
+=
+P_{\Phi}(-1,v).
+\]
+
+---
+
+# Final Principle
+
+The passage from classical cohomological physics to flux-cohomological physics is the replacement
+\[
+\boxed{
+D^{2}=0
+\quad\longrightarrow\quad
+D^{2}=K,
+\qquad
+\ker D/\operatorname{im}D
+\quad\longrightarrow\quad
+H_{\Phi}^{\bullet,\bullet}.
+}
+\]
+
+The physical world described by this theory is not one in which curvature is an obstruction. It is one in which curvature resolves the spectrum into depths, refines conservation laws, stratifies anomalies, and converts topological invariants into depth-dependent observables.
