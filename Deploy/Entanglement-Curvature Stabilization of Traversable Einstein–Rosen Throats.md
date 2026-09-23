@@ -1,5 +1,3 @@
----
-
 # Entanglement-Curvature Stabilization of Traversable Einstein–Rosen Throats
 
 **Author:** [Corresponding author]
