@@ -1,0 +1,2438 @@
+Correlation Scale Hierarchy (CSH)
+
+Irreducible Multipartite Correlations, Connected Cumulants, and the Classification of Global Quantum Structure
+
+Abstract
+
+We develop Correlation Scale Hierarchy (CSH) as a mathematical framework for classifying the organization of correlations in multipartite systems according to the minimum subsystem order required to detect them. The central proposition is that correlation structure need not be exhausted by pairwise correlations, pairwise entanglement measures, or two-party Bell inequalities. A global quantum state may contain information that remains inaccessible to every collection of lower-order reduced states and becomes observable only through genuinely higher-order measurements.
+
+For a system of subsystems, we introduce a hierarchy of connected correlation tensors,
+
+C^{(k)}_{i_1\cdots i_k}
+
+\left\langle
+O_{i_1}\cdots O_{i_k}
+\right\rangle_c,
+
+where connected cumulants are defined by subtracting all contributions associated with lower-order partitions. We distinguish connectedness in the cumulant sense from genuine multipartite entanglement, genuine multipartite nonlocality, and irreducibility under lower-order marginal data. These concepts are related but not equivalent.
+
+The principal mathematical object is the -body marginal map,
+
+\mathcal M_k(\rho)
+
+\{\rho_S: S\subseteq V,\ |S|\leq k\}.
+
+Two states are -equivalent when all their reduced states involving at most subsystems coincide. A state property is irreducible at order , relative to a specified state family and observable algebra, when it varies within a -equivalence class but is determined at the next level of the hierarchy. This definition provides a precise distinction between higher-order information and a merely high-order expression of lower-order data.
+
+We establish the nesting of marginal equivalence classes, derive the cumulant reconstruction relation, formulate an irreducibility criterion, and demonstrate exact -body irreducibility using the phase-distinguished GHZ family. In that family, every proper reduced density matrix is independent of the global phase, while an -body coherence witness depends on it. We then develop operational witnesses, discuss the limitations of Bell-based criteria, formulate a hierarchy of correlation signatures, and identify the conditions required for a complete classification.
+
+The resulting framework does not claim that every connected -body cumulant represents a new physical correlation scale. Nor does it identify cumulant order with entanglement depth or causal complexity. Its central research target is a rigorous classification of information that first becomes identifiable at a particular subsystem order, together with experimentally implementable witnesses and stability bounds.
+
+Keywords: multipartite quantum systems; connected correlation functions; cumulants; quantum marginal problem; irreducible correlations; multipartite entanglement; correlation hierarchy; Bell nonlocality; global coherence; quantum information.
+
+Part I — Foundations
+
+1. Introduction
+
+1.1 The insufficiency of pairwise descriptions
+
+A multipartite quantum system is commonly represented by a density operator
+
+\rho_V\in\mathcal D(\mathcal H_V),
+\qquad
+\mathcal H_V=
+\bigotimes_{i=1}^{N}\mathcal H_i.
+
+Its global structure may be examined through reduced states,
+
+\rho_S
+
+\operatorname{Tr}_{V\setminus S}(\rho_V),
+\qquad
+S\subseteq V.
+
+For a pair of subsystems , the reduced state is
+
+\rho_{ij}
+
+\operatorname{Tr}_{V\setminus\{i,j\}}(\rho_V).
+
+Pairwise entanglement measures, mutual information, correlation tensors, and two-party Bell inequalities characterize different aspects of these reduced states.
+
+They do not, in general, determine the global state.
+
+This is not merely a limitation of a particular entanglement measure. It is a structural limitation of marginal information. Distinct global states can have exactly the same reduced density operators on every subset containing fewer than subsystems.
+
+Thus, even complete knowledge of all pairwise reduced density matrices need not determine the three-party, four-party, or higher-order structure of a system.
+
+The distinction is especially important because several notions that are often treated as interchangeable are mathematically different:
+
+* pairwise correlation;
+* pairwise entanglement;
+* connected multipartite correlation;
+* genuine multipartite entanglement;
+* genuine multipartite nonlocality;
+* irreducibility relative to lower-order marginal data.
+
+A rigorous theory must keep these notions separate.
+
+1.2 The proposed hierarchy
+
+We propose that correlation structure be investigated at successive subsystem orders.
+
+For distinct subsystems, define the connected correlation tensor
+
+\boxed{
+C^{(k)}_{i_1\cdots i_k}
+
+\left\langle
+O_{i_1}\cdots O_{i_k}
+\right\rangle_c.
+}
+
+The subscript denotes the connected cumulant. It removes contributions generated by products of lower-order moments.
+
+At second order,
+
+C^{(2)}_{ij}
+
+\langle O_iO_j\rangle
+
+\langle O_i\rangle\langle O_j\rangle.
+
+At third order,
+
+\begin{aligned}
+C^{(3)}_{ijk}
+={}&
+\langle O_iO_jO_k\rangle
+-\langle O_iO_j\rangle\langle O_k\rangle\\
+&-\langle O_iO_k\rangle\langle O_j\rangle
+-\langle O_jO_k\rangle\langle O_i\rangle\\
+&+2\langle O_i\rangle
+\langle O_j\rangle
+\langle O_k\rangle.
+\end{aligned}
+
+The hierarchy continues through all accessible subsystem orders.
+
+However, a cumulant of order is not automatically an irreducible -party physical structure. It is a connected statistical quantity relative to a chosen family of observables and ordering prescription. The stronger notion of irreducibility must be defined through lower-order indistinguishability.
+
+1.3 Central research question
+
+The principal question is:
+
+Do there exist multipartite states whose correlation structure contains invariant information that cannot be reconstructed from the complete collection of all lower-order reduced states?
+
+The answer is affirmative in the general quantum-state setting. The quantum marginal problem admits distinct global states with identical proper marginals. The more ambitious research problem is to classify these differences systematically by their first identifiable subsystem order.
+
+CSH seeks to turn this observation into a hierarchy of operationally testable correlation structures.
+
+1.4 Principal objectives
+
+The framework has six objectives:
+
+* Define connected correlation tensors at arbitrary subsystem order.
+* Define exact lower-order equivalence through reduced density matrices.
+* Establish an operational definition of irreducible correlation order.
+* Construct witnesses that distinguish states within lower-order equivalence classes.
+* Determine when a correlation hierarchy is complete or minimal for a specified family of states.
+* Establish robustness under finite measurement precision, noise, and imperfect state preparation.
+
+2. Mathematical setting
+
+2.1 Multipartite state space
+
+Let the subsystem index set be
+
+V=\{1,2,\ldots,N\}.
+
+Each subsystem has a finite-dimensional Hilbert space , with
+
+\dim\mathcal H_i=d_i.
+
+The global Hilbert space is
+
+\mathcal H_V=\bigotimes_{i=1}^{N}\mathcal H_i.
+
+The physical state belongs to
+
+\mathcal D(\mathcal H_V)
+
+\left\{
+\rho\in\mathcal B(\mathcal H_V):
+\rho\geq0,\
+\operatorname{Tr}\rho=1
+\right\}.
+
+For every subset , its reduced state is
+
+\rho_S
+
+\operatorname{Tr}_{V\setminus S}\rho.
+
+The collection of all reduced states of order at most is
+
+\mathcal M_k(\rho)
+
+\left\{
+\rho_S:
+S\subseteq V,\
+1\leq |S|\leq k
+\right\}.
+
+This is the fundamental data object for the hierarchy.
+
+2.2 Local observable bases
+
+For each subsystem , choose a Hermitian operator basis
+
+\{F_i^a\}_{a=0}^{d_i^2-1},
+
+normalized according to
+
+\operatorname{Tr}(F_i^aF_i^b)=\delta^{ab}.
+
+The identity direction may be separated by choosing
+
+F_i^0=\frac{I_i}{\sqrt{d_i}},
+
+with the remaining operators traceless.
+
+A general local Hermitian observable is
+
+O_i=\sum_a o_i^aF_i^a.
+
+For a collection of distinct subsystems , define the raw correlation tensor
+
+T^{(k)}_{a_1\cdots a_k}
+
+\operatorname{Tr}
+\left\\rho
+\\left(
+F_{i_1}^{a_1}
+\\otimes\\cdots\\otimes
+F_{i_k}^{a_k}
+\\right)
+\\right.
+
+The connected tensor is obtained by the cumulant transformation.
+
+2.3 Why distinct subsystem labels matter
+
+The primary hierarchy considered here concerns correlations across distinct subsystems.
+
+Repeated measurements on the same subsystem introduce additional issues:
+
+* operator ordering;
+* noncommutativity;
+* measurement back-action;
+* time ordering;
+* sequential versus simultaneous observables.
+
+These are important for dynamical and temporal correlation theories, but they should not be mixed with the initial spatial or subsystem-order hierarchy.
+
+Accordingly, unless explicitly stated otherwise, the indices refer to distinct subsystems.
+
+3. Connected cumulants
+
+3.1 Classical partition definition
+
+For commuting random variables , define their joint cumulant by
+
+\boxed{
+\kappa(X_1,\ldots,X_k)
+
+\sum_{\pi\in\Pi_k}
+(|\pi|-1)!(-1)^{|\pi|-1}
+\prod_{B\in\pi}
+\left\langle
+\prod_{j\in B}X_j
+\right\rangle.
+}
+
+Here:
+
+* is the set of partitions of ;
+* denotes one block of a partition;
+* is the number of blocks.
+
+The formula subtracts every contribution that can be decomposed into products of moments associated with smaller subsets.
+
+3.2 First orders
+
+For one variable,
+
+\kappa(X_1)=\langle X_1\rangle.
+
+For two variables,
+
+\kappa(X_1,X_2)
+
+\langle X_1X_2\rangle
+
+\langle X_1\rangle\langle X_2\rangle.
+
+For three variables,
+
+\begin{aligned}
+\kappa(X_1,X_2,X_3)
+={}&
+\langle X_1X_2X_3\rangle\\
+&-\langle X_1X_2\rangle\langle X_3\rangle\\
+&-\langle X_1X_3\rangle\langle X_2\rangle\\
+&-\langle X_2X_3\rangle\langle X_1\rangle\\
+&+2\langle X_1\rangle
+\langle X_2\rangle
+\langle X_3\rangle.
+\end{aligned}
+
+For four variables,
+
+\begin{aligned}
+\kappa(X_1,X_2,X_3,X_4)
+={}&\langle X_1X_2X_3X_4\rangle\\
+&-\sum_{\{ij\}}
+\langle X_iX_j\rangle
+\langle X_kX_l\rangle\\
+&-\sum_{\{ij\}}
+\langle X_iX_jX_k\rangle
+\langle X_l\rangle\\
+&+2\sum_{\{ij\}}
+\langle X_iX_j\rangle
+\langle X_k\rangle
+\langle X_l\rangle\\
+&-6\prod_{i=1}^{4}\langle X_i\rangle.
+\end{aligned}
+
+In the second line, the sum is over the three distinct pair-pair partitions. In the third and fourth lines, the sums range over the appropriate distinct choices of subsets and complementary indices.
+
+The general partition formula is preferable to manually expanding higher orders.
+
+3.3 Generating-function definition
+
+For commuting variables, define the moment-generating function
+
+M(\mathbf t)
+
+\left\langle
+\exp\left(
+\sum_{i=1}^{k}t_iX_i
+\right)
+\right\rangle.
+
+The cumulant-generating function is
+
+K(\mathbf t)=\log M(\mathbf t).
+
+Then
+
+\boxed{
+\kappa(X_1,\ldots,X_k)
+
+\left.
+\frac{\partial^k K}
+{\partial t_1\cdots\partial t_k}
+\right|_{\mathbf t=0}.
+}
+
+This representation immediately explains why cumulants isolate connected contributions: the logarithm removes products associated with independent factorization.
+
+3.4 Quantum ordering
+
+Quantum observables on distinct tensor factors commute:
+
+O_i,O_j=0,
+\qquad i\neq j.
+
+Thus the equal-time cumulant construction for distinct subsystems is unambiguous.
+
+For repeated operators on the same subsystem or at different times, one must specify an ordering prescription. Possibilities include:
+
+* ordinary ordered moments;
+* symmetrized moments;
+* time-ordered cumulants;
+* contour-ordered cumulants;
+* cumulants of measurement outcomes.
+
+These can produce different quantities.
+
+The present CSH formulation uses distinct subsystems and equal-time Hermitian observables as its foundational case. More general quantum cumulants are extensions, not interchangeable replacements.
+
+3.5 Connectedness is not entanglement
+
+A nonzero connected cumulant indicates statistical dependence that cannot be decomposed into products of lower-order moments under the selected observable family.
+
+It does not by itself establish entanglement.
+
+For example, classical probability distributions can have nonzero higher-order cumulants. Conversely, some entangled states may have vanishing cumulants for particular observables.
+
+Therefore:
+
+\boxed{
+\text{connectedness}
+\neq
+\text{entanglement}
+\neq
+\text{nonlocality}.
+}
+
+CSH must classify these properties separately.
+
+4. Moment–cumulant reconstruction
+
+The hierarchy of cumulants is useful only if its relation to ordinary correlation data is explicit.
+
+4.1 Reconstruction theorem
+
+For commuting variables, the moment associated with a set is recovered from its cumulants by
+
+\boxed{
+\left\langle
+\prod_{i\in S}X_i
+\right\rangle
+
+\sum_{\pi\in\Pi(S)}
+\prod_{B\in\pi}
+\kappa(X_i:i\in B).
+}
+
+This is the inverse of the cumulant expansion.
+
+4.2 Interpretation
+
+At order , the raw moment contains:
+
+* the connected -body cumulant;
+* products of connected lower-order cumulants;
+* combinations of intermediate-order cumulants.
+
+The connected cumulant is therefore the part of the -body moment not generated by the lower-order cumulants through the partition expansion.
+
+This is a statistical irreducibility statement, not yet a quantum marginal irreducibility statement.
+
+4.3 Theorem 1: lower-order moments and cumulants are equivalent data
+
+Theorem 1. For a fixed family of commuting observables, knowledge of all joint moments of orders at most is equivalent to knowledge of all joint cumulants of orders at most .
+
+Proof. The moment–cumulant relation expresses each moment of order as a finite polynomial in cumulants of orders no greater than . The inverse cumulant formula expresses each cumulant of order as a finite polynomial in moments of orders no greater than . Applying these transformations successively for establishes equivalence.
+
+This theorem clarifies an important limitation: cumulants reorganize information; they do not create information absent from the complete set of corresponding moments.
+
+A genuinely new hierarchy therefore requires more than a list of cumulants. It requires a precise account of what becomes identifiable at each order.
+
+Part II — Irreducible Correlation Order
+
+5. The marginal hierarchy
+
+5.1 Definition of -equivalence
+
+Let .
+
+Definition 1. The states are -equivalent if
+
+\boxed{
+\rho\sim_k\sigma
+\iff
+\rho_S=\sigma_S
+\quad
+\forall S\subseteq V,\quad |S|\leq k.
+}
+
+This definition uses complete reduced density matrices, not merely selected correlation strengths.
+
+It is therefore stronger than equality of a few moments or equality of pairwise entanglement measures.
+
+5.2 Nested equivalence
+
+Theorem 2. The equivalence relations satisfy
+
+\boxed{
+\sim_N
+\ \subseteq\
+\sim_{N-1}
+\ \subseteq\cdots\subseteq\
+\sim_2
+\ \subseteq\
+\sim_1.
+}
+
+Proof. If two states agree on every marginal of order at most , they necessarily agree on every marginal of order at most . Therefore -equivalence implies -equivalence.
+
+The hierarchy is a sequence of progressively finer partitions of the global state space.
+
+At order , equality of the full density operator implies equality of the states. At lower orders, equivalence classes may contain multiple global states.
+
+5.3 Marginal fibers
+
+For a fixed lower-order data set , define the marginal fiber
+
+\mathcal F_k(m_k)
+
+\left\{
+\rho\in\mathcal D(\mathcal H_V):
+\mathcal M_k(\rho)=m_k
+\right\}.
+
+The fiber contains every global state compatible with the specified lower-order marginals.
+
+A nontrivial fiber means that lower-order data do not uniquely determine the global state.
+
+The CSH problem is to understand the structure of these fibers and identify which observables vary within them.
+
+5.4 Relative irreducibility
+
+Let be a real-valued state functional.
+
+Definition 2. The functional is irreducible at order , relative to a state family , if:
+
+* is not constant on at least one nontrivial -equivalence class in ;
+* is determined by the -body marginal data on .
+
+The first condition establishes that lower-order marginals are insufficient. The second establishes that the next marginal level is sufficient for the chosen witness.
+
+This definition is relative to the state family and the functional. It does not assert that the entire global state is determined at order .
+
+5.5 Minimal identifying order
+
+For a functional , define its marginal identification order by
+
+\boxed{
+q_{\mathcal S}(W)
+
+\min
+\left\{
+k:
+W(\rho)=W(\sigma)
+\text{ whenever }
+\rho\sim_k\sigma,\
+\rho,\sigma\in\mathcal S
+\right\}.
+}
+
+If no such exists below , set , since the full state always determines the functional.
+
+This quantity provides a direct classification of the order at which a chosen property becomes identifiable.
+
+5.6 Important distinction
+
+A functional can have a high identification order without being a connected cumulant of that order.
+
+Likewise, a connected cumulant of order may be determined by lower-order data on a restricted state family.
+
+Consequently, CSH should maintain two labels:
+
+\begin{aligned}
+k_{\rm cumulant}&=\text{order of the connected statistical moment},\\
+k_{\rm marginal}&=\text{minimum order of marginals needed to identify it}.
+\end{aligned}
+
+They coincide in some natural examples, but not in general.
+
+6. Operator-space decomposition of marginal information
+
+6.1 Local operator tensor basis
+
+For each subsystem , decompose its operator space as
+
+\mathcal B(\mathcal H_i)
+
+\operatorname{span}\{I_i\}
+\oplus
+\mathfrak h_i^0,
+
+where is the traceless operator subspace.
+
+The global operator space decomposes into tensor sectors:
+
+\mathcal B(\mathcal H_V)
+
+\bigoplus_{S\subseteq V}
+\left(
+\bigotimes_{i\in S}\mathfrak h_i^0
+\otimes
+\bigotimes_{j\notin S}\operatorname{span}\{I_j\}
+\right).
+
+Each sector is labeled by the support set .
+
+The sector with contains operators acting nontrivially on exactly subsystems.
+
+6.2 State expansion
+
+With normalized local operator bases, any state can be expanded as
+
+\rho
+
+\sum_{\boldsymbol a}
+r_{\boldsymbol a}
+F_1^{a_1}\otimes\cdots\otimes F_N^{a_N}.
+
+The coefficients with exactly nonidentity indices are the order- generalized Bloch coefficients.
+
+They are not all connected cumulants, because cumulants subtract products of lower-order moments. Nevertheless, they provide a useful linear decomposition of state information by support size.
+
+6.3 Theorem 3: lower-order marginals determine lower-support coefficients
+
+Theorem 3. The collection of all reduced density matrices on subsets of size at most determines every coefficient of the global operator expansion whose nonidentity support has size at most .
+
+Proof. A marginal is obtained by tracing out all subsystems outside . Any tensor-basis term containing a traceless operator on a traced-out subsystem vanishes. Therefore retains exactly those expansion coefficients whose support is contained in . Taking all subsets with recovers every coefficient with support size at most .
+
+6.4 Invisible higher-order directions
+
+Define the linear difference space
+
+\mathcal N_k
+
+\left\{
+\Delta=\Delta^\dagger:
+\operatorname{Tr}_{V\setminus S}\Delta=0
+\quad
+\forall S,\ |S|\leq k
+\right\}.
+
+If
+
+\rho-\sigma\in\mathcal N_k,
+
+then .
+
+In the tensor decomposition, consists of operators whose nonidentity support has size greater than .
+
+This gives a precise linear-algebraic interpretation of higher-order information:
+
+\boxed{
+\text{order-}(k+1)\text{ information lies in directions invisible to all }k\text{-body marginals}.
+}
+
+Positivity still constrains which differences correspond to physically admissible pairs of states.
+
+7. The existence of irreducible higher-order information
+
+7.1 General existence principle
+
+If contains a nonzero Hermitian operator , and there exists a full-rank state for which sufficiently small perturbations remain positive, then
+
+\rho_\pm=\rho_0\pm\epsilon\Delta
+
+are distinct states with identical marginals up to order .
+
+More precisely, if
+
+\operatorname{Tr}\Delta=0
+
+and
+
+0<\epsilon<
+\frac{\lambda_{\min}(\rho_0)}
+{\|\Delta\|_\infty},
+
+then
+
+\rho_\pm\geq0.
+
+Because ,
+
+(\rho_+)S=(\rho-)_S
+\qquad
+\forall |S|\leq k.
+
+Yet any observable satisfying
+
+\operatorname{Tr}(W\Delta)\neq0
+
+distinguishes the states.
+
+7.2 Theorem 4: existence of lower-marginal-indistinguishable states
+
+Theorem 4. Let be full rank and let be Hermitian, traceless, and belong to . Then there exist distinct physical states such that
+
+\rho_+\sim_k\rho_-.
+
+Moreover, there exists a Hermitian observable that distinguishes them.
+
+Proof. Choose small enough that remain positive. Since , both states have unit trace. Their marginals agree through order because every partial trace of onto at most subsystems vanishes. Finally, choosing gives
+
+\operatorname{Tr}W(\\rho_+-\\rho_-)
+
+2\epsilon\operatorname{Tr}(\Delta^2)>0.
+
+Thus the states are physically distinct and operationally distinguishable by an appropriate observable.
+
+This theorem establishes a broad mathematical mechanism for irreducible higher-order information whenever the relevant operator-space complement is nontrivial.
+
+It does not yet specify whether the witness is experimentally simple, whether it is a connected cumulant, or whether the states differ in entanglement class.
+
+Part III — Explicit Multipartite Structures
+
+8. The GHZ phase family
+
+8.1 Definition
+
+For , consider
+
+\boxed{
+|\mathrm{GHZ}_\phi^{(N)}\rangle
+
+\frac{
+|0\rangle^{\otimes N}
++
+e^{i\phi}|1\rangle^{\otimes N}
+}{\sqrt2}.
+}
+
+Let
+
+\rho_\phi
+
+|\mathrm{GHZ}\phi^{(N)}\rangle
+\langle\mathrm{GHZ}\phi^{(N)}|.
+
+Expanding,
+
+\begin{aligned}
+\rho_\phi
+
+\frac12\big(
+&|0^N\rangle\langle0^N|
++|1^N\rangle\langle1^N|\\
+&+e^{-i\phi}|0^N\rangle\langle1^N|\\
+&+e^{i\phi}|1^N\rangle\langle0^N|
+\big).
+\end{aligned}
+
+8.2 Proper marginals
+
+Trace out any nonempty set of subsystems.
+
+The off-diagonal coherence terms vanish because
+
+\operatorname{Tr}(|0\rangle\langle1|)=0.
+
+For every proper subset ,
+
+\boxed{
+\rho_{\phi,S}
+
+\frac12
+\left(
+|0\rangle^{\otimes |S|}
+\langle0|^{\otimes |S|}
++
+|1\rangle^{\otimes |S|}
+\langle1|^{\otimes |S|}
+\right).
+}
+
+This expression is independent of .
+
+Consequently,
+
+\boxed{
+\rho_{\phi,S}=\rho_{\phi’,S}
+\quad
+\forall S\subsetneq V.
+}
+
+The global phase is invisible to every proper reduced density matrix.
+
+8.3 Global coherence witness
+
+Define
+
+X_i=\sigma_x^{(i)},
+\qquad
+Y_i=\sigma_y^{(i)}.
+
+Then
+
+\left\langle
+X_1X_2\cdots X_N
+\right\rangle_{\phi}
+
+\cos\phi.
+
+For a witness containing one and operators,
+
+\left\langle
+Y_1X_2\cdots X_N
+\right\rangle_{\phi}
+
+\sin\phi,
+
+with the stated convention for .
+
+The phase is therefore recoverable from the pair of global expectation values:
+
+\phi
+
+\operatorname{atan2}
+\left(
+\langle Y_1X_2\cdots X_N\rangle,
+\langle X_1X_2\cdots X_N\rangle
+\right)
+
+modulo , provided the ideal GHZ-family assumption holds.
+
+8.4 Connectedness of the global witness
+
+For this family, every nonempty proper subset of the relevant measurement string has zero expectation whenever it flips at least one but not all computational-basis bits.
+
+Therefore, all lower-order contributions in the cumulant partition expansion vanish for the all-subsystem -string and the corresponding one- string.
+
+Hence,
+
+\boxed{
+\kappa(X_1,\ldots,X_N)
+
+\langle X_1\cdots X_N\rangle
+
+\cos\phi,
+}
+
+and similarly,
+
+\kappa(Y_1,X_2,\ldots,X_N)
+
+\sin\phi.
+
+Thus the global phase is represented by a connected -body cumulant.
+
+8.5 Theorem 5: exact -body irreducibility of GHZ phase
+
+Theorem 5. For , the GHZ phase states satisfy:
+
+* all proper reduced density matrices are independent of ;
+* at least one -body connected cumulant depends on ;
+* therefore the phase is not identifiable from any collection of proper marginals but is identifiable from suitable -body observables.
+
+Proof. The first result follows by tracing out at least one subsystem, which eliminates the global off-diagonal terms. The second follows from the explicit -body expectation values above; all lower-order partition terms vanish for the selected measurement strings. The third follows because the global observables vary with while every proper marginal remains fixed.
+
+This is an explicit realization of maximal marginal irreducibility: the distinguishing information first appears at order .
+
+8.6 Important qualification: local-unitary equivalence
+
+The states satisfy
+
+|\mathrm{GHZ}_\phi^{(N)}\rangle
+
+\left(
+\operatorname{diag}(1,e^{i\phi})
+\otimes I^{\otimes(N-1)}
+\right)
+|\mathrm{GHZ}_0^{(N)}\rangle.
+
+Thus they are related by a local unitary operation.
+
+If the classification identifies states up to arbitrary local unitaries, then the GHZ phase family represents one local-unitary equivalence class.
+
+This does not invalidate the example. It shows that the classification target must be explicit.
+
+The phase is invisible to all proper marginals in a fixed local computational basis, but it is not an invariant under arbitrary local-unitary transformations.
+
+A CSH classification may therefore distinguish:
+
+* basis-relative marginal irreducibility;
+* local-unitary-invariant multipartite structure;
+* operational distinguishability under restricted measurement access.
+
+These are different classification problems.
+
+9. A locally invariant example: graph-state correlations
+
+To avoid relying solely on a phase parameter removable by a local unitary, consider stabilizer and graph-state structures.
+
+9.1 Graph states
+
+Let be a simple graph. Its graph state is
+
+|G\rangle
+
+\prod_{(i,j)\in E}
+CZ_{ij}
+|+\rangle^{\otimes N},
+
+where
+
+|+\rangle=\frac{|0\rangle+|1\rangle}{\sqrt2}.
+
+The stabilizer generators are
+
+K_i
+
+X_i\prod_{j\in N(i)}Z_j.
+
+The graph state is the unique common eigenstate of all .
+
+9.2 Stabilizer expectation values
+
+For a stabilizer state,
+
+\langle S\rangle=
+\begin{cases}
+1,&S\in\mathcal S,\\
+0,&S\notin\mathcal S,
+\end{cases}
+
+for Hermitian stabilizer elements , with signs included in the stabilizer group.
+
+The stabilizer group contains products of generators. Some of these products have support on many subsystems and encode global constraints.
+
+9.3 Reduced-state determination
+
+For a stabilizer state, the reduced density matrix on can be written
+
+\rho_A
+
+\frac{1}{2^{|A|}}
+\sum_{\substack{S\in\mathcal S\\
+\operatorname{supp}(S)\subseteq A}}
+S_A.
+
+Thus the reduced state contains precisely the stabilizer elements supported entirely within .
+
+Two graph states may therefore share all stabilizer information supported on subsets up to order while differing in higher-support stabilizers.
+
+This offers a natural route to locally invariant examples, because graph-state equivalence can be studied under local Clifford transformations and graph transformations.
+
+9.4 Research opportunity
+
+A useful CSH result would identify pairs of graph states such that:
+
+\rho_A^{G_1}=\rho_A^{G_2}
+\quad
+\forall |A|\leq k,
+
+but a local-unitary-invariant higher-order quantity differs.
+
+The candidate invariant might involve:
+
+* stabilizer support distributions;
+* multipartite entanglement measures;
+* local-unitary polynomial invariants;
+* code distance;
+* generalized geometric entanglement;
+* higher-order correlation spectra.
+
+This is a more demanding problem than the GHZ phase construction, but it would strengthen the claim that CSH captures global organization rather than basis-dependent coherence alone.
+
+10. Pairwise Bell inequalities and the limits of two-party certification
+
+10.1 Two-party Bell tests
+
+A bipartite Bell experiment tests whether observed joint probabilities admit a local hidden-variable representation:
+
+P(a,b|x,y)
+
+\int d\lambda\,
+p(\lambda)
+P(a|x,\lambda)P(b|y,\lambda).
+
+For the CHSH scenario, local realism implies
+
+|S|\leq2,
+
+while quantum theory permits
+
+|S|\leq2\sqrt2.
+
+Such inequalities characterize constraints on particular two-party measurement scenarios.
+
+10.2 Why pairwise tests are insufficient
+
+A multipartite system can exhibit global properties that no collection of pairwise Bell tests determines.
+
+There are several reasons:
+
+* Pairwise reduced states discard global coherence.
+* Different multipartite states may have identical pairwise marginals.
+* Genuine multipartite entanglement need not be visible as pairwise entanglement across every edge.
+* Multipartite nonlocality may require joint constraints involving several parties.
+* Pairwise Bell locality does not imply the existence of a single global classical model for all multipartite contexts.
+
+The GHZ family demonstrates the first two points exactly: every pairwise reduced state is identical across the family, but the global phase is different.
+
+10.3 Pairwise separability does not imply global separability
+
+There exist multipartite states in which every two-party reduced state is separable while the global state is genuinely multipartite entangled.
+
+Therefore, the absence of pairwise entanglement does not imply the absence of global entanglement.
+
+The distinction is particularly important for cluster states, graph states, and certain error-correcting code states.
+
+10.4 Bell nonlocality is not the hierarchy itself
+
+CSH should not define its order through Bell violations.
+
+A connected cumulant can be nonzero in a classical model. A quantum state can be entangled without violating a given Bell inequality. A multipartite state can exhibit genuine multipartite nonlocality without every pairwise reduction being nonlocal.
+
+The hierarchy is more general:
+
+\boxed{
+\text{marginal irreducibility}
+\text{ is a question about information order,}
+}
+
+whereas
+
+\boxed{
+\text{Bell nonlocality}
+\text{ is a question about the compatibility of observed probabilities with local models.}
+}
+
+They may overlap, but neither defines the other.
+
+Part IV — Classification and Invariants
+
+11. Correlation Scale Hierarchy as a sequence of information layers
+
+11.1 The hierarchy of state information
+
+The natural hierarchy is not simply a sequence of increasingly complicated correlation functions. It is a sequence of increasingly informative marginal descriptions.
+
+Define
+
+\mathscr C_k(\rho)
+
+\left\{
+\rho_S:S\subseteq V,\ |S|=k
+\right\}.
+
+The complete information available through order is
+
+\mathscr I_k(\rho)
+
+\bigcup_{j=1}^{k}\mathscr C_j(\rho).
+
+The hierarchy is then
+
+\mathscr I_1
+\longrightarrow
+\mathscr I_2
+\longrightarrow
+\cdots
+\longrightarrow
+\mathscr I_N.
+
+Each level can resolve distinctions left unresolved by the preceding level.
+
+The hierarchy is not necessarily strictly increasing for every state family. For some restricted families, lower-order marginals may already determine all higher-order properties. For others, new information may first appear at a much higher order.
+
+11.2 Scale-dependent information
+
+Let be a specified family of admissible states. Consider the equivalence class
+
+\\rho_k
+
+\{\sigma\in\mathcal S:\sigma\sim_k\rho\}.
+
+The uncertainty in a functional remaining after all -body marginal information is known can be measured by its range over the fiber:
+
+\boxed{
+\Delta_k(W|\rho)
+
+\sup_{\sigma\in\\rho_k}W(\sigma)
+
+\inf_{\sigma\in\\rho_k}W(\sigma).
+}
+
+If
+
+\Delta_k(W|\rho)=0,
+
+then is determined by the -body marginals within the selected state family.
+
+If
+
+\Delta_k(W|\rho)>0,
+
+then the lower-order information is insufficient to identify .
+
+This quantity is a direct measure of marginal ambiguity. It is not an entropy and should not be interpreted as intrinsic physical uncertainty.
+
+11.3 Information revealed at the next level
+
+The reduction in ambiguity between orders and is
+
+\boxed{
+\mathfrak R_{k+1}(W|\rho)
+
+\Delta_k(W|\rho)-\Delta_{k+1}(W|\rho).
+}
+
+Because the marginal fibers are nested,
+
+\\rho_{k+1}\subseteq\\rho_k,
+
+and therefore
+
+\mathfrak R_{k+1}(W|\rho)\geq0.
+
+A positive value means that the additional -body marginals reduce the range of possible values of .
+
+This is a candidate scale-resolution measure.
+
+11.4 Theorem 6: monotonicity of marginal ambiguity
+
+Theorem 6. For any real-valued functional bounded on the relevant state family,
+
+\Delta_{k+1}(W|\rho)\leq\Delta_k(W|\rho).
+
+Proof. Since , the supremum over the smaller set cannot exceed the supremum over the larger set, and the infimum over the smaller set cannot be less than the infimum over the larger set. Subtracting yields the result.
+
+The theorem establishes a monotonic refinement of state identification. It does not imply that every added order reveals new information.
+
+12. A hierarchy of correlation signatures
+
+12.1 Generalized Bloch tensors
+
+Choose traceless local Hermitian operator bases . For each subset , define
+
+T_S^{a_1\cdots a_k}
+
+\operatorname{Tr}
+\left\\rho
+\\left(
+F_{i_1}^{a_1}\\otimes\\cdots\\otimes
+F_{i_k}^{a_k}
+\\right)
+\\right.
+
+These tensors encode all support- coefficients of the global state in the chosen basis.
+
+The collection of such tensors through order determines all reduced states of order at most .
+
+12.2 Connected tensor hierarchy
+
+Define the connected tensor by
+
+C_S^{a_1\cdots a_k}
+
+\kappa_\rho
+\left(
+F_{i_1}^{a_1},\ldots,F_{i_k}^{a_k}
+\right).
+
+The hierarchy is
+
+\mathfrak C(\rho)
+
+\left(
+C^{(1)},C^{(2)},\ldots,C^{(N)}
+\right).
+
+The full cumulant family contains the same information as the full moment family for the specified commuting measurement variables. It is a reorganization of the data by connectedness.
+
+12.3 Tensor norms
+
+A simple basis-dependent magnitude is
+
+\|C^{(k)}\|_F^2
+
+\sum_{i_1<\cdots<i_k}
+\sum_{a_1,\ldots,a_k}
+\left|
+C_{i_1\cdots i_k}^{a_1\cdots a_k}
+\right|^2.
+
+This can quantify the aggregate size of the order- connected tensor in a chosen normalized basis.
+
+However, a raw Frobenius norm need not be invariant under arbitrary local transformations unless the tensor indices transform orthogonally or unitarily under the chosen operator-space metric.
+
+12.4 Local-unitary-invariant contractions
+
+For a local unitary , the traceless operator basis transforms by an orthogonal or unitary adjoint representation:
+
+U_i^\dagger F_i^aU_i
+
+\sum_b(R_i)_{ab}F_i^b.
+
+The order- tensor transforms as
+
+C^{(k)}
+\longmapsto
+(R_{i_1}\otimes\cdots\otimes R_{i_k})C^{(k)}.
+
+If each is orthogonal, then
+
+\|C^{(k)}\|_F
+
+is invariant.
+
+This makes the squared tensor norm a natural candidate invariant, provided the basis normalization and transformation group are specified.
+
+Yet it is not a complete invariant. Different correlation tensors can have identical norms.
+
+12.5 Polynomial invariant families
+
+A stronger classification can use contractions of multiple tensor copies.
+
+For example,
+
+I_{k,2}
+
+\sum_{\boldsymbol a}
+C_{\boldsymbol a}^{(k)}
+C_{\boldsymbol a}^{(k)*},
+
+and higher contractions of the form
+
+I_{k,r}
+
+\operatorname{Contr}
+\left\[
+(C^{(k)})^{\\otimes r}
+\\right\].
+
+The contraction pattern must pair indices in a manner invariant under the local representation group.
+
+Such invariants may distinguish tensors with identical norms but different internal structure.
+
+A complete local-unitary classification generally requires more than one scalar invariant, and may require a finite or infinite family depending on the state space and group action.
+
+12.6 CSH signature
+
+A proposed hierarchy signature is
+
+\boxed{
+\mathfrak S_{\rm CSH}(\rho)
+
+\left\{
+\mathcal I_k(\rho)
+\right\}_{k=1}^{N},
+}
+
+where is a selected family of invariants constructed from order- correlation data.
+
+The signature should be designed to answer three separate questions:
+
+* What correlation structure is present at order ?
+* Which of its features are invariant under the chosen local representation group?
+* Which features cannot be reconstructed from all lower-order marginals?
+
+Only the third question establishes marginal irreducibility.
+
+13. Irreducible correlation witnesses
+
+13.1 General witness definition
+
+Let be a Hermitian operator acting on a subset of size . Its expectation is
+
+w_W(\rho)=\operatorname{Tr}(\rho W).
+
+It is a witness of marginal irreducibility at order if there exist states such that
+
+\rho\sim_{k-1}\sigma
+
+but
+
+\operatorname{Tr}(\rho W)
+\neq
+\operatorname{Tr}(\sigma W).
+
+The witness must be accessible through an operational measurement scheme.
+
+13.2 A linear-algebraic criterion
+
+Suppose the lower-order marginal data define a linear measurement map
+
+\mathcal L_{k-1}:
+\mathcal B_{\rm Herm}(\mathcal H_V)
+\rightarrow\mathcal Y_{k-1}.
+
+Let
+
+\mathcal N_{k-1}
+
+\ker\mathcal L_{k-1}.
+
+A linear observable is constant on every affine fiber of if and only if
+
+\operatorname{Tr}(W\Delta)=0
+\qquad
+\forall\Delta\in\mathcal N_{k-1}.
+
+Thus a necessary and sufficient linear-algebraic condition for to vary along an allowed lower-order invisible direction is
+
+\boxed{
+\exists\Delta\in\mathcal N_{k-1}:
+\operatorname{Tr}(W\Delta)\neq0.
+}
+
+For physical states, positivity must also be satisfied. The full-rank perturbation construction in Theorem 4 provides a sufficient local condition.
+
+13.3 Theorem 7: witness criterion
+
+Theorem 7. Let be full rank, and let be nonzero and Hermitian with zero trace. If
+
+\operatorname{Tr}(W\Delta)\neq0,
+
+then for sufficiently small , the physical states
+
+\rho_\pm=\rho_0\pm\epsilon\Delta
+
+have identical marginals through order , while distinguishes them.
+
+Proof. Positivity and trace normalization follow from the perturbation bound. Membership in ensures equality of all lower-order marginals. The witness difference is
+
+\operatorname{Tr}W(\\rho_+-\\rho_-)
+
+2\epsilon\operatorname{Tr}(W\Delta),
+
+which is nonzero by assumption.
+
+This result gives a systematic method for constructing witnesses: find a physically admissible invisible direction and choose an observable not orthogonal to it.
+
+13.4 Witnesses must be independent of lower-order data
+
+A high-order observable is not necessarily a high-order witness.
+
+For example, an -body product observable may have an expectation value completely determined by lower-order marginals on a restricted state family.
+
+The relevant criterion is not the number of tensor factors in the observable alone. It is whether its expectation varies within the relevant lower-order marginal fiber.
+
+14. Operational witness families
+
+14.1 Pauli correlation witnesses
+
+For qubits, choose local Pauli operators
+
+\sigma_x,\quad\sigma_y,\quad\sigma_z.
+
+An order- correlator is
+
+E_{i_1\cdots i_k}^{a_1\cdots a_k}
+
+\left\langle
+\sigma_{a_1}^{(i_1)}
+\cdots
+\sigma_{a_k}^{(i_k)}
+\right\rangle.
+
+The connected version subtracts all lower-order partition contributions.
+
+A complete Pauli correlation tensor on a specified subset provides a tomographically complete description of that subset’s reduced state.
+
+14.2 Parity witnesses
+
+For binary outcomes , define the parity observable
+
+\Pi_S=\prod_{i\in S}A_i.
+
+Its expectation is
+
+\langle\Pi_S\rangle.
+
+Parity measurements are experimentally attractive because they can often be implemented through collective basis rotations followed by computational-basis readout.
+
+For GHZ-type states, the global parity expectation is directly sensitive to the coherence phase.
+
+14.3 Stabilizer witnesses
+
+For stabilizer states, products of local Pauli operators can form stabilizer elements:
+
+S=\bigotimes_{i\in V}P_i.
+
+A stabilizer witness has expectation
+
+\langle S\rangle=1
+
+on the target state.
+
+If its support is larger than , it may distinguish states sharing all marginals through order .
+
+But support size alone is not sufficient. One must verify that the witness actually varies within the lower-order equivalence class.
+
+14.4 Entanglement witnesses
+
+An entanglement witness is a Hermitian operator such that
+
+\operatorname{Tr}(W\sigma)\geq0
+
+for all states in a specified separable class, while
+
+\operatorname{Tr}(W\rho)<0
+
+for at least one entangled state .
+
+A CSH witness and an entanglement witness need not be the same.
+
+A witness can demonstrate marginal irreducibility without certifying entanglement. Conversely, an entanglement witness may be determined by lower-order marginals on a restricted family.
+
+The most valuable CSH witnesses would satisfy both properties:
+
+* they certify a desired multipartite entanglement class;
+* their value cannot be inferred from all lower-order marginals.
+
+14.5 Multipartite Bell witnesses
+
+Multipartite Bell inequalities constrain probability distributions produced by local measurements on several parties.
+
+A violation can certify nonclassical multipartite correlations under the assumptions of the Bell scenario.
+
+For CSH, such inequalities are useful as optional operational witnesses, but they do not provide a universal scale classification.
+
+A state may possess irreducible higher-order marginal information without violating a chosen Bell inequality.
+
+15. Entanglement depth and correlation order
+
+15.1 Definitions
+
+A pure multipartite state is -producible if it factors into a product of states, each involving at most parties.
+
+A mixed state is -producible if it is a convex mixture of such states, allowing different partitions in the mixture.
+
+The entanglement depth is the smallest for which the state is -producible.
+
+15.2 Why the two hierarchies differ
+
+Correlation order and entanglement depth measure different properties.
+
+* Correlation order refers to the number of subsystems entering a statistical or operator expression.
+* Entanglement depth refers to the largest number of parties that can be genuinely entangled in the decomposition of a state.
+
+A classical probability distribution can have a nonzero -body connected cumulant while possessing no quantum entanglement.
+
+Likewise, an entangled state may have nonzero correlations at several orders without each order corresponding to an independent entanglement resource.
+
+Therefore,
+
+\boxed{
+k_{\rm correlation}
+\not\equiv
+k_{\rm entanglement\ depth}.
+}
+
+15.3 Useful joint classification
+
+A more complete state classification may attach multiple labels:
+
+\mathfrak Q(\rho)
+
+\left(
+q_{\rm marginal},
+d_{\rm ent},
+\ell_{\rm nonlocal},
+r_{\rm cumulant}
+\right),
+
+where:
+
+* is a marginal identification order for a specified property;
+* is entanglement depth;
+* is a nonlocality classification under a specified Bell scenario;
+* records selected nonzero connected cumulant orders.
+
+These quantities should not be collapsed into one scalar.
+
+16. Classical higher-order correlations
+
+16.1 A classical parity distribution
+
+Consider binary random variables
+
+X_i\in\{-1,+1\}
+
+uniformly distributed over outcomes satisfying
+
+\prod_{i=1}^{N}X_i=+1.
+
+There are such outcomes, each with equal probability.
+
+Every proper subset of fewer than variables is uniformly distributed. In particular,
+
+\langle X_i\rangle=0
+
+and all proper-subset product expectations vanish:
+
+\left\langle
+\prod_{i\in S}X_i
+\right\rangle=0
+\qquad
+S\subsetneq V.
+
+But
+
+\left\langle
+\prod_{i=1}^{N}X_i
+\right\rangle=1.
+
+16.2 Consequence
+
+This is an exact classical example of an irreducible -variable statistical correlation relative to proper-subset marginals.
+
+It demonstrates that higher-order irreducibility is not inherently quantum.
+
+Quantum theory adds additional structure through:
+
+* noncommuting observables;
+* entanglement;
+* contextuality;
+* Bell nonlocality;
+* quantum measurement constraints;
+* coherent superposition.
+
+CSH must therefore separate a general statistical hierarchy from specifically quantum refinements.
+
+16.3 Classical versus quantum classification
+
+A useful theory should first define marginal irreducibility independently of quantum mechanics. It can then classify the additional quantum properties of the irreducible structure.
+
+This avoids building entanglement into the definition of correlation order.
+
+Part V — Experimental and Dynamical Structure
+
+17. Experimental protocol
+
+17.1 Objective
+
+The primary experimental objective is to prepare states with identical complete lower-order marginals and different higher-order witnesses.
+
+For a target order , prepare and satisfying
+
+\rho\sim_{k-1}\sigma
+
+while
+
+\operatorname{Tr}(\rho W)
+\neq
+\operatorname{Tr}(\sigma W)
+
+for a specified -body witness .
+
+17.2 State preparation
+
+Candidate systems include:
+
+* trapped-ion registers;
+* superconducting-qubit processors;
+* neutral-atom arrays;
+* photonic multipartite systems;
+* nuclear magnetic resonance platforms;
+* programmable spin systems.
+
+The GHZ phase family is a suitable initial benchmark because its lower-order marginal equality is exact and analytically transparent.
+
+17.3 Marginal verification
+
+For each subset with , reconstruct or estimate the reduced state
+
+\rho_S,\qquad\sigma_S.
+
+A natural comparison is the trace distance
+
+D_S(\rho,\sigma)
+
+\frac12\|\rho_S-\sigma_S\|_1.
+
+Define the maximum lower-order discrepancy
+
+\boxed{
+D_{k-1}(\rho,\sigma)
+
+\max_{|S|\leq k-1}
+\frac12\|\rho_S-\sigma_S\|_1.
+}
+
+Exact lower-order equivalence requires
+
+D_{k-1}=0.
+
+In a finite experiment, the claim must be expressed with confidence bounds and a predeclared tolerance.
+
+17.4 Higher-order witness measurement
+
+Measure a witness acting on or more subsystems.
+
+The observed separation is
+
+\Delta_W
+
+\left|
+\operatorname{Tr}(\rho W)
+
+\operatorname{Tr}(\sigma W)
+\right|.
+
+The experiment supports irreducibility when the lower-order discrepancy is bounded below the chosen equivalence tolerance while the witness separation is statistically significant.
+
+17.5 Avoiding circularity
+
+The higher-order witness should not be treated as a discovery merely because it distinguishes states that were prepared to differ in that witness.
+
+The meaningful result is the demonstration that:
+
+* the full lower-order marginal data agree;
+* the states are nevertheless globally distinct;
+* a specified higher-order observable detects the distinction;
+* the witness has an invariant interpretation under the chosen representation group;
+* the distinction is not already encoded in another lower-order observable that was omitted from the test.
+
+17.6 Experimental equivalence testing
+
+A failure to detect a difference between lower-order marginals is not evidence of their equality.
+
+Use an equivalence-testing framework. For a tolerance , the objective is to establish
+
+D_{k-1}(\rho,\sigma)<\epsilon
+
+with a specified confidence level.
+
+This requires sufficient statistical power to exclude differences larger than .
+
+18. Measurement complexity and reconstruction
+
+18.1 Full marginal tomography
+
+For a subsystem subset with Hilbert-space dimension
+
+d_S=\prod_{i\in S}d_i,
+
+a general density matrix contains independent real parameters.
+
+Full tomography at order can therefore become expensive as grows.
+
+For homogeneous qubits,
+
+d_S=2^k,
+
+so a generic -qubit density matrix has
+
+4^k-1
+
+independent real parameters.
+
+The number of subsets also grows as
+
+\binom Nk.
+
+A brute-force marginal hierarchy is therefore not always experimentally efficient.
+
+18.2 Structured witness estimation
+
+If the target is a particular irreducible functional rather than the complete marginal state, direct witness measurements may be substantially more efficient.
+
+For example, a Pauli-string witness
+
+W=P_1\otimes\cdots\otimes P_k
+
+requires estimating one expectation value, although verifying all lower-order marginal equivalence may still require multiple measurements.
+
+18.3 Randomized measurements
+
+Random local measurements can estimate families of correlation functions and selected nonlinear state functionals.
+
+They may provide an efficient route to estimating:
+
+* purity;
+* correlation tensor norms;
+* selected polynomial invariants;
+* multipartite entanglement witnesses;
+* differences between candidate marginal fibers.
+
+Their use must be accompanied by a statistical analysis of estimator bias and variance.
+
+18.4 Classical shadows and related methods
+
+Classical-shadow methods can estimate many observables from randomized measurement data, with sample complexity depending on the observable family and desired precision.
+
+For CSH, they may be useful when the invariant family contains many Pauli strings or local tensor contractions.
+
+However, no universal complexity advantage should be claimed without a specified observable set and accuracy target.
+
+19. Robustness and noise
+
+19.1 State perturbations
+
+Let the prepared state be
+
+\widetilde\rho=\rho+\delta\rho.
+
+For an observable ,
+
+\left|
+\operatorname{Tr}(W\widetilde\rho)
+
+\operatorname{Tr}(W\rho)
+\right|
+\leq
+\|W\|_\infty\|\delta\rho\|_1.
+
+Thus witness stability follows directly from trace-norm control of the state error.
+
+19.2 Cumulant error propagation
+
+A connected cumulant is a polynomial in moments. Its estimation error depends on the errors in all lower-order moments appearing in the partition expansion.
+
+For the third-order cumulant,
+
+\kappa_{123}
+
+m_{123}
+-m_{12}m_3
+-m_{13}m_2
+-m_{23}m_1
++2m_1m_2m_3.
+
+If every moment estimate has bounded error, a conservative error bound follows from the triangle inequality and the fact that normalized bounded observables have bounded moments.
+
+For observables with operator norm at most one,
+
+|m_S|\leq1.
+
+Writing , one obtains a first-order perturbation estimate by expanding the polynomial and retaining linear error terms, with higher-order products bounded separately.
+
+This procedure generalizes to arbitrary cumulant order through the partition formula.
+
+19.3 Noise can erase irreducible structure
+
+Suppose a global state undergoes local depolarizing noise,
+
+\mathcal D_p(\rho)
+
+(1-p)\rho
++
+p\frac{I}{d}.
+
+For independent local depolarizing channels, a product of traceless local observables has its expectation attenuated by a factor proportional to
+
+(1-p)^k.
+
+Thus high-order correlation witnesses can decay rapidly with subsystem order.
+
+This creates a practical tension: higher-order structures may be mathematically more discriminating but experimentally more fragile.
+
+19.4 Noise-adjusted irreducibility
+
+A useful operational classification should report not only whether a witness is nonzero, but its normalized signal-to-noise ratio:
+
+\mathrm{SNR}_W
+
+\frac{
+|\operatorname{Tr}(\\rho-\\sigma)W|
+}{
+\delta_W
+},
+
+where is the combined standard uncertainty.
+
+A hierarchy that is theoretically complete but experimentally inaccessible at realistic noise levels may have limited practical value.
+
+20. Dynamical and temporal correlation hierarchy
+
+20.1 Equal-time foundation
+
+The primary CSH construction concerns correlations across distinct subsystems at a specified time.
+
+A dynamical extension introduces time-dependent operators:
+
+O_i(t)=U^\dagger(t)O_iU(t).
+
+One can then define multi-time connected functions,
+
+C^{(k)}(t_1,\ldots,t_k)
+
+\kappa\left(
+O_{i_1}(t_1),\ldots,O_{i_k}(t_k)
+\right).
+
+20.2 Ordering prescription
+
+For noncommuting operators at different times, one must specify whether the cumulant is:
+
+* time ordered;
+* symmetrically ordered;
+* contour ordered;
+* defined through sequential measurement outcomes.
+
+Different definitions answer different physical questions.
+
+20.3 Spatial and temporal orders
+
+A more general hierarchy may carry two indices:
+
+C^{(k)}_{\mathbf i}(\mathbf t),
+
+where is the number of distinct subsystems and specifies the time arguments.
+
+One can then distinguish:
+
+* spatial multipartite order;
+* temporal order;
+* mixed space-time correlation order.
+
+These should not be merged into a single scale parameter.
+
+20.4 Process tensors
+
+For open quantum systems with interventions, process tensors provide a framework for describing multi-time input-output correlations.
+
+A process-tensor extension of CSH could classify irreducible temporal correlations that are invisible to all lower-order intervention statistics.
+
+That is a separate research program. It requires distinguishing state correlations from correlations in the dynamics and environment.
+
+21. Relation to other established theories
+
+21.1 Quantum marginal problem
+
+The quantum marginal problem asks whether a collection of reduced density matrices is compatible with a global state and, if so, whether that global state is unique.
+
+CSH adopts the marginal hierarchy as its mathematical foundation.
+
+Its distinctive objective is to classify the first subsystem order at which specified global properties become identifiable.
+
+21.2 Multipartite entanglement
+
+Multipartite entanglement theory classifies states that cannot be decomposed into mixtures of product states across specified partitions.
+
+CSH is broader in one sense: it includes classical irreducible correlations as well as quantum entanglement.
+
+It is narrower in another: marginal order alone does not classify all forms of multipartite entanglement.
+
+21.3 Quantum discord
+
+Quantum discord and related measures characterize aspects of nonclassical correlation beyond entanglement.
+
+They are generally defined for bipartite systems, though multipartite generalizations exist.
+
+A CSH invariant may be evaluated alongside discord, but discord does not itself provide a complete marginal-order hierarchy.
+
+21.4 Genuine multipartite nonlocality
+
+Genuine multipartite nonlocality concerns probability distributions that cannot be decomposed into specified hybrid local-nonlocal models.
+
+Its classification depends on the measurement scenario and the model class.
+
+CSH does not replace that theory. It asks whether global state information is invisible to lower-order marginals, regardless of whether the resulting correlations violate a Bell inequality.
+
+21.5 Cumulant and cluster expansions
+
+Connected correlation functions are central in statistical mechanics, quantum field theory, and probability theory.
+
+Cluster expansions organize many-body systems by connected contributions.
+
+CSH uses the same mathematical logic but introduces a separate classification based on marginal equivalence and operational identification order.
+
+21.6 Tensor networks and quantum codes
+
+Tensor-network states often possess local gauge freedoms on internal bond spaces. Quantum error-correcting codes can exhibit global logical information that is invisible to sufficiently small subsystems.
+
+These are particularly promising sources of CSH examples.
+
+In a code state, information may be encoded nonlocally so that no sufficiently small subsystem can identify a logical degree of freedom. This is closely related to marginal irreducibility, though code distance and CSH order are not identical in all settings.
+
+Part VI — Theoretical Limits and Research Program
+
+22. The relationship between CSH order and quantum code distance
+
+One of the most promising connections is to quantum error correction.
+
+22.1 Logical information and local indistinguishability
+
+A quantum code encodes logical information into a physical multipartite system. In many codes, local observables cannot distinguish different logical states.
+
+Let be a code subspace, with projector .
+
+For a correctable error set , the Knill–Laflamme condition is
+
+\boxed{
+P_{\mathcal C}E_a^\dagger E_bP_{\mathcal C}
+
+c_{ab}P_{\mathcal C}.
+}
+
+This condition means that the permitted error operators cannot distinguish encoded logical states through their action on the code subspace.
+
+22.2 Connection to marginal equivalence
+
+Suppose all operators supported on subsets of size at most act as scalar operators on the code subspace:
+
+P_{\mathcal C}OP_{\mathcal C}
+
+c_O P_{\mathcal C}.
+
+Then no measurement confined to such a subsystem can distinguish code states.
+
+For two orthogonal code states ,
+
+\langle\psi_0|O|\psi_0\rangle
+
+\langle\psi_1|O|\psi_1\rangle
+
+for every such .
+
+Under the corresponding operator conditions, their reduced density matrices on the supported subsets agree.
+
+Thus the code can contain logical distinctions that are invisible below a certain subsystem size.
+
+22.3 CSH interpretation
+
+This suggests the following relationship:
+
+\text{logical distinguishability order}
+\quad\leftrightarrow\quad
+\text{marginal identification order}.
+
+A code distance can therefore provide a lower bound on the order of subsystem information required to recover certain encoded logical distinctions.
+
+The exact relationship depends on the code, the error model, and whether the relevant condition concerns all local operators or only a selected error set.
+
+22.4 Research proposition
+
+Proposition 1 — Code-induced correlation irreducibility.
+
+Let be a code subspace with two orthogonal logical states . Suppose every operator supported on at most physical subsystems has identical expectation values in these states. Then
+
+|\psi_0\rangle\langle\psi_0|
+\sim_k
+|\psi_1\rangle\langle\psi_1|.
+
+If a logical observable distinguishes the two states, its expectation cannot be reconstructed from their -body marginals.
+
+Proof. Equality of expectation values for every operator supported on each subset of size at most implies equality of the corresponding reduced density matrices, since a density matrix is uniquely determined by its expectation values against a complete Hermitian operator basis. The logical observable distinguishes the global states by assumption.
+
+This gives CSH a natural application to encoded quantum information: the hierarchy can describe the subsystem scale at which protected logical information becomes accessible.
+
+23. The geometry of marginal equivalence classes
+
+23.1 Convexity
+
+For fixed marginal data , the fiber
+
+\mathcal F_k(m_k)
+
+\{\rho:\mathcal M_k(\rho)=m_k\}
+
+is the intersection of the convex quantum state space with affine constraints.
+
+It is therefore convex.
+
+This follows because partial trace is linear and the set of density matrices is convex.
+
+23.2 Dimension
+
+Let the global Hilbert-space dimension be
+
+D=\prod_{i=1}^{N}d_i.
+
+The real affine dimension of the full density-operator space is
+
+D^2-1.
+
+The number of independent constraints imposed by -body marginals depends on overlaps between subsets and on linear dependencies among the corresponding operator sectors.
+
+In the normalized tensor-product basis, the number of real coefficients supported on exactly subsystems is
+
+n_j
+
+\sum_{\substack{S\subseteq V\\|S|=j}}
+\prod_{i\in S}(d_i^2-1).
+
+Consequently, the dimension of the linear space of Hermitian perturbations invisible to all marginals through order is
+
+\boxed{
+\dim\mathcal N_k
+
+\sum_{j=k+1}^{N}
+\sum_{\substack{S\subseteq V\\|S|=j}}
+\prod_{i\in S}(d_i^2-1).
+}
+
+This counts the real higher-support operator directions. The physically admissible portion of a marginal fiber can be smaller because of positivity and rank constraints.
+
+23.3 Interpretation
+
+The dimension formula gives a structural measure of the potential information omitted by a lower-order marginal description.
+
+For homogeneous -qubit systems,
+
+d_i=2,
+
+so
+
+\dim\mathcal N_k
+
+\sum_{j=k+1}^{N}
+\binom Nj 3^j.
+
+This quantity falls as increases and vanishes at .
+
+23.4 Theorem 8: dimension of the marginally invisible operator sector
+
+Theorem 8. For a finite-dimensional multipartite system with local dimensions , the real dimension of the Hermitian operator subspace invisible to every marginal of order at most is
+
+\dim\mathcal N_k
+
+\sum_{j=k+1}^{N}
+\sum_{|S|=j}
+\prod_{i\in S}(d_i^2-1).
+
+Proof. Each local operator space decomposes into a one-dimensional identity sector and a traceless sector of real dimension . Tensor products of these sectors form an orthogonal decomposition of the global Hermitian operator space. A component is invisible to all marginals of order at most precisely when its nonidentity support contains more than subsystems. Summing the dimensions of these mutually orthogonal support sectors gives the result.
+
+This is a structural theorem for the linearized hierarchy. It does not assert that every point in the corresponding affine space is a valid density matrix.
+
+24. A hierarchy of marginal complexity
+
+24.1 Definition
+
+The dimension of suggests a simple structural measure:
+
+\boxed{
+\mathfrak D_k
+
+\dim\mathcal N_k.
+}
+
+It quantifies the number of independent real operator directions not visible to the complete set of marginals through order .
+
+A normalized version is
+
+\widehat{\mathfrak D}_k
+
+\frac{\dim\mathcal N_k}{D^2-1}.
+
+This measures the fraction of the global traceless Hermitian operator space that is invisible at the chosen marginal order.
+
+24.2 Interpretation and limitation
+
+A large indicates that a large operator sector is not constrained by lower-order marginal data.
+
+It does not mean that a particular state contains a large amount of irreducible correlation. The physical state may have zero projection onto much of that sector.
+
+Thus is a property of the system’s operator-space architecture, not a state-dependent measure of correlation strength.
+
+24.3 State-dependent higher-order content
+
+For a chosen reference product operator basis, write
+
+\rho
+
+\sum_{j=0}^{N}\rho^{j},
+
+where denotes the component with nonidentity support on exactly subsystems.
+
+Define
+
+Q_j(\rho)
+
+\|\rho^{j}\|_{\rm HS}^2.
+
+The quantities are nonnegative and provide a basis-invariant norm within the fixed tensor-product operator-space metric under local unitary transformations.
+
+They describe the magnitude of support- contributions.
+
+However, they are not the same as connected cumulant norms. Products of lower-order statistical correlations can contribute to support- coefficients. Therefore, a complete CSH analysis should report both:
+
+Q_j(\rho)
+\quad\text{and}\quad
+\|C^{(j)}(\rho)\|_F^2.
+
+The first describes support order in the density-operator expansion; the second describes connected statistical structure in the chosen measurement family.
+
+25. A proposed hierarchy of irreducibility classes
+
+A useful classification should identify not only whether a global distinction exists, but the smallest order at which it appears.
+
+25.1 Definition of a state-pair irreducibility index
+
+For two states , define
+
+\boxed{
+q(\rho,\sigma)
+
+\min\left\{
+k:
+\rho\not\sim_k\sigma
+\right\}.
+}
+
+For distinct states, lies between and .
+
+If
+
+q(\rho,\sigma)=k,
+
+then the states have identical reduced density matrices through order , but differ in at least one -body marginal.
+
+25.2 Interpretation
+
+* : at least one local state differs.
+* : all local states agree, but some pairwise marginal differs.
+* : all one- and two-body marginals agree, but a three-body marginal differs.
+* : all proper marginals agree, but the global states differ.
+
+This definition is independent of any particular cumulant or entanglement measure.
+
+25.3 Theorem 9: pairwise classification of irreducibility order
+
+Theorem 9. For any distinct finite-dimensional multipartite states , the index exists and satisfies
+
+1\leq q(\rho,\sigma)\leq N.
+
+Proof. Since the states differ, their full -body density operators differ, so they are not -equivalent. The finite set of orders therefore contains a smallest order at which equivalence fails.
+
+This is a general classification index, not a claim that every state pair exhibits a nonzero connected cumulant at precisely that order.
+
+25.4 Equivalence-class stratification
+
+The global state space can be stratified by the first order at which pairs of states become distinguishable.
+
+For a given reference state , define
+
+\mathcal S_k(\rho)
+
+\left\{
+\sigma:
+q(\rho,\sigma)=k
+\right\}.
+
+This partitions the states distinct from according to their minimum marginal distinction order.
+
+A CSH catalogue could report these classes for important state families, code spaces, or experimentally accessible ensembles.
+
+26. A stronger candidate result: minimal witness completion
+
+The marginal hierarchy defines a natural classification problem: determine the smallest set of observables needed to resolve the distinctions left by lower-order marginals.
+
+26.1 Witness completion
+
+Let be a specified state family, and let be a family of Hermitian observables supported on at most subsystems.
+
+Define the measurement signature
+
+\mathcal A_{\mathcal W_k}(\rho)
+
+\left\{
+\operatorname{Tr}(\rho W):
+W\in\mathcal W_k
+\right\}.
+
+A family is separating on if
+
+\mathcal A_{\mathcal W_k}(\rho)
+
+\mathcal A_{\mathcal W_k}(\sigma)
+\quad\Longrightarrow\quad
+\rho=\sigma
+
+for all .
+
+Full tomography is one possible separating family. It is generally not minimal.
+
+26.2 Irreducible completion
+
+Suppose all observables through order have already been measured. The remaining task is to add a family of -body observables that separates states within the existing lower-order fibers.
+
+The minimal completion problem is
+
+\boxed{
+\min_{\mathcal W_k}
+|\mathcal W_k|
+}
+
+subject to the condition that the combined measurement family separates the desired state classes.
+
+The meaning of must be fixed: it may count independent observables, measurement settings, or estimated parameters. These are not the same resource.
+
+26.3 Candidate theorem
+
+For a finite-dimensional state family with a finite-dimensional affine difference space, a separating linear witness family can be chosen with cardinality no greater than the dimension of the unresolved difference space.
+
+This follows by selecting a basis of the dual of that space.
+
+The practically important problem is to find a physically implementable family with much smaller measurement complexity than generic tomography.
+
+26.4 Research significance
+
+A minimal-completion theorem would give CSH a concrete operational purpose: it would determine which additional measurements are necessary to resolve global correlation structures left ambiguous by all lower-order marginals.
+
+This is a more substantive objective than simply cataloguing higher-order expectation values.
+
+27. Novelty assessment
+
+27.1 Established foundations
+
+The following elements are established:
+
+* joint cumulants and the moment–cumulant expansion;
+* connected correlation functions in probability and statistical mechanics;
+* the quantum marginal problem;
+* multipartite entanglement classifications;
+* genuine multipartite nonlocality;
+* stabilizer and graph-state methods;
+* quantum error-correcting codes and local indistinguishability;
+* correlation tensors and their local-unitary transformations;
+* polynomial invariants of quantum states;
+* multipartite correlation witnesses.
+
+The existence of higher-order correlations beyond pairwise descriptions is therefore not a new discovery.
+
+27.2 What CSH can legitimately contribute
+
+The proposed contribution is the unification of these subjects through a scale-indexed marginal identification framework.
+
+A distinct CSH result would need to establish one or more of the following:
+
+* A complete irreducibility classification: a theorem assigning states or state families to their first marginal-identification order.
+* A minimal witness theorem: a construction of the smallest operational witness family that resolves a specified marginal fiber.
+* A local-unitary-invariant hierarchy: a complete or demonstrably useful set of invariants that identifies higher-order structures modulo local transformations.
+* A stability theorem: rigorous bounds on the reliability of irreducibility classification under finite precision and noise.
+* A code-theoretic correspondence: a precise relationship between logical indistinguishability, code distance, and marginal irreducibility.
+* A dynamical extension: a classification of multi-time irreducible correlation structures under a specified intervention model.
+* A nonclassicality refinement: a criterion separating classical high-order statistical dependence from genuinely quantum irreducible structure.
+
+27.3 What would not constitute novelty
+
+The following would not be sufficient by themselves:
+
+* renaming connected cumulants as correlation scales;
+* observing that GHZ states have multipartite correlations;
+* constructing a high-order tensor without an invariance or classification theorem;
+* demonstrating that one global observable differs between two states without verifying complete lower-order marginal equivalence;
+* interpreting a nonzero cumulant as proof of entanglement;
+* claiming that a higher-order Bell inequality establishes a universal correlation hierarchy.
+
+27.4 Strongest candidate contribution
+
+The strongest near-term mathematical target is a Marginal Irreducibility Classification Theorem:
+
+For a specified class of multipartite states, identify the minimum subsystem order at which each physically relevant invariant becomes determined, and prove that the resulting hierarchy is complete relative to the chosen equivalence group.
+
+This would be a real classification result rather than a new notation for established correlations.
+
+28. Explicit limitations and unresolved obstacles
+
+28.1 State-family dependence
+
+The identification order of a functional can depend on the family of allowed states.
+
+A global property that is irreducible at order in the full state space may be determined at order in a restricted family.
+
+Every CSH result must therefore specify its state domain.
+
+28.2 Observable dependence
+
+Connected cumulants depend on the selected observables. A vanishing cumulant does not imply the absence of higher-order structure.
+
+A complete classification requires either a sufficiently rich observable algebra or an explicit statement of what the chosen measurement family can detect.
+
+28.3 Basis dependence
+
+Individual tensor components depend on local basis choices.
+
+Any proposed physical invariant must be constructed from contractions or other functions invariant under the stated local transformation group.
+
+28.4 Positivity constraints
+
+The higher-support operator sectors provide linear directions invisible to lower marginals, but not every displacement along these directions preserves positivity.
+
+The affine dimension of the invisible space is not always the dimension of a physical marginal fiber at a boundary state.
+
+28.5 Classical–quantum ambiguity
+
+High-order connected correlations exist in classical systems.
+
+A CSH classification alone does not establish quantum entanglement, contextuality, or nonlocality.
+
+28.6 Computational complexity
+
+The number of subsystem subsets and correlation components grows rapidly with system size.
+
+An operationally useful hierarchy must exploit structure, symmetry, low-rank descriptions, code constraints, or efficient randomized measurement methods.
+
+28.7 Completeness versus usefulness
+
+A complete invariant family may be too large to measure.
+
+A practically useful CSH theory may instead aim for a hierarchy that is:
+
+* complete on selected state families;
+* stable under realistic noise;
+* efficient to estimate;
+* physically interpretable.
+
+These objectives must be balanced explicitly.
+
+29. Falsifiability criteria
+
+The framework is mathematically testable, but particular CSH claims must be formulated so they can fail.
+
+Test 1 — Lower-order equality
+
+A claimed order- irreducible structure fails if any reduced state of order less than differs between the compared states.
+
+Test 2 — Witness dependence
+
+A claimed witness fails to establish irreducibility if its expectation is a function of the lower-order marginal data on the stated state family.
+
+Test 3 — Cumulant irreducibility
+
+A claimed connected order- signature fails as an irreducibility witness if its value is fixed by all lower-order marginals on the relevant state family.
+
+Test 4 — Representation invariance
+
+A claimed invariant fails if it changes under an allowed passive local basis transformation.
+
+Test 5 — Classification completeness
+
+A proposed complete invariant set fails if two states remain inequivalent under the declared equivalence relation but share every proposed invariant.
+
+Test 6 — Noise robustness
+
+A proposed experimental classification fails operationally if realistic uncertainty makes the lower-order equivalence and higher-order distinction statistically inseparable.
+
+Test 7 — Quantum specificity
+
+A claimed quantum-specific CSH effect fails if an ordinary classical probability model reproduces the same relevant statistics under the declared assumptions.
+
+This does not invalidate a general correlation hierarchy. It invalidates only the claim of specifically quantum significance.
+
+30. Proposed research program
+
+The following sequence is the most disciplined path toward a substantive CSH theory.
+
+Phase I — Formal hierarchy
+
+Establish:
+
+* the marginal equivalence relations;
+* the connected cumulant construction;
+* the support-order operator decomposition;
+* the relation between marginal fibers and invisible operator sectors.
+
+The basic results in this paper provide a starting foundation.
+
+Phase II — Classification of state families
+
+Investigate state families with analytically tractable marginals:
+
+* GHZ states;
+* graph states;
+* cluster states;
+* stabilizer codes;
+* quantum error-correcting codes;
+* permutation-symmetric states;
+* matrix-product and tensor-network states.
+
+Determine the first marginal order at which selected global properties become identifiable.
+
+Phase III — Invariant construction
+
+Develop local-unitary-invariant signatures from:
+
+* connected tensor contractions;
+* stabilizer support distributions;
+* polynomial state invariants;
+* correlation spectra;
+* code-theoretic quantities.
+
+Prove which invariants are independent and which are redundant.
+
+Phase IV — Witness minimality
+
+Find the smallest observable families that distinguish states within specified marginal fibers.
+
+Prove lower bounds on measurement complexity where possible.
+
+Phase V — Robustness
+
+Derive:
+
+* perturbation bounds for connected cumulants;
+* confidence bounds for marginal equivalence;
+* noise thresholds for witness separation;
+* scaling laws with subsystem order.
+
+Phase VI — Experimental realization
+
+Demonstrate at least one nontrivial classification in a physical multipartite system.
+
+The experiment should establish exact theoretical marginal equivalence, finite-precision experimental compatibility with that equivalence, and a separately measured higher-order witness.
+
+Phase VII — Quantum-specific extension
+
+Only after the general hierarchy is secure should CSH be extended to classify specifically quantum properties such as multipartite entanglement, nonlocality, or contextuality.
+
+31. Principal mathematical results
+
+The results developed in this paper can be summarized as follows.
+
+Result	Statement	Status
+Moment–cumulant equivalence	Moments through order and cumulants through order encode equivalent information for the chosen commuting variables	Established mathematical identity
+Nested marginal hierarchy	-equivalence implies -equivalence	Proven
+Support decomposition	Lower-order marginals determine all operator coefficients supported on at most subsystems	Proven
+Higher-order invisible sector	Perturbations supported above order are invisible to all -body marginals	Proven
+Existence of marginally indistinguishable states	Nonzero invisible directions through a full-rank state generate distinct physical states with identical lower-order marginals	Proven
+GHZ phase irreducibility	All proper marginals agree while global connected -body witnesses vary	Proven
+Marginal ambiguity monotonicity	The range of any bounded functional over a marginal fiber cannot increase with marginal order	Proven
+Marginal irreducibility index	Every distinct finite-dimensional state pair has a first order at which its marginals differ	Proven
+Minimal witness completion	A finite-dimensional unresolved linear sector admits a separating dual witness family	Standard linear-algebra consequence
+Complete invariant classification	A minimal local-unitary-invariant hierarchy for general multipartite states	Open
+Quantum-specific irreducibility criterion	A universal distinction between classical high-order dependence and quantum irreducible structure	Open
+
+32. Conclusion
+
+Correlation Scale Hierarchy begins from a simple but consequential observation: the organization of a multipartite system is not necessarily recoverable from its pairwise correlations.
+
+The deeper mathematical issue is the existence of information that remains invariantly hidden from every collection of lower-order marginals.
+
+The appropriate foundation is not a hierarchy of correlation strengths alone. It is a hierarchy of state-identification levels:
+
+\boxed{
+\mathscr I_1
+\subseteq
+\mathscr I_2
+\subseteq
+\cdots
+\subseteq
+\mathscr I_N.
+}
+
+At each order, the marginal data partition the global state space into equivalence classes. Higher-order information is irreducible relative to a lower level when a relevant property varies within one of those classes.
+
+The connected cumulant construction provides a complementary statistical decomposition. It identifies the portions of joint moments not generated by products of lower-order moments. But cumulant order and marginal identification order are not universally identical. Their relationship must be established for each state family and observable algebra.
+
+The GHZ phase family supplies a rigorous example of maximal marginal irreducibility: every proper reduced density matrix is independent of the global phase, while an -body connected coherence witness detects it. The classical parity distribution shows that this phenomenon is not intrinsically quantum. Graph states and quantum codes provide promising routes toward stronger classifications under local-unitary equivalence and operational constraints.
+
+The operator-space decomposition establishes a further result: lower-order marginal data leave an explicitly quantifiable higher-support sector unconstrained. This gives a structural foundation for constructing witnesses and analyzing the geometry of marginal equivalence classes.
+
+The most consequential future achievement would be a minimal, stable, local-unitary-invariant classification of global correlation architectures by their irreducible subsystem order. Such a result would tell us not merely that higher-order correlations exist, but precisely what information first appears at each level, which observables reveal it, and what lower-order descriptions fundamentally cannot determine.
+
+The central CSH thesis is therefore:
+
+\boxed{
+\begin{gathered}
+\text{Global correlation structure admits a hierarchy of}\\
+\text{marginal-identification orders,}\\
+\text{with irreducible information at each order}\\
+\text{defined by what lower-order data cannot determine.}
+\end{gathered}
+}
+
+This is a mathematically defensible research framework. Its basic marginal and cumulant foundations are established; its strongest classification claims remain open. The next genuine advance is not another catalog of high-order correlators, but a theorem that identifies and separates irreducible correlation classes with minimal operational resources.
+
+References and foundational literature
+
+The following works and research areas provide the established foundations for the proposed framework. They are included to distinguish the mathematical ancestry of CSH from the open classification problems developed here.
+
+1. Kubo, R. “Generalized Cumulant Expansion Method.” Journal of the Physical Society of Japan 17 (1962): 1100–1120. Foundational treatment of generalized cumulants and their role in statistical mechanics.
+
+2. Möbius inversion and partition lattices. The mathematical basis of the moment–cumulant transformation, including the partition formula used in this paper.
+
+3. Linden, N., Popescu, S., and Wootters, W. K. “Almost Every Pure State of Three Qubits Is Completely Determined by Its Two-Particle Reduced Density Matrices.” Physical Review Letters 89 (2002): 207901. A foundational result on uniqueness and nonuniqueness in the quantum marginal problem.
+
+4. Doherty, A. C., Parrilo, P. A., and Spedalieri, F. M. “Complete Family of Semidefinite Programming Inequalities for Separability.” Physical Review A 69 (2004): 022308. Relevant to the mathematical characterization of multipartite separability.
+
+5. Horodecki, R., Horodecki, P., Horodecki, M., and Horodecki, K. “Quantum Entanglement.” Reviews of Modern Physics 81 (2009): 865–942. Broad foundation for entanglement classification and operational properties.
+
+6. Hein, M. et al. “Entanglement in Graph States and Its Applications.” In Proceedings of the International School of Physics Enrico Fermi (2006). Foundational treatment of graph-state entanglement and stabilizer structure.
+
+7. Gühne, O., and Tóth, G. “Entanglement Detection.” Physics Reports 474 (2009): 1–75. Review of entanglement witnesses and multipartite detection methods.
+
+8. Knill, E., and Laflamme, R. “Theory of Quantum Error-Correcting Codes.” Physical Review A 55 (1997): 900–911. Foundational quantum error-correction formalism.
+
+9. Terhal, B. M. “Quantum Error Correction for Quantum Memories.” Reviews of Modern Physics 87 (2015): 307–346. Review of quantum code structure, protection, and information recovery.
+
+10. Greenberger, D. M., Horne, M. A., and Zeilinger, A. Foundational work on multipartite quantum correlations and GHZ nonlocality. The GHZ family provides a central benchmark for the present marginal-irreducibility construction.
+
+Final research assessment: CSH is strongest when defined as a hierarchy of irreducible marginal information, with connected cumulants as one family of witnesses rather than as the definition of the hierarchy itself. The proven operator-space and marginal results establish a rigorous foundation. A complete invariant classification, especially one that is locally invariant, experimentally efficient, and distinguishes genuinely quantum structure from classical higher-order dependence, remains the principal open achievement.
